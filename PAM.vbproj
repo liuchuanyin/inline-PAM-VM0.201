@@ -199,6 +199,7 @@
     <Compile Include="Module\Mod_UV.vb" />
     <Compile Include="Module\Mod_Yield.vb" />
     <Compile Include="Module\Motion.vb" />
+    <Compile Include="运动模块\L2Run.vb" />
     <Compile Include="运动模块\Needle_Calibration.vb" />
     <Compile Include="Module\OperateCrossFroms.vb" />
     <Compile Include="Module\OPTControllerAPI.vb" />

@@ -30,7 +30,7 @@ Partial Class Frm_Material
         Me.btn_Cancle.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btn_Cancle.BZ_Radius = 11
         Me.btn_Cancle.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.btn_Cancle.Location = New System.Drawing.Point(425, 279)
+        Me.btn_Cancle.Location = New System.Drawing.Point(131, 151)
         Me.btn_Cancle.Name = "btn_Cancle"
         Me.btn_Cancle.Size = New System.Drawing.Size(60, 30)
         Me.btn_Cancle.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class Frm_Material
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Orange
-        Me.ClientSize = New System.Drawing.Size(522, 330)
+        Me.ClientSize = New System.Drawing.Size(335, 309)
         Me.Controls.Add(Me.btn_Cancle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_Material"

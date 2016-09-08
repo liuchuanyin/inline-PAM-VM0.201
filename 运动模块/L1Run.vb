@@ -30,7 +30,7 @@
 
             Case 300
                 If Tray_Pallet(1).isTrayOK = False Then
-                    Step_Line(1) = 8000 '载具不良直接流走
+                    Step_Line(1) = 800 '载具不良直接流走
                 ElseIf isTimeout(timeStart, 300) Then
                     Call setCylinderRise(1, True)
                     SetEMO(1, 8, True)  'L1真空吸载具
@@ -54,7 +54,7 @@
                             Call setCylinderRise(1, False)
                             Frm_DialogAddMessage("1段流水线真空吸载具负压异常！")
                             Tray_Pallet(1).isTrayOK = False
-                            Step_Line(1) = 8000 '载具不良直接流走
+                            Step_Line(1) = 800 '载具不良直接流走
                         End If
                     End If
                 ElseIf isTimeout(timeStart, 2000) Then
@@ -62,13 +62,13 @@
                     Call setCylinderRise(1, False)
                     Frm_DialogAddMessage("1段流水线升降气缸升起超时！")
                     Tray_Pallet(1).isTrayOK = False
-                    Step_Line(1) = 8000 '载具不良直接流走
+                    Step_Line(1) = 800 '载具不良直接流走
                 End If
 
             Case 500
                 Line_Sta(1).workState = 0 '接收载具完成，等待点胶
                 GLue_Sta.workState = 0  '点胶进行中
-                Step_Line(1) = 500
+                Step_Line(1) = 600
 
             Case 600
                 '等待点胶工站工作完成
