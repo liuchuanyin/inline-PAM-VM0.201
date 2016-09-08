@@ -1,0 +1,81 @@
+此版本增加缝隙3条直线
+
+201606251014
+此版增加精确补偿次数限定，此版精补后Z轴运动到贴合位置，500步检测压力值
+
+
+
+18:02
+
+add CCD3 calibration OK
+
+
+20160630
+完善自动取料，取料负压异常抛料然后重新取料，精确补偿次数超限抛料然后重新取料
+
+
+20160722
+add upload data to server
+sw version update to v1.1.1
+
+
+20160723 
+add function to read barcode at station 1 and station 3
+sw version update to v1.2.1
+
+    '///////////////////////////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    'add by Sticker 20160715
+    'add variables: dist_GSX,dist_GSY
+    '扫条码和取料X,Y距离
+    'dist_GS = FirstScanPos - FirstGetMaterialPos
+    'ScanPos = GetMaterialPos + dist_GS
+
+    ''' <summary>
+    ''' 扫条码和取料X,Y距离
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public dist_GSX As Double
+    ''' <summary>
+    ''' 扫条码和取料X,Y距离
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public dist_GSY As Double
+    ''' <summary>
+    ''' 获取扫条码位置和取料位置之间X，Y的距离
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function Get_GS() As Boolean
+        Try
+            dist_GSX = Par_Pos.Pos_S3(15).X_Pos - Par_Pos.Pos_S3(1).X_Pos
+            dist_GSY = Par_Pos.Pos_S3(15).Y_Pos - Par_Pos.Pos_S3(1).Y_Pos
+            Write_Log("dist_GSX = " & dist_GSX, Path_Log)
+            Write_Log("dist_GSY = " & dist_GSY, Path_Log)
+            Write_Log("获取扫条码位置和取料位置之间X，Y的距离成功！", Path_Log)
+            Return True
+        Catch ex As Exception
+            Frm_DialogAddMessage("获取扫条码位置和取料位置之间X，Y的距离失败！")
+            Write_Log("获取扫条码位置和取料位置之间X，Y的距离失败！", Path_Log)
+            Return False
+        End Try
+    End Function
+
+    'add by Sticker 20160715
+    '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^^^/////////////////////////////////////
+
+
+
+20160726
+fix some errors
+
+
+
+20160728
+根据点胶位置计算镭射位置，目前 pam-b2,4站已经完成此功能。
+复检结果修改
+sw version update to v1.2.5
+
+
+20160729
+fix some debug
+
