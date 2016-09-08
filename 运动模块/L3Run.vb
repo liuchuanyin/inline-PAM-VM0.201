@@ -1,5 +1,5 @@
 ﻿Module L3Run
-    '3段流水线用于接收载具，贴合
+    '3段流水线用于接收载具，复检
     Public Sub L3_AutoRun()
         'Line_Sta(3).workState = 1 '接收载具完成，贴合完成
         'Line_Sta(3).workState = 2 '接收载具完成，等待复检完成
@@ -80,29 +80,40 @@
                 Call setCylinderRise(3, False)
                 Step_Line(3) = 800
 
-                'Case 800
-                '    '3 段流水线工作完成，等待第3段流水线接收载具
-                '    Line_Sta(3).isWorking = False
-                '    Line_Sta(3).workState = 1 '3 段流水线工作完成(组装工作OK)
-                '    If Flag_MachineStop = False And Line_Sta(3).isWorking = False And Line_Sta(3).isHaveTray = False Then
-                '        Call setBlock(2, False)
-                '        Call setMotorRun(2)
-                '        ListBoxAddMessage(">> 2 段流水线开始发送载具")
-                '        Step_Line(3) = 900
-                '    End If
+            Case 800
+                '3 段流水线工作完成，等待下一台设备流水线接收载具
+                Line_Sta(3).isWorking = False
+                Line_Sta(3).workState = 1 '3 段流水线工作完成(组装工作OK)
 
-                'Case 900
-                '    If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '2段流水线已经接收到载具
-                '        Step_Line(3) = 1000
-                '    End If
+                If par.chkFn(21) And EMI(1, 13) Then
+                    SetEMO(1, 14, True) '给下一台设备有载具信号
+                    If Tray_Pallet(3).isTrayOK = False Then
+                        SetEMO(1, 15, True) '给下一台设备有载具,不可用信号
+                    End If
+                    Call setBlock(3, False)
+                    Call setMotorRun(3)
+                    ListBoxAddMessage(">> 3 段流水线开始发送载具")
+                    Step_Line(3) = 900
+                Else
+                    If isHaveTray(3) = False Or par.chkFn(4) Then
+                        Step_Line(3) = 900
+                    End If
+                End If
 
-                'Case 1000
-                '    If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '2段流水线已经接收到载具
-                '        Call setBlock(2, True)
-                '        Call setMotorStop(2)
-                '        timeStart = GetTickCount
-                '        Step_Line(3) = 1100
-                '    End If
+
+            Case 900
+                If isHaveTray(3) = False Or par.chkFn(4) Then  '下一台设备已经接收到载具
+                    timeStart = GetTickCount
+                    Step_Line(3) = 1000
+                End If
+
+            Case 1000
+                If isTimeout(timeStart, 2000) Then
+                    Call setBlock(3, True)
+                    Call setMotorStop(3)
+                    timeStart = GetTickCount
+                    Step_Line(3) = 1100
+                End If
 
             Case 1100
                 If isBlocked(3) Then

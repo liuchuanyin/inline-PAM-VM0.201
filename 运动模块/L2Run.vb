@@ -92,12 +92,12 @@
                 End If
 
             Case 900
-                If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '2段流水线已经接收到载具
+                If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '3段流水线已经接收到载具
                     Step_Line(2) = 1000
                 End If
 
             Case 1000
-                If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '2段流水线已经接收到载具
+                If isHaveTray(3) Or Line_Sta(3).isHaveTray Then  '3段流水线已经接收到载具
                     Call setBlock(2, True)
                     Call setMotorStop(2)
                     timeStart = GetTickCount
