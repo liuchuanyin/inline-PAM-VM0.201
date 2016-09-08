@@ -2,8 +2,8 @@
 
     '1段流水线用于接收载具，点胶
     Public Sub L1_AutoRun()
-        'Line_Sta(1).workState = 0 '接收载具完成，等待点胶
         'Line_Sta(1).workState = 1 '接收载具完成，点胶完成
+        'Line_Sta(1).workState = 2 '接收载具完成，等待点胶
         Static timeStart As Long    '记录开始时间
 
         Select Case Step_Line(1)
@@ -66,7 +66,7 @@
                 End If
 
             Case 500
-                Line_Sta(1).workState = 0 '接收载具完成，等待点胶
+                Line_Sta(1).workState = 2 '接收载具完成，等待点胶
                 GLue_Sta.workState = 0  '点胶进行中
                 Step_Line(1) = 600
 

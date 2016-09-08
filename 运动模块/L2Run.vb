@@ -1,8 +1,8 @@
 ﻿Module L2Run
     '2段流水线用于接收载具，贴合
     Public Sub L2_AutoRun()
-        'Line_Sta(2).workState = 0 '接收载具完成，等待贴合完成
         'Line_Sta(2).workState = 1 '接收载具完成，贴合完成
+        'Line_Sta(2).workState = 2 '接收载具完成，等待贴合完成
         Static timeStart As Long    '记录开始时间
 
         Select Case Step_Line(2)
@@ -65,7 +65,7 @@
                 End If
 
             Case 500
-                Line_Sta(2).workState = 0 '接收载具完成，等待贴合
+                Line_Sta(2).workState = 2 '接收载具完成，等待贴合
                 Paste_Sta.workState = 0  '贴合进行中
                 Step_Line(2) = 600
 
