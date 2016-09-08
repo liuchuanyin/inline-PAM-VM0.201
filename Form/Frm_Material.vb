@@ -25,6 +25,7 @@
         Next
 
         Me.Size = New Size(5 + ColumnNumber * 65, 40 + RowNumber * 35)
+        Me.Location = New Point(512 - Me.Width / 2, 365 - Me.Height / 2)
         btn_Cancle.Location = New Point(Me.Width - 65, Me.Height - 35)
     End Sub
 

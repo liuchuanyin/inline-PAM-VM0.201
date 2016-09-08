@@ -355,13 +355,15 @@
         cbo_Pos1.Items.Add("胶针2 Z轴校正位置") '13
 
         cbo_Pos2.Items.Clear()
-        cbo_Pos2.Items.Add("待机位置")
-        cbo_Pos2.Items.Add("取料位置")
-        cbo_Pos2.Items.Add("定位拍照位置")
-        cbo_Pos2.Items.Add("精补第一颗料位置")
-        cbo_Pos2.Items.Add("贴合第一颗料位置")
-        cbo_Pos2.Items.Add("针头Z轴校正位置")
-        cbo_Pos2.Items.Add("抛料位置")
+        cbo_Pos2.Items.Add("待机位置")  '0
+        cbo_Pos2.Items.Add("取料位置")  '1
+        cbo_Pos2.Items.Add("定位拍照位置")    '2
+        cbo_Pos2.Items.Add("精补第一颗料位置")  '3
+        cbo_Pos2.Items.Add("贴合第一颗料位置")  '4
+        cbo_Pos2.Items.Add("针头Z轴校正位置")  '5
+        cbo_Pos2.Items.Add("抛料位置")  '6
+        cbo_Pos3.Items.Add("压力传感器自动标定位置1") '7
+        cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
 
         cbo_Pos3.Items.Clear()
         cbo_Pos3.Items.Add("待机位置") '0
@@ -2385,5 +2387,9 @@
 
     Private Sub Select_Material_Click(sender As Object, e As EventArgs) Handles Select_Material.Click
         Frm_Material.Show()
+    End Sub
+
+    Private Sub Btn_GluePar_Click(sender As Object, e As EventArgs) Handles Btn_GluePar.Click
+        Frm_GluePar.Show()
     End Sub
 End Class

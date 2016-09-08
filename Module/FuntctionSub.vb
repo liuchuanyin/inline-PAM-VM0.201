@@ -313,6 +313,38 @@ WriteDataError:
     End Sub
 
 
+    Public Sub Read_GluePar(ByVal path As String, ByVal data As Glue_Segment)
+
+        '结构体数组实例化
+        Call Par_Glue.Ini()
+
+        Try
+            If IO.File.Exists(path) = False Then
+                Call Write_GluePar(path, Par_Glue)
+            End If
+
+            Dim reader As New System.Xml.Serialization.XmlSerializer(GetType(Glue_Segment))
+            Dim file As New System.IO.StreamReader(path)
+            'Par_Glue为定义的共用变量，用来保存读取的信息
+            Par_Glue = CType(reader.Deserialize(file), Glue_Segment)
+            file.Close()
+        Catch ex As Exception
+            MsgBox("Par_Glue XML文件读取失败:" & ex.Message)
+        End Try
+    End Sub
+
+    Public Sub Write_GluePar(ByVal FileName As String, ByRef WriteData As Glue_Segment)
+        Try
+            Dim writer As New System.Xml.Serialization.XmlSerializer(GetType(Glue_Segment))
+            Dim file As New System.IO.StreamWriter(FileName)
+            writer.Serialize(file, WriteData)
+            file.Close()
+        Catch ex As Exception
+            MsgBox("Par_Glue XML文件创建失败:" & ex.Message)
+        End Try
+    End Sub
+
+
 #End Region
 
 #Region "删除N天以上的文件或文件夹"

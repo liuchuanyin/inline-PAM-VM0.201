@@ -18,6 +18,8 @@ Public Class Frm_Main
         Call Read_MacType(Path_MacType, MACTYPE)
         '读取本地保存的参数设置
         Call Read_par(Path_Par, par)
+        '读取点胶参数
+        Call Read_GluePar(Path_Par_Glue, Par_Glue)
         '良率统计信息初始化
         Call Yield_Data_Init()
         '加载回原点需要的参数

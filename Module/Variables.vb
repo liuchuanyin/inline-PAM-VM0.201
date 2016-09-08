@@ -97,6 +97,7 @@ Public Module Variables
     ''' </summary>
     ''' <remarks></remarks>
     Public Path_Par As String = "D:\BZ-Parameter\Par.xml"
+    Public Path_Par_Glue As String = "D:\BZ-Parameter\Par_Glue.xml"
     ''' <summary>
     ''' 密码保存 "D:\BZ-Parameter\User.dat"
     ''' </summary>
@@ -231,6 +232,25 @@ Public Module Variables
     ''' </summary>
     ''' <remarks></remarks>
     Public par As Parameter
+#End Region
+
+
+#Region "点胶参数结构体"
+
+    Public Structure Glue_Vel_Delay
+        Dim vel As Double
+        Dim startDelay As Double
+        Dim endDelay As Double
+    End Structure
+
+    Public Structure Glue_Segment
+        Dim Segment() As Glue_Vel_Delay
+        Sub Ini()
+            ReDim Segment(20)
+        End Sub
+    End Structure
+
+    Public Par_Glue As Glue_Segment
 #End Region
 
 #Region "账户名密码结构体"
