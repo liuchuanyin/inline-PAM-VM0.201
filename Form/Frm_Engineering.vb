@@ -2082,29 +2082,23 @@
         If MsgBox("准备自动擦胶" & vbCr & "谨防撞机，请确认？", vbOKCancel + vbQuestion) <> vbOK Then
             Exit Sub
         End If
+        ClrGlue_Work.Enable = True
+        step_clrGlue = 10
+        Do While True
+            Call GlueAuto_Clr(ClrGlue_Work)
+            If ClrGlue_Work.State = False Then
+                If ClrGlue_Work.Result Then
+                    ListBoxAddMessage("自动擦胶成功")
+                    Exit Do
+                Else
+                    ListBoxAddMessage("自动擦胶失败")
+                    Exit Do
+                End If
+            End If
+            My.Application.DoEvents()
+            Delay(10)
+        Loop
 
-        'Do While True
-        '    Clr_GlueS2(ClrGlue_workS2) '2工位自动擦胶
-        '    Delay(10)
-
-        '    If ClrGlue_workS2.State = False Then         '等待校针结束
-        '        If ClrGlue_workS2.Result = True Then
-        '            Step_ClrGlueS2 = 0
-        '            List_DebugAddMessage("2工位自动擦胶完成")
-        '        Else
-        '            Step_ClrGlueS2 = 0
-        '            List_DebugAddMessage("2工位自动擦胶失败")
-        '        End If
-        '        Exit Do
-        '    End If
-
-        '    If IsSysEmcStop Then    '判断急停按钮是否按下
-        '        Step_ClrGlueS2 = 0
-        '        Frm_DialogAddMessage("2工位自动擦胶急停中断")
-        '        Exit Do
-        '    End If
-        '    Application.DoEvents()
-        'Loop
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

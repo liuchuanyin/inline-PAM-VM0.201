@@ -1958,7 +1958,7 @@ Partial Class Frm_Settings
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 30)
         Me.Label2.TabIndex = 100
-        Me.Label2.Text = "mm"
+        Me.Label2.Text = "°"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1
@@ -2098,7 +2098,7 @@ Partial Class Frm_Settings
         Me.lbl_Par32.Name = "lbl_Par32"
         Me.lbl_Par32.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par32.TabIndex = 42
-        Me.lbl_Par32.Text = "32-StandBy"
+        Me.lbl_Par32.Text = "32-取料补偿A"
         Me.lbl_Par32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Unit1
@@ -2118,7 +2118,7 @@ Partial Class Frm_Settings
         Me.lbl_Par15.Name = "lbl_Par15"
         Me.lbl_Par15.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par15.TabIndex = 26
-        Me.lbl_Par15.Text = "15-2站点点胶延时"
+        Me.lbl_Par15.Text = "15-"
         Me.lbl_Par15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par1
@@ -2128,7 +2128,7 @@ Partial Class Frm_Settings
         Me.lbl_Par1.Name = "lbl_Par1"
         Me.lbl_Par1.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par1.TabIndex = 12
-        Me.lbl_Par1.Text = "01-2工位镭射补偿"
+        Me.lbl_Par1.Text = "01-镭射补偿"
         Me.lbl_Par1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par2
@@ -2138,7 +2138,7 @@ Partial Class Frm_Settings
         Me.lbl_Par2.Name = "lbl_Par2"
         Me.lbl_Par2.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par2.TabIndex = 13
-        Me.lbl_Par2.Text = "02-3工位镭射补偿"
+        Me.lbl_Par2.Text = "02-点胶1补偿X"
         Me.lbl_Par2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par3
@@ -2148,7 +2148,7 @@ Partial Class Frm_Settings
         Me.lbl_Par3.Name = "lbl_Par3"
         Me.lbl_Par3.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par3.TabIndex = 14
-        Me.lbl_Par3.Text = "03-2工位X补正"
+        Me.lbl_Par3.Text = "03-点胶1补偿Y"
         Me.lbl_Par3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par4
@@ -2158,7 +2158,7 @@ Partial Class Frm_Settings
         Me.lbl_Par4.Name = "lbl_Par4"
         Me.lbl_Par4.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par4.TabIndex = 15
-        Me.lbl_Par4.Text = "04-2工位Y补正"
+        Me.lbl_Par4.Text = "04-点胶2补偿X"
         Me.lbl_Par4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par5
@@ -2168,7 +2168,7 @@ Partial Class Frm_Settings
         Me.lbl_Par5.Name = "lbl_Par5"
         Me.lbl_Par5.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par5.TabIndex = 16
-        Me.lbl_Par5.Text = "05-3工位X补正"
+        Me.lbl_Par5.Text = "05-点胶2补偿Y"
         Me.lbl_Par5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par6
@@ -2178,7 +2178,7 @@ Partial Class Frm_Settings
         Me.lbl_Par6.Name = "lbl_Par6"
         Me.lbl_Par6.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par6.TabIndex = 17
-        Me.lbl_Par6.Text = "06-3工位Y补正"
+        Me.lbl_Par6.Text = "06-"
         Me.lbl_Par6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par7
@@ -2188,7 +2188,7 @@ Partial Class Frm_Settings
         Me.lbl_Par7.Name = "lbl_Par7"
         Me.lbl_Par7.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par7.TabIndex = 18
-        Me.lbl_Par7.Text = "07-4工位X补正"
+        Me.lbl_Par7.Text = "07-"
         Me.lbl_Par7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par8
@@ -2198,7 +2198,7 @@ Partial Class Frm_Settings
         Me.lbl_Par8.Name = "lbl_Par8"
         Me.lbl_Par8.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par8.TabIndex = 19
-        Me.lbl_Par8.Text = "08-4工位Y补正"
+        Me.lbl_Par8.Text = "08-"
         Me.lbl_Par8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par9
@@ -2208,7 +2208,7 @@ Partial Class Frm_Settings
         Me.lbl_Par9.Name = "lbl_Par9"
         Me.lbl_Par9.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par9.TabIndex = 20
-        Me.lbl_Par9.Text = "09-4工位R补正"
+        Me.lbl_Par9.Text = "09-"
         Me.lbl_Par9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par10
@@ -2218,7 +2218,7 @@ Partial Class Frm_Settings
         Me.lbl_Par10.Name = "lbl_Par10"
         Me.lbl_Par10.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par10.TabIndex = 21
-        Me.lbl_Par10.Text = "10-4工位Z补正"
+        Me.lbl_Par10.Text = "10-"
         Me.lbl_Par10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par11
@@ -2228,7 +2228,7 @@ Partial Class Frm_Settings
         Me.lbl_Par11.Name = "lbl_Par11"
         Me.lbl_Par11.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par11.TabIndex = 22
-        Me.lbl_Par11.Text = "11-2工位弧1速度"
+        Me.lbl_Par11.Text = "11-"
         Me.lbl_Par11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par12
@@ -2238,7 +2238,7 @@ Partial Class Frm_Settings
         Me.lbl_Par12.Name = "lbl_Par12"
         Me.lbl_Par12.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par12.TabIndex = 23
-        Me.lbl_Par12.Text = "12-2工位弧2速度"
+        Me.lbl_Par12.Text = "12-"
         Me.lbl_Par12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par13
@@ -2248,7 +2248,7 @@ Partial Class Frm_Settings
         Me.lbl_Par13.Name = "lbl_Par13"
         Me.lbl_Par13.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par13.TabIndex = 24
-        Me.lbl_Par13.Text = "13-2工位弧3速度"
+        Me.lbl_Par13.Text = "13-"
         Me.lbl_Par13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par14
@@ -2258,7 +2258,7 @@ Partial Class Frm_Settings
         Me.lbl_Par14.Name = "lbl_Par14"
         Me.lbl_Par14.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par14.TabIndex = 25
-        Me.lbl_Par14.Text = "14-2工位弧4速度"
+        Me.lbl_Par14.Text = "14-"
         Me.lbl_Par14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par1
@@ -2548,7 +2548,7 @@ Partial Class Frm_Settings
         Me.lbl_Unit15.Name = "lbl_Unit15"
         Me.lbl_Unit15.Size = New System.Drawing.Size(34, 30)
         Me.lbl_Unit15.TabIndex = 84
-        Me.lbl_Unit15.Text = "s"
+        Me.lbl_Unit15.Text = "mm"
         Me.lbl_Unit15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par16
@@ -2568,7 +2568,7 @@ Partial Class Frm_Settings
         Me.lbl_Par17.Name = "lbl_Par17"
         Me.lbl_Par17.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par17.TabIndex = 28
-        Me.lbl_Par17.Text = "17-CC-Limit"
+        Me.lbl_Par17.Text = "17-"
         Me.lbl_Par17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par18
@@ -2578,7 +2578,7 @@ Partial Class Frm_Settings
         Me.lbl_Par18.Name = "lbl_Par18"
         Me.lbl_Par18.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par18.TabIndex = 29
-        Me.lbl_Par18.Text = "18-3站UV照射时间"
+        Me.lbl_Par18.Text = "18-组装UV固化时间"
         Me.lbl_Par18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par16
@@ -2648,7 +2648,7 @@ Partial Class Frm_Settings
         Me.lbl_Par19.Name = "lbl_Par19"
         Me.lbl_Par19.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par19.TabIndex = 30
-        Me.lbl_Par19.Text = "19-3工位贴合压力"
+        Me.lbl_Par19.Text = "19-预固化时间"
         Me.lbl_Par19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par19
@@ -2668,7 +2668,7 @@ Partial Class Frm_Settings
         Me.lbl_Unit19.Name = "lbl_Unit19"
         Me.lbl_Unit19.Size = New System.Drawing.Size(34, 30)
         Me.lbl_Unit19.TabIndex = 88
-        Me.lbl_Unit19.Text = "Kg"
+        Me.lbl_Unit19.Text = "s"
         Me.lbl_Unit19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par20
@@ -2678,7 +2678,7 @@ Partial Class Frm_Settings
         Me.lbl_Par20.Name = "lbl_Par20"
         Me.lbl_Par20.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par20.TabIndex = 31
-        Me.lbl_Par20.Text = "20-3工位取料压力"
+        Me.lbl_Par20.Text = "20-复检固化时间"
         Me.lbl_Par20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par20
@@ -2698,7 +2698,7 @@ Partial Class Frm_Settings
         Me.lbl_Unit20.Name = "lbl_Unit20"
         Me.lbl_Unit20.Size = New System.Drawing.Size(34, 30)
         Me.lbl_Unit20.TabIndex = 89
-        Me.lbl_Unit20.Text = "Kg"
+        Me.lbl_Unit20.Text = "s"
         Me.lbl_Unit20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par21
@@ -2708,7 +2708,7 @@ Partial Class Frm_Settings
         Me.lbl_Par21.Name = "lbl_Par21"
         Me.lbl_Par21.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par21.TabIndex = 32
-        Me.lbl_Par21.Text = "21-2站点胶1点延时"
+        Me.lbl_Par21.Text = "21-贴合压力限制"
         Me.lbl_Par21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par21
@@ -2728,7 +2728,7 @@ Partial Class Frm_Settings
         Me.lbl_Unit21.Name = "lbl_Unit21"
         Me.lbl_Unit21.Size = New System.Drawing.Size(34, 30)
         Me.lbl_Unit21.TabIndex = 90
-        Me.lbl_Unit21.Text = "s"
+        Me.lbl_Unit21.Text = "Kg"
         Me.lbl_Unit21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par22
@@ -2738,7 +2738,7 @@ Partial Class Frm_Settings
         Me.lbl_Par22.Name = "lbl_Par22"
         Me.lbl_Par22.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par22.TabIndex = 33
-        Me.lbl_Par22.Text = "22-2站点胶2点延时"
+        Me.lbl_Par22.Text = "22-取料压力限制"
         Me.lbl_Par22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par22
@@ -2758,7 +2758,7 @@ Partial Class Frm_Settings
         Me.lbl_Unit22.Name = "lbl_Unit22"
         Me.lbl_Unit22.Size = New System.Drawing.Size(34, 30)
         Me.lbl_Unit22.TabIndex = 91
-        Me.lbl_Unit22.Text = "s"
+        Me.lbl_Unit22.Text = "Kg"
         Me.lbl_Unit22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par23
@@ -2768,7 +2768,7 @@ Partial Class Frm_Settings
         Me.lbl_Par23.Name = "lbl_Par23"
         Me.lbl_Par23.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par23.TabIndex = 34
-        Me.lbl_Par23.Text = "23-2站点胶3点延时"
+        Me.lbl_Par23.Text = "23-装配补偿X"
         Me.lbl_Par23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par23
@@ -2798,7 +2798,7 @@ Partial Class Frm_Settings
         Me.lbl_Par24.Name = "lbl_Par24"
         Me.lbl_Par24.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par24.TabIndex = 35
-        Me.lbl_Par24.Text = "24-2站点胶4点延时"
+        Me.lbl_Par24.Text = "24-装配补偿Y"
         Me.lbl_Par24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par24
@@ -2828,7 +2828,7 @@ Partial Class Frm_Settings
         Me.lbl_Par25.Name = "lbl_Par25"
         Me.lbl_Par25.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par25.TabIndex = 36
-        Me.lbl_Par25.Text = "25-4工位点胶速度"
+        Me.lbl_Par25.Text = "25-"
         Me.lbl_Par25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par25
@@ -2858,7 +2858,7 @@ Partial Class Frm_Settings
         Me.lbl_Par26.Name = "lbl_Par26"
         Me.lbl_Par26.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par26.TabIndex = 37
-        Me.lbl_Par26.Text = "26-4工位点胶延时"
+        Me.lbl_Par26.Text = "26-"
         Me.lbl_Par26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par26
@@ -2888,7 +2888,7 @@ Partial Class Frm_Settings
         Me.lbl_Par27.Name = "lbl_Par27"
         Me.lbl_Par27.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par27.TabIndex = 38
-        Me.lbl_Par27.Text = "27-3工位精补次数"
+        Me.lbl_Par27.Text = "27-精补次数限定"
         Me.lbl_Par27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par27
@@ -2918,7 +2918,7 @@ Partial Class Frm_Settings
         Me.lbl_Par28.Name = "lbl_Par28"
         Me.lbl_Par28.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par28.TabIndex = 39
-        Me.lbl_Par28.Text = "28-2工位点胶气压"
+        Me.lbl_Par28.Text = "28-点胶1气压"
         Me.lbl_Par28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par28
@@ -2948,7 +2948,7 @@ Partial Class Frm_Settings
         Me.lbl_Par29.Name = "lbl_Par29"
         Me.lbl_Par29.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par29.TabIndex = 40
-        Me.lbl_Par29.Text = "29-4工位点胶气压"
+        Me.lbl_Par29.Text = "29-点胶2气压"
         Me.lbl_Par29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par30
@@ -2958,7 +2958,7 @@ Partial Class Frm_Settings
         Me.lbl_Par30.Name = "lbl_Par30"
         Me.lbl_Par30.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par30.TabIndex = 41
-        Me.lbl_Par30.Text = "30-StandBy"
+        Me.lbl_Par30.Text = "30-取料补偿X"
         Me.lbl_Par30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par29
@@ -3008,7 +3008,7 @@ Partial Class Frm_Settings
         Me.lbl_Par31.Name = "lbl_Par31"
         Me.lbl_Par31.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par31.TabIndex = 100
-        Me.lbl_Par31.Text = "31-StandBy"
+        Me.lbl_Par31.Text = "31-取料补偿Y"
         Me.lbl_Par31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par36

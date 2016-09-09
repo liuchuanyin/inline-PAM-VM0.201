@@ -3,6 +3,8 @@
     Public Step_Glue As Integer
     Public Step_Gopos(7) As Integer
     Public Probe_Result As Boolean
+    Public ClrGlue_Work As sFlag3
+    Public step_clrGlue As Integer
 
     Public Sub GoPos_Glue(ByVal index As Short)
         'Static timeStart As Long
@@ -118,6 +120,232 @@
             End If
             Application.DoEvents()
         Loop
+    End Sub
+
+    ''' <summary>
+    ''' 点胶工位自动擦胶
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Sub GlueAuto_Clr(ByRef status As sFlag3)
+        Static timeStart As Long
+
+        Select Case step_clrGlue
+            Case 10
+                status.State = True
+                step_clrGlue = 20
+
+            Case 20
+                If isHaveTray(1) Then
+                    Frm_DialogAddMessage("1段流水线上有载具，已退出自动擦胶")
+                    step_clrGlue = 9000
+                Else
+                    step_clrGlue = 30
+                End If
+
+            Case 30
+                If Flag_MachineInit = False Then
+                    Frm_DialogAddMessage("设备未初始化，已退出自动擦胶")
+                    step_clrGlue = 9000
+                Else
+                    step_clrGlue = 40
+                End If
+
+            Case 40
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)
+                ListBoxAddMessage("GlueZ 轴运动到待机位置")
+                step_clrGlue = 50
+
+            Case 50
+                If isAxisMoving(0, GlueZ) = False Then
+                    step_clrGlue = 60
+                End If
+
+            Case 60
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(5).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Par_Pos.St_Glue(5).Y)
+                ListBoxAddMessage("GlueX、GlueY轴运动到擦胶位置")
+                step_clrGlue = 70
+
+            Case 70
+                If isAxisMoving(0, GlueX) = False And isAxisMoving(0, GlueY) = False Then
+                    ListBoxAddMessage("GlueX,GlueY 轴已运动到擦胶位置")
+                    step_clrGlue = 80
+                End If
+
+            Case 80
+                SetEMO(0, 13, True) '擦胶电机使能
+                SetEMO(0, 14, True) '擦胶电机工作转动
+                SetEMO(0, 15, False)    '擦胶加紧气缸松开
+                timeStart = GetTickCount
+                step_clrGlue = 100
+
+            Case 100
+                If isTimeout(timeStart, 2000) Then
+                    SetEMO(0, 14, False) '擦胶电机工作转动
+                    step_clrGlue = 110
+                End If
+
+            Case 110
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(5).Z)
+                ListBoxAddMessage("GlueZ 轴运动到擦胶位置")
+                step_clrGlue = 120
+
+            Case 120
+                If isAxisMoving(0, GlueZ) = False Then
+                    step_clrGlue = 130
+                End If
+
+            Case 130
+                If EMI(0, 15) Then
+                    SetEXO(2, 9, True)  '点胶1气缸降下
+                    timeStart = GetTickCount
+                    step_clrGlue = 150
+                Else
+                    Frm_DialogAddMessage("擦胶加紧气缸张开磁簧信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 150
+                If EXI(2, 10) Then
+                    step_clrGlue = 160
+                ElseIf isTimeout(timeStart, 2000) Then
+                    Frm_DialogAddMessage("点胶1气缸下降到位信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 160
+                SetEMO(0, 15, True) '擦胶加紧气缸加紧
+                timeStart = GetTickCount
+                step_clrGlue = 170
+
+            Case 170
+                If isTimeout(timeStart, 1000) Then
+                    SetEXO(2, 9, False) '点胶1气缸降上升
+                    timeStart = GetTickCount
+                    step_clrGlue = 180
+                End If
+
+            Case 180
+                If EXI(2, 9) Then
+                    step_clrGlue = 200
+                ElseIf isTimeout(timeStart, 2000) Then
+                    Frm_DialogAddMessage("点胶1气缸上升到位信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 200
+                If MACTYPE = "PAM-B" Then
+                    step_clrGlue = 210
+                Else
+                    step_clrGlue = 8000
+                End If
+
+            Case 210
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(10).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Par_Pos.St_Glue(10).Y)
+                ListBoxAddMessage("GlueX、GlueY轴运动到擦胶位置")
+                step_clrGlue = 220
+
+            Case 220
+                If isAxisMoving(0, GlueX) = False And isAxisMoving(0, GlueY) = False Then
+                    ListBoxAddMessage("GlueX,GlueY 轴已运动到擦胶位置")
+                    step_clrGlue = 230
+                End If
+
+            Case 230
+                SetEMO(0, 14, True) '擦胶电机工作转动
+                SetEMO(0, 15, False)    '擦胶加紧气缸松开
+                timeStart = GetTickCount
+                step_clrGlue = 240
+
+            Case 240
+                If isTimeout(timeStart, 2000) Then
+                    SetEMO(0, 14, False) '擦胶电机工作转动
+                    step_clrGlue = 250
+                End If
+
+            Case 250
+                If EMI(0, 15) Then
+                    SetEXO(2, 11, True)  '点胶2气缸降下
+                    timeStart = GetTickCount
+                    step_clrGlue = 260
+                Else
+                    Frm_DialogAddMessage("擦胶加紧气缸张开磁簧信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 260
+                If EXI(2, 12) Then
+                    step_clrGlue = 270
+                ElseIf isTimeout(timeStart, 2000) Then
+                    Frm_DialogAddMessage("点胶2气缸下降到位信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 270
+                SetEMO(0, 15, True) '擦胶加紧气缸加紧
+                timeStart = GetTickCount
+                step_clrGlue = 280
+
+            Case 280
+                If isTimeout(timeStart, 1000) Then
+                    SetEXO(2, 11, False) '点胶2气缸降上升
+                    timeStart = GetTickCount
+                    step_clrGlue = 290
+                End If
+
+            Case 290
+                If EXI(2, 11) Then
+                    step_clrGlue = 300
+                ElseIf isTimeout(timeStart, 2000) Then
+                    Frm_DialogAddMessage("点胶2气缸上升到位信号异常")
+                    step_clrGlue = 9000
+                End If
+
+            Case 300
+                step_clrGlue = 8000
+
+            Case 8000
+                '擦胶成功
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)
+                ListBoxAddMessage("GlueZ 轴运动到待机位置")
+                step_clrGlue = 8010
+
+            Case 8010
+                If isAxisMoving(0, GlueZ) = False Then
+                    step_clrGlue = 8020
+                End If
+
+            Case 8030
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(0).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Par_Pos.St_Glue(0).Y)
+                ListBoxAddMessage("GlueX、GlueY轴运动到待机位置")
+                step_clrGlue = 8040
+
+            Case 8040
+                If isAxisMoving(0, GlueX) = False And isAxisMoving(0, GlueY) = False Then
+                    ListBoxAddMessage("GlueX,GlueY 轴已运动到擦胶位置")
+                    step_clrGlue = 8050
+                End If
+
+            Case 8050
+                SetEMO(0, 13, False) '擦胶电机失能
+                SetEMO(0, 15, False)    '擦胶加紧气缸松开
+                status.State = False
+                status.Result = True
+                step_clrGlue = 0
+
+            Case 9000
+                '擦胶失败
+                SetEMO(0, 13, False) '擦胶电机失能
+                SetEMO(0, 15, False)    '擦胶加紧气缸松开
+                SetEXO(2, 9, False) '点胶1气缸降上升
+                SetEXO(2, 11, False) '点胶2气缸降上升
+                status.State = False
+                status.Result = False
+                step_clrGlue = 0
+        End Select
+
     End Sub
 
     Public Sub ManualRun_Glue()
