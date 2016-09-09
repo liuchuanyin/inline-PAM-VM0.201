@@ -1,7 +1,7 @@
 ﻿Module Mod_PipeLine
 
     Public Step_Line(4) As Integer
-
+    Public Const Speed_LineMotor As Integer = 2000
 
     ''' <summary>
     ''' 控制第i段流水线运行
@@ -9,10 +9,24 @@
     ''' <param name="PipeLine_Segment">i段流水线 0,1,2,3,4</param>
     ''' <remarks></remarks>
     Public Sub setMotorRun(ByVal PipeLine_Segment As Short)
-        Select Case PipeLine_Segment
-            Case 0
+        If Flag_isLineMotorControllerOpened Then
+            Call LineMotor_Run(PipeLine_Segment + 1, Speed_LineMotor, "+")
+        Else
+            Frm_DialogAddMessage("流水线步进电机未打开！")
+        End If
+    End Sub
 
-        End Select
+    ''' <summary>
+    ''' 控制第i段流水线反转运行
+    ''' </summary>
+    ''' <param name="PipeLine_Segment">i段流水线 0,1,2,3,4</param>
+    ''' <remarks></remarks>
+    Public Sub setMotorRunBack(ByVal PipeLine_Segment As Short)
+        If Flag_isLineMotorControllerOpened Then
+            Call LineMotor_Run(PipeLine_Segment + 1, Speed_LineMotor, "-")
+        Else
+            Frm_DialogAddMessage("流水线步进电机未打开！")
+        End If
     End Sub
 
     ''' <summary>
@@ -21,10 +35,11 @@
     ''' <param name="PipeLine_Segment">i段流水线 0,1,2,3,4</param>
     ''' <remarks></remarks>
     Public Sub setMotorStop(ByVal PipeLine_Segment As Short)
-        Select Case PipeLine_Segment
-            Case 0
-
-        End Select
+        If Flag_isLineMotorControllerOpened Then
+            Call LineMotor_Stop(PipeLine_Segment + 1)
+        Else
+            Frm_DialogAddMessage("流水线步进电机未打开！")
+        End If
     End Sub
 
     ''' <summary>

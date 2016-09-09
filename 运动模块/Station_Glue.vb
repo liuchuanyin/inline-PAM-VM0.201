@@ -348,6 +348,10 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 点胶单站自动运行
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Sub ManualRun_Glue()
         'Static timeStart As Long
         '判断是否所有轴伺服ON
@@ -409,8 +413,6 @@
 
     End Sub
 
-
-
     Public Sub Autorun_GlueStation()
         '产品索引号
         Static index As Short
@@ -460,6 +462,7 @@
                 '工作异常需要急停处理
                 GLue_Sta.isNormal = False   '点胶工站工作异常
                 Call Frm_Main.Machine_Stop()
+                Step_Glue = 0
 
         End Select
 

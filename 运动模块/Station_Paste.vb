@@ -73,6 +73,7 @@
             End Select
         Loop
     End Sub
+
     '精补XY去指定位置
     Public Sub GoPos_FineCompensation(ByVal index As Short)
         '判断是否所有轴伺服ON
@@ -113,6 +114,7 @@
             End Select
         Loop
     End Sub
+
     '预固化去指定位置
     Public Sub GoPos_Cure(ByVal index As Short)
         '判断是否所有轴伺服ON
@@ -155,6 +157,57 @@
                     End If
             End Select
         Loop
+    End Sub
+
+    Public Sub AutoRun_PasteStation()
+        '产品索引号
+        Static index As Short
+        ' Paste_Sta.workState =0 工作进行中
+        ' Paste_Sta.workState =1 工作完成
+        ' Paste_Sta.workState =2 工作进行中:点胶进行中
+
+        Select Step_Paste
+            Case 10
+                If Flag_MachineStop = False And Line_Sta(2).workState = 2 And _
+                    Line_Sta(2).isHaveTray = True And isTimeout(cmd_SendTime, 2) Then
+                    Paste_Sta.isNormal = True : Paste_Sta.isWorking = True : Paste_Sta.workState = 0    '点胶模组工作进行中
+                    Step_Paste = 100
+                End If
+
+            Case 100
+                '流水线上有载具，且载具可用
+                If Tray_Pallet(2).isHaveTray And Tray_Pallet(2).isTrayOK Then
+                    index = 0
+                    Step_Paste = 200
+                End If
+
+
+            Case 2000
+                '共计12颗料，index从0开始
+                If index < 11 Then
+                    index += 1
+                    Step_Paste = 200 '去贴合下一颗料
+                Else
+                    Step_Paste = 8000 '工作完成
+                End If
+
+            Case 8000
+                '组装工站工作完成
+                Paste_Sta.isWorking = False    '组装模组工作完成
+                Paste_Sta.isNormal = True
+                Paste_Sta.workState = 1  '工作完成
+                Step_Paste = 10  '开始下一个循环
+
+            Case 9000
+                '工作异常需要急停处理
+                Paste_Sta.isNormal = False   '组装工站工作异常
+                Call Frm_Main.Machine_Stop()
+                Step_Paste = 0
+
+        End Select
+
+
+
     End Sub
 
 End Module

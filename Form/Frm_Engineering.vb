@@ -2319,7 +2319,32 @@
     ''' <remarks></remarks>
     Private Sub btn_setBlock_Click(sender As Object, e As EventArgs) Handles btn_setBlock0.Click, btn_setBlock1.Click, _
         btn_setBlock2.Click, btn_setBlock3.Click
-
+        Select Case sender.tag
+            Case 0
+                If EXO(1, 0) Then
+                    SetEXO(1, 0, False)
+                Else
+                    SetEXO(1, 0, True)
+                End If
+            Case 1
+                If EXO(1, 2) Then
+                    SetEXO(1, 2, False)
+                Else
+                    SetEXO(1, 2, True)
+                End If
+            Case 2
+                If EXO(1, 4) Then
+                    SetEXO(1, 4, False)
+                Else
+                    SetEXO(1, 4, True)
+                End If
+            Case 3
+                If EXO(1, 6) Then
+                    SetEXO(1, 6, False)
+                Else
+                    SetEXO(1, 6, True)
+                End If
+        End Select
 
     End Sub
 
@@ -2330,7 +2355,26 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btn_setRise_Click(sender As Object, e As EventArgs) Handles btn_setRise3.Click, btn_setRise1.Click, btn_setRise2.Click
-
+        Select Case sender.tag
+            Case 1
+                If EXO(1, 8) Then
+                    SetEXO(1, 8, False)
+                Else
+                    SetEXO(1, 8, True)
+                End If
+            Case 2
+                If EXO(1, 10) Then
+                    SetEXO(1, 10, False)
+                Else
+                    SetEXO(1, 10, True)
+                End If
+            Case 3
+                If EXO(1, 6) Then
+                    SetEXO(1, 12, False)
+                Else
+                    SetEXO(1, 12, True)
+                End If
+        End Select
     End Sub
 
     ''' <summary>
@@ -2340,7 +2384,26 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btn_setVac_Click(sender As Object, e As EventArgs) Handles btn_setVac1.Click, btn_setVac2.Click, btn_setVac3.Click
-
+        Select Case sender.tag
+            Case 1
+                If EMO(1, 8) Then
+                    SetEMO(1, 8, False)
+                Else
+                    SetEMO(1, 8, True)
+                End If
+            Case 2
+                If EMO(1, 9) Then
+                    SetEMO(1, 9, False)
+                Else
+                    SetEMO(1, 9, True)
+                End If
+            Case 3
+                If EMO(1, 10) Then
+                    SetEMO(1, 10, False)
+                Else
+                    SetEMO(1, 10, True)
+                End If
+        End Select
     End Sub
 
     ''' <summary>
@@ -2350,7 +2413,7 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btn_Stop_Click(sender As Object, e As EventArgs) Handles btn_StopL0.Click, btn_StopL1.Click, btn_StopL2.Click, btn_StopL3.Click
-
+        Call setMotorStop(sender.tag)
     End Sub
 
     ''' <summary>
@@ -2361,7 +2424,7 @@
     ''' <remarks></remarks>
     Private Sub btn_MotorRunPositive_Click(sender As Object, e As EventArgs) Handles btn_MotorRunPositive0.Click, _
         btn_MotorRunPositive1.Click, btn_MotorRunPositive2.Click, btn_MotorRunPositive3.Click
-
+        Call setMotorRun(sender.tag)
     End Sub
 
     ''' <summary>
@@ -2372,11 +2435,10 @@
     ''' <remarks></remarks>
     Private Sub btn_MotorRunNegative_Click(sender As Object, e As EventArgs) Handles btn_MotorRunNegative0.Click, _
         btn_MotorRunNegative1.Click, btn_MotorRunNegative2.Click, btn_MotorRunNegative3.Click
-
+        Call setMotorRunBack(sender.tag)
     End Sub
 
 #End Region
-
 
 
     Private Sub Select_Material_Click(sender As Object, e As EventArgs) Handles Select_Material.Click

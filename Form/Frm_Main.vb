@@ -30,9 +30,9 @@ Public Class Frm_Main
         Call SerialPortInit()
         '网络初始化
         Call WinSock_Init()
-
         Call SetMachine(0)
-
+        '初始化流水线步进电机控制器之前必须先初始化串口并打开串口，关闭则相反
+        Call Init_LineMotorController(COM5)
         'Call OpenShellExecute("D:\Cognex-Run\COGNEX\", "AlignVisSystem.exe")   '开启CCD程序
 
         '//读取本地保存的轴参数
@@ -71,7 +71,7 @@ Public Class Frm_Main
 
         '刷新IO线程关闭
         Thread_IORefresh.Abort()
-
+        LineMotorController.C1ose()
 
         '*********************  统计软件使用时间  **********************
         Dim temp As Long
@@ -503,15 +503,57 @@ Com_Err:
         End Select
     End Sub
 
+    ''' <summary>
+    ''' 流水线步进电机控制器串口
+    ''' </summary>
+    ''' <param name="port"></param>
+    ''' <remarks></remarks>
+    Public Sub COM5_Init(ByVal port As Short)
+        On Error Resume Next
+        COM5.PortName = "COM" & port       '设置端口号
+        COM5.BaudRate = 115200
+        COM5.DataBits = 8
+        COM5.StopBits = IO.Ports.StopBits.One
+        COM5.Parity = IO.Ports.Parity.None
+        On Error GoTo Com_Err                                     '激活错误检测机制
+        COM5.Open()                               '打开串行通信口
+        Delay(50)
+        Com4_Send(":O000000o" & vbCrLf)
+        Flag_COMOpened(5) = True
+        Exit Sub
+Com_Err:
+        Frm_DialogAddMessage("流水线步进电机控制器串口" & COM5.PortName.ToString & "打开失败，请检查！")
+        Flag_COMOpened(5) = False
+        Exit Sub
+        Select Case Err.Number
+            Case 8000
+                MsgBox("串口" & COM5.PortName.ToString & "端口打开时操作不合法", vbCritical + vbOKOnly)
+            Case 8002
+                MsgBox("串口" & COM5.PortName.ToString & "无效端口号", vbCritical + vbOKOnly)
+            Case 8005
+                MsgBox("串口" & COM5.PortName.ToString & "端口已经打开", vbCritical + vbOKOnly)
+            Case 8007
+                MsgBox("串口" & COM5.PortName.ToString & "不支持设备的波特率", vbCritical + vbOKOnly)
+            Case 8010
+                MsgBox("串口" & COM5.PortName.ToString & "不支持设备的波特率", vbCritical + vbOKOnly)
+            Case 8015
+                MsgBox("串口" & COM5.PortName.ToString & "有一个或多个无效的通信参数", vbCritical + vbOKOnly)
+            Case Else
+                MsgBox("串口" & COM5.PortName.ToString & "打开通信端口时发生未知错误", vbCritical + vbOKOnly)
+        End Select
+    End Sub
+
     Public Sub SerialPortInit()
         'LoadCell 1
-        COM1_Init(par.CCD(6))
+        COM1_Init(par.CCD(2))
         'Laser
-        COM2_Init(par.CCD(5))
+        COM2_Init(par.CCD(1))
         'LoadCell 2
-        COM3_Init(par.CCD(7))
+        COM3_Init(par.CCD(3))
         'LoadCell 3
-        COM4_Init(par.CCD(8))
+        COM4_Init(par.CCD(4))
+        '流水线步进电机控制器
+        COM5_Init(par.CCD(5))
     End Sub
 
     'COM1接收数据
@@ -690,11 +732,9 @@ Com_Err:
 
 #Region "功能：网络 "
     Private Sub WinSock_Init()
-
         Call WinSock1_Connect()
         Call WinSock2_Connect()
         Call WinSock3_Connect()
-
     End Sub
 
     ''' <summary>
@@ -711,7 +751,7 @@ Com_Err:
             Call WinSock1_Connect()   '不成功则重新去连接
         End If
 
-        '///////////Barcode Scanner St 1 ////////////////
+        '///////////Barcode 1 ////////////////
         If Winsock2.CtlState = 7 Then    '判断网络连接是否成功
             Winsock2State = True
         Else
@@ -735,10 +775,10 @@ Com_Err:
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub WinSock1_Connect()
-        If par.CCD(9) <> "" And par.CCD(24) <> "" Then
+        If par.CCD(7) <> "" And par.CCD(22) <> "" Then
             Winsock1.Close()
-            Winsock1.RemoteHost = par.CCD(9)
-            Winsock1.RemotePort = par.CCD(24)
+            Winsock1.RemoteHost = par.CCD(7)
+            Winsock1.RemotePort = par.CCD(22)
             Winsock1.Connect()
         End If
     End Sub
@@ -765,20 +805,20 @@ Com_Err:
 
 
     ''' <summary>
-    ''' WinSock连接---S1 Barcode Scanner
+    ''' WinSock连接 Barcode Scanner
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub WinSock2_Connect()
-        If par.CCD(10) <> "" And par.CCD(25) <> "" Then
+        If par.CCD(6) <> "" And par.CCD(21) <> "" Then
             Winsock2.Close()
-            Winsock2.RemoteHost = par.CCD(10)
-            Winsock2.RemotePort = par.CCD(25)
+            Winsock2.RemoteHost = par.CCD(6)
+            Winsock2.RemotePort = par.CCD(21)
             Winsock2.Connect()
         End If
     End Sub
 
     ''' <summary>
-    ''' St 1 Barcode Scanner Data Arrival
+    ''' Barcode Scanner Data Arrival
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -805,42 +845,42 @@ Com_Err:
 
 
     ''' <summary>
-    ''' WinSock连接---S3 Barcode Scanner
+    ''' WinSock连接
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub WinSock3_Connect()
-        If par.CCD(11) <> "" And par.CCD(26) <> "" Then
+        If par.CCD(8) <> "" And par.CCD(23) <> "" Then
             Winsock3.Close()
-            Winsock3.RemoteHost = par.CCD(11)
-            Winsock3.RemotePort = par.CCD(26)
+            Winsock3.RemoteHost = par.CCD(8)
+            Winsock3.RemotePort = par.CCD(23)
             Winsock3.Connect()
         End If
     End Sub
 
     ''' <summary>
-    ''' St 3 Barcode Scanner Data Arrival
+    ''' Data Arrival
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub Winsock3_DataArrival(sender As Object, e As AxMSWinsockLib.DMSWinsockControlEvents_DataArrivalEvent) Handles Winsock3.DataArrival
-        Static EthernetBufferStr As String  '以太网数据读取缓存字符
-        Dim EthernetData As String
-        'Dim TempStr As String
-        'Dim i As Long
+        'Static EthernetBufferStr As String  '以太网数据读取缓存字符
+        'Dim EthernetData As String
+        ''Dim TempStr As String
+        ''Dim i As Long
 
-        EthernetData = ""
-        Winsock3_String = ""
-        Winsock3.GetData(EthernetData)                              '获取字符串数据
-        EthernetBufferStr = EthernetBufferStr & EthernetData
-        Winsock3_String = Trim(EthernetBufferStr)                  '获取原始数据
-        Winsock3_String = Winsock3_String.Replace(vbCrLf, "")       '删除未尾的回车符
-        Winsock3_String = Trim(Winsock3_String)
+        'EthernetData = ""
+        'Winsock3_String = ""
+        'Winsock3.GetData(EthernetData)                              '获取字符串数据
+        'EthernetBufferStr = EthernetBufferStr & EthernetData
+        'Winsock3_String = Trim(EthernetBufferStr)                  '获取原始数据
+        'Winsock3_String = Winsock3_String.Replace(vbCrLf, "")       '删除未尾的回车符
+        'Winsock3_String = Trim(Winsock3_String)
 
-        If Winsock3_String <> "" Then
-            Call BarData_Process(2, Winsock3_String)
-        End If
-        EthernetBufferStr = ""
+        'If Winsock3_String <> "" Then
+        '    Call BarData_Process(2, Winsock3_String)
+        'End If
+        'EthernetBufferStr = ""
     End Sub
 
 

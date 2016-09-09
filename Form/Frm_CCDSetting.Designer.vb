@@ -203,7 +203,7 @@ Partial Class Frm_CCDSetting
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(144, 30)
         Me.Label16.TabIndex = 3
-        Me.Label16.Text = "Port"
+        Me.Label16.Text = "Stand By"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
@@ -213,7 +213,7 @@ Partial Class Frm_CCDSetting
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(144, 30)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "UV Controller 4"
+        Me.Label4.Text = "标准表压力 COM"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
@@ -223,7 +223,7 @@ Partial Class Frm_CCDSetting
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 30)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "UV Controller 3"
+        Me.Label3.Text = "取料站压力 COM"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
@@ -233,7 +233,7 @@ Partial Class Frm_CCDSetting
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 30)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "UV Controller 1"
+        Me.Label1.Text = "Laser COM"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
@@ -243,7 +243,7 @@ Partial Class Frm_CCDSetting
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(144, 30)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "UV Controller 2"
+        Me.Label2.Text = "组装站压力 COM"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label5
@@ -253,7 +253,7 @@ Partial Class Frm_CCDSetting
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 30)
         Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Laser COM"
+        Me.Label5.Text = "步进电机控制器 COM"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label6
@@ -263,7 +263,7 @@ Partial Class Frm_CCDSetting
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(144, 30)
         Me.Label6.TabIndex = 4
-        Me.Label6.Text = "组装站压力 COM"
+        Me.Label6.Text = "Barcode Reader"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label7
@@ -273,7 +273,7 @@ Partial Class Frm_CCDSetting
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(144, 30)
         Me.Label7.TabIndex = 5
-        Me.Label7.Text = "取料站压力 COM"
+        Me.Label7.Text = "Congnex CCD"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label8
@@ -283,7 +283,7 @@ Partial Class Frm_CCDSetting
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(144, 30)
         Me.Label8.TabIndex = 6
-        Me.Label8.Text = "标准表压力 COM"
+        Me.Label8.Text = "Server"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label9
@@ -293,7 +293,7 @@ Partial Class Frm_CCDSetting
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(144, 30)
         Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Congnex CCD"
+        Me.Label9.Text = "Stand By"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label10
@@ -303,7 +303,7 @@ Partial Class Frm_CCDSetting
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(144, 30)
         Me.Label10.TabIndex = 8
-        Me.Label10.Text = "St 1 Barcode Scanner"
+        Me.Label10.Text = "Stand By"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label11
@@ -313,7 +313,7 @@ Partial Class Frm_CCDSetting
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(144, 30)
         Me.Label11.TabIndex = 9
-        Me.Label11.Text = "St 3 Barcode Scanner"
+        Me.Label11.Text = "Stand By"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label12
@@ -363,7 +363,7 @@ Partial Class Frm_CCDSetting
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(144, 30)
         Me.Label17.TabIndex = 14
-        Me.Label17.Text = "Port"
+        Me.Label17.Text = "Stand By"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label18
@@ -373,7 +373,7 @@ Partial Class Frm_CCDSetting
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(144, 30)
         Me.Label18.TabIndex = 15
-        Me.Label18.Text = "Port"
+        Me.Label18.Text = "Stand By"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label19
@@ -383,7 +383,7 @@ Partial Class Frm_CCDSetting
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(144, 30)
         Me.Label19.TabIndex = 16
-        Me.Label19.Text = "Port"
+        Me.Label19.Text = "Stand By"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label20
@@ -403,7 +403,7 @@ Partial Class Frm_CCDSetting
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(144, 30)
         Me.Label21.TabIndex = 18
-        Me.Label21.Text = "Stand By"
+        Me.Label21.Text = "Port"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label22
@@ -413,7 +413,7 @@ Partial Class Frm_CCDSetting
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(144, 30)
         Me.Label22.TabIndex = 19
-        Me.Label22.Text = "Stand By"
+        Me.Label22.Text = "Port"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label23
@@ -423,7 +423,7 @@ Partial Class Frm_CCDSetting
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(144, 30)
         Me.Label23.TabIndex = 20
-        Me.Label23.Text = "Stand By"
+        Me.Label23.Text = "Port"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label24
@@ -542,7 +542,7 @@ Partial Class Frm_CCDSetting
         '
         'TextBox5
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.Pink
+        Me.TextBox5.BackColor = System.Drawing.Color.LightCyan
         Me.TextBox5.Font = New System.Drawing.Font("HelveticaNeue", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(153, 123)
         Me.TextBox5.Name = "TextBox5"
@@ -703,7 +703,7 @@ Partial Class Frm_CCDSetting
         '
         'TextBox20
         '
-        Me.TextBox20.BackColor = System.Drawing.Color.Pink
+        Me.TextBox20.BackColor = System.Drawing.Color.LightCyan
         Me.TextBox20.Font = New System.Drawing.Font("HelveticaNeue", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.TextBox20.Location = New System.Drawing.Point(493, 123)
         Me.TextBox20.Name = "TextBox20"

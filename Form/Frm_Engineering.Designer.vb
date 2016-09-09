@@ -23,7 +23,7 @@ Partial Class Frm_Engineering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Engineering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -49,6 +49,7 @@ Partial Class Frm_Engineering
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.lbl_BOZHON = New BoTech.BZ_Label()
         Me.RoundPanel = New BoTech.BZ_RoundPanel()
+        Me.Btn_GluePar = New System.Windows.Forms.Button()
         Me.btn_lockSelecetBrc = New System.Windows.Forms.Button()
         Me.btn_EnSelecetBrc = New System.Windows.Forms.Button()
         Me.rad_SelectNone = New System.Windows.Forms.RadioButton()
@@ -864,6 +865,7 @@ Partial Class Frm_Engineering
         Me.btn_S5IO5 = New System.Windows.Forms.Button()
         Me.btn_S5IO3 = New System.Windows.Forms.Button()
         Me.TabPage13 = New System.Windows.Forms.TabPage()
+        Me.BZ_RoundPanel11 = New BoTech.BZ_RoundPanel()
         Me.BZ_RoundPanel10 = New BoTech.BZ_RoundPanel()
         Me.TableLayoutPanel22 = New System.Windows.Forms.TableLayoutPanel()
         Me.txt_DistNeedle1ToCCD_Y = New System.Windows.Forms.TextBox()
@@ -911,93 +913,91 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
-        Me.BZ_RoundPanel11 = New BoTech.BZ_RoundPanel()
-        Me.Btn_GluePar = New System.Windows.Forms.Button()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.BZ_RoundPanel6.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BZ_RoundPanel4.SuspendLayout()
-        Me.BZ_RoundPanel2.SuspendLayout()
-        Me.BZ_RoundPanel1.SuspendLayout()
-        Me.RoundPanel.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Tray3.SuspendLayout()
-        Me.Tray2.SuspendLayout()
-        Me.Tray1.SuspendLayout()
-        CType(Me.PB_Right1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BZ_RoundPanel5.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.BZ_RoundPanel8.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.BZ_RoundPanel7.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.TableLayoutPanel6.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.BZ_RoundPanel9.SuspendLayout()
-        Me.GroupBox10.SuspendLayout()
-        Me.TableLayoutPanel11.SuspendLayout()
-        Me.GroupBox9.SuspendLayout()
-        Me.TableLayoutPanel10.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
-        Me.TableLayoutPanel9.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.TableLayoutPanel7.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.tab_Log.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
-        Me.TabPage11.SuspendLayout()
-        Me.TableLayoutPanel16.SuspendLayout()
-        Me.TabPage12.SuspendLayout()
-        Me.gupStep.SuspendLayout()
-        Me.gupVel.SuspendLayout()
-        Me.TabCon.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.GroupBox13.SuspendLayout()
-        Me.TableLayoutPanel12.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.GroupBox14.SuspendLayout()
-        Me.TableLayoutPanel13.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.GroupBox17.SuspendLayout()
-        Me.TableLayoutPanel14.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.GroupBox16.SuspendLayout()
-        Me.TableLayoutPanel19.SuspendLayout()
-        Me.GroupBox15.SuspendLayout()
-        Me.TableLayoutPanel18.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
-        Me.TableLayoutPanel17.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
-        Me.TableLayoutPanel15.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
-        Me.GroupBox22.SuspendLayout()
-        Me.GroupBox21.SuspendLayout()
-        Me.GroupBox19.SuspendLayout()
-        Me.GroupBox20.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        Me.TabPage13.SuspendLayout()
-        Me.BZ_RoundPanel10.SuspendLayout()
-        Me.TableLayoutPanel22.SuspendLayout()
-        Me.TableLayoutPanel23.SuspendLayout()
-        Me.BZ_RoundPanel3.SuspendLayout()
-        Me.TableLayoutPanel21.SuspendLayout()
-        Me.TableLayoutPanel20.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.BZ_RoundPanel6.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.BZ_RoundPanel4.SuspendLayout
+        Me.BZ_RoundPanel2.SuspendLayout
+        Me.BZ_RoundPanel1.SuspendLayout
+        Me.RoundPanel.SuspendLayout
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Tray3.SuspendLayout
+        Me.Tray2.SuspendLayout
+        Me.Tray1.SuspendLayout
+        CType(Me.PB_Right1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.BZ_RoundPanel5.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        Me.BZ_RoundPanel8.SuspendLayout
+        Me.TableLayoutPanel1.SuspendLayout
+        Me.BZ_RoundPanel7.SuspendLayout
+        Me.GroupBox1.SuspendLayout
+        Me.TableLayoutPanel2.SuspendLayout
+        Me.GroupBox5.SuspendLayout
+        Me.TableLayoutPanel6.SuspendLayout
+        Me.GroupBox2.SuspendLayout
+        Me.TableLayoutPanel3.SuspendLayout
+        Me.GroupBox4.SuspendLayout
+        Me.TableLayoutPanel5.SuspendLayout
+        Me.GroupBox3.SuspendLayout
+        Me.TableLayoutPanel4.SuspendLayout
+        Me.TabPage3.SuspendLayout
+        Me.BZ_RoundPanel9.SuspendLayout
+        Me.GroupBox10.SuspendLayout
+        Me.TableLayoutPanel11.SuspendLayout
+        Me.GroupBox9.SuspendLayout
+        Me.TableLayoutPanel10.SuspendLayout
+        Me.GroupBox8.SuspendLayout
+        Me.TableLayoutPanel9.SuspendLayout
+        Me.GroupBox7.SuspendLayout
+        Me.TableLayoutPanel8.SuspendLayout
+        Me.GroupBox6.SuspendLayout
+        Me.TableLayoutPanel7.SuspendLayout
+        Me.TabPage4.SuspendLayout
+        Me.tab_Log.SuspendLayout
+        Me.TabPage10.SuspendLayout
+        Me.TabPage11.SuspendLayout
+        Me.TableLayoutPanel16.SuspendLayout
+        Me.TabPage12.SuspendLayout
+        Me.gupStep.SuspendLayout
+        Me.gupVel.SuspendLayout
+        Me.TabCon.SuspendLayout
+        Me.TabPage6.SuspendLayout
+        Me.Panel4.SuspendLayout
+        Me.GroupBox13.SuspendLayout
+        Me.TableLayoutPanel12.SuspendLayout
+        Me.TabPage7.SuspendLayout
+        Me.Panel2.SuspendLayout
+        Me.GroupBox14.SuspendLayout
+        Me.TableLayoutPanel13.SuspendLayout
+        Me.TabPage8.SuspendLayout
+        Me.Panel6.SuspendLayout
+        Me.GroupBox17.SuspendLayout
+        Me.TableLayoutPanel14.SuspendLayout
+        Me.TabPage5.SuspendLayout
+        Me.GroupBox16.SuspendLayout
+        Me.TableLayoutPanel19.SuspendLayout
+        Me.GroupBox15.SuspendLayout
+        Me.TableLayoutPanel18.SuspendLayout
+        Me.GroupBox12.SuspendLayout
+        Me.TableLayoutPanel17.SuspendLayout
+        Me.GroupBox11.SuspendLayout
+        Me.TableLayoutPanel15.SuspendLayout
+        Me.TabPage9.SuspendLayout
+        Me.GroupBox22.SuspendLayout
+        Me.GroupBox21.SuspendLayout
+        Me.GroupBox19.SuspendLayout
+        Me.GroupBox20.SuspendLayout
+        Me.Panel10.SuspendLayout
+        Me.TabPage13.SuspendLayout
+        Me.BZ_RoundPanel10.SuspendLayout
+        Me.TableLayoutPanel22.SuspendLayout
+        Me.TableLayoutPanel23.SuspendLayout
+        Me.BZ_RoundPanel3.SuspendLayout
+        Me.TableLayoutPanel21.SuspendLayout
+        Me.TableLayoutPanel20.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
@@ -1005,8 +1005,8 @@ Partial Class Frm_Engineering
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Font = New System.Drawing.Font("HelveticaNeue", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.HotTrack = True
+        Me.TabControl1.Font = New System.Drawing.Font("HelveticaNeue", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TabControl1.HotTrack = true
         Me.TabControl1.ItemSize = New System.Drawing.Size(200, 35)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
@@ -1024,14 +1024,14 @@ Partial Class Frm_Engineering
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel1)
         Me.TabPage1.Controls.Add(Me.RoundPanel)
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel5)
-        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 39)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "工程师主界面"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'BZ_RoundPanel6
         '
@@ -1050,8 +1050,8 @@ Partial Class Frm_Engineering
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 30
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.Size = New System.Drawing.Size(808, 160)
         Me.DataGridView1.TabIndex = 1
@@ -1344,6 +1344,17 @@ Partial Class Frm_Engineering
         Me.RoundPanel.Name = "RoundPanel"
         Me.RoundPanel.Size = New System.Drawing.Size(485, 410)
         Me.RoundPanel.TabIndex = 4
+        '
+        'Btn_GluePar
+        '
+        Me.Btn_GluePar.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_GluePar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_GluePar.Location = New System.Drawing.Point(344, 281)
+        Me.Btn_GluePar.Name = "Btn_GluePar"
+        Me.Btn_GluePar.Size = New System.Drawing.Size(123, 50)
+        Me.Btn_GluePar.TabIndex = 99
+        Me.Btn_GluePar.Text = "点胶参数"
+        Me.Btn_GluePar.UseVisualStyleBackColor = false
         '
         'btn_lockSelecetBrc
         '
@@ -11044,7 +11055,7 @@ Partial Class Frm_Engineering
         Me.btn_MotorRunPositive3.Name = "btn_MotorRunPositive3"
         Me.btn_MotorRunPositive3.Size = New System.Drawing.Size(100, 30)
         Me.btn_MotorRunPositive3.TabIndex = 2
-        Me.btn_MotorRunPositive3.Text = "L1 正转"
+        Me.btn_MotorRunPositive3.Text = "L3 正转"
         Me.btn_MotorRunPositive3.UseVisualStyleBackColor = true
         '
         'btn_MotorRunNegative3
@@ -11056,7 +11067,7 @@ Partial Class Frm_Engineering
         Me.btn_MotorRunNegative3.Name = "btn_MotorRunNegative3"
         Me.btn_MotorRunNegative3.Size = New System.Drawing.Size(100, 30)
         Me.btn_MotorRunNegative3.TabIndex = 1
-        Me.btn_MotorRunNegative3.Text = "L1 反转"
+        Me.btn_MotorRunNegative3.Text = "L3 反转"
         Me.btn_MotorRunNegative3.UseVisualStyleBackColor = true
         '
         'btn_StopL3
@@ -11222,7 +11233,7 @@ Partial Class Frm_Engineering
         Me.btn_MotorRunPositive2.Name = "btn_MotorRunPositive2"
         Me.btn_MotorRunPositive2.Size = New System.Drawing.Size(100, 30)
         Me.btn_MotorRunPositive2.TabIndex = 2
-        Me.btn_MotorRunPositive2.Text = "L1 正转"
+        Me.btn_MotorRunPositive2.Text = "L2 正转"
         Me.btn_MotorRunPositive2.UseVisualStyleBackColor = true
         '
         'btn_MotorRunNegative2
@@ -11234,7 +11245,7 @@ Partial Class Frm_Engineering
         Me.btn_MotorRunNegative2.Name = "btn_MotorRunNegative2"
         Me.btn_MotorRunNegative2.Size = New System.Drawing.Size(100, 30)
         Me.btn_MotorRunNegative2.TabIndex = 1
-        Me.btn_MotorRunNegative2.Text = "L1 反转"
+        Me.btn_MotorRunNegative2.Text = "L2 反转"
         Me.btn_MotorRunNegative2.UseVisualStyleBackColor = true
         '
         'btn_StopL2
@@ -11643,6 +11654,16 @@ Partial Class Frm_Engineering
         Me.TabPage13.TabIndex = 5
         Me.TabPage13.Text = "其他"
         Me.TabPage13.UseVisualStyleBackColor = true
+        '
+        'BZ_RoundPanel11
+        '
+        Me.BZ_RoundPanel11.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.BZ_RoundPanel11.BZ_Radius = 11
+        Me.BZ_RoundPanel11.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
+        Me.BZ_RoundPanel11.Location = New System.Drawing.Point(3, 250)
+        Me.BZ_RoundPanel11.Name = "BZ_RoundPanel11"
+        Me.BZ_RoundPanel11.Size = New System.Drawing.Size(738, 325)
+        Me.BZ_RoundPanel11.TabIndex = 2
         '
         'BZ_RoundPanel10
         '
@@ -12157,27 +12178,6 @@ Partial Class Frm_Engineering
         'Timer_GoHome
         '
         Me.Timer_GoHome.Interval = 10
-        '
-        'BZ_RoundPanel11
-        '
-        Me.BZ_RoundPanel11.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
-        Me.BZ_RoundPanel11.BZ_Radius = 11
-        Me.BZ_RoundPanel11.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
-        Me.BZ_RoundPanel11.Location = New System.Drawing.Point(3, 250)
-        Me.BZ_RoundPanel11.Name = "BZ_RoundPanel11"
-        Me.BZ_RoundPanel11.Size = New System.Drawing.Size(738, 325)
-        Me.BZ_RoundPanel11.TabIndex = 2
-        '
-        'Btn_GluePar
-        '
-        Me.Btn_GluePar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_GluePar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Btn_GluePar.Location = New System.Drawing.Point(344, 281)
-        Me.Btn_GluePar.Name = "Btn_GluePar"
-        Me.Btn_GluePar.Size = New System.Drawing.Size(123, 50)
-        Me.Btn_GluePar.TabIndex = 99
-        Me.Btn_GluePar.Text = "点胶参数"
-        Me.Btn_GluePar.UseVisualStyleBackColor = false
         '
         'Frm_Engineering
         '
