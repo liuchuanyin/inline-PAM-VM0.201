@@ -22,13 +22,49 @@
             Exit Sub
         End If
 
+        If Math.Abs(CurrEncPos(2, PasteY1) - Par_Pos.St_Paste(0).Y) > 2 Then
+            List_DebugAddMessage("请检查组装模组是否在安全位置！")
+            Exit Sub
+        End If
+
         Step_Gopos(3) = 0
         Do While True
             My.Application.DoEvents()
+            Delay(10)
             Select Case Step_Gopos(3)
                 Case 0
+                    Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(0).Z)
+                    Step_Gopos(3) = 10
+
                 Case 10
+                    If isAxisMoving(0, PreTakerZ) = False Then
+                        List_DebugAddMessage("取料站Z轴运动到待机位置完成")
+                        Step_Gopos(3) = 20
+                    End If
+
                 Case 20
+                    Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(index).X)
+                    Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(index).R)
+                    Call AbsMotion(2, PreTakerY1, AxisPar.MoveVel(0, PreTakerY1), Par_Pos.St_PreTaker(index).Y)
+                    Step_Gopos(3) = 30
+
+                Case 30
+                    If isAxisMoving(0, PreTakerX) = False And isAxisMoving(1, PreTakerR) = False And isAxisMoving(2, PreTakerY1) = False Then
+                        List_DebugAddMessage("取料站XYR运动到" & Par_Pos.St_PreTaker(index).Name & "完成")
+                        Step_Gopos(3) = 40
+                    End If
+
+                Case 40
+                    Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(index).Z)
+                    Step_Gopos(3) = 50
+
+                Case 50
+                    If isAxisMoving(0, PreTakerZ) = False Then
+                        List_DebugAddMessage("取料站Z运动到" & Par_Pos.St_PreTaker(index).Name & "完成")
+                        Step_Gopos(3) = 0
+                        Exit Do
+                    End If
+
             End Select
         Loop
     End Sub
@@ -53,14 +89,23 @@
             Exit Sub
         End If
 
-        Step_Gopos(7) = 0
+        Select Case index
+            Case 0
+                Call AbsMotion(1, FeedZ, AxisPar.MoveVel(1, FeedZ), Par_Pos.St_Feed(0).Z)
+                Call AbsMotion(1, RecycleZ, AxisPar.MoveVel(1, RecycleZ), Par_Pos.St_Recycle(0).Z)
+
+            Case 1, 2
+                Call AbsMotion(1, FeedZ, AxisPar.MoveVel(1, FeedZ), Par_Pos.St_Feed(index).Z)
+
+            Case 3, 4
+                Call AbsMotion(1, RecycleZ, AxisPar.MoveVel(1, RecycleZ), Par_Pos.St_Recycle(index).Z)
+        End Select
+
         Do While True
             My.Application.DoEvents()
-            Select Case Step_Gopos(7)
-                Case 0
-                Case 10
-                Case 20
-            End Select
+            If isAxisMoving(1, FeedZ) = False And isAxisMoving(1, RecycleZ) = False Then
+                List_DebugAddMessage("供料Z轴运动到指定位置OK")
+            End If
         Loop
     End Sub
 

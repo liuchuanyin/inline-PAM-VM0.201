@@ -26,8 +26,16 @@
             My.Application.DoEvents()
             Select Case Step_Gopos(5)
                 Case 0
+                    Call AbsMotion(1, RecheckX, AxisPar.MoveVel(1, RecheckX), Par_Pos.St_Recheck(index).X)
+                    Call AbsMotion(1, RecheckY, AxisPar.MoveVel(1, RecheckY), Par_Pos.St_Recheck(index).Y)
+                    Step_Gopos(5) = 10
+
                 Case 10
-                Case 20
+                    If isAxisMoving(1, RecheckX) = False And isAxisMoving(1, RecheckY) = False Then
+                        Frm_DialogAddMessage("精补模组运动到" & Par_Pos.St_Recheck(index).Name & "完成！")
+                        Step_Gopos(5) = 0
+                        Exit Do
+                    End If
             End Select
         Loop
     End Sub

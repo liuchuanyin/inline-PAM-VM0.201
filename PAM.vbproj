@@ -182,10 +182,10 @@
     <Compile Include="Form\Frm_Dialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_GluePar.Designer.vb">
+    <Compile Include="Form\Frm_GluePar.Designer.vb">
       <DependentUpon>Frm_GluePar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_GluePar.vb">
+    <Compile Include="Form\Frm_GluePar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module\FuntctionSub.vb" />
@@ -271,7 +271,7 @@
     <EmbeddedResource Include="Form\Frm_Dialog.resx">
       <DependentUpon>Frm_Dialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_GluePar.resx">
+    <EmbeddedResource Include="Form\Frm_GluePar.resx">
       <DependentUpon>Frm_GluePar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
