@@ -2,6 +2,18 @@
 
     Public Step_PreTaker As Integer
 
+    ''' <summary>
+    ''' 中转平台上的物料信息
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Structure TransferPlate
+        Dim isHaveCam As Boolean
+        Dim Barcode As String
+        Dim TakerPress As Double
+    End Structure
+
+    Public Cam_OnTransferPlate As TransferPlate
+
     Public Sub GoPos_PreTaker(ByVal index As Short)
         '判断是否所有轴伺服ON
         If ServoOn(0, PreTakerX) And ServoOn(2, PreTakerY1) And ServoOn(0, PreTakerZ) And ServoOn(1, PreTakerR) Then
@@ -107,6 +119,28 @@
                 List_DebugAddMessage("供料Z轴运动到指定位置OK")
             End If
         Loop
+    End Sub
+
+    Public Function isHaveBracketNotPasteCamera() As Boolean
+        Dim mValue As Boolean
+
+        Return mValue
+    End Function
+
+    Public Sub AutoRun_PreTakerStation()
+        'PreTaker_Sta.workState = 0   '工作进行中
+        'PreTaker_Sta.workState = 1   '工作完成
+        'PreTaker_Sta.workState = 2   '工作进行中：拍物料
+        'PreTaker_Sta.workState = 3   '工作进行中：取料
+        'PreTaker_Sta.workState = 4   '工作进行中：去放料，夹镜头保护盖
+        Select Case Step_PreTaker
+            Case 10
+                If Flag_MachineStop = False And Cam_OnTransferPlate.isHaveCam = False And Feed_Sta.isWorking = False And Feed_Sta.workState = 1 Then
+
+                End If
+
+
+        End Select
     End Sub
 
 End Module

@@ -911,15 +911,15 @@ Com_Err:
             Next
         Next
         Call Machine_Init()
-        'Do While Flag_MachineInitOngoing
-        '    My.Application.DoEvents()
-        'Loop
+        Do While Flag_MachineInitOngoing
+            My.Application.DoEvents()
+        Loop
 
-        'If Flag_MachineInit Then
-        '    Call Machine_AutoRun()
-        'Else
-        '    SetMachine(0)
-        'End If
+        If Flag_MachineInit Then
+            'Call Machine_AutoRun()
+        Else
+            SetMachine(0)
+        End If
     End Sub
 
     ''' <summary>
@@ -927,7 +927,14 @@ Com_Err:
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Machine_Pause()
-        ' 
+        If GLue_Sta.workState = 2 Then
+            Frm_DialogAddMessage("点胶进行中禁止暂停！")
+            Exit Sub
+        End If
+        If EXO(1, 9) Or EXO(1, 10) Then
+            Frm_DialogAddMessage("出胶进行中禁止暂停！")
+            Exit Sub
+        End If
         Timer_AutoRun.Enabled = False
         SetMachine(2)
     End Sub
@@ -937,7 +944,6 @@ Com_Err:
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Machine_Continue()
-        ' 
         Timer_AutoRun.Enabled = True
         SetMachine(1)
     End Sub
@@ -949,9 +955,12 @@ Com_Err:
     Public Sub Machine_Stop()
         If Flag_MachineAutoRun = False Then
             ListBoxAddMessage("停止自动运行无效")
+            Exit Sub
+        End If
+        If MessageBox.Show("确定要停止设备自动运行 ?", "inline PAM", MessageBoxButtons.YesNo) <> Windows.Forms.DialogResult.Yes Then
+            Exit Sub
         End If
 
-        ListBoxAddMessage("设备停止自动运行")
         CycelTime = 0
         CycelTimeEn = False
         SetMachine(0)
@@ -965,6 +974,8 @@ Com_Err:
             Frm_Engineering.Btn_AutoRun.Enabled = True
         End If
         Timer_AutoRun.Enabled = False
+
+        ListBoxAddMessage("设备停止自动运行")
     End Sub
 #End Region
 

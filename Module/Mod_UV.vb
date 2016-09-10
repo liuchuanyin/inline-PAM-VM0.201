@@ -4,39 +4,21 @@
     ''' UV灯连接状态标志位
     ''' </summary>
     ''' <remarks></remarks>
-    Public Flag_UVConnect(4) As Boolean
-    Public ControllerHandle(4) As Integer
+    Public Flag_UVConnect(7) As Boolean
+    Public ControllerHandle(7) As Integer
+    Public UVControllerIP(7) As String
 
     ''' <summary>
     ''' UV灯初始化
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub UV_Init()
-        Flag_UVConnect(1) = False
-        Flag_UVConnect(2) = False
-        Flag_UVConnect(3) = False
-        Flag_UVConnect(4) = False
-        'If UV_Connect(par.CCD(1), ControllerHandle(1)) Then
-        '    Flag_UVConnect(1) = True
-        'End If
-        'If UV_Connect(par.CCD(2), ControllerHandle(2)) Then
-        '    Flag_UVConnect(2) = True
-        'End If
-        'If UV_Connect(par.CCD(3), ControllerHandle(3)) Then
-        '    Flag_UVConnect(3) = True
-        'End If
-        'If UV_Connect(par.CCD(4), ControllerHandle(4)) Then
-        '    Flag_UVConnect(4) = True
-        'End If
-        For i = 1 To 4
-            If MACTYPE = "PAM-B" And i = 4 Then
-                Exit Sub
+        For i = 1 To Flag_UVConnect.Count - 1
+            UVControllerIP(i) = "192.168.0.10" & i
+            Flag_UVConnect(i) = False
+            If UV_Connect(UVControllerIP(i), ControllerHandle(i)) Then
+                Flag_UVConnect(1) = True
             End If
-
-            If UV_Connect(par.CCD(i), ControllerHandle(i)) Then
-                Flag_UVConnect(i) = True
-            End If
-
             If Flag_UVConnect(i) = False Then
                 Frm_DialogAddMessage("UV Controller " & i & " Connect Failed!")
             Else

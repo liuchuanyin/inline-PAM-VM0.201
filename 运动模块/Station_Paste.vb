@@ -1,7 +1,8 @@
 ﻿Module Station_Paste
 
     Public Step_Paste As Integer
-
+    '产品索引号
+    Public index_InPaste As Short
     '组装XYZR去指定位置
     Public Sub GoPos_Paste(ByVal index As Short)
         '判断是否所有轴伺服ON
@@ -160,32 +161,112 @@
     End Sub
 
     Public Sub AutoRun_PasteStation()
-        '产品索引号
-        Static index As Short
         ' Paste_Sta.workState =0 工作进行中
         ' Paste_Sta.workState =1 工作完成
-        ' Paste_Sta.workState =2 工作进行中:点胶进行中
-
-        Select Step_Paste
+        ' Paste_Sta.workState =2 工作进行中:取料
+        ' Paste_Sta.workState =3 工作进行中:定位拍照
+        ' Paste_Sta.workState =4 工作进行中:精补贴合
+        ' Paste_Sta.workState =5 工作进行中:抛料
+        ' Paste_Sta.workState =6 工作进行中:等待取料机构向中转机构上放料
+        Select Case Step_Paste
             Case 10
                 If Flag_MachineStop = False And Line_Sta(2).workState = 2 And _
                     Line_Sta(2).isHaveTray = True And isTimeout(cmd_SendTime, 2) Then
-                    Paste_Sta.isNormal = True : Paste_Sta.isWorking = True : Paste_Sta.workState = 0    '点胶模组工作进行中
+                    Paste_Sta.isNormal = True : Paste_Sta.isWorking = True : Paste_Sta.workState = 0    '组装模组工作进行中
                     Step_Paste = 100
                 End If
 
             Case 100
                 '流水线上有载具，且载具可用
                 If Tray_Pallet(2).isHaveTray And Tray_Pallet(2).isTrayOK Then
-                    index = 0
+                    index_InPaste = 0
                     Step_Paste = 200
                 End If
 
+            Case 200
+                If Tray_Pallet(2).Hole(index_InPaste).isHaveProduct And Tray_Pallet(2).Hole(index_InPaste).isProductOk And Frm_Engineering.chk_Brc(index_InPaste).Checked Then
+                    '当前穴位有料，且是OK的，并且选中要做这个
+                    Step_Paste = 210
+                Else
+                    '否则跳过这一颗料
+                    ListBoxAddMessage("组装站组装跳过第" & index_InPaste + 1 & "颗料！")
+                    Step_Paste = 2000
+                End If
+
+            Case 210
+                '中转机构上有料且，取料模组不在放料的过程中
+                If Cam_OnTransferPlate.isHaveCam And PreTaker_Sta.workState <> 4 Then
+                    Paste_Sta.workState = 2    '工作进行中:取料
+                    Step_Paste = 300    '直接去取料
+                Else
+                    Step_Paste = 220    '运动到待机位置，待料
+                End If
+
+            Case 220
+                Call AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                Step_Paste = 230
+
+            Case 230
+                If isAxisMoving(0, PasteZ) = False Then
+                    '运动到待机位置
+                    Call AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
+                    Call AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
+                    Call AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(0).Y)
+                    Step_Paste = 230
+                End If
+
+            Case 230
+                If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
+                    Paste_Sta.workState = 6     '工作进行中:等待取料机构向中转机构上放料
+                    ListBoxAddMessage("组装站运动到待机位置，等待取料模组放料")
+                    Step_Paste = 250
+                End If
+
+            Case 250
+                '中转机构上有料且，取料模组不在放料的过程中
+                If Cam_OnTransferPlate.isHaveCam And PreTaker_Sta.workState <> 4 Then
+                    Paste_Sta.workState = 2    '工作进行中:取料
+                    Step_Paste = 300    '去取料
+                End If
+
+            Case 300
+                Call AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                Step_Paste = 310
+
+            Case 310
+                '组装模组去取料位置取料
+                If isAxisMoving(0, PasteZ) = False Then
+                    '运动到取料位置
+                    Call AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(1).X)
+                    Call AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(1).R)
+                    Call AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(1).Y)
+                    Step_Paste = 330
+                End If
+
+            Case 330
+                If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
+                    ListBoxAddMessage("组装站X、Y、R轴运动到取料位置")
+                    Step_Paste = 350
+                End If
+
+            Case 350
+                Call AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(1).Z)
+                Step_Paste = 360
+
+            Case 360
+                If isAxisMoving(0, PasteZ) = False Then
+                    ListBoxAddMessage("组装站Z轴运动到取料位置")
+                    Step_Paste = 400
+                End If
+
+            Case 400
+                '取料，条码处理？？？？？？？？？？？？？
+
 
             Case 2000
-                '共计12颗料，index从0开始
-                If index < 11 Then
-                    index += 1
+                '共计12颗料，index_InPaste从0开始
+                If index_InPaste < 11 Then
+                    index_InPaste += 1
                     Step_Paste = 200 '去贴合下一颗料
                 Else
                     Step_Paste = 8000 '工作完成

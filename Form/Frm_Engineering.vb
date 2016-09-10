@@ -353,6 +353,13 @@
         cbo_Pos1.Items.Add("胶针2 光纤校针位置")   '11
         cbo_Pos1.Items.Add("胶针2 XY轴校正位置") '12
         cbo_Pos1.Items.Add("胶针2 Z轴校正位置") '13
+        cbo_Pos1.Items.Add("CCD 拍第1颗料位置") '14
+        cbo_Pos1.Items.Add("CCD 拍第3颗料位置") '15
+        cbo_Pos1.Items.Add("CCD 拍第6颗料位置") '16
+        cbo_Pos1.Items.Add("CCD 拍第7颗料位置") '17
+        cbo_Pos1.Items.Add("CCD 拍第9颗料位置") '18
+        cbo_Pos1.Items.Add("CCD 拍第12颗料位置") '19
+        cbo_Pos1.Items.Add("CCD 校正位置") '20
 
         cbo_Pos2.Items.Clear()
         cbo_Pos2.Items.Add("待机位置")  '0
@@ -360,27 +367,38 @@
         cbo_Pos2.Items.Add("定位拍照位置")    '2
         cbo_Pos2.Items.Add("精补第一颗料位置")  '3
         cbo_Pos2.Items.Add("贴合第一颗料位置")  '4
-        cbo_Pos2.Items.Add("针头Z轴校正位置")  '5
-        cbo_Pos2.Items.Add("抛料位置")  '6
-        cbo_Pos3.Items.Add("压力传感器自动标定位置1") '7
-        cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
+        cbo_Pos2.Items.Add("抛料位置")  '5
+        cbo_Pos2.Items.Add("压力传感器自动标定位置1") '6
+        cbo_Pos2.Items.Add("压力传感器自动标定位置2") '7
 
         cbo_Pos3.Items.Clear()
         cbo_Pos3.Items.Add("待机位置") '0
-        cbo_Pos3.Items.Add("取Tray盘第一颗料位置") '1
-        cbo_Pos3.Items.Add("拍Tray盘第一颗料位置")   '2
-        cbo_Pos3.Items.Add("扫Tray盘第一颗料条码位置")  '3
-        cbo_Pos3.Items.Add("夹镜头保护盖位置") '4
-        cbo_Pos3.Items.Add("压力传感器自动标定位置1") '5
-        cbo_Pos3.Items.Add("压力传感器自动标定位置2") '6
+        cbo_Pos3.Items.Add("拍Tray盘第一颗料位置")   '1
+        cbo_Pos3.Items.Add("拍Tray盘第一行最后一颗料位置")   '2
+        cbo_Pos3.Items.Add("拍Tray盘最后一行最后一颗料位置")   '3
+        cbo_Pos3.Items.Add("扫Tray盘第一颗料条码位置")  '4
+        cbo_Pos3.Items.Add("取Tray盘第一颗料位置") '5
+        cbo_Pos3.Items.Add("夹镜头保护盖位置") '6
+        cbo_Pos3.Items.Add("压力传感器自动标定位置1") '7
+        cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
 
         cbo_Pos4.Items.Clear()
         cbo_Pos4.Items.Add("初始位置")
-        cbo_Pos4.Items.Add("第一颗料精补位置")
+        cbo_Pos4.Items.Add("第1颗料精补位置")
+        cbo_Pos4.Items.Add("第3颗料精补位置")
+        cbo_Pos4.Items.Add("第6颗料精补位置")
+        cbo_Pos4.Items.Add("第7颗料精补位置")
+        cbo_Pos4.Items.Add("第9颗料精补位置")
+        cbo_Pos4.Items.Add("第12颗料精补位置")
 
         cbo_Pos5.Items.Clear()
         cbo_Pos5.Items.Add("初始位置")
-        cbo_Pos5.Items.Add("第一颗料复检位置")
+        cbo_Pos5.Items.Add("第1颗料复检位置")
+        cbo_Pos5.Items.Add("第3颗料复检位置")
+        cbo_Pos5.Items.Add("第6颗料复检位置")
+        cbo_Pos5.Items.Add("第7颗料复检位置")
+        cbo_Pos5.Items.Add("第9颗料复检位置")
+        cbo_Pos5.Items.Add("第12颗料复检位置")
 
         cbo_Pos6.Items.Clear()
         cbo_Pos6.Items.Add("初始位置")
@@ -414,7 +432,6 @@
 
         txtStepS2.Text = 0.1
         txtVelS2.Text = 1
-
     End Sub
 
     ''' <summary>
