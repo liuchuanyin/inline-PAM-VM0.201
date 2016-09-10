@@ -199,6 +199,13 @@ Module Motion
 
             End If
 
+            If Load_GantryMode() <> 0 Then
+                Frm_DialogAddMessage("龙门模式配置失败！")
+                Exit Sub
+            Else
+                ListBoxAddMessage("龙门模式配置成功！")
+            End If
+
             '//如下使能  位置清零
             For n = 0 To GTS_CardNum - 1
                 For i = 1 To GTS_AxisNum(n)
@@ -221,70 +228,161 @@ Module Motion
             GTS_Opened_ADDA = False
         End Try
     End Sub
+
+
+    Public Function Load_GantryMode() As Short
+        Dim rtn As Short
+        Dim plPid1, plPid2, plPid3, plPid4 As TPid
+        Dim vlPid1, vlPid2, vlPid3, vlPid4 As TPid
+        Dim piConvertPara1, piConvertPara2, piConvertPara3, piConvertPara4 As Double
+        rtn = 1
+        Try
+            '// 配置龙门模式
+            GT_SetGantryMode(2, PasteY1, PasteY2, 0)
+            GT_SetGantryMode(2, PreTakerY1, PreTakerY2, 0)
+
+            '// 配置2卡 轴 1、2、3、4 为双闭环模式
+            GT_SetControlMode(2, PasteY1, 3)
+            GT_SetControlMode(2, PasteY2, 3)
+            GT_SetControlMode(2, PreTakerY1, 3)
+            GT_SetControlMode(2, PreTakerY2, 3)
+
+            Frm_DialogAddMessage("龙门参数需要配置提醒")
+
+            ''// 配置轴 1 控制参数
+            'GT_GetPid(2, PasteY1, 1, plPid1)
+            'plPid1.kp = 0.01
+            'GT_SetPid(2, PasteY1, 1, plPid1)
+            'GT_GetVelLoopPid(2, PasteY1, 1, vlPid1, piConvertPara1)
+            'vlPid1.kp = 500
+            'piConvertPara1 = 1
+            'GT_SetVelLoopPid(2, PasteY1, 1, vlPid1, piConvertPara1)
+            ''// 配置轴 2 控制参数
+            'GT_GetPid(2, PasteY2, 1, plPid2)
+            'plPid2.kp = 0.01
+            'GT_SetPid(2, PasteY2, 1, plPid2)
+            'GT_GetVelLoopPid(2, PasteY2, 1, vlPid2, piConvertPara2)
+            'vlPid2.kp = 500
+            'piConvertPara2 = 1
+            'GT_SetVelLoopPid(2, PasteY2, 1, vlPid2, piConvertPara2)
+            ''// 配置轴 3 控制参数
+            'GT_GetPid(2, PreTakerY1, 1, plPid3)
+            'plPid3.kp = 0.01
+            'GT_SetPid(2, PreTakerY1, 1, plPid3)
+            'GT_GetVelLoopPid(2, PreTakerY1, 1, vlPid3, piConvertPara3)
+            'vlPid3.kp = 500
+            'piConvertPara3 = 1
+            'GT_SetVelLoopPid(2, PreTakerY1, 1, vlPid3, piConvertPara3)
+            ''// 配置轴 4 控制参数
+            'GT_GetPid(2, PreTakerY2, 1, plPid4)
+            'plPid4.kp = 0.01
+            'GT_SetPid(2, PreTakerY2, 1, plPid4)
+            'GT_GetVelLoopPid(2, PreTakerY2, 1, vlPid4, piConvertPara4)
+            'vlPid4.kp = 500
+            'piConvertPara4 = 1
+            'GT_SetVelLoopPid(2, PreTakerY2, 1, vlPid4, piConvertPara4)
+            rtn = 0
+            Return rtn
+        Catch ex As Exception
+            rtn = 1
+            Return rtn
+        End Try
+    End Function
 #End Region
 
     Public Sub HomeValue()
-        'Station 2 Axis X
+        'Glue X
         HomeSearchDist(0, 1) = -1000
         HomeOffsetDist(0, 1) = -10     '第2次原点搜索偏移距离
         LimToHomeDist(0, 1) = -40      '到极限走过原点的距离
-        'Station 2 Axis Y
+        'Glue Y
         HomeSearchDist(0, 2) = -1000
         HomeOffsetDist(0, 2) = -10     '第2次原点搜索偏移距离
         LimToHomeDist(0, 2) = -40      '到极限走过原点的距离
-        'Station 2 Axis Z
+        'Glue Z
         HomeSearchDist(0, 3) = -1000
         HomeOffsetDist(0, 3) = -2     '第2次原点搜索偏移距离
         LimToHomeDist(0, 3) = -25      '到极限走过原点的距离
-        'Station 3 Axis X
+        'Paste X
         HomeSearchDist(0, 4) = -1000
         HomeOffsetDist(0, 4) = -10     '第2次原点搜索偏移距离
         LimToHomeDist(0, 5) = -40      '到极限走过原点的距离
-        'Station 3 Axis Y
+        'Paste Z
         HomeSearchDist(0, 5) = -1000
-        HomeOffsetDist(0, 5) = -10     '第2次原点搜索偏移距离
+        HomeOffsetDist(0, 5) = -2     '第2次原点搜索偏移距离
         LimToHomeDist(0, 5) = -40      '到极限走过原点的距离
-        'Station 3 Axis Z
-        HomeSearchDist(0, 6) = -1000
-        HomeOffsetDist(0, 6) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 6) = -40     '到极限走过原点的距离
-        'Station 3 Axis R
-        HomeSearchDist(0, 7) = 200
-        HomeOffsetDist(0, 7) = 5     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 7) = 130      '到极限走过原点的距离
-        'Y1
+        'Paste R
+        HomeSearchDist(0, 6) = 360
+        HomeOffsetDist(0, 6) = 2     '第2次原点搜索偏移距离
+        LimToHomeDist(0, 6) = 180     '到极限走过原点的距离
+        'PreTaker X
+        HomeSearchDist(0, 7) = -1000
+        HomeOffsetDist(0, 7) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(0, 7) = -40      '到极限走过原点的距离
+        'PreTaker Z
         HomeSearchDist(0, 8) = -1000
-        HomeOffsetDist(0, 8) = -10     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 8) = -40      '到极限走过原点的距离
+        HomeOffsetDist(0, 8) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(0, 8) = -25      '到极限走过原点的距离
 
-        'Station 4 Axis X
-        HomeSearchDist(1, 1) = -1000
-        HomeOffsetDist(1, 1) = -10     '第2次原点搜索偏移距离
-        LimToHomeDist(1, 1) = -40      '到极限走过原点的距离
-        'Station 4 Axis Y
+        'PreTaker R
+        HomeSearchDist(1, 1) = 360
+        HomeOffsetDist(1, 1) = 2     '第2次原点搜索偏移距离
+        LimToHomeDist(1, 1) = 180      '到极限走过原点的距离
+
+        'Cure X
         HomeSearchDist(1, 2) = -1000
-        HomeOffsetDist(1, 2) = -50     '第2次原点搜索偏移距离
+        HomeOffsetDist(1, 2) = -2     '第2次原点搜索偏移距离
         LimToHomeDist(1, 2) = -40      '到极限走过原点的距离
-        'Station 4 Axis Z
-        HomeSearchDist(1, 3) = -200
-        HomeOffsetDist(1, 3) = -10     '第2次原点搜索偏移距离
+
+        'Fine X
+        HomeSearchDist(1, 3) = -1000
+        HomeOffsetDist(1, 3) = -2     '第2次原点搜索偏移距离
         LimToHomeDist(1, 3) = -25     '到极限走过原点的距离
-        'SM 转盘
-        HomeSearchDist(1, 4) = 400
-        HomeOffsetDist(1, 4) = 20     '第2次原点搜索偏移距离
-        LimToHomeDist(1, 4) = 30      '到极限走过原点的距离
-        'Y2
+
+        'Fine Y
+        HomeSearchDist(1, 4) = -1000
+        HomeOffsetDist(1, 4) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(1, 4) = -40     '到极限走过原点的距离
+
+        'Reheck X
         HomeSearchDist(1, 5) = -1000
-        HomeOffsetDist(1, 5) = -10     '第2次原点搜索偏移距离
+        HomeOffsetDist(1, 5) = -2     '第2次原点搜索偏移距离
         LimToHomeDist(1, 5) = -40      '到极限走过原点的距离
-        'Z1
+
+        'Reheck Y
         HomeSearchDist(1, 6) = -1000
-        HomeOffsetDist(1, 6) = -10     '第2次原点搜索偏移距离
-        LimToHomeDist(1, 6) = -60      '到极限走过原点的距离
-        'Z2
+        HomeOffsetDist(1, 6) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(1, 6) = -40     '到极限走过原点的距离
+
+        'Z1
         HomeSearchDist(1, 7) = -1000
         HomeOffsetDist(1, 7) = -10     '第2次原点搜索偏移距离
         LimToHomeDist(1, 7) = -60      '到极限走过原点的距离
+
+        'Z2
+        HomeSearchDist(1, 8) = -1000
+        HomeOffsetDist(1, 8) = -10     '第2次原点搜索偏移距离
+        LimToHomeDist(1, 8) = -60      '到极限走过原点的距离
+
+        'Paste Y1
+        HomeSearchDist(2, 1) = -1000
+        HomeOffsetDist(2, 1) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(2, 1) = -40     '到极限走过原点的距离
+
+        'Paste Y2
+        HomeSearchDist(2, 2) = -1000
+        HomeOffsetDist(2, 2) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(2, 2) = -40      '到极限走过原点的距离
+
+        'PreTaker Y1
+        HomeSearchDist(2, 3) = -1000
+        HomeOffsetDist(2, 3) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(2, 3) = -40     '到极限走过原点的距离
+
+        'PreTaker Y2
+        HomeSearchDist(2, 4) = -1000
+        HomeOffsetDist(2, 4) = -2     '第2次原点搜索偏移距离
+        LimToHomeDist(2, 4) = -40     '到极限走过原点的距离
 
     End Sub
 
@@ -872,15 +970,15 @@ Module Motion
         Dim flag_Moving As Boolean
 
         i = 200
-        rtn = GT_GetSts(card, Axis, Status, 1, 0)
+        rtn = GT_GetSts(card, axis, Status, 1, 0)
         flag_Moving = True
         If CBool(Status And &H400) = False Then
-            rtn = GT_GetEncPos(card, Axis, TempPos(0), 1, 0)
-            rtn = GT_GetPrfPos(card, Axis, TempPos(1), 1, 0)
+            rtn = GT_GetEncPos(card, axis, TempPos(0), 1, 0)
+            rtn = GT_GetPrfPos(card, axis, TempPos(1), 1, 0)
             If Abs(TempPos(0) - TempPos(1)) < i Then
                 flag_Moving = False
             Else
-                If GetTickCount() - AxisTime(card, Axis) >= 5000 Then
+                If GetTickCount() - AxisTime(card, axis) >= 5000 Then
                     'Call Form_Main.MacStop()
                     'Form_Main.List1(0).AddItem AxisName0_2(Axis) & "运动异常"
                     'Call WriteErrLog(0, AxisName0_2(Axis) & "伺服电机运动目标位置与编码位置相差过大", "A0001")
@@ -891,7 +989,7 @@ Module Motion
                 End If
             End If
         Else
-            AxisTime(card, Axis) = GetTickCount()
+            AxisTime(card, axis) = GetTickCount()
             flag_Moving = True
         End If
         Return flag_Moving
@@ -1110,11 +1208,9 @@ Module Motion
             IsSysEmcStop = True
             If Once = False Then
                 Once = True
-
                 For n = 0 To GTS_CardNum - 1
                     rtn = GT_Stop(n, 255, 255)  '紧急停止所有轴
                 Next n
-
                 '//轴伺服OFF
                 For n = 0 To GTS_CardNum - 1
                     For i = 1 To GTS_AxisNum(n)

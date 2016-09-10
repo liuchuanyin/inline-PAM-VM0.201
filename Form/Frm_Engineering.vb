@@ -422,9 +422,6 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Load_CurWorkState()
-
-        '**********工工位是否工作颜色提示******
-
         Timer_Display.Enabled = True
         '如果初始化完成，初始化按钮显示初始化完成，并且disable
         If Flag_MachineInit Then
@@ -2294,7 +2291,6 @@
     End Sub
 #End Region
 
-
 #Region "   功能：流水线调试相关IO，电机启停等"
     ''' <summary>
     ''' 加载流水线调试界面btn Tag标记数据
@@ -2439,7 +2435,6 @@
     End Sub
 
 #End Region
-
 
     Private Sub Select_Material_Click(sender As Object, e As EventArgs) Handles Select_Material.Click
         Frm_Material.Show()

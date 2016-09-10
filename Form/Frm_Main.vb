@@ -947,7 +947,6 @@ Com_Err:
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Machine_Stop()
-
         If Flag_MachineAutoRun = False Then
             ListBoxAddMessage("停止自动运行无效")
         End If
@@ -966,12 +965,10 @@ Com_Err:
             Frm_Engineering.Btn_AutoRun.Enabled = True
         End If
         Timer_AutoRun.Enabled = False
-
     End Sub
 #End Region
 
 #Region "   Timer"
-
     ''' <summary>
     ''' 设备初始化定时器
     ''' </summary>
@@ -979,10 +976,7 @@ Com_Err:
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub Timer_MacInit_Tick(sender As Object, e As EventArgs) Handles Timer_MacInit.Tick
-        Dim en As Boolean
-        If en Then Exit Sub
-        en = True
-
+        Timer_MacInit.Enabled = False
         If Flag_MachineInitOngoing Then
             Call Machine_Initialize()
             Frm_ProgressBar.Show()
@@ -1018,8 +1012,7 @@ Com_Err:
             Frm_Engineering.Btn_initialize.BZ_Color = Color_Unselected
             Timer_MacInit.Enabled = False
         End If
-
-        en = False
+        Timer_MacInit.Enabled = True
     End Sub
 
     ''' <summary>
@@ -1062,25 +1055,16 @@ Com_Err:
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub Timer_Sys_Tick(sender As Object, e As EventArgs) Handles Timer_Sys.Tick
-        Dim en As Boolean
+        Timer_Sys.Enabled = False
         Static CountT As Integer = 0
 
-        If en Then
-            Exit Sub
-        End If
-        en = True
-
-
         Call EMC_Stop()
-
         'OK NG指示灯
         Call Auto_ShowLight()
         '自动排胶
-        'Call AutoPurge_S2(2, 2)
-
+        Call AutoPurge(2, 2)
         '如果OP操作界面可见，那么刷新
         If Frm_Home.Visible Then Call Frm_Home.VariablesRefresh()
-
         '生产周期计时
         If CycelTimeEn Then
             CycelTime = CycelTime + 10
@@ -1093,50 +1077,32 @@ Com_Err:
         '每100ms检查一次
         If CountT = 10 Then
             Call WinSock_Check()
-
             '设置点胶工作气压
-            If EXI(0, 8) Then
-                If Abs(ReadPressure(0) - par.num(28)) > 0.01 Then
-                    Call SetPressure(0, par.num(28))
-                End If
-                If Abs(ReadPressure(1) - par.num(29)) > 0.01 Then
-                    Call SetPressure(1, par.num(29))
-                End If
+            If EXI(2, 1) Then
+                If Abs(ReadPressure(0) - par.num(28)) > 0.01 Then Call SetPressure(0, par.num(28))
+                If Abs(ReadPressure(1) - par.num(29)) > 0.01 Then Call SetPressure(1, par.num(29))
             Else
                 Call SetPressure(0, 0)
                 Call SetPressure(1, 0)
             End If
-
             CountT = 0
         End If
         CountT += 1
 
+        If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 5000) Then CCD_Lock_Flag = False
 
-        If CCD_Lock_Flag And GetTickCount - Winsock1_TimmingWatch > 5000 Then
-            CCD_Lock_Flag = False
-        End If
-
-
-        en = False
+        Timer_Sys.Enabled = True
     End Sub
 
     '///////////////自动运行定时器
     Private Sub Timer_AutoRun_Tick(sender As Object, e As EventArgs) Handles Timer_AutoRun.Tick
-        Dim en As Boolean
-        If en Then
-            Exit Sub
-        End If
-        en = True
-
+        Timer_AutoRun.Enabled = False
         If Not Flag_MachineAutoRun Then '判断是否进入自动运行状态
             Exit Sub
         End If
 
-        en = False
+        Timer_AutoRun.Enabled = True
     End Sub
-
-
-
 #End Region
 
     '量测OK/NG指示灯
@@ -1150,30 +1116,30 @@ Com_Err:
             If TotalResult = 1 Then     '判断最终检测结果
                 Frm_Engineering.lbl_OKNG.Text = "OK"
                 Frm_Engineering.lbl_OKNG.ForeColor = Color.Black
-                SetEXO(0, 10, True) '亮绿色灯
-                SetEXO(0, 11, False) '灭红色指示灯
+                SetEXO(2, 13, True) '亮绿色灯
+                SetEXO(2, 14, False) '灭红色指示灯
                 buzen = True
             ElseIf TotalResult = 2 Then
                 Frm_Engineering.lbl_OKNG.Text = "NG"
                 Frm_Engineering.lbl_OKNG.ForeColor = Color.Red
-                SetEXO(0, 10, False) '灭绿色灯
-                SetEXO(0, 11, True) '亮红色指示灯
+                SetEXO(2, 13, False) '灭绿色灯
+                SetEXO(2, 14, True) '亮红色指示灯
                 '///////蜂鸣器鸣叫
                 If GetTickCount - TimingWatchBuz > 2000 Then
                     If buzen Then
-                        SetEXO(0, 9, True)
+                        SetEXO(2, 15, True)
                         buzen = False
                     End If
                     TimingWatchBuz = GetTickCount()
                 ElseIf GetTickCount - TimingWatchBuz > 1000 Then
-                    SetEXO(0, 9, False)
+                    SetEXO(2, 15, False)
                 End If
             ElseIf TotalResult = 0 Then
                 Frm_Engineering.lbl_OKNG.Text = "--"
                 Frm_Engineering.lbl_OKNG.ForeColor = Color.Black
-                SetEXO(0, 11, False) '灭红色指示灯
-                SetEXO(0, 10, False) '灭绿色灯
-                SetEXO(0, 9, False) 'NG警示灯停止鸣叫
+                SetEXO(2, 13, False) '灭红色指示灯
+                SetEXO(2, 14, False) '灭绿色灯
+                SetEXO(2, 15, False) 'NG警示灯停止鸣叫
                 buzen = True
             End If
 
@@ -1182,23 +1148,23 @@ Com_Err:
         '//////////   三色灯工作   /////////////////////////
         If GetTickCount - timingwatchFlash > 2000 Then
             If Flag_MachineAutoRun And Flag_MachinePause = False Then
-                SetEXO(1, 2, False)    '三色灯红色
-                SetEXO(1, 3, False)    '三色灯黄色
-                SetEXO(1, 4, True)    '三色灯绿色
+                SetEXO(2, 5, False)    '三色灯红色
+                SetEXO(2, 6, False)    '三色灯黄色
+                SetEXO(2, 7, True)    '三色灯绿色
             ElseIf Flag_MachinePause Then
-                SetEXO(1, 2, False)    '三色灯红色
-                SetEXO(1, 3, True)    '三色灯黄色
-                SetEXO(1, 4, False)    '三色灯绿色
+                SetEXO(2, 5, False)    '三色灯红色
+                SetEXO(2, 6, True)    '三色灯黄色
+                SetEXO(2, 7, False)    '三色灯绿色
             Else
-                SetEXO(1, 2, True)    '三色灯红色
-                SetEXO(1, 3, False)    '三色灯黄色
-                SetEXO(1, 4, False)    '三色灯绿色
+                SetEXO(2, 5, True)    '三色灯红色
+                SetEXO(2, 6, False)    '三色灯黄色
+                SetEXO(2, 7, False)    '三色灯绿色
             End If
             timingwatchFlash = GetTickCount
         ElseIf GetTickCount - timingwatchFlash > 1000 Then
-            SetEXO(1, 2, False)    '三色灯红色
-            SetEXO(1, 3, False)    '三色灯黄色
-            'SetEXO(1, 4, False)    '三色灯绿色
+            SetEXO(2, 5, False)    '三色灯红色
+            SetEXO(2, 6, False)    '三色灯黄色
+            'SetEXO(2, 7, False)    '三色灯绿色
         End If
 
     End Sub
@@ -1224,25 +1190,8 @@ Com_Err:
     End Sub
 
     Private Sub btn_test_Click(sender As Object, e As EventArgs) Handles btn_test.Click
-        'Dim Command As String
-        'If MessageBox.Show("第二工位标定　or 第四工位标定，Yes为二工位标定，No为四工位标定", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-        '    Command = "Cal1," & Par_Pos.St_Glue(5).X & "," & Par_Pos.St_Glue(5).Y & "," & Par_Pos.St_Glue(6).X & "," & Par_Pos.St_Glue(6).Y & "," & Par_Pos.St_Glue(7).X & "," & Par_Pos.St_Glue(7).Y & "," & Par_Pos.St_Glue(8).X & "," & Par_Pos.St_Glue(8).Y & vbCrLf
-        '    Winsock1.SendData(Command)
-        'Else
-        '    Command = "Cal5," & Par_Pos.Pos_S4(5).X & "," & Par_Pos.Pos_S4(5).Y & "," & Par_Pos.Pos_S4(6).X & "," & Par_Pos.Pos_S4(6).Y & "," & Par_Pos.Pos_S4(7).X & "," & Par_Pos.Pos_S4(7).Y & "," & Par_Pos.Pos_S4(8).X & "," & Par_Pos.Pos_S4(8).Y & vbCrLf
-        '    Winsock1.SendData(Command)
-        'End If
-
-        'Frm_Engineering.DataGridView1.Rows.Add(par.Machine_Info.AE_SubID & "-" & par.Machine_Info.Machine_SN, ST(5).num, Format(Now, "yyyyMMdd HH:mm:ss"), ST(5).BarCodeS3, "Kirin", "OK", _
-        '      Cam6Data(0), Cam6Data(1), Cam6Data(2), _
-        '      Cam6Data(3), ST(5).BarCodeS1, ST(5).Cnt_Pao, ST(5).Paste_Press, CT)
-
         'Frm_Engineering.DataGridView1.Rows(Frm_Engineering.DataGridView1.Rows.Count - 2).Cells(3).Value = "小丹"
-
-        List_DebugAddMessage("axis servo on failed please check the servo driver")
-
         'Flag_HuanliaoOK = True
-
 
     End Sub
 
@@ -1340,54 +1289,53 @@ Com_Err:
 
 #End Region
 
-    ' ''' <summary>
-    ' ''' 自动按时间间隔排胶
-    ' ''' </summary>
-    ' ''' <param name="interval">间隔时间 单位：min</param>
-    ' ''' <param name="timelast">持续时间 单位：second</param>
-    ' ''' <remarks></remarks>
-    'Public Sub AutoPurge_S2(ByVal interval As Integer, ByVal timelast As Long)
-    '    Static TimeCount As Long = GetTickCount
-    '    Static TimingClrGlue As Long = GetTickCount
-    '    Static flag_NeedClose As Boolean
+    ''' <summary>
+    ''' 自动按时间间隔排胶
+    ''' </summary>
+    ''' <param name="interval">间隔时间 单位：min</param>
+    ''' <param name="timelast">持续时间 单位：second</param>
+    ''' <remarks></remarks>
+    Public Sub AutoPurge(ByVal interval As Integer, ByVal timelast As Long)
+        Static TimeCount As Long = GetTickCount
+        Static TimingClrGlue As Long = GetTickCount
+        Static flag_NeedClose As Boolean
 
-    '    If Flag_MachineAutoRun = False And Flag_MachineInit = False Then
-    '        '设备未初始化或未进入自动运行，则退出
-    '        Exit Sub
-    '    End If
+        If Flag_MachineAutoRun = False And Flag_MachineInit = False Then
+            '设备未初始化或未进入自动运行，则退出
+            Exit Sub
+        End If
 
-    '    '判断是否在待机位置
-    '    If Abs(CurrEncPos(0, 1) - Par_Pos.St_Glue(0).X) > 5 Or Abs(CurrEncPos(0, 2) - Par_Pos.St_Glue(0).Y) > 5 Then
-    '        Exit Sub
-    '    End If
+        '判断是否在待机位置
+        If Abs(CurrEncPos(0, 1) - Par_Pos.St_Glue(0).X) > 5 Or Abs(CurrEncPos(0, 2) - Par_Pos.St_Glue(0).Y) > 5 Then
+            Exit Sub
+        End If
 
-    '    If EXO(0, 6) And flag_NeedClose = False Then
-    '        TimingClrGlue = GetTickCount
-    '    End If
+        If (EXO(1, 13) Or EXO(1, 14)) And flag_NeedClose = False Then
+            TimingClrGlue = GetTickCount
+        End If
 
-    '    If GetTickCount - TimingClrGlue > interval * 60 * 1000 Then
-    '        If par.chkFn(15) And EXO(0, 6) = False Then
-    '            SetEXO(0, 6, True) '2工位点胶打开
-    '            SetEXO(0, 9, True) '蜂鸣器
-    '            flag_NeedClose = True
-    '            Flag_Purged_S2 = True
-    '            TimeCount = GetTickCount
-    '        End If
+        If GetTickCount - TimingClrGlue > interval * 60 * 1000 Then
+            If par.chkFn(15) And EXO(0, 6) = False Then
+                SetEXO(1, 13, True) '点胶打开
+                SetEXO(1, 14, True) '点胶打开
+                SetEXO(2, 15, True) '蜂鸣器
+                flag_NeedClose = True
+                Flag_Purged = True
+                TimeCount = GetTickCount
+            End If
 
-    '        If par.chkFn(15) And EXO(0, 6) And S2_Work.State = False And flag_NeedClose Then
-    '            If GetTickCount - TimeCount > 500 Then
-    '                SetEXO(0, 9, False) '蜂鸣器
-    '            End If
-    '            If GetTickCount - TimeCount > timelast * 1000 Then
-    '                SetEXO(0, 6, False) '2工位点胶关闭
-    '                flag_NeedClose = False
-    '                TimingClrGlue = GetTickCount
-    '            End If
-    '        End If
-    '    End If
-
-
-
-    'End Sub
+            If par.chkFn(15) And (EXO(1, 13) Or EXO(1, 14)) And GLue_Sta.isWorking = False And flag_NeedClose Then
+                If GetTickCount - TimeCount > 500 Then
+                    SetEXO(2, 15, False) '蜂鸣器
+                End If
+                If GetTickCount - TimeCount > timelast * 1000 Then
+                    SetEXO(1, 13, False) '点胶关闭
+                    SetEXO(1, 14, False) '点胶关闭
+                    flag_NeedClose = False
+                    TimingClrGlue = GetTickCount
+                End If
+            End If
+        End If
+    End Sub
 
 End Class

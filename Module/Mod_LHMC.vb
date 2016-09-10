@@ -20,8 +20,10 @@ Module Mod_LHMC
             Try
                 LineMotorController = New SendDate(COM)
                 LineMotorController.Open()
-                Delay(10)
+                Delay(50)
                 LineMotorController.Get_Status()
+                Delay(50)
+                Enable_LineMotor()
                 Flag_isLineMotorControllerOpened = True
                 Return True
             Catch ex As Exception
@@ -72,6 +74,8 @@ Module Mod_LHMC
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Close_LineMotorController()
+        Disable_LineMotor()
+        Delay(50)
         LineMotorController.C1ose()
         Flag_isLineMotorControllerOpened = False
     End Sub

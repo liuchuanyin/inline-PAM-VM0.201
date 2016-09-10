@@ -52,7 +52,7 @@ Public Module Variables
     ''' 是否排过胶，用于判断是否需要擦胶
     ''' </summary>
     ''' <remarks></remarks>
-    Public Flag_Purged(2) As Boolean
+    Public Flag_Purged As Boolean
 
 
 #Region "颜色变量区域"
