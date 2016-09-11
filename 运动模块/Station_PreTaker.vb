@@ -1,7 +1,7 @@
 ﻿Module Station_PreTaker
 
     Public Step_PreTaker As Integer
-
+    Public index_TakerMaterial As Integer
     ''' <summary>
     ''' 中转平台上的物料信息
     ''' </summary>
@@ -133,11 +133,66 @@
         'PreTaker_Sta.workState = 2   '工作进行中：拍物料
         'PreTaker_Sta.workState = 3   '工作进行中：取料
         'PreTaker_Sta.workState = 4   '工作进行中：去放料，夹镜头保护盖
+        Static timeStart As Long    '记录开始时间
+
         Select Case Step_PreTaker
             Case 10
                 If Flag_MachineStop = False And Cam_OnTransferPlate.isHaveCam = False And Feed_Sta.isWorking = False And Feed_Sta.workState = 1 Then
-
+                    PreTaker_Sta.isNormal = True : PreTaker_Sta.isWorking = True : PreTaker_Sta.workState = 0    '取料模组工作进行中
+                    Step_PreTaker = 100
                 End If
+
+            Case 100
+                '去拍照位置
+                Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(0).Z)
+                Step_PreTaker = 110
+
+            Case 110
+                If isAxisMoving(0, PreTakerZ) = False Then
+                    Step_PreTaker = 120
+                End If
+
+            Case 120
+                'XYR去指定位置
+                Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(1).X)
+                Call AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(1).Y)
+                Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(1).R)
+                Step_PreTaker = 130
+
+            Case 130
+                If isAxisMoving(0, PreTakerX) = False And isAxisMoving(1, PreTakerR) = False And isAxisMoving(2, PreTakerY1) = False Then
+                    Step_PreTaker = 150
+                End If
+
+            Case 150
+                'Z去拍照位置
+                Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(1).Z)
+                Step_PreTaker = 160
+
+            Case 160
+                If isAxisMoving(0, PreTakerZ) = False Then
+                    timeStart = GetTickCount
+                    Step_PreTaker = 200
+                End If
+
+            Case 200
+                If isTimeout(timeStart, 50) Then
+                    '触发CCD拍照
+                End If
+
+            Case 300
+                '等待获取取料位置和产品条码
+
+            Case 400
+                '去取料
+
+            Case 500
+
+
+            Case 8000
+
+            Case 9000
+
 
 
         End Select

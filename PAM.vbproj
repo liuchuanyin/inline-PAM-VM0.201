@@ -214,6 +214,7 @@
     <Compile Include="运动模块\Needle_Calibration.vb" />
     <Compile Include="Module\OperateCrossFroms.vb" />
     <Compile Include="Module\OPTControllerAPI.vb" />
+    <Compile Include="运动模块\Station_TrayFeed.vb" />
     <Compile Include="运动模块\Station_Glue.vb" />
     <Compile Include="运动模块\Station_Paste.vb" />
     <Compile Include="运动模块\Station_PreTaker.vb" />
@@ -235,6 +236,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="运动模块\Station_TrayRecycle.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Frm_Alarm.resx">

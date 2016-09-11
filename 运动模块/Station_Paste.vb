@@ -168,6 +168,8 @@
         ' Paste_Sta.workState =4 工作进行中:精补贴合
         ' Paste_Sta.workState =5 工作进行中:抛料
         ' Paste_Sta.workState =6 工作进行中:等待取料机构向中转机构上放料
+        Static timeStart As Long    '记录开始时间
+
         Select Case Step_Paste
             Case 10
                 If Flag_MachineStop = False And Line_Sta(2).workState = 2 And _
@@ -190,7 +192,7 @@
                 Else
                     '否则跳过这一颗料
                     ListBoxAddMessage("组装站组装跳过第" & index_InPaste + 1 & "颗料！")
-                    Step_Paste = 2000
+                    Step_Paste = 7000
                 End If
 
             Case 210
@@ -263,7 +265,7 @@
                 '取料，条码处理？？？？？？？？？？？？？
 
 
-            Case 2000
+            Case 7000
                 '共计12颗料，index_InPaste从0开始
                 If index_InPaste < 11 Then
                     index_InPaste += 1

@@ -616,6 +616,8 @@
         lbl_StepPaste.Text = "Paste:" & Step_Paste
         lbl_StepTaker.Text = "Taker:" & Step_PreTaker
         lbl_StepRecheck.Text = "Recheck:" & Step_Recheck
+        lbl_StepTrayRight.Text = "Tray Feeder:" & Step_Feed
+        lbl_StepTrayLeft.Text = "Tray Recycle:" & Step_Feed
 
         lbl_PressPaste.Text = Format(Press(0), "0.00")
         lbl_PressTaker.Text = Format(Press(1), "0.00")

@@ -39,19 +39,16 @@ Public Class Frm_Main
         Call DatabaseRead("D:\BZ-Parameter\ParameterMdb\BZ001.mdb", "AxisPar")
         '//读取本地保存的点位信息
         Call read_Par_Pos(Path_Par_Pos, Par_Pos)
-        ''//获取扫条码位置和取料位置之间X，Y的距离
-        'Call Get_GS()
-        ''//获取镭射和针头位置之间X，Y的距离
-        'Call Get_NL()
-        'Call Get_NLS4()
         'UV Light Ini
         Call UV_Init()
 
+        Frm_Engineering.Opacity = 0
+        Frm_Engineering.Show()
+        Frm_Engineering.Visible = False
         '实例化结构体
         For i = 0 To Tray_Pallet.Count - 1
             Tray_Pallet(i).init()
         Next
-
         If GTS_Opened_EX = True And GTS_Opened_EM = True Then
             Thread_IORefresh.Start()
         End If
@@ -59,7 +56,6 @@ Public Class Frm_Main
 
         '在主界面上显示设备名称及编号
         Btn_MachineInfo.Text = par.Machine_Info.AE_SubID & "-" & par.Machine_Info.Machine_SN
-
         If IO.File.Exists(Path_IniFile) = False Then '判断INI文件是否存在
             Call CreateIniFile(Path_IniFile)  '不存在则创建默认的INI文件
         End If
@@ -186,8 +182,9 @@ Public Class Frm_Main
                 If ComboBox_User.SelectedIndex = 1 And BOZHON.User2.Code = txt_Password.Text Then
                     Btn_Mode.BZ_Color = Color_Selected 'Button 选中，颜色提示
                     Me.BackColor = Color.FromArgb(252, 223, 222) '登陆工程界面，显示红色
-                    Frm_Engineering.Show(Me)
+                    'Frm_Engineering.Show(Me)
                     Frm_Engineering.Visible = True
+                    Frm_Engineering.Opacity = 255
                     txt_Password.Text = ""
                     '登陆成功后，关闭使能
                     Login_Engineering_Enable(False)

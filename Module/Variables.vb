@@ -54,7 +54,6 @@ Public Module Variables
     ''' <remarks></remarks>
     Public Flag_Purged As Boolean
 
-
 #Region "颜色变量区域"
     '********************* 颜色变量区域 *****************************
     Public Color_Unselected As Color = Color.FromArgb(234, 234, 235)   '16进制颜色EAEAEB，Button未选中
@@ -143,7 +142,6 @@ Public Module Variables
     ''' <remarks></remarks>
     Public Time_SWClosed As Date
 #End Region
-
 
 #Region "网络连接 变量定义"
 
@@ -234,7 +232,6 @@ Public Module Variables
     Public par As Parameter
 #End Region
 
-
 #Region "点胶参数结构体"
 
     Public Structure Glue_Vel_Delay
@@ -281,7 +278,6 @@ Public Module Variables
 
 #End Region
 
-
     '三标志
     Public Structure sFlag3
         ''' <summary>
@@ -300,15 +296,6 @@ Public Module Variables
         ''' <remarks></remarks>
         Dim Result As Boolean   '结果
     End Structure
-
-    'XYZ及角度补偿
-    Public Structure sOffset
-        Public X As Double
-        Public Y As Double
-        Public Z As Double
-        Public A As Double
-    End Structure
-
 
 #Region "设备运行状态标志位"
     ''' <summary>
@@ -338,7 +325,6 @@ Public Module Variables
     Public CT As Double
 
 #End Region
-
 
     Public Structure Hole
         Dim isHaveProduct As Boolean

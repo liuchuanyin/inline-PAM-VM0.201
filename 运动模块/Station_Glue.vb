@@ -1,6 +1,8 @@
 ﻿Public Module Station_Glue
 
     Public Step_Glue As Integer
+    '产品索引号
+    Public index_InGlue As Short
     Public Step_Gopos(7) As Integer
     Public Probe_Result As Boolean
     Public ClrGlue_Work As sFlag3
@@ -414,11 +416,10 @@
     End Sub
 
     Public Sub Autorun_GlueStation()
-        '产品索引号
-        Static index As Short
         ' GLue_Sta.workState =0 工作进行中
         ' GLue_Sta.workState =1 工作完成
         ' GLue_Sta.workState =2 工作进行中:点胶进行中
+        Static timeStart As Long    '记录开始时间
 
         Select Case Step_Glue
             Case 10
@@ -431,21 +432,26 @@
             Case 100
                 '流水线上有载具，且载具可用
                 If Tray_Pallet(1).isHaveTray And Tray_Pallet(1).isTrayOK Then
-                    index = 0
+                    index_InGlue = 0
                     Step_Glue = 200
                 End If
 
             Case 200
-                If Tray_Pallet(1).Hole(index).isHaveProduct And Tray_Pallet(1).Hole(index).isProductOk Then
-
+                If Tray_Pallet(1).Hole(index_InGlue).isHaveProduct And Tray_Pallet(1).Hole(index_InGlue).isProductOk And Frm_Engineering.chk_Brc(index_InGlue).Checked Then
+                    '当前穴位有料，且是OK的，并且选中要做这个
+                    Step_Glue = 210
+                Else
+                    '否则跳过这一颗料
+                    ListBoxAddMessage("点胶站跳过第" & index_InGlue + 1 & "颗料！")
+                    Step_Glue = 7000
                 End If
 
 
 
-            Case 2000
+            Case 7000
                 '共计12颗料，index从0开始
-                If index < 11 Then
-                    index += 1
+                If index_InGlue < 11 Then
+                    index_InGlue += 1
                     Step_Glue = 200 '去下一颗料点胶
                 Else
                     Step_Glue = 8000 '点胶完成
