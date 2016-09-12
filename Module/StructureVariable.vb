@@ -219,4 +219,72 @@
     End Sub
 #End Region
 
+#Region "Tray矩阵计算"
+    Structure sctTrayMatrix
+        Dim TrayGlue() As Dist_XY
+        Dim TrayFineCompensation() As Dist_XY
+        Dim TrayPaste() As Dist_XY
+        Dim TrayPreTaker() As Dist_XY
+        Dim TrayRecheck() As Dist_XY
+    End Structure
+
+    Public TrayMatrix As sctTrayMatrix
+
+    Public Function PointRefresh(P0 As Dist_XY, P1 As Dist_XY, P2 As Dist_XY, Row As Integer, Column As Integer) As Dist_XY()
+        Dim tempRowPoint0() As Dist_XY
+        Dim tempRowPoint1() As Dist_XY
+        Dim tempColumnPoint() As Dist_XY
+        Dim index As Integer
+        Dim Point(Row * Column - 1) As Dist_XY
+
+        Dim P3 As Dist_XY
+
+        If Row < 2 Then Row = 2
+        If Column < 2 Then Column = 2
+
+        '求平行四边形的第4个点
+        P3 = ParallelogramFourthPoint(P0, P1, P2)
+
+        '求P0,P3的均等分点
+        tempRowPoint0 = AveragePoint(P0, P3, Row)
+
+        '求P1,P2的均等分点
+        tempRowPoint1 = AveragePoint(P1, P2, Row)
+
+        index = 0
+        For i = 0 To tempRowPoint0.Length - 1
+            tempColumnPoint = AveragePoint(tempRowPoint0(i), tempRowPoint1(i), Column)
+            For j = 0 To tempColumnPoint.Length - 1
+                Point(index) = tempColumnPoint(j)
+                index = index + 1
+            Next
+        Next
+
+        Return Point 
+    End Function
+
+    Private Function ParallelogramFourthPoint(tempP0 As Dist_XY, tempP1 As Dist_XY, tempP2 As Dist_XY) As Dist_XY
+        Dim tempP3 As Dist_XY
+        tempP3.X = tempP2.X - tempP1.X + tempP0.X
+        tempP3.Y = tempP2.Y - tempP1.Y + tempP0.Y
+        Return tempP3
+    End Function
+
+    Private Function AveragePoint(StartPoint As Dist_XY, EndPoint As Dist_XY, AveragenNum As Integer) As Dist_XY()
+        '首先对输入的均分点数进行判断,包括起始点和终止点,所以均分点必须>=2
+        If AveragenNum < 2 Then AveragenNum = 2
+
+        Dim n As Integer = AveragenNum - 1
+
+        Dim TempPoint(n) As Dist_XY
+
+        For i = 0 To n
+            TempPoint(i).X = (i * EndPoint.X + (n - i) * StartPoint.X) / n
+            TempPoint(i).Y = (i * EndPoint.Y + (n - i) * StartPoint.Y) / n 
+        Next
+
+        Return TempPoint
+    End Function
+#End Region
+
 End Module
