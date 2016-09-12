@@ -43,7 +43,7 @@ Public Class Frm_Main
         Call UV_Init()
 
         Frm_Engineering.Opacity = 0
-        Frm_Engineering.Show()
+        Frm_Engineering.Show(Me)
         Frm_Engineering.Visible = False
         '实例化结构体
         For i = 0 To Tray_Pallet.Count - 1
@@ -67,7 +67,7 @@ Public Class Frm_Main
 
         '刷新IO线程关闭
         Thread_IORefresh.Abort()
-        LineMotorController.C1ose()
+        If LineMotorController IsNot Nothing Then LineMotorController.C1ose()
 
         '*********************  统计软件使用时间  **********************
         Dim temp As Long
@@ -182,7 +182,7 @@ Public Class Frm_Main
                 If ComboBox_User.SelectedIndex = 1 And BOZHON.User2.Code = txt_Password.Text Then
                     Btn_Mode.BZ_Color = Color_Selected 'Button 选中，颜色提示
                     Me.BackColor = Color.FromArgb(252, 223, 222) '登陆工程界面，显示红色
-                    'Frm_Engineering.Show(Me)
+                    Frm_Engineering.Show(Me)
                     Frm_Engineering.Visible = True
                     Frm_Engineering.Opacity = 255
                     txt_Password.Text = ""
@@ -971,7 +971,6 @@ Com_Err:
             Frm_Engineering.Btn_AutoRun.Enabled = True
         End If
         Timer_AutoRun.Enabled = False
-
         ListBoxAddMessage("设备停止自动运行")
     End Sub
 #End Region

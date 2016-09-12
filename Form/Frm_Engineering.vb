@@ -5,6 +5,7 @@
     Public btn_Servo(2, 8) As Button
     Public btn_Home(2, 8) As Button
     Public chk_Brc(12) As CheckBox
+    Public rad_Brc(12) As RadioButton
 
 #Region "   窗体加载"
     ''' <summary>
@@ -33,6 +34,7 @@
         Call DataGridViewInit()
         Call Load_NeedlePar()
         Call Load_SelectBrc()
+        Call Load_SelectRad_Brc()
         Call Load_LineBtnTag()
     End Sub
 
@@ -521,13 +523,11 @@
             .Columns(3).Name = Field3
             .Columns(4).Name = Field4
             .Columns(3).DefaultCellStyle.ForeColor = Color.Black
-
             .Columns(5).Name = Field5
             .Columns(6).Name = Field6
             .Columns(7).Name = Field7
             .Columns(8).Name = Field8
             .Columns(9).Name = Field9
-
             .Columns(10).Name = Field16
             .Columns(11).Name = Field17
             .Columns(12).Name = Field18
@@ -605,7 +605,6 @@
 #End Region
 
 #Region "   刷新定时器"
-
     Private Sub Timer_Display_Tick(sender As Object, e As EventArgs) Handles Timer_Display.Tick
         Timer_Display.Enabled = False
 
@@ -643,11 +642,8 @@
         Me.lbl_sts_Line.BackColor = IIf(Frm_Main.COM5.IsOpen, Color.Lime, Color.Transparent) '流水线步进电机控制器
         Me.lbl_sts_Safedoor.BackColor = IIf(EXI(0, 3) And EXI(0, 4), Color.Lime, Color.Transparent)    '安全门
         Me.lbl_sts_UV.BackColor = IIf(Flag_UVConnect(1), Color.Lime, Color.Transparent)    'UV 灯控制器
-
-        '****************如果IO界面显示那么就刷新IO状态到界面，否则不刷新
-        If TabControl1.SelectedIndex = 1 Or TabControl1.SelectedIndex = 2 Then Call IO_Controls_Display()
-        '***************如果显示调试界面，那么就刷新调试界面的状态
-        If TabControl1.SelectedIndex = 3 Then Call Debug_Display()
+        If TabControl1.SelectedIndex = 1 Or TabControl1.SelectedIndex = 2 Then Call IO_Controls_Display() '如果IO界面显示那么就刷新IO状态到界面，否则不刷新
+        If TabControl1.SelectedIndex = 3 Then Call Debug_Display() '如果显示调试界面，那么就刷新调试界面的状态
 
         For i = 0 To 11
             Tray1.Controls.Item(i).BackColor = IIf(Tray_Pallet(1).Hole(i).isProductOk, Color.Lime, Color.Red)
@@ -930,6 +926,10 @@
             For i = 1 To GTS_AxisNum(n)
                 btn_Home(n, i).BackColor = IIf(AxisHome(n, i).Result, Color.Lime, Color.Transparent)
             Next
+        Next
+
+        For i = 0 To rad_Brc.Count - 1
+            If rad_Brc(i).Checked Then txt_MaterialSelected.Text = i + 1
         Next
 
         Me.lbl_Blocked0.BackColor = IIf(EXI(1, 0), Color.Lime, Color.Transparent)   'L0阻挡气缸磁簧
@@ -2308,6 +2308,25 @@
             End If
         End If
     End Sub
+
+    Private Sub Load_SelectRad_Brc()
+        For i = 0 To rad_Brc.Count - 1
+            rad_Brc(i) = New RadioButton
+        Next
+        rad_Brc(0) = rad_Brc0
+        rad_Brc(1) = rad_Brc1
+        rad_Brc(2) = rad_Brc2
+        rad_Brc(3) = rad_Brc3
+        rad_Brc(4) = rad_Brc4
+        rad_Brc(5) = rad_Brc5
+        rad_Brc(6) = rad_Brc6
+        rad_Brc(7) = rad_Brc7
+        rad_Brc(8) = rad_Brc8
+        rad_Brc(9) = rad_Brc9
+        rad_Brc(10) = rad_Brc10
+        rad_Brc(11) = rad_Brc11
+    End Sub
+
 #End Region
 
 #Region "   功能：流水线调试相关IO，电机启停等"

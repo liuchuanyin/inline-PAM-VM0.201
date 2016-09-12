@@ -160,6 +160,27 @@
         Loop
     End Sub
 
+    ''' <summary>
+    ''' 判断是否还有物料，没有贴合Cam
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function isHaveBracketNotPasteCamera() As Boolean
+        Dim mValue As Boolean
+        mValue = False
+        Try
+            For i = index_InPaste To Tray_Pallet(2).Hole.Count - 1
+                If Tray_Pallet(2).Hole(i).isProductOk And Tray_Pallet(2).Hole(i).isHaveProduct And Frm_Engineering.chk_Brc(i).Checked Then
+                    mValue = True
+                End If
+            Next
+        Catch ex As Exception
+            Frm_DialogAddMessage("获取2段流水线上是否有产品没有贴合异常" & ex.ToString)
+        End Try
+
+        Return mValue
+    End Function
+
     Public Sub AutoRun_PasteStation()
         ' Paste_Sta.workState =0 工作进行中
         ' Paste_Sta.workState =1 工作完成

@@ -913,6 +913,21 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
+        Me.Grp = New System.Windows.Forms.GroupBox()
+        Me.rad_Brc0 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc1 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc2 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc3 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc4 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc5 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc6 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc7 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc8 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc9 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc10 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc11 = New System.Windows.Forms.RadioButton()
+        Me.txt_MaterialSelected = New System.Windows.Forms.TextBox()
+        Me.Label336 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.BZ_RoundPanel6.SuspendLayout
@@ -997,6 +1012,7 @@ Partial Class Frm_Engineering
         Me.BZ_RoundPanel3.SuspendLayout
         Me.TableLayoutPanel21.SuspendLayout
         Me.TableLayoutPanel20.SuspendLayout
+        Me.Grp.SuspendLayout
         Me.SuspendLayout
         '
         'TabControl1
@@ -7572,6 +7588,7 @@ Partial Class Frm_Engineering
         '
         'TabPage12
         '
+        Me.TabPage12.Controls.Add(Me.Grp)
         Me.TabPage12.Controls.Add(Me.gupStep)
         Me.TabPage12.Controls.Add(Me.gupVel)
         Me.TabPage12.Location = New System.Drawing.Point(4, 24)
@@ -12179,6 +12196,185 @@ Partial Class Frm_Engineering
         '
         Me.Timer_GoHome.Interval = 10
         '
+        'Grp
+        '
+        Me.Grp.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Grp.Controls.Add(Me.Label336)
+        Me.Grp.Controls.Add(Me.txt_MaterialSelected)
+        Me.Grp.Controls.Add(Me.rad_Brc11)
+        Me.Grp.Controls.Add(Me.rad_Brc10)
+        Me.Grp.Controls.Add(Me.rad_Brc9)
+        Me.Grp.Controls.Add(Me.rad_Brc8)
+        Me.Grp.Controls.Add(Me.rad_Brc7)
+        Me.Grp.Controls.Add(Me.rad_Brc6)
+        Me.Grp.Controls.Add(Me.rad_Brc5)
+        Me.Grp.Controls.Add(Me.rad_Brc4)
+        Me.Grp.Controls.Add(Me.rad_Brc3)
+        Me.Grp.Controls.Add(Me.rad_Brc2)
+        Me.Grp.Controls.Add(Me.rad_Brc1)
+        Me.Grp.Controls.Add(Me.rad_Brc0)
+        Me.Grp.Location = New System.Drawing.Point(9, 247)
+        Me.Grp.Name = "Grp"
+        Me.Grp.Size = New System.Drawing.Size(227, 148)
+        Me.Grp.TabIndex = 265
+        Me.Grp.TabStop = false
+        Me.Grp.Text = "选择载具中料的序号"
+        '
+        'rad_Brc0
+        '
+        Me.rad_Brc0.AutoSize = true
+        Me.rad_Brc0.Checked = true
+        Me.rad_Brc0.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc0.Location = New System.Drawing.Point(21, 23)
+        Me.rad_Brc0.Name = "rad_Brc0"
+        Me.rad_Brc0.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc0.TabIndex = 266
+        Me.rad_Brc0.TabStop = true
+        Me.rad_Brc0.Text = "1"
+        Me.rad_Brc0.UseVisualStyleBackColor = true
+        '
+        'rad_Brc1
+        '
+        Me.rad_Brc1.AutoSize = true
+        Me.rad_Brc1.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc1.Location = New System.Drawing.Point(46, 43)
+        Me.rad_Brc1.Name = "rad_Brc1"
+        Me.rad_Brc1.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc1.TabIndex = 267
+        Me.rad_Brc1.Text = "2"
+        Me.rad_Brc1.UseVisualStyleBackColor = true
+        '
+        'rad_Brc2
+        '
+        Me.rad_Brc2.AutoSize = true
+        Me.rad_Brc2.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc2.Location = New System.Drawing.Point(85, 23)
+        Me.rad_Brc2.Name = "rad_Brc2"
+        Me.rad_Brc2.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc2.TabIndex = 268
+        Me.rad_Brc2.Text = "3"
+        Me.rad_Brc2.UseVisualStyleBackColor = true
+        '
+        'rad_Brc3
+        '
+        Me.rad_Brc3.AutoSize = true
+        Me.rad_Brc3.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc3.Location = New System.Drawing.Point(110, 43)
+        Me.rad_Brc3.Name = "rad_Brc3"
+        Me.rad_Brc3.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc3.TabIndex = 269
+        Me.rad_Brc3.Text = "4"
+        Me.rad_Brc3.UseVisualStyleBackColor = true
+        '
+        'rad_Brc4
+        '
+        Me.rad_Brc4.AutoSize = true
+        Me.rad_Brc4.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc4.Location = New System.Drawing.Point(149, 23)
+        Me.rad_Brc4.Name = "rad_Brc4"
+        Me.rad_Brc4.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc4.TabIndex = 270
+        Me.rad_Brc4.Text = "5"
+        Me.rad_Brc4.UseVisualStyleBackColor = true
+        '
+        'rad_Brc5
+        '
+        Me.rad_Brc5.AutoSize = true
+        Me.rad_Brc5.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc5.Location = New System.Drawing.Point(174, 43)
+        Me.rad_Brc5.Name = "rad_Brc5"
+        Me.rad_Brc5.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc5.TabIndex = 271
+        Me.rad_Brc5.Text = "6"
+        Me.rad_Brc5.UseVisualStyleBackColor = true
+        '
+        'rad_Brc6
+        '
+        Me.rad_Brc6.AutoSize = true
+        Me.rad_Brc6.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc6.Location = New System.Drawing.Point(21, 69)
+        Me.rad_Brc6.Name = "rad_Brc6"
+        Me.rad_Brc6.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc6.TabIndex = 272
+        Me.rad_Brc6.Text = "7"
+        Me.rad_Brc6.UseVisualStyleBackColor = true
+        '
+        'rad_Brc7
+        '
+        Me.rad_Brc7.AutoSize = true
+        Me.rad_Brc7.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc7.Location = New System.Drawing.Point(46, 90)
+        Me.rad_Brc7.Name = "rad_Brc7"
+        Me.rad_Brc7.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc7.TabIndex = 273
+        Me.rad_Brc7.Text = "8"
+        Me.rad_Brc7.UseVisualStyleBackColor = true
+        '
+        'rad_Brc8
+        '
+        Me.rad_Brc8.AutoSize = true
+        Me.rad_Brc8.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc8.Location = New System.Drawing.Point(85, 69)
+        Me.rad_Brc8.Name = "rad_Brc8"
+        Me.rad_Brc8.Size = New System.Drawing.Size(32, 19)
+        Me.rad_Brc8.TabIndex = 274
+        Me.rad_Brc8.Text = "9"
+        Me.rad_Brc8.UseVisualStyleBackColor = true
+        '
+        'rad_Brc9
+        '
+        Me.rad_Brc9.AutoSize = true
+        Me.rad_Brc9.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc9.Location = New System.Drawing.Point(110, 90)
+        Me.rad_Brc9.Name = "rad_Brc9"
+        Me.rad_Brc9.Size = New System.Drawing.Size(39, 19)
+        Me.rad_Brc9.TabIndex = 275
+        Me.rad_Brc9.Text = "10"
+        Me.rad_Brc9.UseVisualStyleBackColor = true
+        '
+        'rad_Brc10
+        '
+        Me.rad_Brc10.AutoSize = true
+        Me.rad_Brc10.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc10.Location = New System.Drawing.Point(149, 69)
+        Me.rad_Brc10.Name = "rad_Brc10"
+        Me.rad_Brc10.Size = New System.Drawing.Size(39, 19)
+        Me.rad_Brc10.TabIndex = 276
+        Me.rad_Brc10.Text = "11"
+        Me.rad_Brc10.UseVisualStyleBackColor = true
+        '
+        'rad_Brc11
+        '
+        Me.rad_Brc11.AutoSize = true
+        Me.rad_Brc11.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc11.Location = New System.Drawing.Point(174, 90)
+        Me.rad_Brc11.Name = "rad_Brc11"
+        Me.rad_Brc11.Size = New System.Drawing.Size(39, 19)
+        Me.rad_Brc11.TabIndex = 277
+        Me.rad_Brc11.Text = "12"
+        Me.rad_Brc11.UseVisualStyleBackColor = true
+        '
+        'txt_MaterialSelected
+        '
+        Me.txt_MaterialSelected.BackColor = System.Drawing.SystemColors.Window
+        Me.txt_MaterialSelected.Font = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.txt_MaterialSelected.ForeColor = System.Drawing.Color.Blue
+        Me.txt_MaterialSelected.Location = New System.Drawing.Point(117, 121)
+        Me.txt_MaterialSelected.Name = "txt_MaterialSelected"
+        Me.txt_MaterialSelected.Size = New System.Drawing.Size(63, 21)
+        Me.txt_MaterialSelected.TabIndex = 278
+        Me.txt_MaterialSelected.Text = "10"
+        Me.txt_MaterialSelected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label336
+        '
+        Me.Label336.AutoSize = true
+        Me.Label336.Location = New System.Drawing.Point(8, 123)
+        Me.Label336.Name = "Label336"
+        Me.Label336.Size = New System.Drawing.Size(103, 15)
+        Me.Label336.TabIndex = 279
+        Me.Label336.Text = "单站调试选料"
+        '
         'Frm_Engineering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 12!)
@@ -12292,6 +12488,8 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel21.PerformLayout
         Me.TableLayoutPanel20.ResumeLayout(false)
         Me.TableLayoutPanel20.PerformLayout
+        Me.Grp.ResumeLayout(false)
+        Me.Grp.PerformLayout
         Me.ResumeLayout(false)
 
 End Sub
@@ -13183,4 +13381,19 @@ End Sub
     Friend WithEvents btn_StopL1 As BoTech.BZ_Button
     Friend WithEvents BZ_RoundPanel11 As BoTech.BZ_RoundPanel
     Friend WithEvents Btn_GluePar As System.Windows.Forms.Button
+    Friend WithEvents Grp As System.Windows.Forms.GroupBox
+    Friend WithEvents rad_Brc11 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc10 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc9 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc8 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc7 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc6 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc5 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc4 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc3 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc2 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc1 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad_Brc0 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label336 As System.Windows.Forms.Label
+    Friend WithEvents txt_MaterialSelected As System.Windows.Forms.TextBox
 End Class

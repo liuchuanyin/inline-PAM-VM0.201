@@ -121,11 +121,6 @@
         Loop
     End Sub
 
-    Public Function isHaveBracketNotPasteCamera() As Boolean
-        Dim mValue As Boolean
-
-        Return mValue
-    End Function
 
     Public Sub AutoRun_PreTakerStation()
         'PreTaker_Sta.workState = 0   '工作进行中
