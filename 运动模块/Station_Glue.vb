@@ -392,21 +392,32 @@
 
         Line_Sta(1).workState = 2   '接收载具完成，等待点胶
         Line_Sta(1).isHaveTray = True
+
         Tray_Pallet(1).isHaveTray = True : Tray_Pallet(1).isTrayOK = True : Tray_Pallet(1).Tray_Barcode = Format(Now, "yyyyMMddHHmmss")
+
         For index = 0 To Tray_Pallet(1).Hole.Count - 1
-            Tray_Pallet(1).Hole(index).isHaveProduct = True : Tray_Pallet(1).Hole(index).isProductOk = True
-            Tray_Pallet(1).Hole(index).ProductBarcode = "Hole" & index
+            If index = Val(Frm_Engineering.txt_MaterialSelected.Text) Then
+                Tray_Pallet(1).Hole(index).isHaveProduct = True : Tray_Pallet(1).Hole(index).isProductOk = True
+                Tray_Pallet(1).Hole(index).ProductBarcode = "Hole" & index
+            Else
+                Tray_Pallet(1).Hole(index).isHaveProduct = False : Tray_Pallet(1).Hole(index).isProductOk = False
+                Tray_Pallet(1).Hole(index).ProductBarcode = "Hole" & index
+            End If
         Next
+
         Step_Glue = 10
 
         Do While True
             My.Application.DoEvents()
             Delay(10)
+
             Call Autorun_GlueStation()
+
             If GLue_Sta.isWorking = False And GLue_Sta.workState = 1 Then
                 List_DebugAddMessage("1段流水线单站自动运行完成！")
                 Exit Do
             End If
+
             If IsSysEmcStop Or GLue_Sta.isNormal = False Then
                 List_DebugAddMessage("1段流水线单站自动运行异常，停止自动运行！")
                 Exit Do
@@ -439,14 +450,53 @@
             Case 200
                 If Tray_Pallet(1).Hole(index_InGlue).isHaveProduct And Tray_Pallet(1).Hole(index_InGlue).isProductOk And Frm_Engineering.chk_Brc(index_InGlue).Checked Then
                     '当前穴位有料，且是OK的，并且选中要做这个
-                    Step_Glue = 210
+                    Step_Glue = 220
                 Else
                     '否则跳过这一颗料
                     ListBoxAddMessage("点胶站跳过第" & index_InGlue + 1 & "颗料！")
                     Step_Glue = 7000
                 End If
 
+            Case 220   'Z轴去安全位置
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)
+                Step_Glue = 240
 
+            Case 240
+                If Not isAxisMoving(0, GlueZ) Then
+                    Step_Glue = 260
+                End If
+
+            Case 300   'XY轴去第n个点胶拍照位置
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), TrayMatrix.TrayGlue(index_InGlue).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), TrayMatrix.TrayGlue(index_InGlue).Y)
+                Step_Glue = 320
+
+            Case 320   'Z轴去点胶站CCD拍第1颗料位置的高度
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) Then
+                    Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(14).Z)
+                    Step_Glue = 340
+                End If
+
+            Case 340   '判断Z轴到位
+                If Not isAxisMoving(0, GlueZ) Then
+                    timeStart = GetTickCount
+                    Step_Glue = 360
+                End If
+
+            Case 360
+                If par.chkFn(4) Then
+
+                Else
+                    'Z轴停止后延时0.5S开始拍照
+                    If GetTickCount - timeStart > 500 Then
+                        Step_Glue = 380
+                    End If
+                End If
+
+            Case 380 '判断CCD是否在锁定中
+                'If TriggerCCD("T1,1", Tray_Pallet(1).Tray_Barcode & Tray_Pallet(1).Hole(index_InGlue).ProductBarcode) Then
+
+                'End If
 
             Case 7000
                 '共计12颗料，index从0开始

@@ -341,10 +341,10 @@ Partial Class Frm_Settings
         'Label_DownTime
         '
         Me.Label_DownTime.AutoSize = True
-        Me.Label_DownTime.Font = New System.Drawing.Font("HelveticaNeue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_DownTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_DownTime.Location = New System.Drawing.Point(345, 18)
         Me.Label_DownTime.Name = "Label_DownTime"
-        Me.Label_DownTime.Size = New System.Drawing.Size(155, 19)
+        Me.Label_DownTime.Size = New System.Drawing.Size(151, 20)
         Me.Label_DownTime.TabIndex = 10
         Me.Label_DownTime.Text = "DowmTime Settings"
         '
@@ -406,7 +406,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime15
         '
-        Me.txt_DownTime15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime15.Location = New System.Drawing.Point(89, 423)
         Me.txt_DownTime15.Multiline = True
         Me.txt_DownTime15.Name = "txt_DownTime15"
@@ -415,7 +415,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime14
         '
-        Me.txt_DownTime14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime14.Location = New System.Drawing.Point(89, 393)
         Me.txt_DownTime14.Multiline = True
         Me.txt_DownTime14.Name = "txt_DownTime14"
@@ -424,7 +424,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime13
         '
-        Me.txt_DownTime13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime13.Location = New System.Drawing.Point(89, 363)
         Me.txt_DownTime13.Multiline = True
         Me.txt_DownTime13.Name = "txt_DownTime13"
@@ -433,7 +433,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime12
         '
-        Me.txt_DownTime12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime12.Location = New System.Drawing.Point(89, 333)
         Me.txt_DownTime12.Multiline = True
         Me.txt_DownTime12.Name = "txt_DownTime12"
@@ -442,7 +442,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime11
         '
-        Me.txt_DownTime11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime11.Location = New System.Drawing.Point(89, 303)
         Me.txt_DownTime11.Multiline = True
         Me.txt_DownTime11.Name = "txt_DownTime11"
@@ -451,7 +451,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime10
         '
-        Me.txt_DownTime10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime10.Location = New System.Drawing.Point(89, 273)
         Me.txt_DownTime10.Multiline = True
         Me.txt_DownTime10.Name = "txt_DownTime10"
@@ -460,7 +460,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime9
         '
-        Me.txt_DownTime9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime9.Location = New System.Drawing.Point(89, 243)
         Me.txt_DownTime9.Multiline = True
         Me.txt_DownTime9.Name = "txt_DownTime9"
@@ -469,7 +469,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime8
         '
-        Me.txt_DownTime8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime8.Location = New System.Drawing.Point(89, 213)
         Me.txt_DownTime8.Multiline = True
         Me.txt_DownTime8.Name = "txt_DownTime8"
@@ -478,7 +478,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime7
         '
-        Me.txt_DownTime7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime7.Location = New System.Drawing.Point(89, 183)
         Me.txt_DownTime7.Multiline = True
         Me.txt_DownTime7.Name = "txt_DownTime7"
@@ -487,7 +487,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime6
         '
-        Me.txt_DownTime6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime6.Location = New System.Drawing.Point(89, 153)
         Me.txt_DownTime6.Multiline = True
         Me.txt_DownTime6.Name = "txt_DownTime6"
@@ -496,7 +496,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime5
         '
-        Me.txt_DownTime5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime5.Location = New System.Drawing.Point(89, 123)
         Me.txt_DownTime5.Multiline = True
         Me.txt_DownTime5.Name = "txt_DownTime5"
@@ -505,7 +505,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime4
         '
-        Me.txt_DownTime4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime4.Location = New System.Drawing.Point(89, 93)
         Me.txt_DownTime4.Multiline = True
         Me.txt_DownTime4.Name = "txt_DownTime4"
@@ -514,7 +514,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime3
         '
-        Me.txt_DownTime3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime3.Location = New System.Drawing.Point(89, 63)
         Me.txt_DownTime3.Multiline = True
         Me.txt_DownTime3.Name = "txt_DownTime3"
@@ -523,7 +523,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime2
         '
-        Me.txt_DownTime2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime2.Location = New System.Drawing.Point(89, 33)
         Me.txt_DownTime2.Multiline = True
         Me.txt_DownTime2.Name = "txt_DownTime2"
@@ -532,7 +532,7 @@ Partial Class Frm_Settings
         '
         'txt_DownTime1
         '
-        Me.txt_DownTime1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DownTime1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_DownTime1.Location = New System.Drawing.Point(89, 3)
         Me.txt_DownTime1.Multiline = True
         Me.txt_DownTime1.Name = "txt_DownTime1"
@@ -541,7 +541,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime4
         '
-        Me.lbl_Downtime4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime4.Location = New System.Drawing.Point(3, 90)
         Me.lbl_Downtime4.Name = "lbl_Downtime4"
         Me.lbl_Downtime4.Size = New System.Drawing.Size(80, 30)
@@ -551,7 +551,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime1
         '
-        Me.lbl_Downtime1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime1.Location = New System.Drawing.Point(3, 0)
         Me.lbl_Downtime1.Name = "lbl_Downtime1"
         Me.lbl_Downtime1.Size = New System.Drawing.Size(80, 30)
@@ -561,7 +561,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime2
         '
-        Me.lbl_Downtime2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime2.Location = New System.Drawing.Point(3, 30)
         Me.lbl_Downtime2.Name = "lbl_Downtime2"
         Me.lbl_Downtime2.Size = New System.Drawing.Size(80, 30)
@@ -571,7 +571,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime3
         '
-        Me.lbl_Downtime3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime3.Location = New System.Drawing.Point(3, 60)
         Me.lbl_Downtime3.Name = "lbl_Downtime3"
         Me.lbl_Downtime3.Size = New System.Drawing.Size(80, 30)
@@ -581,7 +581,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime5
         '
-        Me.lbl_Downtime5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime5.Location = New System.Drawing.Point(3, 120)
         Me.lbl_Downtime5.Name = "lbl_Downtime5"
         Me.lbl_Downtime5.Size = New System.Drawing.Size(80, 30)
@@ -591,7 +591,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime6
         '
-        Me.lbl_Downtime6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime6.Location = New System.Drawing.Point(3, 150)
         Me.lbl_Downtime6.Name = "lbl_Downtime6"
         Me.lbl_Downtime6.Size = New System.Drawing.Size(80, 30)
@@ -601,7 +601,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime7
         '
-        Me.lbl_Downtime7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime7.Location = New System.Drawing.Point(3, 180)
         Me.lbl_Downtime7.Name = "lbl_Downtime7"
         Me.lbl_Downtime7.Size = New System.Drawing.Size(80, 30)
@@ -611,7 +611,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime8
         '
-        Me.lbl_Downtime8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime8.Location = New System.Drawing.Point(3, 210)
         Me.lbl_Downtime8.Name = "lbl_Downtime8"
         Me.lbl_Downtime8.Size = New System.Drawing.Size(80, 30)
@@ -621,7 +621,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime9
         '
-        Me.lbl_Downtime9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime9.Location = New System.Drawing.Point(3, 240)
         Me.lbl_Downtime9.Name = "lbl_Downtime9"
         Me.lbl_Downtime9.Size = New System.Drawing.Size(80, 30)
@@ -631,7 +631,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime10
         '
-        Me.lbl_Downtime10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime10.Location = New System.Drawing.Point(3, 270)
         Me.lbl_Downtime10.Name = "lbl_Downtime10"
         Me.lbl_Downtime10.Size = New System.Drawing.Size(80, 30)
@@ -641,7 +641,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime11
         '
-        Me.lbl_Downtime11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime11.Location = New System.Drawing.Point(3, 300)
         Me.lbl_Downtime11.Name = "lbl_Downtime11"
         Me.lbl_Downtime11.Size = New System.Drawing.Size(80, 30)
@@ -651,7 +651,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime12
         '
-        Me.lbl_Downtime12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime12.Location = New System.Drawing.Point(3, 330)
         Me.lbl_Downtime12.Name = "lbl_Downtime12"
         Me.lbl_Downtime12.Size = New System.Drawing.Size(80, 30)
@@ -661,7 +661,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime15
         '
-        Me.lbl_Downtime15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime15.Location = New System.Drawing.Point(3, 420)
         Me.lbl_Downtime15.Name = "lbl_Downtime15"
         Me.lbl_Downtime15.Size = New System.Drawing.Size(80, 30)
@@ -671,7 +671,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime14
         '
-        Me.lbl_Downtime14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime14.Location = New System.Drawing.Point(3, 390)
         Me.lbl_Downtime14.Name = "lbl_Downtime14"
         Me.lbl_Downtime14.Size = New System.Drawing.Size(80, 30)
@@ -681,7 +681,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime13
         '
-        Me.lbl_Downtime13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime13.Location = New System.Drawing.Point(3, 360)
         Me.lbl_Downtime13.Name = "lbl_Downtime13"
         Me.lbl_Downtime13.Size = New System.Drawing.Size(80, 30)
@@ -695,7 +695,7 @@ Partial Class Frm_Settings
         Me.BZ_RoundPanel2.BZ_Radius = 11
         Me.BZ_RoundPanel2.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel2.Controls.Add(Me.TableLayoutPanel1)
-        Me.BZ_RoundPanel2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BZ_RoundPanel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BZ_RoundPanel2.Location = New System.Drawing.Point(0, 0)
         Me.BZ_RoundPanel2.Name = "BZ_RoundPanel2"
         Me.BZ_RoundPanel2.Size = New System.Drawing.Size(931, 613)
@@ -746,7 +746,7 @@ Partial Class Frm_Settings
         Me.TableLayoutPanel1.Controls.Add(Me.CheckBox14, 0, 13)
         Me.TableLayoutPanel1.Controls.Add(Me.CheckBox15, 0, 14)
         Me.TableLayoutPanel1.Controls.Add(Me.CheckBox16, 0, 15)
-        Me.TableLayoutPanel1.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(215, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 20
@@ -775,7 +775,7 @@ Partial Class Frm_Settings
         '
         'CheckBox40
         '
-        Me.CheckBox40.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox40.Location = New System.Drawing.Point(253, 573)
         Me.CheckBox40.Name = "CheckBox40"
         Me.CheckBox40.Size = New System.Drawing.Size(195, 24)
@@ -785,7 +785,7 @@ Partial Class Frm_Settings
         '
         'CheckBox39
         '
-        Me.CheckBox39.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox39.Location = New System.Drawing.Point(253, 543)
         Me.CheckBox39.Name = "CheckBox39"
         Me.CheckBox39.Size = New System.Drawing.Size(195, 24)
@@ -795,7 +795,7 @@ Partial Class Frm_Settings
         '
         'CheckBox38
         '
-        Me.CheckBox38.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox38.Location = New System.Drawing.Point(253, 513)
         Me.CheckBox38.Name = "CheckBox38"
         Me.CheckBox38.Size = New System.Drawing.Size(195, 24)
@@ -805,7 +805,7 @@ Partial Class Frm_Settings
         '
         'CheckBox37
         '
-        Me.CheckBox37.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox37.Location = New System.Drawing.Point(253, 483)
         Me.CheckBox37.Name = "CheckBox37"
         Me.CheckBox37.Size = New System.Drawing.Size(195, 24)
@@ -815,7 +815,7 @@ Partial Class Frm_Settings
         '
         'CheckBox36
         '
-        Me.CheckBox36.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox36.Location = New System.Drawing.Point(253, 453)
         Me.CheckBox36.Name = "CheckBox36"
         Me.CheckBox36.Size = New System.Drawing.Size(195, 24)
@@ -825,7 +825,7 @@ Partial Class Frm_Settings
         '
         'CheckBox35
         '
-        Me.CheckBox35.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox35.Location = New System.Drawing.Point(253, 423)
         Me.CheckBox35.Name = "CheckBox35"
         Me.CheckBox35.Size = New System.Drawing.Size(195, 24)
@@ -835,7 +835,7 @@ Partial Class Frm_Settings
         '
         'CheckBox34
         '
-        Me.CheckBox34.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox34.Location = New System.Drawing.Point(253, 393)
         Me.CheckBox34.Name = "CheckBox34"
         Me.CheckBox34.Size = New System.Drawing.Size(195, 24)
@@ -845,7 +845,7 @@ Partial Class Frm_Settings
         '
         'CheckBox33
         '
-        Me.CheckBox33.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox33.Location = New System.Drawing.Point(253, 363)
         Me.CheckBox33.Name = "CheckBox33"
         Me.CheckBox33.Size = New System.Drawing.Size(195, 24)
@@ -855,7 +855,7 @@ Partial Class Frm_Settings
         '
         'CheckBox32
         '
-        Me.CheckBox32.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox32.Location = New System.Drawing.Point(253, 333)
         Me.CheckBox32.Name = "CheckBox32"
         Me.CheckBox32.Size = New System.Drawing.Size(195, 24)
@@ -865,7 +865,7 @@ Partial Class Frm_Settings
         '
         'CheckBox31
         '
-        Me.CheckBox31.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox31.Location = New System.Drawing.Point(253, 303)
         Me.CheckBox31.Name = "CheckBox31"
         Me.CheckBox31.Size = New System.Drawing.Size(195, 24)
@@ -875,7 +875,7 @@ Partial Class Frm_Settings
         '
         'CheckBox30
         '
-        Me.CheckBox30.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox30.Location = New System.Drawing.Point(253, 273)
         Me.CheckBox30.Name = "CheckBox30"
         Me.CheckBox30.Size = New System.Drawing.Size(195, 24)
@@ -885,7 +885,7 @@ Partial Class Frm_Settings
         '
         'CheckBox29
         '
-        Me.CheckBox29.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox29.Location = New System.Drawing.Point(253, 243)
         Me.CheckBox29.Name = "CheckBox29"
         Me.CheckBox29.Size = New System.Drawing.Size(195, 24)
@@ -895,7 +895,7 @@ Partial Class Frm_Settings
         '
         'CheckBox28
         '
-        Me.CheckBox28.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox28.Location = New System.Drawing.Point(253, 213)
         Me.CheckBox28.Name = "CheckBox28"
         Me.CheckBox28.Size = New System.Drawing.Size(195, 24)
@@ -905,7 +905,7 @@ Partial Class Frm_Settings
         '
         'CheckBox27
         '
-        Me.CheckBox27.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox27.Location = New System.Drawing.Point(253, 183)
         Me.CheckBox27.Name = "CheckBox27"
         Me.CheckBox27.Size = New System.Drawing.Size(195, 24)
@@ -915,7 +915,7 @@ Partial Class Frm_Settings
         '
         'CheckBox26
         '
-        Me.CheckBox26.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox26.Location = New System.Drawing.Point(253, 153)
         Me.CheckBox26.Name = "CheckBox26"
         Me.CheckBox26.Size = New System.Drawing.Size(195, 24)
@@ -925,7 +925,7 @@ Partial Class Frm_Settings
         '
         'CheckBox25
         '
-        Me.CheckBox25.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox25.Location = New System.Drawing.Point(253, 123)
         Me.CheckBox25.Name = "CheckBox25"
         Me.CheckBox25.Size = New System.Drawing.Size(195, 24)
@@ -935,7 +935,7 @@ Partial Class Frm_Settings
         '
         'CheckBox24
         '
-        Me.CheckBox24.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox24.Location = New System.Drawing.Point(253, 93)
         Me.CheckBox24.Name = "CheckBox24"
         Me.CheckBox24.Size = New System.Drawing.Size(195, 24)
@@ -945,7 +945,7 @@ Partial Class Frm_Settings
         '
         'CheckBox23
         '
-        Me.CheckBox23.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox23.Location = New System.Drawing.Point(253, 63)
         Me.CheckBox23.Name = "CheckBox23"
         Me.CheckBox23.Size = New System.Drawing.Size(195, 24)
@@ -955,7 +955,7 @@ Partial Class Frm_Settings
         '
         'CheckBox22
         '
-        Me.CheckBox22.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox22.Location = New System.Drawing.Point(253, 33)
         Me.CheckBox22.Name = "CheckBox22"
         Me.CheckBox22.Size = New System.Drawing.Size(195, 24)
@@ -965,7 +965,7 @@ Partial Class Frm_Settings
         '
         'CheckBox21
         '
-        Me.CheckBox21.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox21.Location = New System.Drawing.Point(253, 3)
         Me.CheckBox21.Name = "CheckBox21"
         Me.CheckBox21.Size = New System.Drawing.Size(195, 24)
@@ -975,7 +975,7 @@ Partial Class Frm_Settings
         '
         'CheckBox20
         '
-        Me.CheckBox20.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox20.Location = New System.Drawing.Point(3, 573)
         Me.CheckBox20.Name = "CheckBox20"
         Me.CheckBox20.Size = New System.Drawing.Size(195, 24)
@@ -985,7 +985,7 @@ Partial Class Frm_Settings
         '
         'CheckBox19
         '
-        Me.CheckBox19.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox19.Location = New System.Drawing.Point(3, 543)
         Me.CheckBox19.Name = "CheckBox19"
         Me.CheckBox19.Size = New System.Drawing.Size(195, 24)
@@ -995,7 +995,7 @@ Partial Class Frm_Settings
         '
         'CheckBox18
         '
-        Me.CheckBox18.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox18.Location = New System.Drawing.Point(3, 513)
         Me.CheckBox18.Name = "CheckBox18"
         Me.CheckBox18.Size = New System.Drawing.Size(195, 24)
@@ -1005,7 +1005,7 @@ Partial Class Frm_Settings
         '
         'CheckBox17
         '
-        Me.CheckBox17.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox17.Location = New System.Drawing.Point(3, 483)
         Me.CheckBox17.Name = "CheckBox17"
         Me.CheckBox17.Size = New System.Drawing.Size(195, 24)
@@ -1015,7 +1015,7 @@ Partial Class Frm_Settings
         '
         'CheckBox1
         '
-        Me.CheckBox1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.Location = New System.Drawing.Point(3, 3)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(195, 24)
@@ -1025,7 +1025,7 @@ Partial Class Frm_Settings
         '
         'CheckBox2
         '
-        Me.CheckBox2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.Location = New System.Drawing.Point(3, 33)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(195, 24)
@@ -1035,7 +1035,7 @@ Partial Class Frm_Settings
         '
         'CheckBox3
         '
-        Me.CheckBox3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox3.Location = New System.Drawing.Point(3, 63)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(195, 24)
@@ -1045,7 +1045,7 @@ Partial Class Frm_Settings
         '
         'CheckBox4
         '
-        Me.CheckBox4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox4.Location = New System.Drawing.Point(3, 93)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(195, 24)
@@ -1055,7 +1055,7 @@ Partial Class Frm_Settings
         '
         'CheckBox5
         '
-        Me.CheckBox5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox5.Location = New System.Drawing.Point(3, 123)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(195, 24)
@@ -1065,7 +1065,7 @@ Partial Class Frm_Settings
         '
         'CheckBox6
         '
-        Me.CheckBox6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox6.Location = New System.Drawing.Point(3, 153)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(195, 24)
@@ -1075,7 +1075,7 @@ Partial Class Frm_Settings
         '
         'CheckBox7
         '
-        Me.CheckBox7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox7.Location = New System.Drawing.Point(3, 183)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(195, 24)
@@ -1085,7 +1085,7 @@ Partial Class Frm_Settings
         '
         'CheckBox8
         '
-        Me.CheckBox8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox8.Location = New System.Drawing.Point(3, 213)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(195, 24)
@@ -1095,7 +1095,7 @@ Partial Class Frm_Settings
         '
         'CheckBox9
         '
-        Me.CheckBox9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox9.Location = New System.Drawing.Point(3, 243)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(195, 24)
@@ -1105,7 +1105,7 @@ Partial Class Frm_Settings
         '
         'CheckBox10
         '
-        Me.CheckBox10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox10.Location = New System.Drawing.Point(3, 273)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(195, 24)
@@ -1115,7 +1115,7 @@ Partial Class Frm_Settings
         '
         'CheckBox11
         '
-        Me.CheckBox11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox11.Location = New System.Drawing.Point(3, 303)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(195, 24)
@@ -1125,7 +1125,7 @@ Partial Class Frm_Settings
         '
         'CheckBox12
         '
-        Me.CheckBox12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox12.Location = New System.Drawing.Point(3, 333)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(195, 24)
@@ -1135,7 +1135,7 @@ Partial Class Frm_Settings
         '
         'CheckBox13
         '
-        Me.CheckBox13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox13.Location = New System.Drawing.Point(3, 363)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(195, 24)
@@ -1145,7 +1145,7 @@ Partial Class Frm_Settings
         '
         'CheckBox14
         '
-        Me.CheckBox14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox14.Location = New System.Drawing.Point(3, 393)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(195, 24)
@@ -1155,7 +1155,7 @@ Partial Class Frm_Settings
         '
         'CheckBox15
         '
-        Me.CheckBox15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox15.Location = New System.Drawing.Point(3, 423)
         Me.CheckBox15.Name = "CheckBox15"
         Me.CheckBox15.Size = New System.Drawing.Size(195, 24)
@@ -1165,7 +1165,7 @@ Partial Class Frm_Settings
         '
         'CheckBox16
         '
-        Me.CheckBox16.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox16.Location = New System.Drawing.Point(3, 453)
         Me.CheckBox16.Name = "CheckBox16"
         Me.CheckBox16.Size = New System.Drawing.Size(195, 24)
@@ -1393,7 +1393,7 @@ Partial Class Frm_Settings
         '
         'txt_Par60
         '
-        Me.txt_Par60.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par60.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par60.Location = New System.Drawing.Point(643, 573)
         Me.txt_Par60.Multiline = True
         Me.txt_Par60.Name = "txt_Par60"
@@ -1403,7 +1403,7 @@ Partial Class Frm_Settings
         '
         'txt_Par40
         '
-        Me.txt_Par40.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par40.Location = New System.Drawing.Point(383, 573)
         Me.txt_Par40.Multiline = True
         Me.txt_Par40.Name = "txt_Par40"
@@ -1413,7 +1413,7 @@ Partial Class Frm_Settings
         '
         'txt_Par59
         '
-        Me.txt_Par59.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par59.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par59.Location = New System.Drawing.Point(643, 543)
         Me.txt_Par59.Multiline = True
         Me.txt_Par59.Name = "txt_Par59"
@@ -1423,7 +1423,7 @@ Partial Class Frm_Settings
         '
         'txt_Par39
         '
-        Me.txt_Par39.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par39.Location = New System.Drawing.Point(383, 543)
         Me.txt_Par39.Multiline = True
         Me.txt_Par39.Name = "txt_Par39"
@@ -1433,7 +1433,7 @@ Partial Class Frm_Settings
         '
         'txt_Par58
         '
-        Me.txt_Par58.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par58.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par58.Location = New System.Drawing.Point(643, 513)
         Me.txt_Par58.Multiline = True
         Me.txt_Par58.Name = "txt_Par58"
@@ -1443,7 +1443,7 @@ Partial Class Frm_Settings
         '
         'txt_Par38
         '
-        Me.txt_Par38.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par38.Location = New System.Drawing.Point(383, 513)
         Me.txt_Par38.Multiline = True
         Me.txt_Par38.Name = "txt_Par38"
@@ -1453,7 +1453,7 @@ Partial Class Frm_Settings
         '
         'txt_Par57
         '
-        Me.txt_Par57.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par57.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par57.Location = New System.Drawing.Point(643, 483)
         Me.txt_Par57.Multiline = True
         Me.txt_Par57.Name = "txt_Par57"
@@ -1463,7 +1463,7 @@ Partial Class Frm_Settings
         '
         'txt_Par37
         '
-        Me.txt_Par37.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par37.Location = New System.Drawing.Point(383, 483)
         Me.txt_Par37.Multiline = True
         Me.txt_Par37.Name = "txt_Par37"
@@ -1473,7 +1473,7 @@ Partial Class Frm_Settings
         '
         'txt_Par56
         '
-        Me.txt_Par56.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par56.Location = New System.Drawing.Point(643, 453)
         Me.txt_Par56.Multiline = True
         Me.txt_Par56.Name = "txt_Par56"
@@ -1483,7 +1483,7 @@ Partial Class Frm_Settings
         '
         'txt_Par36
         '
-        Me.txt_Par36.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par36.Location = New System.Drawing.Point(383, 453)
         Me.txt_Par36.Multiline = True
         Me.txt_Par36.Name = "txt_Par36"
@@ -1493,7 +1493,7 @@ Partial Class Frm_Settings
         '
         'txt_Par55
         '
-        Me.txt_Par55.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par55.Location = New System.Drawing.Point(643, 423)
         Me.txt_Par55.Multiline = True
         Me.txt_Par55.Name = "txt_Par55"
@@ -1503,7 +1503,7 @@ Partial Class Frm_Settings
         '
         'txt_Par35
         '
-        Me.txt_Par35.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par35.Location = New System.Drawing.Point(383, 423)
         Me.txt_Par35.Multiline = True
         Me.txt_Par35.Name = "txt_Par35"
@@ -1513,7 +1513,7 @@ Partial Class Frm_Settings
         '
         'txt_Par54
         '
-        Me.txt_Par54.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par54.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par54.Location = New System.Drawing.Point(643, 393)
         Me.txt_Par54.Multiline = True
         Me.txt_Par54.Name = "txt_Par54"
@@ -1523,7 +1523,7 @@ Partial Class Frm_Settings
         '
         'txt_Par34
         '
-        Me.txt_Par34.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par34.Location = New System.Drawing.Point(383, 393)
         Me.txt_Par34.Multiline = True
         Me.txt_Par34.Name = "txt_Par34"
@@ -1533,7 +1533,7 @@ Partial Class Frm_Settings
         '
         'txt_Par53
         '
-        Me.txt_Par53.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par53.Location = New System.Drawing.Point(643, 363)
         Me.txt_Par53.Multiline = True
         Me.txt_Par53.Name = "txt_Par53"
@@ -1543,7 +1543,7 @@ Partial Class Frm_Settings
         '
         'txt_Par33
         '
-        Me.txt_Par33.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par33.Location = New System.Drawing.Point(383, 363)
         Me.txt_Par33.Multiline = True
         Me.txt_Par33.Name = "txt_Par33"
@@ -1553,7 +1553,7 @@ Partial Class Frm_Settings
         '
         'txt_Par52
         '
-        Me.txt_Par52.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par52.Location = New System.Drawing.Point(643, 333)
         Me.txt_Par52.Multiline = True
         Me.txt_Par52.Name = "txt_Par52"
@@ -1563,7 +1563,7 @@ Partial Class Frm_Settings
         '
         'txt_Par32
         '
-        Me.txt_Par32.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par32.Location = New System.Drawing.Point(383, 333)
         Me.txt_Par32.Multiline = True
         Me.txt_Par32.Name = "txt_Par32"
@@ -1573,7 +1573,7 @@ Partial Class Frm_Settings
         '
         'txt_Par51
         '
-        Me.txt_Par51.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par51.Location = New System.Drawing.Point(643, 303)
         Me.txt_Par51.Multiline = True
         Me.txt_Par51.Name = "txt_Par51"
@@ -1583,7 +1583,7 @@ Partial Class Frm_Settings
         '
         'txt_Par50
         '
-        Me.txt_Par50.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par50.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par50.Location = New System.Drawing.Point(643, 273)
         Me.txt_Par50.Multiline = True
         Me.txt_Par50.Name = "txt_Par50"
@@ -1593,7 +1593,7 @@ Partial Class Frm_Settings
         '
         'txt_Par49
         '
-        Me.txt_Par49.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par49.Location = New System.Drawing.Point(643, 243)
         Me.txt_Par49.Multiline = True
         Me.txt_Par49.Name = "txt_Par49"
@@ -1603,7 +1603,7 @@ Partial Class Frm_Settings
         '
         'txt_Par48
         '
-        Me.txt_Par48.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par48.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par48.Location = New System.Drawing.Point(643, 213)
         Me.txt_Par48.Multiline = True
         Me.txt_Par48.Name = "txt_Par48"
@@ -1613,7 +1613,7 @@ Partial Class Frm_Settings
         '
         'txt_Par47
         '
-        Me.txt_Par47.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par47.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par47.Location = New System.Drawing.Point(643, 183)
         Me.txt_Par47.Multiline = True
         Me.txt_Par47.Name = "txt_Par47"
@@ -1623,7 +1623,7 @@ Partial Class Frm_Settings
         '
         'txt_Par46
         '
-        Me.txt_Par46.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par46.Location = New System.Drawing.Point(643, 153)
         Me.txt_Par46.Multiline = True
         Me.txt_Par46.Name = "txt_Par46"
@@ -1633,7 +1633,7 @@ Partial Class Frm_Settings
         '
         'txt_Par45
         '
-        Me.txt_Par45.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par45.Location = New System.Drawing.Point(643, 123)
         Me.txt_Par45.Multiline = True
         Me.txt_Par45.Name = "txt_Par45"
@@ -1643,7 +1643,7 @@ Partial Class Frm_Settings
         '
         'txt_Par44
         '
-        Me.txt_Par44.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par44.Location = New System.Drawing.Point(643, 93)
         Me.txt_Par44.Multiline = True
         Me.txt_Par44.Name = "txt_Par44"
@@ -1653,7 +1653,7 @@ Partial Class Frm_Settings
         '
         'txt_Par43
         '
-        Me.txt_Par43.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par43.Location = New System.Drawing.Point(643, 63)
         Me.txt_Par43.Multiline = True
         Me.txt_Par43.Name = "txt_Par43"
@@ -1663,7 +1663,7 @@ Partial Class Frm_Settings
         '
         'txt_Par42
         '
-        Me.txt_Par42.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par42.Location = New System.Drawing.Point(643, 33)
         Me.txt_Par42.Multiline = True
         Me.txt_Par42.Name = "txt_Par42"
@@ -1673,7 +1673,7 @@ Partial Class Frm_Settings
         '
         'txt_Par41
         '
-        Me.txt_Par41.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par41.Location = New System.Drawing.Point(643, 3)
         Me.txt_Par41.Multiline = True
         Me.txt_Par41.Name = "txt_Par41"
@@ -1683,7 +1683,7 @@ Partial Class Frm_Settings
         '
         'Label30
         '
-        Me.Label30.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.Location = New System.Drawing.Point(743, 540)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(34, 30)
@@ -1693,7 +1693,7 @@ Partial Class Frm_Settings
         '
         'Label29
         '
-        Me.Label29.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.Location = New System.Drawing.Point(743, 510)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(34, 30)
@@ -1703,7 +1703,7 @@ Partial Class Frm_Settings
         '
         'Label28
         '
-        Me.Label28.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.Location = New System.Drawing.Point(743, 480)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(34, 30)
@@ -1713,7 +1713,7 @@ Partial Class Frm_Settings
         '
         'Label27
         '
-        Me.Label27.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(743, 450)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(34, 30)
@@ -1723,7 +1723,7 @@ Partial Class Frm_Settings
         '
         'Label26
         '
-        Me.Label26.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(743, 420)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(34, 30)
@@ -1733,7 +1733,7 @@ Partial Class Frm_Settings
         '
         'Label25
         '
-        Me.Label25.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(743, 390)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(34, 30)
@@ -1743,7 +1743,7 @@ Partial Class Frm_Settings
         '
         'Label24
         '
-        Me.Label24.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(743, 360)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(34, 30)
@@ -1753,7 +1753,7 @@ Partial Class Frm_Settings
         '
         'Label23
         '
-        Me.Label23.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(743, 330)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(34, 30)
@@ -1763,7 +1763,7 @@ Partial Class Frm_Settings
         '
         'Label22
         '
-        Me.Label22.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.Location = New System.Drawing.Point(743, 300)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(34, 30)
@@ -1773,7 +1773,7 @@ Partial Class Frm_Settings
         '
         'Label21
         '
-        Me.Label21.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(743, 270)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(34, 30)
@@ -1783,7 +1783,7 @@ Partial Class Frm_Settings
         '
         'Label20
         '
-        Me.Label20.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(743, 240)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(34, 30)
@@ -1793,7 +1793,7 @@ Partial Class Frm_Settings
         '
         'Label19
         '
-        Me.Label19.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(743, 210)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(34, 30)
@@ -1803,7 +1803,7 @@ Partial Class Frm_Settings
         '
         'Label18
         '
-        Me.Label18.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(743, 180)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(34, 30)
@@ -1813,7 +1813,7 @@ Partial Class Frm_Settings
         '
         'Label17
         '
-        Me.Label17.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(743, 150)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(34, 30)
@@ -1823,7 +1823,7 @@ Partial Class Frm_Settings
         '
         'Label16
         '
-        Me.Label16.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(743, 120)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(34, 30)
@@ -1833,7 +1833,7 @@ Partial Class Frm_Settings
         '
         'Label15
         '
-        Me.Label15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(743, 90)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(34, 30)
@@ -1843,7 +1843,7 @@ Partial Class Frm_Settings
         '
         'Label14
         '
-        Me.Label14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(743, 60)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(34, 30)
@@ -1853,7 +1853,7 @@ Partial Class Frm_Settings
         '
         'Label13
         '
-        Me.Label13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(743, 30)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(34, 30)
@@ -1863,7 +1863,7 @@ Partial Class Frm_Settings
         '
         'Label11
         '
-        Me.Label11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(743, 570)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(34, 30)
@@ -1873,7 +1873,7 @@ Partial Class Frm_Settings
         '
         'Label10
         '
-        Me.Label10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(483, 570)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(34, 30)
@@ -1883,7 +1883,7 @@ Partial Class Frm_Settings
         '
         'Label9
         '
-        Me.Label9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(483, 540)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(34, 30)
@@ -1893,7 +1893,7 @@ Partial Class Frm_Settings
         '
         'Label8
         '
-        Me.Label8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(483, 510)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(34, 30)
@@ -1903,7 +1903,7 @@ Partial Class Frm_Settings
         '
         'Label7
         '
-        Me.Label7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(483, 480)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(34, 30)
@@ -1913,7 +1913,7 @@ Partial Class Frm_Settings
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(483, 450)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(34, 30)
@@ -1923,7 +1923,7 @@ Partial Class Frm_Settings
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(483, 420)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(34, 30)
@@ -1933,7 +1933,7 @@ Partial Class Frm_Settings
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(483, 390)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 30)
@@ -1943,7 +1943,7 @@ Partial Class Frm_Settings
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(483, 360)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(34, 30)
@@ -1953,7 +1953,7 @@ Partial Class Frm_Settings
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(483, 330)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 30)
@@ -1963,7 +1963,7 @@ Partial Class Frm_Settings
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(483, 300)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 30)
@@ -1973,7 +1973,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par59
         '
-        Me.lbl_Par59.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par59.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par59.Location = New System.Drawing.Point(523, 540)
         Me.lbl_Par59.Name = "lbl_Par59"
         Me.lbl_Par59.Size = New System.Drawing.Size(114, 30)
@@ -1983,7 +1983,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par58
         '
-        Me.lbl_Par58.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par58.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par58.Location = New System.Drawing.Point(523, 510)
         Me.lbl_Par58.Name = "lbl_Par58"
         Me.lbl_Par58.Size = New System.Drawing.Size(114, 30)
@@ -1993,7 +1993,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par44
         '
-        Me.lbl_Par44.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par44.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par44.Location = New System.Drawing.Point(523, 90)
         Me.lbl_Par44.Name = "lbl_Par44"
         Me.lbl_Par44.Size = New System.Drawing.Size(114, 30)
@@ -2003,7 +2003,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par60
         '
-        Me.lbl_Par60.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par60.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par60.Location = New System.Drawing.Point(523, 570)
         Me.lbl_Par60.Name = "lbl_Par60"
         Me.lbl_Par60.Size = New System.Drawing.Size(114, 30)
@@ -2013,7 +2013,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par40
         '
-        Me.lbl_Par40.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par40.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par40.Location = New System.Drawing.Point(263, 570)
         Me.lbl_Par40.Name = "lbl_Par40"
         Me.lbl_Par40.Size = New System.Drawing.Size(114, 30)
@@ -2023,7 +2023,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par39
         '
-        Me.lbl_Par39.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par39.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par39.Location = New System.Drawing.Point(263, 540)
         Me.lbl_Par39.Name = "lbl_Par39"
         Me.lbl_Par39.Size = New System.Drawing.Size(114, 30)
@@ -2033,7 +2033,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par38
         '
-        Me.lbl_Par38.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par38.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par38.Location = New System.Drawing.Point(263, 510)
         Me.lbl_Par38.Name = "lbl_Par38"
         Me.lbl_Par38.Size = New System.Drawing.Size(114, 30)
@@ -2043,7 +2043,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par37
         '
-        Me.lbl_Par37.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par37.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par37.Location = New System.Drawing.Point(263, 480)
         Me.lbl_Par37.Name = "lbl_Par37"
         Me.lbl_Par37.Size = New System.Drawing.Size(114, 30)
@@ -2053,7 +2053,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par41
         '
-        Me.lbl_Par41.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par41.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par41.Location = New System.Drawing.Point(523, 0)
         Me.lbl_Par41.Name = "lbl_Par41"
         Me.lbl_Par41.Size = New System.Drawing.Size(114, 30)
@@ -2063,7 +2063,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par35
         '
-        Me.lbl_Par35.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par35.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par35.Location = New System.Drawing.Point(263, 420)
         Me.lbl_Par35.Name = "lbl_Par35"
         Me.lbl_Par35.Size = New System.Drawing.Size(114, 30)
@@ -2073,27 +2073,27 @@ Partial Class Frm_Settings
         '
         'lbl_Par34
         '
-        Me.lbl_Par34.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par34.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par34.Location = New System.Drawing.Point(263, 390)
         Me.lbl_Par34.Name = "lbl_Par34"
         Me.lbl_Par34.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par34.TabIndex = 42
-        Me.lbl_Par34.Text = "34-StandBy"
+        Me.lbl_Par34.Text = "34-料盘列数"
         Me.lbl_Par34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par33
         '
-        Me.lbl_Par33.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par33.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par33.Location = New System.Drawing.Point(263, 360)
         Me.lbl_Par33.Name = "lbl_Par33"
         Me.lbl_Par33.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par33.TabIndex = 42
-        Me.lbl_Par33.Text = "33-StandBy"
+        Me.lbl_Par33.Text = "33-料盘行数"
         Me.lbl_Par33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par32
         '
-        Me.lbl_Par32.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par32.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par32.Location = New System.Drawing.Point(263, 330)
         Me.lbl_Par32.Name = "lbl_Par32"
         Me.lbl_Par32.Size = New System.Drawing.Size(114, 30)
@@ -2103,7 +2103,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit1
         '
-        Me.lbl_Unit1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit1.Location = New System.Drawing.Point(223, 0)
         Me.lbl_Unit1.Name = "lbl_Unit1"
         Me.lbl_Unit1.Size = New System.Drawing.Size(34, 30)
@@ -2113,7 +2113,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par15
         '
-        Me.lbl_Par15.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par15.Location = New System.Drawing.Point(3, 420)
         Me.lbl_Par15.Name = "lbl_Par15"
         Me.lbl_Par15.Size = New System.Drawing.Size(114, 30)
@@ -2123,7 +2123,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par1
         '
-        Me.lbl_Par1.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par1.Location = New System.Drawing.Point(3, 0)
         Me.lbl_Par1.Name = "lbl_Par1"
         Me.lbl_Par1.Size = New System.Drawing.Size(114, 30)
@@ -2133,7 +2133,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par2
         '
-        Me.lbl_Par2.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par2.Location = New System.Drawing.Point(3, 30)
         Me.lbl_Par2.Name = "lbl_Par2"
         Me.lbl_Par2.Size = New System.Drawing.Size(114, 30)
@@ -2143,7 +2143,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par3
         '
-        Me.lbl_Par3.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par3.Location = New System.Drawing.Point(3, 60)
         Me.lbl_Par3.Name = "lbl_Par3"
         Me.lbl_Par3.Size = New System.Drawing.Size(114, 30)
@@ -2153,7 +2153,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par4
         '
-        Me.lbl_Par4.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par4.Location = New System.Drawing.Point(3, 90)
         Me.lbl_Par4.Name = "lbl_Par4"
         Me.lbl_Par4.Size = New System.Drawing.Size(114, 30)
@@ -2163,7 +2163,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par5
         '
-        Me.lbl_Par5.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par5.Location = New System.Drawing.Point(3, 120)
         Me.lbl_Par5.Name = "lbl_Par5"
         Me.lbl_Par5.Size = New System.Drawing.Size(114, 30)
@@ -2173,7 +2173,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par6
         '
-        Me.lbl_Par6.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par6.Location = New System.Drawing.Point(3, 150)
         Me.lbl_Par6.Name = "lbl_Par6"
         Me.lbl_Par6.Size = New System.Drawing.Size(114, 30)
@@ -2183,7 +2183,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par7
         '
-        Me.lbl_Par7.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par7.Location = New System.Drawing.Point(3, 180)
         Me.lbl_Par7.Name = "lbl_Par7"
         Me.lbl_Par7.Size = New System.Drawing.Size(114, 30)
@@ -2193,7 +2193,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par8
         '
-        Me.lbl_Par8.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par8.Location = New System.Drawing.Point(3, 210)
         Me.lbl_Par8.Name = "lbl_Par8"
         Me.lbl_Par8.Size = New System.Drawing.Size(114, 30)
@@ -2203,7 +2203,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par9
         '
-        Me.lbl_Par9.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par9.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par9.Location = New System.Drawing.Point(3, 240)
         Me.lbl_Par9.Name = "lbl_Par9"
         Me.lbl_Par9.Size = New System.Drawing.Size(114, 30)
@@ -2213,7 +2213,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par10
         '
-        Me.lbl_Par10.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par10.Location = New System.Drawing.Point(3, 270)
         Me.lbl_Par10.Name = "lbl_Par10"
         Me.lbl_Par10.Size = New System.Drawing.Size(114, 30)
@@ -2223,7 +2223,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par11
         '
-        Me.lbl_Par11.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par11.Location = New System.Drawing.Point(3, 300)
         Me.lbl_Par11.Name = "lbl_Par11"
         Me.lbl_Par11.Size = New System.Drawing.Size(114, 30)
@@ -2233,7 +2233,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par12
         '
-        Me.lbl_Par12.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par12.Location = New System.Drawing.Point(3, 330)
         Me.lbl_Par12.Name = "lbl_Par12"
         Me.lbl_Par12.Size = New System.Drawing.Size(114, 30)
@@ -2243,7 +2243,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par13
         '
-        Me.lbl_Par13.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par13.Location = New System.Drawing.Point(3, 360)
         Me.lbl_Par13.Name = "lbl_Par13"
         Me.lbl_Par13.Size = New System.Drawing.Size(114, 30)
@@ -2253,7 +2253,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par14
         '
-        Me.lbl_Par14.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par14.Location = New System.Drawing.Point(3, 390)
         Me.lbl_Par14.Name = "lbl_Par14"
         Me.lbl_Par14.Size = New System.Drawing.Size(114, 30)
@@ -2263,7 +2263,7 @@ Partial Class Frm_Settings
         '
         'txt_Par1
         '
-        Me.txt_Par1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par1.Location = New System.Drawing.Point(123, 3)
         Me.txt_Par1.Multiline = True
         Me.txt_Par1.Name = "txt_Par1"
@@ -2273,7 +2273,7 @@ Partial Class Frm_Settings
         '
         'txt_Par2
         '
-        Me.txt_Par2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par2.Location = New System.Drawing.Point(123, 33)
         Me.txt_Par2.Multiline = True
         Me.txt_Par2.Name = "txt_Par2"
@@ -2283,7 +2283,7 @@ Partial Class Frm_Settings
         '
         'txt_Par3
         '
-        Me.txt_Par3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par3.Location = New System.Drawing.Point(123, 63)
         Me.txt_Par3.Multiline = True
         Me.txt_Par3.Name = "txt_Par3"
@@ -2293,7 +2293,7 @@ Partial Class Frm_Settings
         '
         'txt_Par4
         '
-        Me.txt_Par4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par4.Location = New System.Drawing.Point(123, 93)
         Me.txt_Par4.Multiline = True
         Me.txt_Par4.Name = "txt_Par4"
@@ -2303,7 +2303,7 @@ Partial Class Frm_Settings
         '
         'txt_Par5
         '
-        Me.txt_Par5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par5.Location = New System.Drawing.Point(123, 123)
         Me.txt_Par5.Multiline = True
         Me.txt_Par5.Name = "txt_Par5"
@@ -2313,7 +2313,7 @@ Partial Class Frm_Settings
         '
         'txt_Par6
         '
-        Me.txt_Par6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par6.Location = New System.Drawing.Point(123, 153)
         Me.txt_Par6.Multiline = True
         Me.txt_Par6.Name = "txt_Par6"
@@ -2323,7 +2323,7 @@ Partial Class Frm_Settings
         '
         'txt_Par7
         '
-        Me.txt_Par7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par7.Location = New System.Drawing.Point(123, 183)
         Me.txt_Par7.Multiline = True
         Me.txt_Par7.Name = "txt_Par7"
@@ -2333,7 +2333,7 @@ Partial Class Frm_Settings
         '
         'txt_Par8
         '
-        Me.txt_Par8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par8.Location = New System.Drawing.Point(123, 213)
         Me.txt_Par8.Multiline = True
         Me.txt_Par8.Name = "txt_Par8"
@@ -2343,7 +2343,7 @@ Partial Class Frm_Settings
         '
         'txt_Par9
         '
-        Me.txt_Par9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par9.Location = New System.Drawing.Point(123, 243)
         Me.txt_Par9.Multiline = True
         Me.txt_Par9.Name = "txt_Par9"
@@ -2353,7 +2353,7 @@ Partial Class Frm_Settings
         '
         'txt_Par10
         '
-        Me.txt_Par10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par10.Location = New System.Drawing.Point(123, 273)
         Me.txt_Par10.Multiline = True
         Me.txt_Par10.Name = "txt_Par10"
@@ -2363,7 +2363,7 @@ Partial Class Frm_Settings
         '
         'txt_Par11
         '
-        Me.txt_Par11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par11.Location = New System.Drawing.Point(123, 303)
         Me.txt_Par11.Multiline = True
         Me.txt_Par11.Name = "txt_Par11"
@@ -2373,7 +2373,7 @@ Partial Class Frm_Settings
         '
         'txt_Par12
         '
-        Me.txt_Par12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par12.Location = New System.Drawing.Point(123, 333)
         Me.txt_Par12.Multiline = True
         Me.txt_Par12.Name = "txt_Par12"
@@ -2383,7 +2383,7 @@ Partial Class Frm_Settings
         '
         'txt_Par13
         '
-        Me.txt_Par13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par13.Location = New System.Drawing.Point(123, 363)
         Me.txt_Par13.Multiline = True
         Me.txt_Par13.Name = "txt_Par13"
@@ -2393,7 +2393,7 @@ Partial Class Frm_Settings
         '
         'txt_Par14
         '
-        Me.txt_Par14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par14.Location = New System.Drawing.Point(123, 393)
         Me.txt_Par14.Multiline = True
         Me.txt_Par14.Name = "txt_Par14"
@@ -2403,7 +2403,7 @@ Partial Class Frm_Settings
         '
         'txt_Par15
         '
-        Me.txt_Par15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par15.Location = New System.Drawing.Point(123, 423)
         Me.txt_Par15.Multiline = True
         Me.txt_Par15.Name = "txt_Par15"
@@ -2413,7 +2413,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit2
         '
-        Me.lbl_Unit2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit2.Location = New System.Drawing.Point(223, 30)
         Me.lbl_Unit2.Name = "lbl_Unit2"
         Me.lbl_Unit2.Size = New System.Drawing.Size(34, 30)
@@ -2423,7 +2423,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit3
         '
-        Me.lbl_Unit3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit3.Location = New System.Drawing.Point(223, 60)
         Me.lbl_Unit3.Name = "lbl_Unit3"
         Me.lbl_Unit3.Size = New System.Drawing.Size(34, 30)
@@ -2433,7 +2433,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit4
         '
-        Me.lbl_Unit4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit4.Location = New System.Drawing.Point(223, 90)
         Me.lbl_Unit4.Name = "lbl_Unit4"
         Me.lbl_Unit4.Size = New System.Drawing.Size(34, 30)
@@ -2443,7 +2443,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit5
         '
-        Me.lbl_Unit5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit5.Location = New System.Drawing.Point(223, 120)
         Me.lbl_Unit5.Name = "lbl_Unit5"
         Me.lbl_Unit5.Size = New System.Drawing.Size(34, 30)
@@ -2453,7 +2453,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit6
         '
-        Me.lbl_Unit6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit6.Location = New System.Drawing.Point(223, 150)
         Me.lbl_Unit6.Name = "lbl_Unit6"
         Me.lbl_Unit6.Size = New System.Drawing.Size(34, 30)
@@ -2463,7 +2463,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit7
         '
-        Me.lbl_Unit7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit7.Location = New System.Drawing.Point(223, 180)
         Me.lbl_Unit7.Name = "lbl_Unit7"
         Me.lbl_Unit7.Size = New System.Drawing.Size(34, 30)
@@ -2473,7 +2473,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit8
         '
-        Me.lbl_Unit8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit8.Location = New System.Drawing.Point(223, 210)
         Me.lbl_Unit8.Name = "lbl_Unit8"
         Me.lbl_Unit8.Size = New System.Drawing.Size(34, 30)
@@ -2483,7 +2483,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit9
         '
-        Me.lbl_Unit9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit9.Location = New System.Drawing.Point(223, 240)
         Me.lbl_Unit9.Name = "lbl_Unit9"
         Me.lbl_Unit9.Size = New System.Drawing.Size(34, 30)
@@ -2493,7 +2493,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit10
         '
-        Me.lbl_Unit10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit10.Location = New System.Drawing.Point(223, 270)
         Me.lbl_Unit10.Name = "lbl_Unit10"
         Me.lbl_Unit10.Size = New System.Drawing.Size(34, 30)
@@ -2503,7 +2503,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit11
         '
-        Me.lbl_Unit11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit11.Location = New System.Drawing.Point(223, 300)
         Me.lbl_Unit11.Name = "lbl_Unit11"
         Me.lbl_Unit11.Size = New System.Drawing.Size(34, 30)
@@ -2513,7 +2513,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit12
         '
-        Me.lbl_Unit12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit12.Location = New System.Drawing.Point(223, 330)
         Me.lbl_Unit12.Name = "lbl_Unit12"
         Me.lbl_Unit12.Size = New System.Drawing.Size(34, 30)
@@ -2523,7 +2523,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit13
         '
-        Me.lbl_Unit13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit13.Location = New System.Drawing.Point(223, 360)
         Me.lbl_Unit13.Name = "lbl_Unit13"
         Me.lbl_Unit13.Size = New System.Drawing.Size(34, 30)
@@ -2533,7 +2533,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit14
         '
-        Me.lbl_Unit14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit14.Location = New System.Drawing.Point(223, 390)
         Me.lbl_Unit14.Name = "lbl_Unit14"
         Me.lbl_Unit14.Size = New System.Drawing.Size(34, 30)
@@ -2543,7 +2543,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit15
         '
-        Me.lbl_Unit15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit15.Location = New System.Drawing.Point(223, 420)
         Me.lbl_Unit15.Name = "lbl_Unit15"
         Me.lbl_Unit15.Size = New System.Drawing.Size(34, 30)
@@ -2553,7 +2553,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par16
         '
-        Me.lbl_Par16.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par16.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par16.Location = New System.Drawing.Point(3, 450)
         Me.lbl_Par16.Name = "lbl_Par16"
         Me.lbl_Par16.Size = New System.Drawing.Size(114, 30)
@@ -2563,7 +2563,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par17
         '
-        Me.lbl_Par17.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par17.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par17.Location = New System.Drawing.Point(3, 480)
         Me.lbl_Par17.Name = "lbl_Par17"
         Me.lbl_Par17.Size = New System.Drawing.Size(114, 30)
@@ -2573,7 +2573,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par18
         '
-        Me.lbl_Par18.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par18.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par18.Location = New System.Drawing.Point(3, 510)
         Me.lbl_Par18.Name = "lbl_Par18"
         Me.lbl_Par18.Size = New System.Drawing.Size(114, 30)
@@ -2583,7 +2583,7 @@ Partial Class Frm_Settings
         '
         'txt_Par16
         '
-        Me.txt_Par16.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par16.Location = New System.Drawing.Point(123, 453)
         Me.txt_Par16.Multiline = True
         Me.txt_Par16.Name = "txt_Par16"
@@ -2593,7 +2593,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit16
         '
-        Me.lbl_Unit16.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit16.Location = New System.Drawing.Point(223, 450)
         Me.lbl_Unit16.Name = "lbl_Unit16"
         Me.lbl_Unit16.Size = New System.Drawing.Size(34, 30)
@@ -2603,7 +2603,7 @@ Partial Class Frm_Settings
         '
         'txt_Par17
         '
-        Me.txt_Par17.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par17.Location = New System.Drawing.Point(123, 483)
         Me.txt_Par17.Multiline = True
         Me.txt_Par17.Name = "txt_Par17"
@@ -2613,7 +2613,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit17
         '
-        Me.lbl_Unit17.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit17.Location = New System.Drawing.Point(223, 480)
         Me.lbl_Unit17.Name = "lbl_Unit17"
         Me.lbl_Unit17.Size = New System.Drawing.Size(34, 30)
@@ -2623,7 +2623,7 @@ Partial Class Frm_Settings
         '
         'txt_Par18
         '
-        Me.txt_Par18.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par18.Location = New System.Drawing.Point(123, 513)
         Me.txt_Par18.Multiline = True
         Me.txt_Par18.Name = "txt_Par18"
@@ -2633,7 +2633,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit18
         '
-        Me.lbl_Unit18.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit18.Location = New System.Drawing.Point(223, 510)
         Me.lbl_Unit18.Name = "lbl_Unit18"
         Me.lbl_Unit18.Size = New System.Drawing.Size(34, 30)
@@ -2643,7 +2643,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par19
         '
-        Me.lbl_Par19.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par19.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par19.Location = New System.Drawing.Point(3, 540)
         Me.lbl_Par19.Name = "lbl_Par19"
         Me.lbl_Par19.Size = New System.Drawing.Size(114, 30)
@@ -2653,7 +2653,7 @@ Partial Class Frm_Settings
         '
         'txt_Par19
         '
-        Me.txt_Par19.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par19.Location = New System.Drawing.Point(123, 543)
         Me.txt_Par19.Multiline = True
         Me.txt_Par19.Name = "txt_Par19"
@@ -2663,7 +2663,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit19
         '
-        Me.lbl_Unit19.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit19.Location = New System.Drawing.Point(223, 540)
         Me.lbl_Unit19.Name = "lbl_Unit19"
         Me.lbl_Unit19.Size = New System.Drawing.Size(34, 30)
@@ -2673,7 +2673,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par20
         '
-        Me.lbl_Par20.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par20.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par20.Location = New System.Drawing.Point(3, 570)
         Me.lbl_Par20.Name = "lbl_Par20"
         Me.lbl_Par20.Size = New System.Drawing.Size(114, 30)
@@ -2683,7 +2683,7 @@ Partial Class Frm_Settings
         '
         'txt_Par20
         '
-        Me.txt_Par20.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par20.Location = New System.Drawing.Point(123, 573)
         Me.txt_Par20.Multiline = True
         Me.txt_Par20.Name = "txt_Par20"
@@ -2693,7 +2693,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit20
         '
-        Me.lbl_Unit20.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit20.Location = New System.Drawing.Point(223, 570)
         Me.lbl_Unit20.Name = "lbl_Unit20"
         Me.lbl_Unit20.Size = New System.Drawing.Size(34, 30)
@@ -2703,7 +2703,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par21
         '
-        Me.lbl_Par21.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par21.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par21.Location = New System.Drawing.Point(263, 0)
         Me.lbl_Par21.Name = "lbl_Par21"
         Me.lbl_Par21.Size = New System.Drawing.Size(114, 30)
@@ -2713,7 +2713,7 @@ Partial Class Frm_Settings
         '
         'txt_Par21
         '
-        Me.txt_Par21.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par21.Location = New System.Drawing.Point(383, 3)
         Me.txt_Par21.Multiline = True
         Me.txt_Par21.Name = "txt_Par21"
@@ -2723,7 +2723,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit21
         '
-        Me.lbl_Unit21.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit21.Location = New System.Drawing.Point(483, 0)
         Me.lbl_Unit21.Name = "lbl_Unit21"
         Me.lbl_Unit21.Size = New System.Drawing.Size(34, 30)
@@ -2733,7 +2733,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par22
         '
-        Me.lbl_Par22.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par22.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par22.Location = New System.Drawing.Point(263, 30)
         Me.lbl_Par22.Name = "lbl_Par22"
         Me.lbl_Par22.Size = New System.Drawing.Size(114, 30)
@@ -2743,7 +2743,7 @@ Partial Class Frm_Settings
         '
         'txt_Par22
         '
-        Me.txt_Par22.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par22.Location = New System.Drawing.Point(383, 33)
         Me.txt_Par22.Multiline = True
         Me.txt_Par22.Name = "txt_Par22"
@@ -2753,7 +2753,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit22
         '
-        Me.lbl_Unit22.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit22.Location = New System.Drawing.Point(483, 30)
         Me.lbl_Unit22.Name = "lbl_Unit22"
         Me.lbl_Unit22.Size = New System.Drawing.Size(34, 30)
@@ -2763,7 +2763,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par23
         '
-        Me.lbl_Par23.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par23.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par23.Location = New System.Drawing.Point(263, 60)
         Me.lbl_Par23.Name = "lbl_Par23"
         Me.lbl_Par23.Size = New System.Drawing.Size(114, 30)
@@ -2773,7 +2773,7 @@ Partial Class Frm_Settings
         '
         'txt_Par23
         '
-        Me.txt_Par23.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par23.Location = New System.Drawing.Point(383, 63)
         Me.txt_Par23.Multiline = True
         Me.txt_Par23.Name = "txt_Par23"
@@ -2783,7 +2783,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit23
         '
-        Me.lbl_Unit23.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit23.Location = New System.Drawing.Point(483, 60)
         Me.lbl_Unit23.Name = "lbl_Unit23"
         Me.lbl_Unit23.Size = New System.Drawing.Size(34, 30)
@@ -2793,7 +2793,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par24
         '
-        Me.lbl_Par24.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par24.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par24.Location = New System.Drawing.Point(263, 90)
         Me.lbl_Par24.Name = "lbl_Par24"
         Me.lbl_Par24.Size = New System.Drawing.Size(114, 30)
@@ -2803,7 +2803,7 @@ Partial Class Frm_Settings
         '
         'txt_Par24
         '
-        Me.txt_Par24.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par24.Location = New System.Drawing.Point(383, 93)
         Me.txt_Par24.Multiline = True
         Me.txt_Par24.Name = "txt_Par24"
@@ -2813,7 +2813,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit24
         '
-        Me.lbl_Unit24.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit24.Location = New System.Drawing.Point(483, 90)
         Me.lbl_Unit24.Name = "lbl_Unit24"
         Me.lbl_Unit24.Size = New System.Drawing.Size(34, 30)
@@ -2823,7 +2823,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par25
         '
-        Me.lbl_Par25.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par25.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par25.Location = New System.Drawing.Point(263, 120)
         Me.lbl_Par25.Name = "lbl_Par25"
         Me.lbl_Par25.Size = New System.Drawing.Size(114, 30)
@@ -2833,7 +2833,7 @@ Partial Class Frm_Settings
         '
         'txt_Par25
         '
-        Me.txt_Par25.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par25.Location = New System.Drawing.Point(383, 123)
         Me.txt_Par25.Multiline = True
         Me.txt_Par25.Name = "txt_Par25"
@@ -2843,7 +2843,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit25
         '
-        Me.lbl_Unit25.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit25.Location = New System.Drawing.Point(483, 120)
         Me.lbl_Unit25.Name = "lbl_Unit25"
         Me.lbl_Unit25.Size = New System.Drawing.Size(34, 30)
@@ -2853,7 +2853,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par26
         '
-        Me.lbl_Par26.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par26.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par26.Location = New System.Drawing.Point(263, 150)
         Me.lbl_Par26.Name = "lbl_Par26"
         Me.lbl_Par26.Size = New System.Drawing.Size(114, 30)
@@ -2863,7 +2863,7 @@ Partial Class Frm_Settings
         '
         'txt_Par26
         '
-        Me.txt_Par26.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par26.Location = New System.Drawing.Point(383, 153)
         Me.txt_Par26.Multiline = True
         Me.txt_Par26.Name = "txt_Par26"
@@ -2873,7 +2873,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit26
         '
-        Me.lbl_Unit26.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit26.Location = New System.Drawing.Point(483, 150)
         Me.lbl_Unit26.Name = "lbl_Unit26"
         Me.lbl_Unit26.Size = New System.Drawing.Size(34, 30)
@@ -2883,7 +2883,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par27
         '
-        Me.lbl_Par27.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par27.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par27.Location = New System.Drawing.Point(263, 180)
         Me.lbl_Par27.Name = "lbl_Par27"
         Me.lbl_Par27.Size = New System.Drawing.Size(114, 30)
@@ -2893,7 +2893,7 @@ Partial Class Frm_Settings
         '
         'txt_Par27
         '
-        Me.txt_Par27.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par27.Location = New System.Drawing.Point(383, 183)
         Me.txt_Par27.Multiline = True
         Me.txt_Par27.Name = "txt_Par27"
@@ -2903,7 +2903,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit27
         '
-        Me.lbl_Unit27.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit27.Location = New System.Drawing.Point(483, 180)
         Me.lbl_Unit27.Name = "lbl_Unit27"
         Me.lbl_Unit27.Size = New System.Drawing.Size(34, 30)
@@ -2913,7 +2913,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par28
         '
-        Me.lbl_Par28.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par28.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par28.Location = New System.Drawing.Point(263, 210)
         Me.lbl_Par28.Name = "lbl_Par28"
         Me.lbl_Par28.Size = New System.Drawing.Size(114, 30)
@@ -2923,7 +2923,7 @@ Partial Class Frm_Settings
         '
         'txt_Par28
         '
-        Me.txt_Par28.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par28.Location = New System.Drawing.Point(383, 213)
         Me.txt_Par28.Multiline = True
         Me.txt_Par28.Name = "txt_Par28"
@@ -2933,7 +2933,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit28
         '
-        Me.lbl_Unit28.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit28.Location = New System.Drawing.Point(483, 210)
         Me.lbl_Unit28.Name = "lbl_Unit28"
         Me.lbl_Unit28.Size = New System.Drawing.Size(34, 30)
@@ -2943,7 +2943,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par29
         '
-        Me.lbl_Par29.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par29.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par29.Location = New System.Drawing.Point(263, 240)
         Me.lbl_Par29.Name = "lbl_Par29"
         Me.lbl_Par29.Size = New System.Drawing.Size(114, 30)
@@ -2953,7 +2953,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par30
         '
-        Me.lbl_Par30.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par30.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par30.Location = New System.Drawing.Point(263, 270)
         Me.lbl_Par30.Name = "lbl_Par30"
         Me.lbl_Par30.Size = New System.Drawing.Size(114, 30)
@@ -2963,7 +2963,7 @@ Partial Class Frm_Settings
         '
         'txt_Par29
         '
-        Me.txt_Par29.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par29.Location = New System.Drawing.Point(383, 243)
         Me.txt_Par29.Multiline = True
         Me.txt_Par29.Name = "txt_Par29"
@@ -2973,7 +2973,7 @@ Partial Class Frm_Settings
         '
         'txt_Par30
         '
-        Me.txt_Par30.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par30.Location = New System.Drawing.Point(383, 273)
         Me.txt_Par30.Multiline = True
         Me.txt_Par30.Name = "txt_Par30"
@@ -2983,7 +2983,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit29
         '
-        Me.lbl_Unit29.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit29.Location = New System.Drawing.Point(483, 240)
         Me.lbl_Unit29.Name = "lbl_Unit29"
         Me.lbl_Unit29.Size = New System.Drawing.Size(34, 30)
@@ -2993,7 +2993,7 @@ Partial Class Frm_Settings
         '
         'lbl_Unit30
         '
-        Me.lbl_Unit30.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Unit30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Unit30.Location = New System.Drawing.Point(483, 270)
         Me.lbl_Unit30.Name = "lbl_Unit30"
         Me.lbl_Unit30.Size = New System.Drawing.Size(34, 30)
@@ -3003,7 +3003,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par31
         '
-        Me.lbl_Par31.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par31.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par31.Location = New System.Drawing.Point(263, 300)
         Me.lbl_Par31.Name = "lbl_Par31"
         Me.lbl_Par31.Size = New System.Drawing.Size(114, 30)
@@ -3013,7 +3013,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par36
         '
-        Me.lbl_Par36.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par36.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par36.Location = New System.Drawing.Point(263, 450)
         Me.lbl_Par36.Name = "lbl_Par36"
         Me.lbl_Par36.Size = New System.Drawing.Size(114, 30)
@@ -3023,7 +3023,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par42
         '
-        Me.lbl_Par42.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par42.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par42.Location = New System.Drawing.Point(523, 30)
         Me.lbl_Par42.Name = "lbl_Par42"
         Me.lbl_Par42.Size = New System.Drawing.Size(114, 30)
@@ -3033,7 +3033,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par43
         '
-        Me.lbl_Par43.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par43.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par43.Location = New System.Drawing.Point(523, 60)
         Me.lbl_Par43.Name = "lbl_Par43"
         Me.lbl_Par43.Size = New System.Drawing.Size(114, 30)
@@ -3043,7 +3043,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par45
         '
-        Me.lbl_Par45.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par45.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par45.Location = New System.Drawing.Point(523, 120)
         Me.lbl_Par45.Name = "lbl_Par45"
         Me.lbl_Par45.Size = New System.Drawing.Size(114, 30)
@@ -3053,7 +3053,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par46
         '
-        Me.lbl_Par46.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par46.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par46.Location = New System.Drawing.Point(523, 150)
         Me.lbl_Par46.Name = "lbl_Par46"
         Me.lbl_Par46.Size = New System.Drawing.Size(114, 30)
@@ -3063,7 +3063,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par47
         '
-        Me.lbl_Par47.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par47.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par47.Location = New System.Drawing.Point(523, 180)
         Me.lbl_Par47.Name = "lbl_Par47"
         Me.lbl_Par47.Size = New System.Drawing.Size(114, 30)
@@ -3073,7 +3073,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par48
         '
-        Me.lbl_Par48.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par48.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par48.Location = New System.Drawing.Point(523, 210)
         Me.lbl_Par48.Name = "lbl_Par48"
         Me.lbl_Par48.Size = New System.Drawing.Size(114, 30)
@@ -3083,7 +3083,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par49
         '
-        Me.lbl_Par49.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par49.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par49.Location = New System.Drawing.Point(523, 240)
         Me.lbl_Par49.Name = "lbl_Par49"
         Me.lbl_Par49.Size = New System.Drawing.Size(114, 30)
@@ -3093,7 +3093,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par50
         '
-        Me.lbl_Par50.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par50.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par50.Location = New System.Drawing.Point(523, 270)
         Me.lbl_Par50.Name = "lbl_Par50"
         Me.lbl_Par50.Size = New System.Drawing.Size(114, 30)
@@ -3103,7 +3103,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par51
         '
-        Me.lbl_Par51.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par51.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par51.Location = New System.Drawing.Point(523, 300)
         Me.lbl_Par51.Name = "lbl_Par51"
         Me.lbl_Par51.Size = New System.Drawing.Size(114, 30)
@@ -3113,7 +3113,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par52
         '
-        Me.lbl_Par52.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par52.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par52.Location = New System.Drawing.Point(523, 330)
         Me.lbl_Par52.Name = "lbl_Par52"
         Me.lbl_Par52.Size = New System.Drawing.Size(114, 30)
@@ -3123,7 +3123,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par53
         '
-        Me.lbl_Par53.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par53.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par53.Location = New System.Drawing.Point(523, 360)
         Me.lbl_Par53.Name = "lbl_Par53"
         Me.lbl_Par53.Size = New System.Drawing.Size(114, 30)
@@ -3133,7 +3133,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par54
         '
-        Me.lbl_Par54.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par54.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par54.Location = New System.Drawing.Point(523, 390)
         Me.lbl_Par54.Name = "lbl_Par54"
         Me.lbl_Par54.Size = New System.Drawing.Size(114, 30)
@@ -3143,7 +3143,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par55
         '
-        Me.lbl_Par55.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par55.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par55.Location = New System.Drawing.Point(523, 420)
         Me.lbl_Par55.Name = "lbl_Par55"
         Me.lbl_Par55.Size = New System.Drawing.Size(114, 30)
@@ -3153,7 +3153,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par56
         '
-        Me.lbl_Par56.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par56.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par56.Location = New System.Drawing.Point(523, 450)
         Me.lbl_Par56.Name = "lbl_Par56"
         Me.lbl_Par56.Size = New System.Drawing.Size(114, 30)
@@ -3163,7 +3163,7 @@ Partial Class Frm_Settings
         '
         'lbl_Par57
         '
-        Me.lbl_Par57.Font = New System.Drawing.Font("HelveticaNeue", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_Par57.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Par57.Location = New System.Drawing.Point(523, 480)
         Me.lbl_Par57.Name = "lbl_Par57"
         Me.lbl_Par57.Size = New System.Drawing.Size(114, 30)
@@ -3173,7 +3173,7 @@ Partial Class Frm_Settings
         '
         'txt_Par31
         '
-        Me.txt_Par31.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Par31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Par31.Location = New System.Drawing.Point(383, 303)
         Me.txt_Par31.Multiline = True
         Me.txt_Par31.Name = "txt_Par31"
@@ -3183,7 +3183,7 @@ Partial Class Frm_Settings
         '
         'Label12
         '
-        Me.Label12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(743, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(34, 30)
@@ -3223,7 +3223,7 @@ Partial Class Frm_Settings
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Font = New System.Drawing.Font("HelveticaNeue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(5, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -3234,10 +3234,10 @@ Partial Class Frm_Settings
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel3)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(931, 613)
+        Me.TabPage1.Size = New System.Drawing.Size(931, 612)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Parameter Settings"
         '
@@ -3255,10 +3255,10 @@ Partial Class Frm_Settings
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.BZ_RoundPanel2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(931, 613)
+        Me.TabPage2.Size = New System.Drawing.Size(931, 612)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Function Select"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -3266,9 +3266,9 @@ Partial Class Frm_Settings
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.BZ_RoundPanel1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 29)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(931, 613)
+        Me.TabPage3.Size = New System.Drawing.Size(931, 612)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Machine Info"
         Me.TabPage3.UseVisualStyleBackColor = True

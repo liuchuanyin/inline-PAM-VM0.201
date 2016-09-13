@@ -55,6 +55,12 @@
         Dim Y As Double
     End Structure
 
+    Public Structure Dist_XYA
+        Dim X As Double
+        Dim Y As Double
+        Dim A As Double
+    End Structure
+
     Public Structure Dist_XYZ
         Dim X As Double
         Dim Y As Double
@@ -267,6 +273,54 @@
     Public TrayMatrix As sctTrayMatrix
 
     ''' <summary>
+    ''' 给出六个点，算出两个矩阵，并转换成我们需要的Tray盘格式的点位信息
+    ''' </summary>
+    ''' <param name="P"></param>
+    ''' <param name="Rows"></param>
+    ''' <param name="Columns"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function CalTrayMatrix(P() As Dist_XY, Rows As Integer, Columns As Integer) As Dist_XY()
+        Dim index As Integer
+        Dim tempPoint0(), tempPoint1() As Dist_XY
+        Dim TempPoint() As Dist_XY
+
+        '判断矩阵计算点位返回异常
+        tempPoint0 = PointRefresh(P(0), P(1), P(2), Rows, Columns)
+        tempPoint1 = PointRefresh(P(3), P(4), P(5), Rows, Columns)
+        If tempPoint0.Length < 1 Or tempPoint1.Length < 1 Then MessageBox.Show("矩阵点位计算失败") : Return Nothing
+
+        '将矩阵进行转换并合并，以下为示意图
+
+        '将原矩阵
+        ''''''0,1,2''''
+        ''''''3,4,5''''
+
+        '转换成以下矩阵
+        ''''''0,2,4''''
+        ''''''1,3,5''''
+
+        ReDim TempPoint(tempPoint0.Length + tempPoint1.Length - 1)
+
+        index = 0
+        For i = 0 To Columns - 1
+            For j = 0 To Rows - 1
+                TempPoint(index) = tempPoint0(i + j * Columns)
+                index = index + 1
+            Next
+        Next
+
+        For i = 0 To Columns - 1
+            For j = 0 To Rows - 1
+                TempPoint(index) = tempPoint1(i + j * Columns)
+                index = index + 1
+            Next
+        Next
+
+        Return TempPoint
+    End Function
+
+    ''' <summary>
     ''' 输入XY平面的三个坐标，行数与列数，得到均分的所有点的XY坐标
     ''' </summary>
     ''' <param name="P0"></param>
@@ -387,6 +441,7 @@
             MsgBox("Tray矩阵点位文件创建/写入失败:" & ex.Message)
         End Try
     End Sub
+     
 #End Region
 
 End Module

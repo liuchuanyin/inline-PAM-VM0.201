@@ -372,6 +372,13 @@
         cbo_Pos2.Items.Add("抛料位置")  '5
         cbo_Pos2.Items.Add("压力传感器自动标定位置1") '6
         cbo_Pos2.Items.Add("压力传感器自动标定位置2") '7
+        cbo_Pos2.Items.Add("CCD 拍第1颗料位置") '8
+        cbo_Pos2.Items.Add("CCD 拍第5颗料位置") '9
+        cbo_Pos2.Items.Add("CCD 拍第6颗料位置") '10
+        cbo_Pos2.Items.Add("CCD 拍第7颗料位置") '11
+        cbo_Pos2.Items.Add("CCD 拍第11颗料位置") '12
+        cbo_Pos2.Items.Add("CCD 拍第12颗料位置") '13
+
 
         cbo_Pos3.Items.Clear()
         cbo_Pos3.Items.Add("待机位置") '0
@@ -385,22 +392,22 @@
         cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
 
         cbo_Pos4.Items.Clear()
-        cbo_Pos4.Items.Add("初始位置")
-        cbo_Pos4.Items.Add("第1颗料精补位置")
-        cbo_Pos4.Items.Add("第3颗料精补位置")
-        cbo_Pos4.Items.Add("第6颗料精补位置")
-        cbo_Pos4.Items.Add("第7颗料精补位置")
-        cbo_Pos4.Items.Add("第9颗料精补位置")
-        cbo_Pos4.Items.Add("第12颗料精补位置")
+        cbo_Pos4.Items.Add("初始位置")            '0
+        cbo_Pos4.Items.Add("第1颗料精补位置")     '1
+        cbo_Pos4.Items.Add("第5颗料精补位置")     '2
+        cbo_Pos4.Items.Add("第6颗料精补位置")     '3
+        cbo_Pos4.Items.Add("第7颗料精补位置")     '4
+        cbo_Pos4.Items.Add("第11颗料精补位置")    '5
+        cbo_Pos4.Items.Add("第12颗料精补位置")    '6
 
         cbo_Pos5.Items.Clear()
-        cbo_Pos5.Items.Add("初始位置")
-        cbo_Pos5.Items.Add("第1颗料复检位置")
-        cbo_Pos5.Items.Add("第3颗料复检位置")
-        cbo_Pos5.Items.Add("第6颗料复检位置")
-        cbo_Pos5.Items.Add("第7颗料复检位置")
-        cbo_Pos5.Items.Add("第9颗料复检位置")
-        cbo_Pos5.Items.Add("第12颗料复检位置")
+        cbo_Pos5.Items.Add("初始位置")            '0
+        cbo_Pos5.Items.Add("第1颗料复检位置")     '1
+        cbo_Pos5.Items.Add("第5颗料复检位置")     '2
+        cbo_Pos5.Items.Add("第6颗料复检位置")     '3
+        cbo_Pos5.Items.Add("第7颗料复检位置")     '4
+        cbo_Pos5.Items.Add("第11颗料复检位置")    '5
+        cbo_Pos5.Items.Add("第12颗料复检位置")    '6
 
         cbo_Pos6.Items.Clear()
         cbo_Pos6.Items.Add("初始位置")
@@ -1839,7 +1846,7 @@
             Exit Sub
         End If
 
-        If TriggerCCD(sender.text, Format(Now, "yyyyMMddHHmmss")) Then
+        If TriggerCCD(sender.text, 0, Format(Now, "yyyyMMddHHmmss"), Format(Now, "yyyyMMddHHmmss")) Then
             List_DebugAddMessage(sender.text)
         Else
             Frm_DialogAddMessage("触发CCD拍照异常，请检查！")
@@ -2482,14 +2489,24 @@
         Frm_GluePar.Show()
     End Sub
 
-   
+#Region "功能：Tray矩阵计算按钮事件"
+
+    ''' <summary>
+    ''' 计算点胶CCD拍照位置的矩阵点位
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnTrayGlue_Click(sender As Object, e As EventArgs) Handles btnTrayGlue.Click
         Dim en As Boolean
-        Dim index As Integer
         Dim P(5) As Dist_XY
-        Dim tempPoint0(), tempPoint1() As Dist_XY
         Dim Rows As Integer = 2
         Dim Columns As Integer = 3
+
+        '提示是否进行更新Tray矩阵点位
+        If MessageBox.Show("确认要进行更新点胶工作Tray矩阵点位吗？", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
 
         '先判断P14-P19点这6个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
         en = False
@@ -2512,34 +2529,192 @@
             P(i).Y = Par_Pos.St_Glue(i + 14).Y
         Next
 
-        '判断矩阵计算点位返回异常
-        tempPoint0 = PointRefresh(P(0), P(1), P(2), Rows, Columns)
-        tempPoint1 = PointRefresh(P(3), P(4), P(5), Rows, Columns)
-        If tempPoint0.Length < 1 Or tempPoint1.Length < 1 Then MessageBox.Show("矩阵点位计算失败") : Exit Sub
+        TrayMatrix.TrayGlue = CalTrayMatrix(P, Rows, Columns)
 
-        '将矩阵进行转换并合并，以下为示意图
-
-        '将原矩阵
-        ''''''0,1,2''''
-        ''''''3,4,5''''
-
-        '转换成以下矩阵
-        ''''''0,2,4''''
-        ''''''1,3,5''''
-
-        index = 0
-        For i = 0 To Columns - 1
-            For j = 0 To Rows - 1
-                TrayMatrix.TrayGlue(index) = tempPoint0(i + j * Columns)
-                index = index + 1
-            Next
-        Next
-
-        For i = 0 To Columns - 1
-            For j = 0 To Rows - 1
-                TrayMatrix.TrayGlue(index) = tempPoint1(i + j * Columns)
-                index = index + 1
-            Next
-        Next
+        '写入矩阵点位文件
+        WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
     End Sub
+
+    ''' <summary>
+    ''' 计算贴合CCD拍照位置的矩阵点位
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnTrayPaste_Click(sender As Object, e As EventArgs) Handles btnTrayPaste.Click
+        Dim en As Boolean
+        Dim P(5) As Dist_XY
+        Dim Rows As Integer = 2
+        Dim Columns As Integer = 3
+
+        '提示是否进行更新Tray矩阵点位
+        If MessageBox.Show("确认要进行更新贴合工位Tray矩阵点位吗？", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        '先判断P8-P13点这6个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
+        en = False
+        en = en Or Par_Pos.St_Paste(8).X = 0 Or Par_Pos.St_Paste(8).Y = 0
+        en = en Or Par_Pos.St_Paste(9).X = 0 Or Par_Pos.St_Paste(9).Y = 0
+        en = en Or Par_Pos.St_Paste(10).X = 0 Or Par_Pos.St_Paste(10).Y = 0
+        en = en Or Par_Pos.St_Paste(11).X = 0 Or Par_Pos.St_Paste(11).Y = 0
+        en = en Or Par_Pos.St_Paste(12).X = 0 Or Par_Pos.St_Paste(12).Y = 0
+        en = en Or Par_Pos.St_Paste(13).X = 0 Or Par_Pos.St_Paste(13).Y = 0
+
+        If en Then
+            If MessageBox.Show("点位中P8到P13中有点位的X坐标或Y坐标值为0，是否继续进行矩阵点位计算", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+                Exit Sub
+            End If
+        End If
+
+        '将点位中的坐标转成dis_xy结构体，给PointRefresh（）计算矩阵
+        For i = 0 To 5
+            P(i).X = Par_Pos.St_Paste(i + 8).X
+            P(i).Y = Par_Pos.St_Paste(i + 8).Y
+        Next
+
+        '传入6个点，得到全部12个点的坐标
+        TrayMatrix.TrayPaste = CalTrayMatrix(P, Rows, Columns)
+
+        '写入矩阵点位文件
+        WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
+    End Sub
+
+    ''' <summary>
+    ''' 计算取料点位的矩阵
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnTrayPreTk_Click(sender As Object, e As EventArgs) Handles btnTrayPreTk.Click
+        Dim en As Boolean
+        Dim P(2) As Dist_XY
+        Dim Rows As Integer = par.num(33)
+        Dim Columns As Integer = par.num(34)
+
+        '判断参数中的料盘行数与列数是否设置正确
+        If Rows < 1 Or Columns < 1 Then MessageBox.Show("参数中的料盘行数或列数设置错误，请修改参数") : Exit Sub
+
+        '提示是否进行更新Tray矩阵点位
+        If MessageBox.Show("确认要进行取料工位Tray矩阵点位吗？", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        '先判断P1-P3点这3个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
+        en = False
+        en = en Or Par_Pos.St_PreTaker(1).X = 0 Or Par_Pos.St_PreTaker(1).Y = 0
+        en = en Or Par_Pos.St_PreTaker(2).X = 0 Or Par_Pos.St_PreTaker(2).Y = 0
+        en = en Or Par_Pos.St_PreTaker(3).X = 0 Or Par_Pos.St_PreTaker(3).Y = 0
+
+        If en Then
+            If MessageBox.Show("点位中P1到P3中有点位的X坐标或Y坐标值为0，是否继续进行矩阵点位计算", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+                Exit Sub
+            End If
+        End If
+
+        '将点位中的坐标转成dis_xy结构体，给PointRefresh（）计算矩阵
+        For i = 0 To 2
+            P(i).X = Par_Pos.St_PreTaker(i + 1).X
+            P(i).Y = Par_Pos.St_PreTaker(i + 1).Y
+        Next
+
+        '传入3个点，得到全部取料点的坐标
+        TrayMatrix.TrayPreTaker = PointRefresh(P(0), P(1), P(2), Rows, Columns)
+
+        '写入矩阵点位文件
+        WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
+    End Sub
+
+    ''' <summary>
+    ''' 计算精补CCD拍照位置的矩阵点位
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnTrayFineCpt_Click(sender As Object, e As EventArgs) Handles btnTrayFineCpt.Click
+        Dim en As Boolean
+        Dim P(5) As Dist_XY
+        Dim Rows As Integer = 2
+        Dim Columns As Integer = 3
+
+        '提示是否进行更新Tray矩阵点位
+        If MessageBox.Show("确认要进行更新精补工位Tray矩阵点位吗？", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        '先判断P1-P6点这6个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
+        en = False
+        en = en Or Par_Pos.St_FineCompensation(1).X = 0 Or Par_Pos.St_FineCompensation(1).Y = 0
+        en = en Or Par_Pos.St_FineCompensation(2).X = 0 Or Par_Pos.St_FineCompensation(2).Y = 0
+        en = en Or Par_Pos.St_FineCompensation(3).X = 0 Or Par_Pos.St_FineCompensation(3).Y = 0
+        en = en Or Par_Pos.St_FineCompensation(4).X = 0 Or Par_Pos.St_FineCompensation(4).Y = 0
+        en = en Or Par_Pos.St_FineCompensation(5).X = 0 Or Par_Pos.St_FineCompensation(5).Y = 0
+        en = en Or Par_Pos.St_FineCompensation(6).X = 0 Or Par_Pos.St_FineCompensation(6).Y = 0
+
+        If en Then
+            If MessageBox.Show("点位中P1到P6中有点位的X坐标或Y坐标值为0，是否继续进行矩阵点位计算", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+                Exit Sub
+            End If
+        End If
+
+        '将点位中的坐标转成dis_xy结构体，给PointRefresh（）计算矩阵
+        For i = 0 To 5
+            P(i).X = Par_Pos.St_FineCompensation(i + 1).X
+            P(i).Y = Par_Pos.St_FineCompensation(i + 1).Y
+        Next
+
+        '传入6个点，得到全部12个点的坐标
+        TrayMatrix.TrayFineCompensation = CalTrayMatrix(P, Rows, Columns)
+
+        '写入矩阵点位文件
+        WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
+    End Sub
+     
+    ''' <summary>
+    ''' 计算复检CCD拍照位置的矩阵点位
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnTrayRecheck_Click(sender As Object, e As EventArgs) Handles btnTrayRecheck.Click
+        Dim en As Boolean
+        Dim P(5) As Dist_XY
+        Dim Rows As Integer = 2
+        Dim Columns As Integer = 3
+
+        '提示是否进行更新Tray矩阵点位
+        If MessageBox.Show("确认要进行更新复检工位Tray矩阵点位吗？", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        '先判断P1-P6点这6个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
+        en = False
+        en = en Or Par_Pos.St_Recheck(1).X = 0 Or Par_Pos.St_Recheck(1).Y = 0
+        en = en Or Par_Pos.St_Recheck(2).X = 0 Or Par_Pos.St_Recheck(2).Y = 0
+        en = en Or Par_Pos.St_Recheck(3).X = 0 Or Par_Pos.St_Recheck(3).Y = 0
+        en = en Or Par_Pos.St_Recheck(4).X = 0 Or Par_Pos.St_Recheck(4).Y = 0
+        en = en Or Par_Pos.St_Recheck(5).X = 0 Or Par_Pos.St_Recheck(5).Y = 0
+        en = en Or Par_Pos.St_Recheck(6).X = 0 Or Par_Pos.St_Recheck(6).Y = 0
+
+        If en Then
+            If MessageBox.Show("点位中P1到P6中有点位的X坐标或Y坐标值为0，是否继续进行矩阵点位计算", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+                Exit Sub
+            End If
+        End If
+
+        '将点位中的坐标转成dis_xy结构体，给PointRefresh（）计算矩阵
+        For i = 0 To 5
+            P(i).X = Par_Pos.St_Recheck(i + 1).X
+            P(i).Y = Par_Pos.St_Recheck(i + 1).Y
+        Next
+
+        '传入6个点，得到全部12个点的坐标
+        TrayMatrix.TrayRecheck = CalTrayMatrix(P, Rows, Columns)
+
+        '写入矩阵点位文件
+        WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
+    End Sub
+     
+#End Region
+ 
 End Class

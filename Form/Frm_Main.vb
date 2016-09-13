@@ -41,6 +41,8 @@ Public Class Frm_Main
         Call read_Par_Pos(Path_Par_Pos, Par_Pos)
         'UV Light Ini
         Call UV_Init()
+        '读取矩阵点位文件
+        ReadMatrixPos(Path_TrayMatrix, TrayMatrix)
 
         Frm_Engineering.Opacity = 0
         Frm_Engineering.Show(Me)
@@ -1096,7 +1098,7 @@ Com_Err:
         End If
         CountT += 1
 
-        If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 5000) Then CCD_Lock_Flag = False
+        If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 100) Then CCD_Lock_Flag = False
 
         Timer_Sys.Enabled = True
     End Sub
