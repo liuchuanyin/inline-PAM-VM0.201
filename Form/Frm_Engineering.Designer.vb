@@ -23,7 +23,7 @@ Partial Class Frm_Engineering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Engineering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -529,6 +529,21 @@ Partial Class Frm_Engineering
         Me.btn_T21 = New System.Windows.Forms.Button()
         Me.btn_T11 = New System.Windows.Forms.Button()
         Me.TabPage12 = New System.Windows.Forms.TabPage()
+        Me.Grp = New System.Windows.Forms.GroupBox()
+        Me.Label336 = New System.Windows.Forms.Label()
+        Me.txt_MaterialSelected = New System.Windows.Forms.TextBox()
+        Me.rad_Brc11 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc10 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc9 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc8 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc7 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc6 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc5 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc4 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc3 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc2 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc1 = New System.Windows.Forms.RadioButton()
+        Me.rad_Brc0 = New System.Windows.Forms.RadioButton()
         Me.gupStep = New System.Windows.Forms.GroupBox()
         Me.txtStepS2 = New System.Windows.Forms.TextBox()
         Me.radStepS2_3 = New System.Windows.Forms.RadioButton()
@@ -558,6 +573,7 @@ Partial Class Frm_Engineering
         Me.btn_S2IO2 = New System.Windows.Forms.Button()
         Me.btn_S2IO1 = New System.Windows.Forms.Button()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.btnTrayGlue = New System.Windows.Forms.Button()
         Me.btn_AtuoNeedle1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_ClrGlue0 = New System.Windows.Forms.Button()
@@ -913,107 +929,92 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
-        Me.Grp = New System.Windows.Forms.GroupBox()
-        Me.rad_Brc0 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc1 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc2 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc3 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc4 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc5 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc6 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc7 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc8 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc9 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc10 = New System.Windows.Forms.RadioButton()
-        Me.rad_Brc11 = New System.Windows.Forms.RadioButton()
-        Me.txt_MaterialSelected = New System.Windows.Forms.TextBox()
-        Me.Label336 = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout
-        Me.TabPage1.SuspendLayout
-        Me.BZ_RoundPanel6.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.BZ_RoundPanel4.SuspendLayout
-        Me.BZ_RoundPanel2.SuspendLayout
-        Me.BZ_RoundPanel1.SuspendLayout
-        Me.RoundPanel.SuspendLayout
-        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Tray3.SuspendLayout
-        Me.Tray2.SuspendLayout
-        Me.Tray1.SuspendLayout
-        CType(Me.PB_Right1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.BZ_RoundPanel5.SuspendLayout
-        Me.TabPage2.SuspendLayout
-        Me.BZ_RoundPanel8.SuspendLayout
-        Me.TableLayoutPanel1.SuspendLayout
-        Me.BZ_RoundPanel7.SuspendLayout
-        Me.GroupBox1.SuspendLayout
-        Me.TableLayoutPanel2.SuspendLayout
-        Me.GroupBox5.SuspendLayout
-        Me.TableLayoutPanel6.SuspendLayout
-        Me.GroupBox2.SuspendLayout
-        Me.TableLayoutPanel3.SuspendLayout
-        Me.GroupBox4.SuspendLayout
-        Me.TableLayoutPanel5.SuspendLayout
-        Me.GroupBox3.SuspendLayout
-        Me.TableLayoutPanel4.SuspendLayout
-        Me.TabPage3.SuspendLayout
-        Me.BZ_RoundPanel9.SuspendLayout
-        Me.GroupBox10.SuspendLayout
-        Me.TableLayoutPanel11.SuspendLayout
-        Me.GroupBox9.SuspendLayout
-        Me.TableLayoutPanel10.SuspendLayout
-        Me.GroupBox8.SuspendLayout
-        Me.TableLayoutPanel9.SuspendLayout
-        Me.GroupBox7.SuspendLayout
-        Me.TableLayoutPanel8.SuspendLayout
-        Me.GroupBox6.SuspendLayout
-        Me.TableLayoutPanel7.SuspendLayout
-        Me.TabPage4.SuspendLayout
-        Me.tab_Log.SuspendLayout
-        Me.TabPage10.SuspendLayout
-        Me.TabPage11.SuspendLayout
-        Me.TableLayoutPanel16.SuspendLayout
-        Me.TabPage12.SuspendLayout
-        Me.gupStep.SuspendLayout
-        Me.gupVel.SuspendLayout
-        Me.TabCon.SuspendLayout
-        Me.TabPage6.SuspendLayout
-        Me.Panel4.SuspendLayout
-        Me.GroupBox13.SuspendLayout
-        Me.TableLayoutPanel12.SuspendLayout
-        Me.TabPage7.SuspendLayout
-        Me.Panel2.SuspendLayout
-        Me.GroupBox14.SuspendLayout
-        Me.TableLayoutPanel13.SuspendLayout
-        Me.TabPage8.SuspendLayout
-        Me.Panel6.SuspendLayout
-        Me.GroupBox17.SuspendLayout
-        Me.TableLayoutPanel14.SuspendLayout
-        Me.TabPage5.SuspendLayout
-        Me.GroupBox16.SuspendLayout
-        Me.TableLayoutPanel19.SuspendLayout
-        Me.GroupBox15.SuspendLayout
-        Me.TableLayoutPanel18.SuspendLayout
-        Me.GroupBox12.SuspendLayout
-        Me.TableLayoutPanel17.SuspendLayout
-        Me.GroupBox11.SuspendLayout
-        Me.TableLayoutPanel15.SuspendLayout
-        Me.TabPage9.SuspendLayout
-        Me.GroupBox22.SuspendLayout
-        Me.GroupBox21.SuspendLayout
-        Me.GroupBox19.SuspendLayout
-        Me.GroupBox20.SuspendLayout
-        Me.Panel10.SuspendLayout
-        Me.TabPage13.SuspendLayout
-        Me.BZ_RoundPanel10.SuspendLayout
-        Me.TableLayoutPanel22.SuspendLayout
-        Me.TableLayoutPanel23.SuspendLayout
-        Me.BZ_RoundPanel3.SuspendLayout
-        Me.TableLayoutPanel21.SuspendLayout
-        Me.TableLayoutPanel20.SuspendLayout
-        Me.Grp.SuspendLayout
-        Me.SuspendLayout
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.BZ_RoundPanel6.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BZ_RoundPanel4.SuspendLayout()
+        Me.BZ_RoundPanel2.SuspendLayout()
+        Me.BZ_RoundPanel1.SuspendLayout()
+        Me.RoundPanel.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tray3.SuspendLayout()
+        Me.Tray2.SuspendLayout()
+        Me.Tray1.SuspendLayout()
+        CType(Me.PB_Right1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BZ_RoundPanel5.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.BZ_RoundPanel8.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.BZ_RoundPanel7.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.TableLayoutPanel6.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.BZ_RoundPanel9.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.TableLayoutPanel10.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.TableLayoutPanel9.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.tab_Log.SuspendLayout()
+        Me.TabPage10.SuspendLayout()
+        Me.TabPage11.SuspendLayout()
+        Me.TableLayoutPanel16.SuspendLayout()
+        Me.TabPage12.SuspendLayout()
+        Me.Grp.SuspendLayout()
+        Me.gupStep.SuspendLayout()
+        Me.gupVel.SuspendLayout()
+        Me.TabCon.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        Me.TableLayoutPanel12.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
+        Me.TableLayoutPanel13.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.GroupBox17.SuspendLayout()
+        Me.TableLayoutPanel14.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.GroupBox16.SuspendLayout()
+        Me.TableLayoutPanel19.SuspendLayout()
+        Me.GroupBox15.SuspendLayout()
+        Me.TableLayoutPanel18.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
+        Me.TableLayoutPanel17.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.TableLayoutPanel15.SuspendLayout()
+        Me.TabPage9.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.TabPage13.SuspendLayout()
+        Me.BZ_RoundPanel10.SuspendLayout()
+        Me.TableLayoutPanel22.SuspendLayout()
+        Me.TableLayoutPanel23.SuspendLayout()
+        Me.BZ_RoundPanel3.SuspendLayout()
+        Me.TableLayoutPanel21.SuspendLayout()
+        Me.TableLayoutPanel20.SuspendLayout()
+        Me.SuspendLayout()
         '
         'TabControl1
         '
@@ -1021,8 +1022,8 @@ Partial Class Frm_Engineering
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Font = New System.Drawing.Font("HelveticaNeue", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TabControl1.HotTrack = true
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.HotTrack = True
         Me.TabControl1.ItemSize = New System.Drawing.Size(200, 35)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
@@ -1040,14 +1041,14 @@ Partial Class Frm_Engineering
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel1)
         Me.TabPage1.Controls.Add(Me.RoundPanel)
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel5)
-        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 39)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "工程师主界面"
-        Me.TabPage1.UseVisualStyleBackColor = true
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel6
         '
@@ -1066,15 +1067,15 @@ Partial Class Frm_Engineering
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 30
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.Size = New System.Drawing.Size(808, 160)
         Me.DataGridView1.TabIndex = 1
         '
         'BZ_RoundPanel4
         '
-        Me.BZ_RoundPanel4.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(175,Byte),Integer), CType(CType(218,Byte),Integer), CType(CType(150,Byte),Integer))
+        Me.BZ_RoundPanel4.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(175, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.BZ_RoundPanel4.BZ_Radius = 11
         Me.BZ_RoundPanel4.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel4.Controls.Add(Me.lbl_OKNG)
@@ -1085,7 +1086,7 @@ Partial Class Frm_Engineering
         '
         'lbl_OKNG
         '
-        Me.lbl_OKNG.Font = New System.Drawing.Font("HelveticaNeue", 120!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_OKNG.Font = New System.Drawing.Font("Microsoft Sans Serif", 120.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_OKNG.Location = New System.Drawing.Point(3, 24)
         Me.lbl_OKNG.Name = "lbl_OKNG"
         Me.lbl_OKNG.Size = New System.Drawing.Size(325, 82)
@@ -1114,29 +1115,29 @@ Partial Class Frm_Engineering
         '
         'Btn_AutoRun
         '
-        Me.Btn_AutoRun.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.Btn_AutoRun.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_AutoRun.BZ_Radius = 11
         Me.Btn_AutoRun.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_AutoRun.Font = New System.Drawing.Font("HelveticaNeue", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_AutoRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AutoRun.Location = New System.Drawing.Point(15, 98)
         Me.Btn_AutoRun.Name = "Btn_AutoRun"
         Me.Btn_AutoRun.Size = New System.Drawing.Size(160, 45)
         Me.Btn_AutoRun.TabIndex = 1
         Me.Btn_AutoRun.Text = "自动装配"
-        Me.Btn_AutoRun.UseVisualStyleBackColor = true
+        Me.Btn_AutoRun.UseVisualStyleBackColor = True
         '
         'Btn_initialize
         '
-        Me.Btn_initialize.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.Btn_initialize.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_initialize.BZ_Radius = 11
         Me.Btn_initialize.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_initialize.Font = New System.Drawing.Font("HelveticaNeue", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_initialize.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_initialize.Location = New System.Drawing.Point(15, 27)
         Me.Btn_initialize.Name = "Btn_initialize"
         Me.Btn_initialize.Size = New System.Drawing.Size(160, 45)
         Me.Btn_initialize.TabIndex = 0
         Me.Btn_initialize.Text = "初始化"
-        Me.Btn_initialize.UseVisualStyleBackColor = true
+        Me.Btn_initialize.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel1
         '
@@ -1162,7 +1163,7 @@ Partial Class Frm_Engineering
         '
         'Label240
         '
-        Me.Label240.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label240.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label240.Location = New System.Drawing.Point(151, 391)
         Me.Label240.Name = "Label240"
         Me.Label240.Size = New System.Drawing.Size(35, 15)
@@ -1172,7 +1173,7 @@ Partial Class Frm_Engineering
         '
         'Label241
         '
-        Me.Label241.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label241.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label241.Location = New System.Drawing.Point(115, 391)
         Me.Label241.Name = "Label241"
         Me.Label241.Size = New System.Drawing.Size(35, 15)
@@ -1182,7 +1183,7 @@ Partial Class Frm_Engineering
         '
         'Label243
         '
-        Me.Label243.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label243.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label243.Location = New System.Drawing.Point(79, 391)
         Me.Label243.Name = "Label243"
         Me.Label243.Size = New System.Drawing.Size(35, 15)
@@ -1192,7 +1193,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS3_Glue
         '
-        Me.lbl_StepS3_Glue.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS3_Glue.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS3_Glue.Location = New System.Drawing.Point(43, 391)
         Me.lbl_StepS3_Glue.Name = "lbl_StepS3_Glue"
         Me.lbl_StepS3_Glue.Size = New System.Drawing.Size(35, 15)
@@ -1202,7 +1203,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS2_Glue
         '
-        Me.lbl_StepS2_Glue.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS2_Glue.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS2_Glue.Location = New System.Drawing.Point(7, 391)
         Me.lbl_StepS2_Glue.Name = "lbl_StepS2_Glue"
         Me.lbl_StepS2_Glue.Size = New System.Drawing.Size(35, 15)
@@ -1212,7 +1213,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS5
         '
-        Me.lbl_StepS5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS5.Location = New System.Drawing.Point(151, 372)
         Me.lbl_StepS5.Name = "lbl_StepS5"
         Me.lbl_StepS5.Size = New System.Drawing.Size(35, 15)
@@ -1222,7 +1223,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS4
         '
-        Me.lbl_StepS4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS4.Location = New System.Drawing.Point(115, 372)
         Me.lbl_StepS4.Name = "lbl_StepS4"
         Me.lbl_StepS4.Size = New System.Drawing.Size(35, 15)
@@ -1232,7 +1233,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS3
         '
-        Me.lbl_StepS3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS3.Location = New System.Drawing.Point(79, 372)
         Me.lbl_StepS3.Name = "lbl_StepS3"
         Me.lbl_StepS3.Size = New System.Drawing.Size(35, 15)
@@ -1242,7 +1243,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS2
         '
-        Me.lbl_StepS2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS2.Location = New System.Drawing.Point(43, 372)
         Me.lbl_StepS2.Name = "lbl_StepS2"
         Me.lbl_StepS2.Size = New System.Drawing.Size(35, 15)
@@ -1252,7 +1253,7 @@ Partial Class Frm_Engineering
         '
         'lbl_StepS1
         '
-        Me.lbl_StepS1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_StepS1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_StepS1.Location = New System.Drawing.Point(7, 372)
         Me.lbl_StepS1.Name = "lbl_StepS1"
         Me.lbl_StepS1.Size = New System.Drawing.Size(35, 15)
@@ -1262,9 +1263,8 @@ Partial Class Frm_Engineering
         '
         'ListBox1
         '
-        Me.ListBox1.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.ListBox1.FormattingEnabled = true
-        Me.ListBox1.ItemHeight = 12
+        Me.ListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(5, 50)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(180, 316)
@@ -1273,15 +1273,15 @@ Partial Class Frm_Engineering
         'lbl_BOZHON
         '
         Me.lbl_BOZHON.BZ_BigText = ""
-        Me.lbl_BOZHON.BZ_BigTextFont = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_BOZHON.BZ_BigTextFont = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_BOZHON.BZ_BigTextOffset = 0
-        Me.lbl_BOZHON.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.lbl_BOZHON.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.lbl_BOZHON.BZ_Radius = 11
         Me.lbl_BOZHON.BZ_RoundStyle = BoTech.BZ_Label.RoundStyle.All
         Me.lbl_BOZHON.BZ_SmallText = ""
-        Me.lbl_BOZHON.BZ_SmallTextFont = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_BOZHON.BZ_SmallTextFont = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_BOZHON.BZ_SmallTextOffset = 0
-        Me.lbl_BOZHON.Image = CType(resources.GetObject("lbl_BOZHON.Image"),System.Drawing.Image)
+        Me.lbl_BOZHON.Image = CType(resources.GetObject("lbl_BOZHON.Image"), System.Drawing.Image)
         Me.lbl_BOZHON.Location = New System.Drawing.Point(5, 5)
         Me.lbl_BOZHON.Name = "lbl_BOZHON"
         Me.lbl_BOZHON.Size = New System.Drawing.Size(180, 40)
@@ -1364,55 +1364,55 @@ Partial Class Frm_Engineering
         'Btn_GluePar
         '
         Me.Btn_GluePar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_GluePar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_GluePar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_GluePar.Location = New System.Drawing.Point(344, 281)
         Me.Btn_GluePar.Name = "Btn_GluePar"
         Me.Btn_GluePar.Size = New System.Drawing.Size(123, 50)
         Me.Btn_GluePar.TabIndex = 99
         Me.Btn_GluePar.Text = "点胶参数"
-        Me.Btn_GluePar.UseVisualStyleBackColor = false
+        Me.Btn_GluePar.UseVisualStyleBackColor = False
         '
         'btn_lockSelecetBrc
         '
-        Me.btn_lockSelecetBrc.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.btn_lockSelecetBrc.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.btn_lockSelecetBrc.Location = New System.Drawing.Point(85, 317)
         Me.btn_lockSelecetBrc.Name = "btn_lockSelecetBrc"
         Me.btn_lockSelecetBrc.Size = New System.Drawing.Size(60, 25)
         Me.btn_lockSelecetBrc.TabIndex = 98
         Me.btn_lockSelecetBrc.Text = "Lock"
-        Me.btn_lockSelecetBrc.UseVisualStyleBackColor = true
+        Me.btn_lockSelecetBrc.UseVisualStyleBackColor = True
         '
         'btn_EnSelecetBrc
         '
-        Me.btn_EnSelecetBrc.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.btn_EnSelecetBrc.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.btn_EnSelecetBrc.Location = New System.Drawing.Point(14, 317)
         Me.btn_EnSelecetBrc.Name = "btn_EnSelecetBrc"
         Me.btn_EnSelecetBrc.Size = New System.Drawing.Size(60, 25)
         Me.btn_EnSelecetBrc.TabIndex = 97
         Me.btn_EnSelecetBrc.Text = "Enable"
-        Me.btn_EnSelecetBrc.UseVisualStyleBackColor = true
+        Me.btn_EnSelecetBrc.UseVisualStyleBackColor = True
         '
         'rad_SelectNone
         '
-        Me.rad_SelectNone.AutoSize = true
+        Me.rad_SelectNone.AutoSize = True
         Me.rad_SelectNone.Location = New System.Drawing.Point(92, 281)
         Me.rad_SelectNone.Name = "rad_SelectNone"
         Me.rad_SelectNone.Size = New System.Drawing.Size(50, 21)
         Me.rad_SelectNone.TabIndex = 96
         Me.rad_SelectNone.Text = "反选"
-        Me.rad_SelectNone.UseVisualStyleBackColor = true
+        Me.rad_SelectNone.UseVisualStyleBackColor = True
         '
         'rad_SelectAll
         '
-        Me.rad_SelectAll.AutoSize = true
-        Me.rad_SelectAll.Checked = true
+        Me.rad_SelectAll.AutoSize = True
+        Me.rad_SelectAll.Checked = True
         Me.rad_SelectAll.Location = New System.Drawing.Point(17, 281)
         Me.rad_SelectAll.Name = "rad_SelectAll"
         Me.rad_SelectAll.Size = New System.Drawing.Size(50, 21)
         Me.rad_SelectAll.TabIndex = 95
-        Me.rad_SelectAll.TabStop = true
+        Me.rad_SelectAll.TabStop = True
         Me.rad_SelectAll.Text = "全选"
-        Me.rad_SelectAll.UseVisualStyleBackColor = true
+        Me.rad_SelectAll.UseVisualStyleBackColor = True
         '
         'GroupBox18
         '
@@ -1420,33 +1420,33 @@ Partial Class Frm_Engineering
         Me.GroupBox18.Name = "GroupBox18"
         Me.GroupBox18.Size = New System.Drawing.Size(86, 100)
         Me.GroupBox18.TabIndex = 77
-        Me.GroupBox18.TabStop = false
+        Me.GroupBox18.TabStop = False
         '
         'Select_Material
         '
         Me.Select_Material.BackColor = System.Drawing.Color.Transparent
-        Me.Select_Material.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Select_Material.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Select_Material.Location = New System.Drawing.Point(409, 211)
         Me.Select_Material.Name = "Select_Material"
         Me.Select_Material.Size = New System.Drawing.Size(60, 50)
         Me.Select_Material.TabIndex = 92
         Me.Select_Material.Text = "选 料"
-        Me.Select_Material.UseVisualStyleBackColor = false
+        Me.Select_Material.UseVisualStyleBackColor = False
         '
         'Change_Metrail
         '
         Me.Change_Metrail.BackColor = System.Drawing.Color.Transparent
-        Me.Change_Metrail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Change_Metrail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Change_Metrail.Location = New System.Drawing.Point(344, 211)
         Me.Change_Metrail.Name = "Change_Metrail"
         Me.Change_Metrail.Size = New System.Drawing.Size(60, 50)
         Me.Change_Metrail.TabIndex = 91
         Me.Change_Metrail.Text = "换  料"
-        Me.Change_Metrail.UseVisualStyleBackColor = false
+        Me.Change_Metrail.UseVisualStyleBackColor = False
         '
         'TextBox3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("微软雅黑", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(134,Byte))
+        Me.TextBox3.Font = New System.Drawing.Font("微软雅黑", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(134, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(168, 246)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(150, 20)
@@ -1457,7 +1457,7 @@ Partial Class Frm_Engineering
         '
         Me.lbl_isHaveCam.BackColor = System.Drawing.Color.White
         Me.lbl_isHaveCam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_isHaveCam.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_isHaveCam.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_isHaveCam.Location = New System.Drawing.Point(226, 209)
         Me.lbl_isHaveCam.Margin = New System.Windows.Forms.Padding(3)
         Me.lbl_isHaveCam.Name = "lbl_isHaveCam"
@@ -1475,9 +1475,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc7
         '
-        Me.chk_Brc7.AutoSize = true
+        Me.chk_Brc7.AutoSize = True
         Me.chk_Brc7.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc7.Checked = true
+        Me.chk_Brc7.Checked = True
         Me.chk_Brc7.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc7.Location = New System.Drawing.Point(14, 241)
         Me.chk_Brc7.Margin = New System.Windows.Forms.Padding(2)
@@ -1485,13 +1485,13 @@ Partial Class Frm_Engineering
         Me.chk_Brc7.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc7.TabIndex = 78
         Me.chk_Brc7.Text = "7"
-        Me.chk_Brc7.UseVisualStyleBackColor = true
+        Me.chk_Brc7.UseVisualStyleBackColor = True
         '
         'chk_Brc11
         '
-        Me.chk_Brc11.AutoSize = true
+        Me.chk_Brc11.AutoSize = True
         Me.chk_Brc11.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc11.Checked = true
+        Me.chk_Brc11.Checked = True
         Me.chk_Brc11.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc11.Location = New System.Drawing.Point(102, 241)
         Me.chk_Brc11.Margin = New System.Windows.Forms.Padding(2)
@@ -1499,12 +1499,12 @@ Partial Class Frm_Engineering
         Me.chk_Brc11.Size = New System.Drawing.Size(26, 35)
         Me.chk_Brc11.TabIndex = 82
         Me.chk_Brc11.Text = "11"
-        Me.chk_Brc11.UseVisualStyleBackColor = true
+        Me.chk_Brc11.UseVisualStyleBackColor = True
         '
         'lbl_StepTrayRight
         '
-        Me.lbl_StepTrayRight.AutoSize = true
-        Me.lbl_StepTrayRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepTrayRight.AutoSize = True
+        Me.lbl_StepTrayRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepTrayRight.Location = New System.Drawing.Point(182, 376)
         Me.lbl_StepTrayRight.Name = "lbl_StepTrayRight"
         Me.lbl_StepTrayRight.Size = New System.Drawing.Size(77, 20)
@@ -1513,9 +1513,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc12
         '
-        Me.chk_Brc12.AutoSize = true
+        Me.chk_Brc12.AutoSize = True
         Me.chk_Brc12.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc12.Checked = true
+        Me.chk_Brc12.Checked = True
         Me.chk_Brc12.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc12.Location = New System.Drawing.Point(125, 241)
         Me.chk_Brc12.Margin = New System.Windows.Forms.Padding(2)
@@ -1523,12 +1523,12 @@ Partial Class Frm_Engineering
         Me.chk_Brc12.Size = New System.Drawing.Size(26, 35)
         Me.chk_Brc12.TabIndex = 71
         Me.chk_Brc12.Text = "12"
-        Me.chk_Brc12.UseVisualStyleBackColor = true
+        Me.chk_Brc12.UseVisualStyleBackColor = True
         '
         'lbl_StepTaker
         '
-        Me.lbl_StepTaker.AutoSize = true
-        Me.lbl_StepTaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepTaker.AutoSize = True
+        Me.lbl_StepTaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepTaker.Location = New System.Drawing.Point(180, 331)
         Me.lbl_StepTaker.Name = "lbl_StepTaker"
         Me.lbl_StepTaker.Size = New System.Drawing.Size(49, 20)
@@ -1537,9 +1537,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc9
         '
-        Me.chk_Brc9.AutoSize = true
+        Me.chk_Brc9.AutoSize = True
         Me.chk_Brc9.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc9.Checked = true
+        Me.chk_Brc9.Checked = True
         Me.chk_Brc9.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc9.Location = New System.Drawing.Point(60, 241)
         Me.chk_Brc9.Margin = New System.Windows.Forms.Padding(2)
@@ -1547,13 +1547,13 @@ Partial Class Frm_Engineering
         Me.chk_Brc9.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc9.TabIndex = 80
         Me.chk_Brc9.Text = "9"
-        Me.chk_Brc9.UseVisualStyleBackColor = true
+        Me.chk_Brc9.UseVisualStyleBackColor = True
         '
         'chk_Brc10
         '
-        Me.chk_Brc10.AutoSize = true
+        Me.chk_Brc10.AutoSize = True
         Me.chk_Brc10.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc10.Checked = true
+        Me.chk_Brc10.Checked = True
         Me.chk_Brc10.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc10.Location = New System.Drawing.Point(79, 241)
         Me.chk_Brc10.Margin = New System.Windows.Forms.Padding(2)
@@ -1561,12 +1561,12 @@ Partial Class Frm_Engineering
         Me.chk_Brc10.Size = New System.Drawing.Size(26, 35)
         Me.chk_Brc10.TabIndex = 81
         Me.chk_Brc10.Text = "10"
-        Me.chk_Brc10.UseVisualStyleBackColor = true
+        Me.chk_Brc10.UseVisualStyleBackColor = True
         '
         'lbl_StepTrayLeft
         '
-        Me.lbl_StepTrayLeft.AutoSize = true
-        Me.lbl_StepTrayLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepTrayLeft.AutoSize = True
+        Me.lbl_StepTrayLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepTrayLeft.Location = New System.Drawing.Point(18, 376)
         Me.lbl_StepTrayLeft.Name = "lbl_StepTrayLeft"
         Me.lbl_StepTrayLeft.Size = New System.Drawing.Size(67, 20)
@@ -1576,7 +1576,7 @@ Partial Class Frm_Engineering
         'chk_Brc1
         '
         Me.chk_Brc1.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc1.Checked = true
+        Me.chk_Brc1.Checked = True
         Me.chk_Brc1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc1.Location = New System.Drawing.Point(14, 202)
         Me.chk_Brc1.Margin = New System.Windows.Forms.Padding(2)
@@ -1584,7 +1584,7 @@ Partial Class Frm_Engineering
         Me.chk_Brc1.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc1.TabIndex = 72
         Me.chk_Brc1.Text = "1"
-        Me.chk_Brc1.UseVisualStyleBackColor = true
+        Me.chk_Brc1.UseVisualStyleBackColor = True
         '
         'Label278
         '
@@ -1596,9 +1596,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc2
         '
-        Me.chk_Brc2.AutoSize = true
+        Me.chk_Brc2.AutoSize = True
         Me.chk_Brc2.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc2.Checked = true
+        Me.chk_Brc2.Checked = True
         Me.chk_Brc2.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc2.Location = New System.Drawing.Point(37, 202)
         Me.chk_Brc2.Margin = New System.Windows.Forms.Padding(2)
@@ -1606,7 +1606,7 @@ Partial Class Frm_Engineering
         Me.chk_Brc2.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc2.TabIndex = 73
         Me.chk_Brc2.Text = "2"
-        Me.chk_Brc2.UseVisualStyleBackColor = true
+        Me.chk_Brc2.UseVisualStyleBackColor = True
         '
         'Label328
         '
@@ -1618,9 +1618,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc8
         '
-        Me.chk_Brc8.AutoSize = true
+        Me.chk_Brc8.AutoSize = True
         Me.chk_Brc8.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.chk_Brc8.Checked = true
+        Me.chk_Brc8.Checked = True
         Me.chk_Brc8.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc8.Location = New System.Drawing.Point(37, 241)
         Me.chk_Brc8.Margin = New System.Windows.Forms.Padding(2)
@@ -1628,7 +1628,7 @@ Partial Class Frm_Engineering
         Me.chk_Brc8.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc8.TabIndex = 79
         Me.chk_Brc8.Text = "8"
-        Me.chk_Brc8.UseVisualStyleBackColor = true
+        Me.chk_Brc8.UseVisualStyleBackColor = True
         '
         'Label331
         '
@@ -1640,9 +1640,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc3
         '
-        Me.chk_Brc3.AutoSize = true
+        Me.chk_Brc3.AutoSize = True
         Me.chk_Brc3.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc3.Checked = true
+        Me.chk_Brc3.Checked = True
         Me.chk_Brc3.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc3.Location = New System.Drawing.Point(60, 202)
         Me.chk_Brc3.Margin = New System.Windows.Forms.Padding(2)
@@ -1650,11 +1650,11 @@ Partial Class Frm_Engineering
         Me.chk_Brc3.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc3.TabIndex = 74
         Me.chk_Brc3.Text = "3"
-        Me.chk_Brc3.UseVisualStyleBackColor = true
+        Me.chk_Brc3.UseVisualStyleBackColor = True
         '
         'lbl_PressStandard
         '
-        Me.lbl_PressStandard.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_PressStandard.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_PressStandard.Location = New System.Drawing.Point(400, 153)
         Me.lbl_PressStandard.Name = "lbl_PressStandard"
         Me.lbl_PressStandard.Size = New System.Drawing.Size(40, 14)
@@ -1664,9 +1664,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc4
         '
-        Me.chk_Brc4.AutoSize = true
+        Me.chk_Brc4.AutoSize = True
         Me.chk_Brc4.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc4.Checked = true
+        Me.chk_Brc4.Checked = True
         Me.chk_Brc4.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc4.Location = New System.Drawing.Point(83, 202)
         Me.chk_Brc4.Margin = New System.Windows.Forms.Padding(2)
@@ -1674,11 +1674,11 @@ Partial Class Frm_Engineering
         Me.chk_Brc4.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc4.TabIndex = 75
         Me.chk_Brc4.Text = "4"
-        Me.chk_Brc4.UseVisualStyleBackColor = true
+        Me.chk_Brc4.UseVisualStyleBackColor = True
         '
         'Label329
         '
-        Me.Label329.Font = New System.Drawing.Font("HelveticaNeue", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label329.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label329.Location = New System.Drawing.Point(441, 153)
         Me.Label329.Name = "Label329"
         Me.Label329.Size = New System.Drawing.Size(26, 14)
@@ -1688,9 +1688,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc6
         '
-        Me.chk_Brc6.AutoSize = true
+        Me.chk_Brc6.AutoSize = True
         Me.chk_Brc6.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc6.Checked = true
+        Me.chk_Brc6.Checked = True
         Me.chk_Brc6.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc6.Location = New System.Drawing.Point(129, 202)
         Me.chk_Brc6.Margin = New System.Windows.Forms.Padding(2)
@@ -1698,11 +1698,11 @@ Partial Class Frm_Engineering
         Me.chk_Brc6.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc6.TabIndex = 77
         Me.chk_Brc6.Text = "6"
-        Me.chk_Brc6.UseVisualStyleBackColor = true
+        Me.chk_Brc6.UseVisualStyleBackColor = True
         '
         'Label330
         '
-        Me.Label330.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label330.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label330.Location = New System.Drawing.Point(344, 153)
         Me.Label330.Name = "Label330"
         Me.Label330.Size = New System.Drawing.Size(60, 14)
@@ -1712,9 +1712,9 @@ Partial Class Frm_Engineering
         '
         'chk_Brc5
         '
-        Me.chk_Brc5.AutoSize = true
+        Me.chk_Brc5.AutoSize = True
         Me.chk_Brc5.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.chk_Brc5.Checked = true
+        Me.chk_Brc5.Checked = True
         Me.chk_Brc5.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_Brc5.Location = New System.Drawing.Point(106, 202)
         Me.chk_Brc5.Margin = New System.Windows.Forms.Padding(2)
@@ -1722,11 +1722,11 @@ Partial Class Frm_Engineering
         Me.chk_Brc5.Size = New System.Drawing.Size(19, 35)
         Me.chk_Brc5.TabIndex = 76
         Me.chk_Brc5.Text = "5"
-        Me.chk_Brc5.UseVisualStyleBackColor = true
+        Me.chk_Brc5.UseVisualStyleBackColor = True
         '
         'lbl_PressTaker
         '
-        Me.lbl_PressTaker.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_PressTaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_PressTaker.Location = New System.Drawing.Point(237, 173)
         Me.lbl_PressTaker.Name = "lbl_PressTaker"
         Me.lbl_PressTaker.Size = New System.Drawing.Size(40, 14)
@@ -1736,7 +1736,7 @@ Partial Class Frm_Engineering
         '
         'Label283
         '
-        Me.Label283.Font = New System.Drawing.Font("HelveticaNeue", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label283.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label283.Location = New System.Drawing.Point(278, 173)
         Me.Label283.Name = "Label283"
         Me.Label283.Size = New System.Drawing.Size(26, 14)
@@ -1746,7 +1746,7 @@ Partial Class Frm_Engineering
         '
         'Label327
         '
-        Me.Label327.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label327.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label327.Location = New System.Drawing.Point(181, 173)
         Me.Label327.Name = "Label327"
         Me.Label327.Size = New System.Drawing.Size(60, 14)
@@ -1756,8 +1756,8 @@ Partial Class Frm_Engineering
         '
         'lbl_StepRecheck
         '
-        Me.lbl_StepRecheck.AutoSize = true
-        Me.lbl_StepRecheck.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepRecheck.AutoSize = True
+        Me.lbl_StepRecheck.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepRecheck.Location = New System.Drawing.Point(343, 15)
         Me.lbl_StepRecheck.Name = "lbl_StepRecheck"
         Me.lbl_StepRecheck.Size = New System.Drawing.Size(72, 20)
@@ -1766,8 +1766,8 @@ Partial Class Frm_Engineering
         '
         'lbl_StepPaste
         '
-        Me.lbl_StepPaste.AutoSize = true
-        Me.lbl_StepPaste.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepPaste.AutoSize = True
+        Me.lbl_StepPaste.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepPaste.Location = New System.Drawing.Point(180, 15)
         Me.lbl_StepPaste.Name = "lbl_StepPaste"
         Me.lbl_StepPaste.Size = New System.Drawing.Size(50, 20)
@@ -1776,8 +1776,8 @@ Partial Class Frm_Engineering
         '
         'lbl_StepGlue
         '
-        Me.lbl_StepGlue.AutoSize = true
-        Me.lbl_StepGlue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepGlue.AutoSize = True
+        Me.lbl_StepGlue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepGlue.Location = New System.Drawing.Point(18, 15)
         Me.lbl_StepGlue.Name = "lbl_StepGlue"
         Me.lbl_StepGlue.Size = New System.Drawing.Size(43, 20)
@@ -1810,8 +1810,8 @@ Partial Class Frm_Engineering
         '
         'lbl_StepL3
         '
-        Me.lbl_StepL3.AutoSize = true
-        Me.lbl_StepL3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepL3.AutoSize = True
+        Me.lbl_StepL3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepL3.Location = New System.Drawing.Point(343, 112)
         Me.lbl_StepL3.Name = "lbl_StepL3"
         Me.lbl_StepL3.Size = New System.Drawing.Size(27, 20)
@@ -1820,17 +1820,17 @@ Partial Class Frm_Engineering
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"),System.Drawing.Image)
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(443, 109)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(24, 23)
         Me.PictureBox2.TabIndex = 39
-        Me.PictureBox2.TabStop = false
+        Me.PictureBox2.TabStop = False
         '
         'lbl_StepL2
         '
-        Me.lbl_StepL2.AutoSize = true
-        Me.lbl_StepL2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepL2.AutoSize = True
+        Me.lbl_StepL2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepL2.Location = New System.Drawing.Point(180, 112)
         Me.lbl_StepL2.Name = "lbl_StepL2"
         Me.lbl_StepL2.Size = New System.Drawing.Size(27, 20)
@@ -1839,22 +1839,22 @@ Partial Class Frm_Engineering
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"),System.Drawing.Image)
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(283, 112)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(24, 23)
         Me.PictureBox1.TabIndex = 37
-        Me.PictureBox1.TabStop = false
+        Me.PictureBox1.TabStop = False
         '
         'Tray3
         '
         Me.Tray3.ColumnCount = 6
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray3.Controls.Add(Me.Label312, 0, 0)
         Me.Tray3.Controls.Add(Me.Label313, 1, 0)
         Me.Tray3.Controls.Add(Me.Label314, 2, 0)
@@ -1870,8 +1870,8 @@ Partial Class Frm_Engineering
         Me.Tray3.Location = New System.Drawing.Point(344, 64)
         Me.Tray3.Name = "Tray3"
         Me.Tray3.RowCount = 2
-        Me.Tray3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray3.Size = New System.Drawing.Size(126, 42)
         Me.Tray3.TabIndex = 36
         '
@@ -1879,7 +1879,7 @@ Partial Class Frm_Engineering
         '
         Me.Label312.BackColor = System.Drawing.Color.White
         Me.Label312.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label312.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label312.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label312.Location = New System.Drawing.Point(3, 3)
         Me.Label312.Margin = New System.Windows.Forms.Padding(3)
         Me.Label312.Name = "Label312"
@@ -1891,7 +1891,7 @@ Partial Class Frm_Engineering
         '
         Me.Label313.BackColor = System.Drawing.Color.White
         Me.Label313.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label313.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label313.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label313.Location = New System.Drawing.Point(24, 3)
         Me.Label313.Margin = New System.Windows.Forms.Padding(3)
         Me.Label313.Name = "Label313"
@@ -1903,7 +1903,7 @@ Partial Class Frm_Engineering
         '
         Me.Label314.BackColor = System.Drawing.Color.White
         Me.Label314.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label314.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label314.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label314.Location = New System.Drawing.Point(45, 3)
         Me.Label314.Margin = New System.Windows.Forms.Padding(3)
         Me.Label314.Name = "Label314"
@@ -1915,7 +1915,7 @@ Partial Class Frm_Engineering
         '
         Me.Label315.BackColor = System.Drawing.Color.White
         Me.Label315.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label315.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label315.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label315.Location = New System.Drawing.Point(66, 3)
         Me.Label315.Margin = New System.Windows.Forms.Padding(3)
         Me.Label315.Name = "Label315"
@@ -1927,7 +1927,7 @@ Partial Class Frm_Engineering
         '
         Me.Label316.BackColor = System.Drawing.Color.White
         Me.Label316.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label316.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label316.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label316.Location = New System.Drawing.Point(87, 3)
         Me.Label316.Margin = New System.Windows.Forms.Padding(3)
         Me.Label316.Name = "Label316"
@@ -1939,7 +1939,7 @@ Partial Class Frm_Engineering
         '
         Me.Label317.BackColor = System.Drawing.Color.White
         Me.Label317.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label317.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label317.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label317.Location = New System.Drawing.Point(108, 3)
         Me.Label317.Margin = New System.Windows.Forms.Padding(3)
         Me.Label317.Name = "Label317"
@@ -1951,7 +1951,7 @@ Partial Class Frm_Engineering
         '
         Me.Label318.BackColor = System.Drawing.Color.White
         Me.Label318.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label318.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label318.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label318.Location = New System.Drawing.Point(3, 24)
         Me.Label318.Margin = New System.Windows.Forms.Padding(3)
         Me.Label318.Name = "Label318"
@@ -1963,7 +1963,7 @@ Partial Class Frm_Engineering
         '
         Me.Label319.BackColor = System.Drawing.Color.White
         Me.Label319.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label319.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label319.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label319.Location = New System.Drawing.Point(24, 24)
         Me.Label319.Margin = New System.Windows.Forms.Padding(3)
         Me.Label319.Name = "Label319"
@@ -1975,7 +1975,7 @@ Partial Class Frm_Engineering
         '
         Me.Label320.BackColor = System.Drawing.Color.White
         Me.Label320.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label320.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label320.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label320.Location = New System.Drawing.Point(45, 24)
         Me.Label320.Margin = New System.Windows.Forms.Padding(3)
         Me.Label320.Name = "Label320"
@@ -1987,7 +1987,7 @@ Partial Class Frm_Engineering
         '
         Me.Label321.BackColor = System.Drawing.Color.White
         Me.Label321.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label321.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label321.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label321.Location = New System.Drawing.Point(66, 24)
         Me.Label321.Margin = New System.Windows.Forms.Padding(3)
         Me.Label321.Name = "Label321"
@@ -1999,7 +1999,7 @@ Partial Class Frm_Engineering
         '
         Me.Label322.BackColor = System.Drawing.Color.White
         Me.Label322.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label322.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label322.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label322.Location = New System.Drawing.Point(87, 24)
         Me.Label322.Margin = New System.Windows.Forms.Padding(3)
         Me.Label322.Name = "Label322"
@@ -2011,7 +2011,7 @@ Partial Class Frm_Engineering
         '
         Me.Label323.BackColor = System.Drawing.Color.White
         Me.Label323.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label323.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label323.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label323.Location = New System.Drawing.Point(108, 24)
         Me.Label323.Margin = New System.Windows.Forms.Padding(3)
         Me.Label323.Name = "Label323"
@@ -2022,12 +2022,12 @@ Partial Class Frm_Engineering
         'Tray2
         '
         Me.Tray2.ColumnCount = 6
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray2.Controls.Add(Me.Label300, 0, 0)
         Me.Tray2.Controls.Add(Me.Label301, 1, 0)
         Me.Tray2.Controls.Add(Me.Label302, 2, 0)
@@ -2043,8 +2043,8 @@ Partial Class Frm_Engineering
         Me.Tray2.Location = New System.Drawing.Point(181, 64)
         Me.Tray2.Name = "Tray2"
         Me.Tray2.RowCount = 2
-        Me.Tray2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray2.Size = New System.Drawing.Size(126, 42)
         Me.Tray2.TabIndex = 35
         '
@@ -2052,7 +2052,7 @@ Partial Class Frm_Engineering
         '
         Me.Label300.BackColor = System.Drawing.Color.White
         Me.Label300.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label300.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label300.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label300.Location = New System.Drawing.Point(3, 3)
         Me.Label300.Margin = New System.Windows.Forms.Padding(3)
         Me.Label300.Name = "Label300"
@@ -2064,7 +2064,7 @@ Partial Class Frm_Engineering
         '
         Me.Label301.BackColor = System.Drawing.Color.White
         Me.Label301.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label301.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label301.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label301.Location = New System.Drawing.Point(24, 3)
         Me.Label301.Margin = New System.Windows.Forms.Padding(3)
         Me.Label301.Name = "Label301"
@@ -2076,7 +2076,7 @@ Partial Class Frm_Engineering
         '
         Me.Label302.BackColor = System.Drawing.Color.White
         Me.Label302.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label302.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label302.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label302.Location = New System.Drawing.Point(45, 3)
         Me.Label302.Margin = New System.Windows.Forms.Padding(3)
         Me.Label302.Name = "Label302"
@@ -2088,7 +2088,7 @@ Partial Class Frm_Engineering
         '
         Me.Label303.BackColor = System.Drawing.Color.White
         Me.Label303.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label303.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label303.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label303.Location = New System.Drawing.Point(66, 3)
         Me.Label303.Margin = New System.Windows.Forms.Padding(3)
         Me.Label303.Name = "Label303"
@@ -2100,7 +2100,7 @@ Partial Class Frm_Engineering
         '
         Me.Label304.BackColor = System.Drawing.Color.White
         Me.Label304.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label304.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label304.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label304.Location = New System.Drawing.Point(87, 3)
         Me.Label304.Margin = New System.Windows.Forms.Padding(3)
         Me.Label304.Name = "Label304"
@@ -2112,7 +2112,7 @@ Partial Class Frm_Engineering
         '
         Me.Label305.BackColor = System.Drawing.Color.White
         Me.Label305.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label305.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label305.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label305.Location = New System.Drawing.Point(108, 3)
         Me.Label305.Margin = New System.Windows.Forms.Padding(3)
         Me.Label305.Name = "Label305"
@@ -2124,7 +2124,7 @@ Partial Class Frm_Engineering
         '
         Me.Label306.BackColor = System.Drawing.Color.White
         Me.Label306.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label306.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label306.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label306.Location = New System.Drawing.Point(3, 24)
         Me.Label306.Margin = New System.Windows.Forms.Padding(3)
         Me.Label306.Name = "Label306"
@@ -2136,7 +2136,7 @@ Partial Class Frm_Engineering
         '
         Me.Label307.BackColor = System.Drawing.Color.White
         Me.Label307.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label307.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label307.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label307.Location = New System.Drawing.Point(24, 24)
         Me.Label307.Margin = New System.Windows.Forms.Padding(3)
         Me.Label307.Name = "Label307"
@@ -2148,7 +2148,7 @@ Partial Class Frm_Engineering
         '
         Me.Label308.BackColor = System.Drawing.Color.White
         Me.Label308.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label308.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label308.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label308.Location = New System.Drawing.Point(45, 24)
         Me.Label308.Margin = New System.Windows.Forms.Padding(3)
         Me.Label308.Name = "Label308"
@@ -2160,7 +2160,7 @@ Partial Class Frm_Engineering
         '
         Me.Label309.BackColor = System.Drawing.Color.White
         Me.Label309.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label309.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label309.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label309.Location = New System.Drawing.Point(66, 24)
         Me.Label309.Margin = New System.Windows.Forms.Padding(3)
         Me.Label309.Name = "Label309"
@@ -2172,7 +2172,7 @@ Partial Class Frm_Engineering
         '
         Me.Label310.BackColor = System.Drawing.Color.White
         Me.Label310.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label310.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label310.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label310.Location = New System.Drawing.Point(87, 24)
         Me.Label310.Margin = New System.Windows.Forms.Padding(3)
         Me.Label310.Name = "Label310"
@@ -2184,7 +2184,7 @@ Partial Class Frm_Engineering
         '
         Me.Label311.BackColor = System.Drawing.Color.White
         Me.Label311.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label311.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label311.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label311.Location = New System.Drawing.Point(108, 24)
         Me.Label311.Margin = New System.Windows.Forms.Padding(3)
         Me.Label311.Name = "Label311"
@@ -2194,8 +2194,8 @@ Partial Class Frm_Engineering
         '
         'lbl_StepL1
         '
-        Me.lbl_StepL1.AutoSize = true
-        Me.lbl_StepL1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lbl_StepL1.AutoSize = True
+        Me.lbl_StepL1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_StepL1.Location = New System.Drawing.Point(18, 112)
         Me.lbl_StepL1.Name = "lbl_StepL1"
         Me.lbl_StepL1.Size = New System.Drawing.Size(27, 20)
@@ -2205,12 +2205,12 @@ Partial Class Frm_Engineering
         'Tray1
         '
         Me.Tray1.ColumnCount = 6
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray1.Controls.Add(Me.Label299, 0, 0)
         Me.Tray1.Controls.Add(Me.Label298, 1, 0)
         Me.Tray1.Controls.Add(Me.Label297, 2, 0)
@@ -2226,8 +2226,8 @@ Partial Class Frm_Engineering
         Me.Tray1.Location = New System.Drawing.Point(19, 64)
         Me.Tray1.Name = "Tray1"
         Me.Tray1.RowCount = 2
-        Me.Tray1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
-        Me.Tray1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21!))
+        Me.Tray1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.Tray1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
         Me.Tray1.Size = New System.Drawing.Size(126, 42)
         Me.Tray1.TabIndex = 24
         '
@@ -2235,7 +2235,7 @@ Partial Class Frm_Engineering
         '
         Me.Label299.BackColor = System.Drawing.Color.White
         Me.Label299.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label299.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label299.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label299.Location = New System.Drawing.Point(3, 3)
         Me.Label299.Margin = New System.Windows.Forms.Padding(3)
         Me.Label299.Name = "Label299"
@@ -2247,7 +2247,7 @@ Partial Class Frm_Engineering
         '
         Me.Label298.BackColor = System.Drawing.Color.White
         Me.Label298.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label298.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label298.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label298.Location = New System.Drawing.Point(24, 3)
         Me.Label298.Margin = New System.Windows.Forms.Padding(3)
         Me.Label298.Name = "Label298"
@@ -2259,7 +2259,7 @@ Partial Class Frm_Engineering
         '
         Me.Label297.BackColor = System.Drawing.Color.White
         Me.Label297.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label297.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label297.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label297.Location = New System.Drawing.Point(45, 3)
         Me.Label297.Margin = New System.Windows.Forms.Padding(3)
         Me.Label297.Name = "Label297"
@@ -2271,7 +2271,7 @@ Partial Class Frm_Engineering
         '
         Me.Label296.BackColor = System.Drawing.Color.White
         Me.Label296.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label296.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label296.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label296.Location = New System.Drawing.Point(66, 3)
         Me.Label296.Margin = New System.Windows.Forms.Padding(3)
         Me.Label296.Name = "Label296"
@@ -2283,7 +2283,7 @@ Partial Class Frm_Engineering
         '
         Me.Label295.BackColor = System.Drawing.Color.White
         Me.Label295.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label295.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label295.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label295.Location = New System.Drawing.Point(87, 3)
         Me.Label295.Margin = New System.Windows.Forms.Padding(3)
         Me.Label295.Name = "Label295"
@@ -2295,7 +2295,7 @@ Partial Class Frm_Engineering
         '
         Me.Label294.BackColor = System.Drawing.Color.White
         Me.Label294.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label294.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label294.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label294.Location = New System.Drawing.Point(108, 3)
         Me.Label294.Margin = New System.Windows.Forms.Padding(3)
         Me.Label294.Name = "Label294"
@@ -2307,7 +2307,7 @@ Partial Class Frm_Engineering
         '
         Me.Label293.BackColor = System.Drawing.Color.White
         Me.Label293.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label293.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label293.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label293.Location = New System.Drawing.Point(3, 24)
         Me.Label293.Margin = New System.Windows.Forms.Padding(3)
         Me.Label293.Name = "Label293"
@@ -2319,7 +2319,7 @@ Partial Class Frm_Engineering
         '
         Me.Label292.BackColor = System.Drawing.Color.White
         Me.Label292.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label292.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label292.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label292.Location = New System.Drawing.Point(24, 24)
         Me.Label292.Margin = New System.Windows.Forms.Padding(3)
         Me.Label292.Name = "Label292"
@@ -2331,7 +2331,7 @@ Partial Class Frm_Engineering
         '
         Me.Label291.BackColor = System.Drawing.Color.White
         Me.Label291.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label291.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label291.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label291.Location = New System.Drawing.Point(45, 24)
         Me.Label291.Margin = New System.Windows.Forms.Padding(3)
         Me.Label291.Name = "Label291"
@@ -2343,7 +2343,7 @@ Partial Class Frm_Engineering
         '
         Me.Label290.BackColor = System.Drawing.Color.White
         Me.Label290.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label290.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label290.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label290.Location = New System.Drawing.Point(66, 24)
         Me.Label290.Margin = New System.Windows.Forms.Padding(3)
         Me.Label290.Name = "Label290"
@@ -2355,7 +2355,7 @@ Partial Class Frm_Engineering
         '
         Me.Label289.BackColor = System.Drawing.Color.White
         Me.Label289.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label289.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label289.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label289.Location = New System.Drawing.Point(87, 24)
         Me.Label289.Margin = New System.Windows.Forms.Padding(3)
         Me.Label289.Name = "Label289"
@@ -2367,7 +2367,7 @@ Partial Class Frm_Engineering
         '
         Me.Label288.BackColor = System.Drawing.Color.White
         Me.Label288.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label288.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label288.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label288.Location = New System.Drawing.Point(108, 24)
         Me.Label288.Margin = New System.Windows.Forms.Padding(3)
         Me.Label288.Name = "Label288"
@@ -2377,12 +2377,12 @@ Partial Class Frm_Engineering
         '
         'PB_Right1
         '
-        Me.PB_Right1.BackgroundImage = CType(resources.GetObject("PB_Right1.BackgroundImage"),System.Drawing.Image)
+        Me.PB_Right1.BackgroundImage = CType(resources.GetObject("PB_Right1.BackgroundImage"), System.Drawing.Image)
         Me.PB_Right1.Location = New System.Drawing.Point(118, 112)
         Me.PB_Right1.Name = "PB_Right1"
         Me.PB_Right1.Size = New System.Drawing.Size(24, 23)
         Me.PB_Right1.TabIndex = 23
-        Me.PB_Right1.TabStop = false
+        Me.PB_Right1.TabStop = False
         '
         'ShapeL3
         '
@@ -2410,7 +2410,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Pressure1
         '
-        Me.lbl_Pressure1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Pressure1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Pressure1.Location = New System.Drawing.Point(82, 173)
         Me.lbl_Pressure1.Name = "lbl_Pressure1"
         Me.lbl_Pressure1.Size = New System.Drawing.Size(40, 14)
@@ -2420,7 +2420,7 @@ Partial Class Frm_Engineering
         '
         'Label264
         '
-        Me.Label264.Font = New System.Drawing.Font("HelveticaNeue", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label264.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label264.Location = New System.Drawing.Point(119, 173)
         Me.Label264.Name = "Label264"
         Me.Label264.Size = New System.Drawing.Size(26, 14)
@@ -2430,7 +2430,7 @@ Partial Class Frm_Engineering
         '
         'Label265
         '
-        Me.Label265.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label265.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label265.Location = New System.Drawing.Point(19, 173)
         Me.Label265.Name = "Label265"
         Me.Label265.Size = New System.Drawing.Size(70, 14)
@@ -2440,7 +2440,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Pressure0
         '
-        Me.lbl_Pressure0.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Pressure0.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Pressure0.Location = New System.Drawing.Point(82, 153)
         Me.lbl_Pressure0.Name = "lbl_Pressure0"
         Me.lbl_Pressure0.Size = New System.Drawing.Size(40, 14)
@@ -2450,7 +2450,7 @@ Partial Class Frm_Engineering
         '
         'Label254
         '
-        Me.Label254.Font = New System.Drawing.Font("HelveticaNeue", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label254.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label254.Location = New System.Drawing.Point(119, 153)
         Me.Label254.Name = "Label254"
         Me.Label254.Size = New System.Drawing.Size(26, 14)
@@ -2460,7 +2460,7 @@ Partial Class Frm_Engineering
         '
         'Label256
         '
-        Me.Label256.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label256.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label256.Location = New System.Drawing.Point(19, 153)
         Me.Label256.Name = "Label256"
         Me.Label256.Size = New System.Drawing.Size(70, 14)
@@ -2470,7 +2470,7 @@ Partial Class Frm_Engineering
         '
         'lbl_PressPaste
         '
-        Me.lbl_PressPaste.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_PressPaste.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_PressPaste.Location = New System.Drawing.Point(237, 153)
         Me.lbl_PressPaste.Name = "lbl_PressPaste"
         Me.lbl_PressPaste.Size = New System.Drawing.Size(40, 14)
@@ -2480,7 +2480,7 @@ Partial Class Frm_Engineering
         '
         'Label249
         '
-        Me.Label249.Font = New System.Drawing.Font("HelveticaNeue", 30!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label249.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label249.Location = New System.Drawing.Point(278, 153)
         Me.Label249.Name = "Label249"
         Me.Label249.Size = New System.Drawing.Size(26, 14)
@@ -2490,7 +2490,7 @@ Partial Class Frm_Engineering
         '
         'Label244
         '
-        Me.Label244.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label244.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label244.Location = New System.Drawing.Point(181, 153)
         Me.Label244.Name = "Label244"
         Me.Label244.Size = New System.Drawing.Size(60, 14)
@@ -2540,7 +2540,7 @@ Partial Class Frm_Engineering
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_UV)
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_CCD)
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_EMS)
-        Me.BZ_RoundPanel5.Font = New System.Drawing.Font("微软雅黑", 10!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.BZ_RoundPanel5.Font = New System.Drawing.Font("微软雅黑", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.BZ_RoundPanel5.Location = New System.Drawing.Point(687, 135)
         Me.BZ_RoundPanel5.Name = "BZ_RoundPanel5"
         Me.BZ_RoundPanel5.Size = New System.Drawing.Size(328, 280)
@@ -2549,7 +2549,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Line
         '
         Me.lbl_sts_Line.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Line.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Line.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Line.Location = New System.Drawing.Point(155, 224)
         Me.lbl_sts_Line.Name = "lbl_sts_Line"
         Me.lbl_sts_Line.Size = New System.Drawing.Size(80, 20)
@@ -2560,7 +2560,7 @@ Partial Class Frm_Engineering
         'lbl_sts_PDCA
         '
         Me.lbl_sts_PDCA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_PDCA.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_PDCA.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_PDCA.Location = New System.Drawing.Point(155, 191)
         Me.lbl_sts_PDCA.Name = "lbl_sts_PDCA"
         Me.lbl_sts_PDCA.Size = New System.Drawing.Size(80, 20)
@@ -2571,7 +2571,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Server
         '
         Me.lbl_sts_Server.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Server.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Server.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Server.Location = New System.Drawing.Point(155, 155)
         Me.lbl_sts_Server.Name = "lbl_sts_Server"
         Me.lbl_sts_Server.Size = New System.Drawing.Size(80, 20)
@@ -2582,7 +2582,7 @@ Partial Class Frm_Engineering
         'lbl_sts_BarReader
         '
         Me.lbl_sts_BarReader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_BarReader.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_BarReader.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_BarReader.Location = New System.Drawing.Point(155, 121)
         Me.lbl_sts_BarReader.Name = "lbl_sts_BarReader"
         Me.lbl_sts_BarReader.Size = New System.Drawing.Size(80, 20)
@@ -2593,7 +2593,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Safedoor
         '
         Me.lbl_sts_Safedoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Safedoor.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Safedoor.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Safedoor.Location = New System.Drawing.Point(155, 87)
         Me.lbl_sts_Safedoor.Name = "lbl_sts_Safedoor"
         Me.lbl_sts_Safedoor.Size = New System.Drawing.Size(80, 20)
@@ -2604,7 +2604,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Vac
         '
         Me.lbl_sts_Vac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Vac.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Vac.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Vac.Location = New System.Drawing.Point(155, 53)
         Me.lbl_sts_Vac.Name = "lbl_sts_Vac"
         Me.lbl_sts_Vac.Size = New System.Drawing.Size(80, 20)
@@ -2615,7 +2615,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Air
         '
         Me.lbl_sts_Air.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Air.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Air.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Air.Location = New System.Drawing.Point(155, 19)
         Me.lbl_sts_Air.Name = "lbl_sts_Air"
         Me.lbl_sts_Air.Size = New System.Drawing.Size(80, 20)
@@ -2630,11 +2630,11 @@ Partial Class Frm_Engineering
         Me.Btn_clrYield.Size = New System.Drawing.Size(60, 50)
         Me.Btn_clrYield.TabIndex = 69
         Me.Btn_clrYield.Text = "清零"
-        Me.Btn_clrYield.UseVisualStyleBackColor = true
+        Me.Btn_clrYield.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("微软雅黑", 10!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.TextBox4.Font = New System.Drawing.Font("微软雅黑", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(67, 18)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(60, 25)
@@ -2643,7 +2643,7 @@ Partial Class Frm_Engineering
         '
         'Label335
         '
-        Me.Label335.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label335.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label335.Location = New System.Drawing.Point(3, 18)
         Me.Label335.Name = "Label335"
         Me.Label335.Size = New System.Drawing.Size(60, 25)
@@ -2654,7 +2654,7 @@ Partial Class Frm_Engineering
         'lbl_sts_loadcell3
         '
         Me.lbl_sts_loadcell3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_loadcell3.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_loadcell3.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_loadcell3.Location = New System.Drawing.Point(241, 224)
         Me.lbl_sts_loadcell3.Name = "lbl_sts_loadcell3"
         Me.lbl_sts_loadcell3.Size = New System.Drawing.Size(80, 20)
@@ -2665,7 +2665,7 @@ Partial Class Frm_Engineering
         'lbl_sts_loadcell2
         '
         Me.lbl_sts_loadcell2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_loadcell2.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_loadcell2.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_loadcell2.Location = New System.Drawing.Point(241, 191)
         Me.lbl_sts_loadcell2.Name = "lbl_sts_loadcell2"
         Me.lbl_sts_loadcell2.Size = New System.Drawing.Size(80, 20)
@@ -2675,29 +2675,29 @@ Partial Class Frm_Engineering
         '
         'Btn_LightClose
         '
-        Me.Btn_LightClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(175,Byte),Integer), CType(CType(218,Byte),Integer), CType(CType(150,Byte),Integer))
-        Me.Btn_LightClose.BackgroundImage = CType(resources.GetObject("Btn_LightClose.BackgroundImage"),System.Drawing.Image)
+        Me.Btn_LightClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(175, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Btn_LightClose.BackgroundImage = CType(resources.GetObject("Btn_LightClose.BackgroundImage"), System.Drawing.Image)
         Me.Btn_LightClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Btn_LightClose.Location = New System.Drawing.Point(6, 82)
         Me.Btn_LightClose.Name = "Btn_LightClose"
         Me.Btn_LightClose.Size = New System.Drawing.Size(60, 50)
         Me.Btn_LightClose.TabIndex = 63
-        Me.Btn_LightClose.UseVisualStyleBackColor = false
+        Me.Btn_LightClose.UseVisualStyleBackColor = False
         '
         'Btn_LightOpen
         '
         Me.Btn_LightOpen.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Btn_LightOpen.BackgroundImage = CType(resources.GetObject("Btn_LightOpen.BackgroundImage"),System.Drawing.Image)
+        Me.Btn_LightOpen.BackgroundImage = CType(resources.GetObject("Btn_LightOpen.BackgroundImage"), System.Drawing.Image)
         Me.Btn_LightOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Btn_LightOpen.Location = New System.Drawing.Point(6, 82)
         Me.Btn_LightOpen.Name = "Btn_LightOpen"
         Me.Btn_LightOpen.Size = New System.Drawing.Size(60, 48)
         Me.Btn_LightOpen.TabIndex = 64
-        Me.Btn_LightOpen.UseVisualStyleBackColor = false
+        Me.Btn_LightOpen.UseVisualStyleBackColor = False
         '
         'txt_CT
         '
-        Me.txt_CT.Font = New System.Drawing.Font("微软雅黑", 10!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.txt_CT.Font = New System.Drawing.Font("微软雅黑", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.txt_CT.Location = New System.Drawing.Point(67, 48)
         Me.txt_CT.Name = "txt_CT"
         Me.txt_CT.Size = New System.Drawing.Size(60, 25)
@@ -2706,7 +2706,7 @@ Partial Class Frm_Engineering
         '
         'Label253
         '
-        Me.Label253.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label253.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label253.Location = New System.Drawing.Point(3, 48)
         Me.Label253.Name = "Label253"
         Me.Label253.Size = New System.Drawing.Size(60, 25)
@@ -2717,7 +2717,7 @@ Partial Class Frm_Engineering
         'lbl_sts_loadcell1
         '
         Me.lbl_sts_loadcell1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_loadcell1.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_loadcell1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_loadcell1.Location = New System.Drawing.Point(241, 155)
         Me.lbl_sts_loadcell1.Name = "lbl_sts_loadcell1"
         Me.lbl_sts_loadcell1.Size = New System.Drawing.Size(80, 20)
@@ -2728,7 +2728,7 @@ Partial Class Frm_Engineering
         'lbl_sts_Laser
         '
         Me.lbl_sts_Laser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_Laser.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_Laser.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_Laser.Location = New System.Drawing.Point(241, 121)
         Me.lbl_sts_Laser.Name = "lbl_sts_Laser"
         Me.lbl_sts_Laser.Size = New System.Drawing.Size(80, 20)
@@ -2739,7 +2739,7 @@ Partial Class Frm_Engineering
         'lbl_sts_UV
         '
         Me.lbl_sts_UV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_UV.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_UV.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_UV.Location = New System.Drawing.Point(241, 87)
         Me.lbl_sts_UV.Name = "lbl_sts_UV"
         Me.lbl_sts_UV.Size = New System.Drawing.Size(80, 20)
@@ -2750,7 +2750,7 @@ Partial Class Frm_Engineering
         'lbl_sts_CCD
         '
         Me.lbl_sts_CCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_CCD.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_CCD.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_CCD.Location = New System.Drawing.Point(241, 53)
         Me.lbl_sts_CCD.Name = "lbl_sts_CCD"
         Me.lbl_sts_CCD.Size = New System.Drawing.Size(80, 20)
@@ -2761,7 +2761,7 @@ Partial Class Frm_Engineering
         'lbl_sts_EMS
         '
         Me.lbl_sts_EMS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_sts_EMS.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.lbl_sts_EMS.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbl_sts_EMS.Location = New System.Drawing.Point(241, 19)
         Me.lbl_sts_EMS.Name = "lbl_sts_EMS"
         Me.lbl_sts_EMS.Size = New System.Drawing.Size(80, 20)
@@ -2779,11 +2779,11 @@ Partial Class Frm_Engineering
         Me.TabPage2.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "I/O输入界面"
-        Me.TabPage2.UseVisualStyleBackColor = true
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel8
         '
-        Me.BZ_RoundPanel8.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.BZ_RoundPanel8.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BZ_RoundPanel8.BZ_Radius = 11
         Me.BZ_RoundPanel8.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel8.Controls.Add(Me.TableLayoutPanel1)
@@ -2795,37 +2795,37 @@ Partial Class Frm_Engineering
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 31
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label150, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label149, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label148, 3, 1)
@@ -2984,11 +2984,11 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1000, 150)
         Me.TableLayoutPanel1.TabIndex = 0
         '
@@ -2996,7 +2996,7 @@ Partial Class Frm_Engineering
         '
         Me.Label150.BackColor = System.Drawing.Color.White
         Me.Label150.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label150.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label150.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label150.Location = New System.Drawing.Point(105, 35)
         Me.Label150.Margin = New System.Windows.Forms.Padding(5)
         Me.Label150.Name = "Label150"
@@ -3008,7 +3008,7 @@ Partial Class Frm_Engineering
         '
         Me.Label149.BackColor = System.Drawing.Color.White
         Me.Label149.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label149.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label149.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label149.Location = New System.Drawing.Point(135, 35)
         Me.Label149.Margin = New System.Windows.Forms.Padding(5)
         Me.Label149.Name = "Label149"
@@ -3020,7 +3020,7 @@ Partial Class Frm_Engineering
         '
         Me.Label148.BackColor = System.Drawing.Color.White
         Me.Label148.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label148.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label148.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label148.Location = New System.Drawing.Point(165, 35)
         Me.Label148.Margin = New System.Windows.Forms.Padding(5)
         Me.Label148.Name = "Label148"
@@ -3032,7 +3032,7 @@ Partial Class Frm_Engineering
         '
         Me.Label147.BackColor = System.Drawing.Color.White
         Me.Label147.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label147.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label147.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label147.Location = New System.Drawing.Point(195, 35)
         Me.Label147.Margin = New System.Windows.Forms.Padding(5)
         Me.Label147.Name = "Label147"
@@ -3044,7 +3044,7 @@ Partial Class Frm_Engineering
         '
         Me.Label146.BackColor = System.Drawing.Color.White
         Me.Label146.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label146.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label146.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label146.Location = New System.Drawing.Point(225, 35)
         Me.Label146.Margin = New System.Windows.Forms.Padding(5)
         Me.Label146.Name = "Label146"
@@ -3056,7 +3056,7 @@ Partial Class Frm_Engineering
         '
         Me.Label145.BackColor = System.Drawing.Color.White
         Me.Label145.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label145.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label145.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label145.Location = New System.Drawing.Point(255, 35)
         Me.Label145.Margin = New System.Windows.Forms.Padding(5)
         Me.Label145.Name = "Label145"
@@ -3068,7 +3068,7 @@ Partial Class Frm_Engineering
         '
         Me.Label144.BackColor = System.Drawing.Color.White
         Me.Label144.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label144.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label144.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label144.Location = New System.Drawing.Point(285, 35)
         Me.Label144.Margin = New System.Windows.Forms.Padding(5)
         Me.Label144.Name = "Label144"
@@ -3080,7 +3080,7 @@ Partial Class Frm_Engineering
         '
         Me.Label143.BackColor = System.Drawing.Color.White
         Me.Label143.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label143.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label143.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label143.Location = New System.Drawing.Point(315, 35)
         Me.Label143.Margin = New System.Windows.Forms.Padding(5)
         Me.Label143.Name = "Label143"
@@ -3092,7 +3092,7 @@ Partial Class Frm_Engineering
         '
         Me.Label142.BackColor = System.Drawing.Color.White
         Me.Label142.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label142.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label142.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label142.Location = New System.Drawing.Point(345, 35)
         Me.Label142.Margin = New System.Windows.Forms.Padding(5)
         Me.Label142.Name = "Label142"
@@ -3104,7 +3104,7 @@ Partial Class Frm_Engineering
         '
         Me.Label141.BackColor = System.Drawing.Color.White
         Me.Label141.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label141.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label141.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label141.Location = New System.Drawing.Point(375, 35)
         Me.Label141.Margin = New System.Windows.Forms.Padding(5)
         Me.Label141.Name = "Label141"
@@ -3116,7 +3116,7 @@ Partial Class Frm_Engineering
         '
         Me.Label140.BackColor = System.Drawing.Color.White
         Me.Label140.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label140.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label140.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label140.Location = New System.Drawing.Point(405, 35)
         Me.Label140.Margin = New System.Windows.Forms.Padding(5)
         Me.Label140.Name = "Label140"
@@ -3128,7 +3128,7 @@ Partial Class Frm_Engineering
         '
         Me.Label139.BackColor = System.Drawing.Color.White
         Me.Label139.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label139.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label139.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label139.Location = New System.Drawing.Point(435, 35)
         Me.Label139.Margin = New System.Windows.Forms.Padding(5)
         Me.Label139.Name = "Label139"
@@ -3140,7 +3140,7 @@ Partial Class Frm_Engineering
         '
         Me.Label138.BackColor = System.Drawing.Color.White
         Me.Label138.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label138.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label138.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label138.Location = New System.Drawing.Point(465, 35)
         Me.Label138.Margin = New System.Windows.Forms.Padding(5)
         Me.Label138.Name = "Label138"
@@ -3152,7 +3152,7 @@ Partial Class Frm_Engineering
         '
         Me.Label137.BackColor = System.Drawing.Color.White
         Me.Label137.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label137.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label137.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label137.Location = New System.Drawing.Point(495, 35)
         Me.Label137.Margin = New System.Windows.Forms.Padding(5)
         Me.Label137.Name = "Label137"
@@ -3164,7 +3164,7 @@ Partial Class Frm_Engineering
         '
         Me.Label136.BackColor = System.Drawing.Color.White
         Me.Label136.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label136.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label136.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label136.Location = New System.Drawing.Point(525, 35)
         Me.Label136.Margin = New System.Windows.Forms.Padding(5)
         Me.Label136.Name = "Label136"
@@ -3176,7 +3176,7 @@ Partial Class Frm_Engineering
         '
         Me.Label135.BackColor = System.Drawing.Color.White
         Me.Label135.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label135.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label135.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label135.Location = New System.Drawing.Point(555, 35)
         Me.Label135.Margin = New System.Windows.Forms.Padding(5)
         Me.Label135.Name = "Label135"
@@ -3188,7 +3188,7 @@ Partial Class Frm_Engineering
         '
         Me.Label134.BackColor = System.Drawing.Color.White
         Me.Label134.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label134.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label134.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label134.Location = New System.Drawing.Point(585, 35)
         Me.Label134.Margin = New System.Windows.Forms.Padding(5)
         Me.Label134.Name = "Label134"
@@ -3200,7 +3200,7 @@ Partial Class Frm_Engineering
         '
         Me.Label133.BackColor = System.Drawing.Color.White
         Me.Label133.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label133.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label133.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label133.Location = New System.Drawing.Point(615, 35)
         Me.Label133.Margin = New System.Windows.Forms.Padding(5)
         Me.Label133.Name = "Label133"
@@ -3212,7 +3212,7 @@ Partial Class Frm_Engineering
         '
         Me.Label132.BackColor = System.Drawing.Color.White
         Me.Label132.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label132.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label132.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label132.Location = New System.Drawing.Point(645, 35)
         Me.Label132.Margin = New System.Windows.Forms.Padding(5)
         Me.Label132.Name = "Label132"
@@ -3224,7 +3224,7 @@ Partial Class Frm_Engineering
         '
         Me.Label131.BackColor = System.Drawing.Color.White
         Me.Label131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label131.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label131.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label131.Location = New System.Drawing.Point(675, 35)
         Me.Label131.Margin = New System.Windows.Forms.Padding(5)
         Me.Label131.Name = "Label131"
@@ -3236,7 +3236,7 @@ Partial Class Frm_Engineering
         '
         Me.Label130.BackColor = System.Drawing.Color.White
         Me.Label130.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label130.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label130.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label130.Location = New System.Drawing.Point(705, 35)
         Me.Label130.Margin = New System.Windows.Forms.Padding(5)
         Me.Label130.Name = "Label130"
@@ -3248,7 +3248,7 @@ Partial Class Frm_Engineering
         '
         Me.Label129.BackColor = System.Drawing.Color.White
         Me.Label129.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label129.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label129.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label129.Location = New System.Drawing.Point(735, 35)
         Me.Label129.Margin = New System.Windows.Forms.Padding(5)
         Me.Label129.Name = "Label129"
@@ -3260,7 +3260,7 @@ Partial Class Frm_Engineering
         '
         Me.Label128.BackColor = System.Drawing.Color.White
         Me.Label128.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label128.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label128.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label128.Location = New System.Drawing.Point(765, 35)
         Me.Label128.Margin = New System.Windows.Forms.Padding(5)
         Me.Label128.Name = "Label128"
@@ -3272,7 +3272,7 @@ Partial Class Frm_Engineering
         '
         Me.Label127.BackColor = System.Drawing.Color.White
         Me.Label127.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label127.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label127.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label127.Location = New System.Drawing.Point(795, 35)
         Me.Label127.Margin = New System.Windows.Forms.Padding(5)
         Me.Label127.Name = "Label127"
@@ -3284,7 +3284,7 @@ Partial Class Frm_Engineering
         '
         Me.Label126.BackColor = System.Drawing.Color.White
         Me.Label126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label126.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label126.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label126.Location = New System.Drawing.Point(825, 35)
         Me.Label126.Margin = New System.Windows.Forms.Padding(5)
         Me.Label126.Name = "Label126"
@@ -3296,7 +3296,7 @@ Partial Class Frm_Engineering
         '
         Me.Label125.BackColor = System.Drawing.Color.White
         Me.Label125.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label125.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label125.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label125.Location = New System.Drawing.Point(855, 35)
         Me.Label125.Margin = New System.Windows.Forms.Padding(5)
         Me.Label125.Name = "Label125"
@@ -3308,7 +3308,7 @@ Partial Class Frm_Engineering
         '
         Me.Label124.BackColor = System.Drawing.Color.White
         Me.Label124.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label124.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label124.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label124.Location = New System.Drawing.Point(885, 35)
         Me.Label124.Margin = New System.Windows.Forms.Padding(5)
         Me.Label124.Name = "Label124"
@@ -3320,7 +3320,7 @@ Partial Class Frm_Engineering
         '
         Me.Label123.BackColor = System.Drawing.Color.White
         Me.Label123.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label123.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label123.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label123.Location = New System.Drawing.Point(915, 35)
         Me.Label123.Margin = New System.Windows.Forms.Padding(5)
         Me.Label123.Name = "Label123"
@@ -3332,7 +3332,7 @@ Partial Class Frm_Engineering
         '
         Me.Label122.BackColor = System.Drawing.Color.White
         Me.Label122.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label122.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label122.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label122.Location = New System.Drawing.Point(945, 35)
         Me.Label122.Margin = New System.Windows.Forms.Padding(5)
         Me.Label122.Name = "Label122"
@@ -3344,7 +3344,7 @@ Partial Class Frm_Engineering
         '
         Me.Label121.BackColor = System.Drawing.Color.White
         Me.Label121.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label121.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label121.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label121.Location = New System.Drawing.Point(975, 35)
         Me.Label121.Margin = New System.Windows.Forms.Padding(5)
         Me.Label121.Name = "Label121"
@@ -3356,7 +3356,7 @@ Partial Class Frm_Engineering
         '
         Me.Label120.BackColor = System.Drawing.Color.White
         Me.Label120.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label120.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label120.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label120.Location = New System.Drawing.Point(105, 65)
         Me.Label120.Margin = New System.Windows.Forms.Padding(5)
         Me.Label120.Name = "Label120"
@@ -3368,7 +3368,7 @@ Partial Class Frm_Engineering
         '
         Me.Label119.BackColor = System.Drawing.Color.White
         Me.Label119.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label119.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label119.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label119.Location = New System.Drawing.Point(135, 65)
         Me.Label119.Margin = New System.Windows.Forms.Padding(5)
         Me.Label119.Name = "Label119"
@@ -3380,7 +3380,7 @@ Partial Class Frm_Engineering
         '
         Me.Label118.BackColor = System.Drawing.Color.White
         Me.Label118.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label118.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label118.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label118.Location = New System.Drawing.Point(165, 65)
         Me.Label118.Margin = New System.Windows.Forms.Padding(5)
         Me.Label118.Name = "Label118"
@@ -3392,7 +3392,7 @@ Partial Class Frm_Engineering
         '
         Me.Label117.BackColor = System.Drawing.Color.White
         Me.Label117.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label117.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label117.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label117.Location = New System.Drawing.Point(195, 65)
         Me.Label117.Margin = New System.Windows.Forms.Padding(5)
         Me.Label117.Name = "Label117"
@@ -3404,7 +3404,7 @@ Partial Class Frm_Engineering
         '
         Me.Label116.BackColor = System.Drawing.Color.White
         Me.Label116.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label116.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label116.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label116.Location = New System.Drawing.Point(225, 65)
         Me.Label116.Margin = New System.Windows.Forms.Padding(5)
         Me.Label116.Name = "Label116"
@@ -3416,7 +3416,7 @@ Partial Class Frm_Engineering
         '
         Me.Label115.BackColor = System.Drawing.Color.White
         Me.Label115.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label115.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label115.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label115.Location = New System.Drawing.Point(255, 65)
         Me.Label115.Margin = New System.Windows.Forms.Padding(5)
         Me.Label115.Name = "Label115"
@@ -3428,7 +3428,7 @@ Partial Class Frm_Engineering
         '
         Me.Label114.BackColor = System.Drawing.Color.White
         Me.Label114.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label114.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label114.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label114.Location = New System.Drawing.Point(285, 65)
         Me.Label114.Margin = New System.Windows.Forms.Padding(5)
         Me.Label114.Name = "Label114"
@@ -3440,7 +3440,7 @@ Partial Class Frm_Engineering
         '
         Me.Label113.BackColor = System.Drawing.Color.White
         Me.Label113.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label113.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label113.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label113.Location = New System.Drawing.Point(315, 65)
         Me.Label113.Margin = New System.Windows.Forms.Padding(5)
         Me.Label113.Name = "Label113"
@@ -3452,7 +3452,7 @@ Partial Class Frm_Engineering
         '
         Me.Label112.BackColor = System.Drawing.Color.White
         Me.Label112.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label112.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label112.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label112.Location = New System.Drawing.Point(345, 65)
         Me.Label112.Margin = New System.Windows.Forms.Padding(5)
         Me.Label112.Name = "Label112"
@@ -3464,7 +3464,7 @@ Partial Class Frm_Engineering
         '
         Me.Label111.BackColor = System.Drawing.Color.White
         Me.Label111.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label111.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label111.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label111.Location = New System.Drawing.Point(375, 65)
         Me.Label111.Margin = New System.Windows.Forms.Padding(5)
         Me.Label111.Name = "Label111"
@@ -3476,7 +3476,7 @@ Partial Class Frm_Engineering
         '
         Me.Label110.BackColor = System.Drawing.Color.White
         Me.Label110.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label110.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label110.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label110.Location = New System.Drawing.Point(405, 65)
         Me.Label110.Margin = New System.Windows.Forms.Padding(5)
         Me.Label110.Name = "Label110"
@@ -3488,7 +3488,7 @@ Partial Class Frm_Engineering
         '
         Me.Label109.BackColor = System.Drawing.Color.White
         Me.Label109.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label109.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label109.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label109.Location = New System.Drawing.Point(435, 65)
         Me.Label109.Margin = New System.Windows.Forms.Padding(5)
         Me.Label109.Name = "Label109"
@@ -3500,7 +3500,7 @@ Partial Class Frm_Engineering
         '
         Me.Label108.BackColor = System.Drawing.Color.White
         Me.Label108.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label108.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label108.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label108.Location = New System.Drawing.Point(465, 65)
         Me.Label108.Margin = New System.Windows.Forms.Padding(5)
         Me.Label108.Name = "Label108"
@@ -3512,7 +3512,7 @@ Partial Class Frm_Engineering
         '
         Me.Label107.BackColor = System.Drawing.Color.White
         Me.Label107.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label107.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label107.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label107.Location = New System.Drawing.Point(495, 65)
         Me.Label107.Margin = New System.Windows.Forms.Padding(5)
         Me.Label107.Name = "Label107"
@@ -3524,7 +3524,7 @@ Partial Class Frm_Engineering
         '
         Me.Label106.BackColor = System.Drawing.Color.White
         Me.Label106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label106.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label106.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label106.Location = New System.Drawing.Point(525, 65)
         Me.Label106.Margin = New System.Windows.Forms.Padding(5)
         Me.Label106.Name = "Label106"
@@ -3536,7 +3536,7 @@ Partial Class Frm_Engineering
         '
         Me.Label105.BackColor = System.Drawing.Color.White
         Me.Label105.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label105.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label105.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label105.Location = New System.Drawing.Point(555, 65)
         Me.Label105.Margin = New System.Windows.Forms.Padding(5)
         Me.Label105.Name = "Label105"
@@ -3548,7 +3548,7 @@ Partial Class Frm_Engineering
         '
         Me.Label104.BackColor = System.Drawing.Color.White
         Me.Label104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label104.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label104.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label104.Location = New System.Drawing.Point(585, 65)
         Me.Label104.Margin = New System.Windows.Forms.Padding(5)
         Me.Label104.Name = "Label104"
@@ -3560,7 +3560,7 @@ Partial Class Frm_Engineering
         '
         Me.Label103.BackColor = System.Drawing.Color.White
         Me.Label103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label103.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label103.Location = New System.Drawing.Point(615, 65)
         Me.Label103.Margin = New System.Windows.Forms.Padding(5)
         Me.Label103.Name = "Label103"
@@ -3572,7 +3572,7 @@ Partial Class Frm_Engineering
         '
         Me.Label102.BackColor = System.Drawing.Color.White
         Me.Label102.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label102.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label102.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label102.Location = New System.Drawing.Point(645, 65)
         Me.Label102.Margin = New System.Windows.Forms.Padding(5)
         Me.Label102.Name = "Label102"
@@ -3584,7 +3584,7 @@ Partial Class Frm_Engineering
         '
         Me.Label101.BackColor = System.Drawing.Color.White
         Me.Label101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label101.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label101.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label101.Location = New System.Drawing.Point(675, 65)
         Me.Label101.Margin = New System.Windows.Forms.Padding(5)
         Me.Label101.Name = "Label101"
@@ -3596,7 +3596,7 @@ Partial Class Frm_Engineering
         '
         Me.Label100.BackColor = System.Drawing.Color.White
         Me.Label100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label100.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label100.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label100.Location = New System.Drawing.Point(705, 65)
         Me.Label100.Margin = New System.Windows.Forms.Padding(5)
         Me.Label100.Name = "Label100"
@@ -3608,7 +3608,7 @@ Partial Class Frm_Engineering
         '
         Me.Label99.BackColor = System.Drawing.Color.White
         Me.Label99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label99.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label99.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label99.Location = New System.Drawing.Point(735, 65)
         Me.Label99.Margin = New System.Windows.Forms.Padding(5)
         Me.Label99.Name = "Label99"
@@ -3620,7 +3620,7 @@ Partial Class Frm_Engineering
         '
         Me.Label98.BackColor = System.Drawing.Color.White
         Me.Label98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label98.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label98.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label98.Location = New System.Drawing.Point(765, 65)
         Me.Label98.Margin = New System.Windows.Forms.Padding(5)
         Me.Label98.Name = "Label98"
@@ -3632,7 +3632,7 @@ Partial Class Frm_Engineering
         '
         Me.Label97.BackColor = System.Drawing.Color.White
         Me.Label97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label97.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label97.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label97.Location = New System.Drawing.Point(795, 65)
         Me.Label97.Margin = New System.Windows.Forms.Padding(5)
         Me.Label97.Name = "Label97"
@@ -3644,7 +3644,7 @@ Partial Class Frm_Engineering
         '
         Me.Label96.BackColor = System.Drawing.Color.White
         Me.Label96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label96.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label96.Location = New System.Drawing.Point(825, 65)
         Me.Label96.Margin = New System.Windows.Forms.Padding(5)
         Me.Label96.Name = "Label96"
@@ -3656,7 +3656,7 @@ Partial Class Frm_Engineering
         '
         Me.Label95.BackColor = System.Drawing.Color.White
         Me.Label95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label95.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label95.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label95.Location = New System.Drawing.Point(855, 65)
         Me.Label95.Margin = New System.Windows.Forms.Padding(5)
         Me.Label95.Name = "Label95"
@@ -3668,7 +3668,7 @@ Partial Class Frm_Engineering
         '
         Me.Label94.BackColor = System.Drawing.Color.White
         Me.Label94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label94.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label94.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label94.Location = New System.Drawing.Point(885, 65)
         Me.Label94.Margin = New System.Windows.Forms.Padding(5)
         Me.Label94.Name = "Label94"
@@ -3680,7 +3680,7 @@ Partial Class Frm_Engineering
         '
         Me.Label93.BackColor = System.Drawing.Color.White
         Me.Label93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label93.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label93.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label93.Location = New System.Drawing.Point(915, 65)
         Me.Label93.Margin = New System.Windows.Forms.Padding(5)
         Me.Label93.Name = "Label93"
@@ -3692,7 +3692,7 @@ Partial Class Frm_Engineering
         '
         Me.Label92.BackColor = System.Drawing.Color.White
         Me.Label92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label92.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label92.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label92.Location = New System.Drawing.Point(945, 65)
         Me.Label92.Margin = New System.Windows.Forms.Padding(5)
         Me.Label92.Name = "Label92"
@@ -3704,7 +3704,7 @@ Partial Class Frm_Engineering
         '
         Me.Label91.BackColor = System.Drawing.Color.White
         Me.Label91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label91.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label91.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label91.Location = New System.Drawing.Point(975, 65)
         Me.Label91.Margin = New System.Windows.Forms.Padding(5)
         Me.Label91.Name = "Label91"
@@ -3716,7 +3716,7 @@ Partial Class Frm_Engineering
         '
         Me.Label90.BackColor = System.Drawing.Color.White
         Me.Label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label90.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label90.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label90.Location = New System.Drawing.Point(105, 95)
         Me.Label90.Margin = New System.Windows.Forms.Padding(5)
         Me.Label90.Name = "Label90"
@@ -3728,7 +3728,7 @@ Partial Class Frm_Engineering
         '
         Me.Label89.BackColor = System.Drawing.Color.White
         Me.Label89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label89.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label89.Location = New System.Drawing.Point(135, 95)
         Me.Label89.Margin = New System.Windows.Forms.Padding(5)
         Me.Label89.Name = "Label89"
@@ -3740,7 +3740,7 @@ Partial Class Frm_Engineering
         '
         Me.Label88.BackColor = System.Drawing.Color.White
         Me.Label88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label88.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label88.Location = New System.Drawing.Point(165, 95)
         Me.Label88.Margin = New System.Windows.Forms.Padding(5)
         Me.Label88.Name = "Label88"
@@ -3752,7 +3752,7 @@ Partial Class Frm_Engineering
         '
         Me.Label87.BackColor = System.Drawing.Color.White
         Me.Label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label87.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label87.Location = New System.Drawing.Point(195, 95)
         Me.Label87.Margin = New System.Windows.Forms.Padding(5)
         Me.Label87.Name = "Label87"
@@ -3764,7 +3764,7 @@ Partial Class Frm_Engineering
         '
         Me.Label86.BackColor = System.Drawing.Color.White
         Me.Label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label86.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label86.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label86.Location = New System.Drawing.Point(225, 95)
         Me.Label86.Margin = New System.Windows.Forms.Padding(5)
         Me.Label86.Name = "Label86"
@@ -3776,7 +3776,7 @@ Partial Class Frm_Engineering
         '
         Me.Label85.BackColor = System.Drawing.Color.White
         Me.Label85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label85.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label85.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label85.Location = New System.Drawing.Point(255, 95)
         Me.Label85.Margin = New System.Windows.Forms.Padding(5)
         Me.Label85.Name = "Label85"
@@ -3788,7 +3788,7 @@ Partial Class Frm_Engineering
         '
         Me.Label84.BackColor = System.Drawing.Color.White
         Me.Label84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label84.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label84.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label84.Location = New System.Drawing.Point(285, 95)
         Me.Label84.Margin = New System.Windows.Forms.Padding(5)
         Me.Label84.Name = "Label84"
@@ -3800,7 +3800,7 @@ Partial Class Frm_Engineering
         '
         Me.Label83.BackColor = System.Drawing.Color.White
         Me.Label83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label83.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label83.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label83.Location = New System.Drawing.Point(315, 95)
         Me.Label83.Margin = New System.Windows.Forms.Padding(5)
         Me.Label83.Name = "Label83"
@@ -3812,7 +3812,7 @@ Partial Class Frm_Engineering
         '
         Me.Label82.BackColor = System.Drawing.Color.White
         Me.Label82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label82.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label82.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label82.Location = New System.Drawing.Point(345, 95)
         Me.Label82.Margin = New System.Windows.Forms.Padding(5)
         Me.Label82.Name = "Label82"
@@ -3824,7 +3824,7 @@ Partial Class Frm_Engineering
         '
         Me.Label81.BackColor = System.Drawing.Color.White
         Me.Label81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label81.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label81.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label81.Location = New System.Drawing.Point(375, 95)
         Me.Label81.Margin = New System.Windows.Forms.Padding(5)
         Me.Label81.Name = "Label81"
@@ -3836,7 +3836,7 @@ Partial Class Frm_Engineering
         '
         Me.Label80.BackColor = System.Drawing.Color.White
         Me.Label80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label80.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label80.Location = New System.Drawing.Point(405, 95)
         Me.Label80.Margin = New System.Windows.Forms.Padding(5)
         Me.Label80.Name = "Label80"
@@ -3848,7 +3848,7 @@ Partial Class Frm_Engineering
         '
         Me.Label79.BackColor = System.Drawing.Color.White
         Me.Label79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label79.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label79.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label79.Location = New System.Drawing.Point(435, 95)
         Me.Label79.Margin = New System.Windows.Forms.Padding(5)
         Me.Label79.Name = "Label79"
@@ -3860,7 +3860,7 @@ Partial Class Frm_Engineering
         '
         Me.Label78.BackColor = System.Drawing.Color.White
         Me.Label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label78.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label78.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label78.Location = New System.Drawing.Point(465, 95)
         Me.Label78.Margin = New System.Windows.Forms.Padding(5)
         Me.Label78.Name = "Label78"
@@ -3872,7 +3872,7 @@ Partial Class Frm_Engineering
         '
         Me.Label77.BackColor = System.Drawing.Color.White
         Me.Label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label77.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label77.Location = New System.Drawing.Point(495, 95)
         Me.Label77.Margin = New System.Windows.Forms.Padding(5)
         Me.Label77.Name = "Label77"
@@ -3884,7 +3884,7 @@ Partial Class Frm_Engineering
         '
         Me.Label76.BackColor = System.Drawing.Color.White
         Me.Label76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label76.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label76.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label76.Location = New System.Drawing.Point(525, 95)
         Me.Label76.Margin = New System.Windows.Forms.Padding(5)
         Me.Label76.Name = "Label76"
@@ -3896,7 +3896,7 @@ Partial Class Frm_Engineering
         '
         Me.Label75.BackColor = System.Drawing.Color.White
         Me.Label75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label75.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label75.Location = New System.Drawing.Point(555, 95)
         Me.Label75.Margin = New System.Windows.Forms.Padding(5)
         Me.Label75.Name = "Label75"
@@ -3908,7 +3908,7 @@ Partial Class Frm_Engineering
         '
         Me.Label74.BackColor = System.Drawing.Color.White
         Me.Label74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label74.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label74.Location = New System.Drawing.Point(585, 95)
         Me.Label74.Margin = New System.Windows.Forms.Padding(5)
         Me.Label74.Name = "Label74"
@@ -3920,7 +3920,7 @@ Partial Class Frm_Engineering
         '
         Me.Label73.BackColor = System.Drawing.Color.White
         Me.Label73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label73.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label73.Location = New System.Drawing.Point(615, 95)
         Me.Label73.Margin = New System.Windows.Forms.Padding(5)
         Me.Label73.Name = "Label73"
@@ -3932,7 +3932,7 @@ Partial Class Frm_Engineering
         '
         Me.Label72.BackColor = System.Drawing.Color.White
         Me.Label72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label72.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label72.Location = New System.Drawing.Point(645, 95)
         Me.Label72.Margin = New System.Windows.Forms.Padding(5)
         Me.Label72.Name = "Label72"
@@ -3944,7 +3944,7 @@ Partial Class Frm_Engineering
         '
         Me.Label71.BackColor = System.Drawing.Color.White
         Me.Label71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label71.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label71.Location = New System.Drawing.Point(675, 95)
         Me.Label71.Margin = New System.Windows.Forms.Padding(5)
         Me.Label71.Name = "Label71"
@@ -3956,7 +3956,7 @@ Partial Class Frm_Engineering
         '
         Me.Label70.BackColor = System.Drawing.Color.White
         Me.Label70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label70.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label70.Location = New System.Drawing.Point(705, 95)
         Me.Label70.Margin = New System.Windows.Forms.Padding(5)
         Me.Label70.Name = "Label70"
@@ -3968,7 +3968,7 @@ Partial Class Frm_Engineering
         '
         Me.Label69.BackColor = System.Drawing.Color.White
         Me.Label69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label69.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label69.Location = New System.Drawing.Point(735, 95)
         Me.Label69.Margin = New System.Windows.Forms.Padding(5)
         Me.Label69.Name = "Label69"
@@ -3980,7 +3980,7 @@ Partial Class Frm_Engineering
         '
         Me.Label68.BackColor = System.Drawing.Color.White
         Me.Label68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label68.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label68.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label68.Location = New System.Drawing.Point(765, 95)
         Me.Label68.Margin = New System.Windows.Forms.Padding(5)
         Me.Label68.Name = "Label68"
@@ -3992,7 +3992,7 @@ Partial Class Frm_Engineering
         '
         Me.Label67.BackColor = System.Drawing.Color.White
         Me.Label67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label67.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label67.Location = New System.Drawing.Point(795, 95)
         Me.Label67.Margin = New System.Windows.Forms.Padding(5)
         Me.Label67.Name = "Label67"
@@ -4004,7 +4004,7 @@ Partial Class Frm_Engineering
         '
         Me.Label66.BackColor = System.Drawing.Color.White
         Me.Label66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label66.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label66.Location = New System.Drawing.Point(825, 95)
         Me.Label66.Margin = New System.Windows.Forms.Padding(5)
         Me.Label66.Name = "Label66"
@@ -4016,7 +4016,7 @@ Partial Class Frm_Engineering
         '
         Me.Label65.BackColor = System.Drawing.Color.White
         Me.Label65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label65.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label65.Location = New System.Drawing.Point(855, 95)
         Me.Label65.Margin = New System.Windows.Forms.Padding(5)
         Me.Label65.Name = "Label65"
@@ -4028,7 +4028,7 @@ Partial Class Frm_Engineering
         '
         Me.Label64.BackColor = System.Drawing.Color.White
         Me.Label64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label64.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label64.Location = New System.Drawing.Point(885, 95)
         Me.Label64.Margin = New System.Windows.Forms.Padding(5)
         Me.Label64.Name = "Label64"
@@ -4040,7 +4040,7 @@ Partial Class Frm_Engineering
         '
         Me.Label63.BackColor = System.Drawing.Color.White
         Me.Label63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label63.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label63.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label63.Location = New System.Drawing.Point(915, 95)
         Me.Label63.Margin = New System.Windows.Forms.Padding(5)
         Me.Label63.Name = "Label63"
@@ -4052,7 +4052,7 @@ Partial Class Frm_Engineering
         '
         Me.Label62.BackColor = System.Drawing.Color.White
         Me.Label62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label62.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label62.Location = New System.Drawing.Point(945, 95)
         Me.Label62.Margin = New System.Windows.Forms.Padding(5)
         Me.Label62.Name = "Label62"
@@ -4064,7 +4064,7 @@ Partial Class Frm_Engineering
         '
         Me.Label61.BackColor = System.Drawing.Color.White
         Me.Label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label61.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label61.Location = New System.Drawing.Point(975, 95)
         Me.Label61.Margin = New System.Windows.Forms.Padding(5)
         Me.Label61.Name = "Label61"
@@ -4076,7 +4076,7 @@ Partial Class Frm_Engineering
         '
         Me.Label60.BackColor = System.Drawing.Color.White
         Me.Label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label60.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label60.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label60.Location = New System.Drawing.Point(105, 125)
         Me.Label60.Margin = New System.Windows.Forms.Padding(5)
         Me.Label60.Name = "Label60"
@@ -4088,7 +4088,7 @@ Partial Class Frm_Engineering
         '
         Me.Label59.BackColor = System.Drawing.Color.White
         Me.Label59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label59.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label59.Location = New System.Drawing.Point(135, 125)
         Me.Label59.Margin = New System.Windows.Forms.Padding(5)
         Me.Label59.Name = "Label59"
@@ -4100,7 +4100,7 @@ Partial Class Frm_Engineering
         '
         Me.Label58.BackColor = System.Drawing.Color.White
         Me.Label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label58.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label58.Location = New System.Drawing.Point(165, 125)
         Me.Label58.Margin = New System.Windows.Forms.Padding(5)
         Me.Label58.Name = "Label58"
@@ -4112,7 +4112,7 @@ Partial Class Frm_Engineering
         '
         Me.Label57.BackColor = System.Drawing.Color.White
         Me.Label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label57.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label57.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label57.Location = New System.Drawing.Point(195, 125)
         Me.Label57.Margin = New System.Windows.Forms.Padding(5)
         Me.Label57.Name = "Label57"
@@ -4124,7 +4124,7 @@ Partial Class Frm_Engineering
         '
         Me.Label56.BackColor = System.Drawing.Color.White
         Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label56.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label56.Location = New System.Drawing.Point(225, 125)
         Me.Label56.Margin = New System.Windows.Forms.Padding(5)
         Me.Label56.Name = "Label56"
@@ -4136,7 +4136,7 @@ Partial Class Frm_Engineering
         '
         Me.Label55.BackColor = System.Drawing.Color.White
         Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label55.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label55.Location = New System.Drawing.Point(255, 125)
         Me.Label55.Margin = New System.Windows.Forms.Padding(5)
         Me.Label55.Name = "Label55"
@@ -4148,7 +4148,7 @@ Partial Class Frm_Engineering
         '
         Me.Label54.BackColor = System.Drawing.Color.White
         Me.Label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label54.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label54.Location = New System.Drawing.Point(285, 125)
         Me.Label54.Margin = New System.Windows.Forms.Padding(5)
         Me.Label54.Name = "Label54"
@@ -4160,7 +4160,7 @@ Partial Class Frm_Engineering
         '
         Me.Label53.BackColor = System.Drawing.Color.White
         Me.Label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label53.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(315, 125)
         Me.Label53.Margin = New System.Windows.Forms.Padding(5)
         Me.Label53.Name = "Label53"
@@ -4172,7 +4172,7 @@ Partial Class Frm_Engineering
         '
         Me.Label52.BackColor = System.Drawing.Color.White
         Me.Label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label52.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label52.Location = New System.Drawing.Point(345, 125)
         Me.Label52.Margin = New System.Windows.Forms.Padding(5)
         Me.Label52.Name = "Label52"
@@ -4184,7 +4184,7 @@ Partial Class Frm_Engineering
         '
         Me.Label51.BackColor = System.Drawing.Color.White
         Me.Label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label51.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label51.Location = New System.Drawing.Point(375, 125)
         Me.Label51.Margin = New System.Windows.Forms.Padding(5)
         Me.Label51.Name = "Label51"
@@ -4196,7 +4196,7 @@ Partial Class Frm_Engineering
         '
         Me.Label50.BackColor = System.Drawing.Color.White
         Me.Label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label50.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label50.Location = New System.Drawing.Point(405, 125)
         Me.Label50.Margin = New System.Windows.Forms.Padding(5)
         Me.Label50.Name = "Label50"
@@ -4208,7 +4208,7 @@ Partial Class Frm_Engineering
         '
         Me.Label49.BackColor = System.Drawing.Color.White
         Me.Label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label49.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label49.Location = New System.Drawing.Point(435, 125)
         Me.Label49.Margin = New System.Windows.Forms.Padding(5)
         Me.Label49.Name = "Label49"
@@ -4220,7 +4220,7 @@ Partial Class Frm_Engineering
         '
         Me.Label48.BackColor = System.Drawing.Color.White
         Me.Label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label48.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label48.Location = New System.Drawing.Point(465, 125)
         Me.Label48.Margin = New System.Windows.Forms.Padding(5)
         Me.Label48.Name = "Label48"
@@ -4232,7 +4232,7 @@ Partial Class Frm_Engineering
         '
         Me.Label47.BackColor = System.Drawing.Color.White
         Me.Label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label47.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label47.Location = New System.Drawing.Point(495, 125)
         Me.Label47.Margin = New System.Windows.Forms.Padding(5)
         Me.Label47.Name = "Label47"
@@ -4244,7 +4244,7 @@ Partial Class Frm_Engineering
         '
         Me.Label46.BackColor = System.Drawing.Color.White
         Me.Label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label46.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label46.Location = New System.Drawing.Point(525, 125)
         Me.Label46.Margin = New System.Windows.Forms.Padding(5)
         Me.Label46.Name = "Label46"
@@ -4256,7 +4256,7 @@ Partial Class Frm_Engineering
         '
         Me.Label45.BackColor = System.Drawing.Color.White
         Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label45.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label45.Location = New System.Drawing.Point(555, 125)
         Me.Label45.Margin = New System.Windows.Forms.Padding(5)
         Me.Label45.Name = "Label45"
@@ -4268,7 +4268,7 @@ Partial Class Frm_Engineering
         '
         Me.Label44.BackColor = System.Drawing.Color.White
         Me.Label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label44.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label44.Location = New System.Drawing.Point(585, 125)
         Me.Label44.Margin = New System.Windows.Forms.Padding(5)
         Me.Label44.Name = "Label44"
@@ -4280,7 +4280,7 @@ Partial Class Frm_Engineering
         '
         Me.Label43.BackColor = System.Drawing.Color.White
         Me.Label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label43.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label43.Location = New System.Drawing.Point(615, 125)
         Me.Label43.Margin = New System.Windows.Forms.Padding(5)
         Me.Label43.Name = "Label43"
@@ -4292,7 +4292,7 @@ Partial Class Frm_Engineering
         '
         Me.Label42.BackColor = System.Drawing.Color.White
         Me.Label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label42.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label42.Location = New System.Drawing.Point(645, 125)
         Me.Label42.Margin = New System.Windows.Forms.Padding(5)
         Me.Label42.Name = "Label42"
@@ -4304,7 +4304,7 @@ Partial Class Frm_Engineering
         '
         Me.Label41.BackColor = System.Drawing.Color.White
         Me.Label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label41.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label41.Location = New System.Drawing.Point(675, 125)
         Me.Label41.Margin = New System.Windows.Forms.Padding(5)
         Me.Label41.Name = "Label41"
@@ -4316,7 +4316,7 @@ Partial Class Frm_Engineering
         '
         Me.Label40.BackColor = System.Drawing.Color.White
         Me.Label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label40.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label40.Location = New System.Drawing.Point(705, 125)
         Me.Label40.Margin = New System.Windows.Forms.Padding(5)
         Me.Label40.Name = "Label40"
@@ -4328,7 +4328,7 @@ Partial Class Frm_Engineering
         '
         Me.Label39.BackColor = System.Drawing.Color.White
         Me.Label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label39.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label39.Location = New System.Drawing.Point(735, 125)
         Me.Label39.Margin = New System.Windows.Forms.Padding(5)
         Me.Label39.Name = "Label39"
@@ -4340,7 +4340,7 @@ Partial Class Frm_Engineering
         '
         Me.Label38.BackColor = System.Drawing.Color.White
         Me.Label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label38.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label38.Location = New System.Drawing.Point(765, 125)
         Me.Label38.Margin = New System.Windows.Forms.Padding(5)
         Me.Label38.Name = "Label38"
@@ -4352,7 +4352,7 @@ Partial Class Frm_Engineering
         '
         Me.Label37.BackColor = System.Drawing.Color.White
         Me.Label37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label37.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label37.Location = New System.Drawing.Point(795, 125)
         Me.Label37.Margin = New System.Windows.Forms.Padding(5)
         Me.Label37.Name = "Label37"
@@ -4364,7 +4364,7 @@ Partial Class Frm_Engineering
         '
         Me.Label36.BackColor = System.Drawing.Color.White
         Me.Label36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label36.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(825, 125)
         Me.Label36.Margin = New System.Windows.Forms.Padding(5)
         Me.Label36.Name = "Label36"
@@ -4376,7 +4376,7 @@ Partial Class Frm_Engineering
         '
         Me.Label35.BackColor = System.Drawing.Color.White
         Me.Label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label35.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label35.Location = New System.Drawing.Point(855, 125)
         Me.Label35.Margin = New System.Windows.Forms.Padding(5)
         Me.Label35.Name = "Label35"
@@ -4388,7 +4388,7 @@ Partial Class Frm_Engineering
         '
         Me.Label34.BackColor = System.Drawing.Color.White
         Me.Label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label34.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label34.Location = New System.Drawing.Point(885, 125)
         Me.Label34.Margin = New System.Windows.Forms.Padding(5)
         Me.Label34.Name = "Label34"
@@ -4400,7 +4400,7 @@ Partial Class Frm_Engineering
         '
         Me.Label33.BackColor = System.Drawing.Color.White
         Me.Label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label33.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(915, 125)
         Me.Label33.Margin = New System.Windows.Forms.Padding(5)
         Me.Label33.Name = "Label33"
@@ -4412,7 +4412,7 @@ Partial Class Frm_Engineering
         '
         Me.Label32.BackColor = System.Drawing.Color.White
         Me.Label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label32.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(945, 125)
         Me.Label32.Margin = New System.Windows.Forms.Padding(5)
         Me.Label32.Name = "Label32"
@@ -4424,7 +4424,7 @@ Partial Class Frm_Engineering
         '
         Me.Label31.BackColor = System.Drawing.Color.White
         Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label31.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label31.Location = New System.Drawing.Point(975, 125)
         Me.Label31.Margin = New System.Windows.Forms.Padding(5)
         Me.Label31.Name = "Label31"
@@ -4434,7 +4434,7 @@ Partial Class Frm_Engineering
         '
         'Label30
         '
-        Me.Label30.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label30.Location = New System.Drawing.Point(973, 3)
         Me.Label30.Margin = New System.Windows.Forms.Padding(3)
         Me.Label30.Name = "Label30"
@@ -4445,7 +4445,7 @@ Partial Class Frm_Engineering
         '
         'Label29
         '
-        Me.Label29.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label29.Location = New System.Drawing.Point(943, 3)
         Me.Label29.Margin = New System.Windows.Forms.Padding(3)
         Me.Label29.Name = "Label29"
@@ -4456,7 +4456,7 @@ Partial Class Frm_Engineering
         '
         'Label28
         '
-        Me.Label28.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label28.Location = New System.Drawing.Point(913, 3)
         Me.Label28.Margin = New System.Windows.Forms.Padding(3)
         Me.Label28.Name = "Label28"
@@ -4467,7 +4467,7 @@ Partial Class Frm_Engineering
         '
         'Label27
         '
-        Me.Label27.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(883, 3)
         Me.Label27.Margin = New System.Windows.Forms.Padding(3)
         Me.Label27.Name = "Label27"
@@ -4478,7 +4478,7 @@ Partial Class Frm_Engineering
         '
         'Label26
         '
-        Me.Label26.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(853, 3)
         Me.Label26.Margin = New System.Windows.Forms.Padding(3)
         Me.Label26.Name = "Label26"
@@ -4489,7 +4489,7 @@ Partial Class Frm_Engineering
         '
         'Label25
         '
-        Me.Label25.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(823, 3)
         Me.Label25.Margin = New System.Windows.Forms.Padding(3)
         Me.Label25.Name = "Label25"
@@ -4500,7 +4500,7 @@ Partial Class Frm_Engineering
         '
         'Label24
         '
-        Me.Label24.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(793, 3)
         Me.Label24.Margin = New System.Windows.Forms.Padding(3)
         Me.Label24.Name = "Label24"
@@ -4511,7 +4511,7 @@ Partial Class Frm_Engineering
         '
         'Label23
         '
-        Me.Label23.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(763, 3)
         Me.Label23.Margin = New System.Windows.Forms.Padding(3)
         Me.Label23.Name = "Label23"
@@ -4522,7 +4522,7 @@ Partial Class Frm_Engineering
         '
         'Label22
         '
-        Me.Label22.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label22.Location = New System.Drawing.Point(733, 3)
         Me.Label22.Margin = New System.Windows.Forms.Padding(3)
         Me.Label22.Name = "Label22"
@@ -4533,7 +4533,7 @@ Partial Class Frm_Engineering
         '
         'Label21
         '
-        Me.Label21.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(703, 3)
         Me.Label21.Margin = New System.Windows.Forms.Padding(3)
         Me.Label21.Name = "Label21"
@@ -4544,7 +4544,7 @@ Partial Class Frm_Engineering
         '
         'Label20
         '
-        Me.Label20.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(673, 3)
         Me.Label20.Margin = New System.Windows.Forms.Padding(3)
         Me.Label20.Name = "Label20"
@@ -4555,7 +4555,7 @@ Partial Class Frm_Engineering
         '
         'Label19
         '
-        Me.Label19.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(643, 3)
         Me.Label19.Margin = New System.Windows.Forms.Padding(3)
         Me.Label19.Name = "Label19"
@@ -4566,7 +4566,7 @@ Partial Class Frm_Engineering
         '
         'Label18
         '
-        Me.Label18.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(613, 3)
         Me.Label18.Margin = New System.Windows.Forms.Padding(3)
         Me.Label18.Name = "Label18"
@@ -4577,7 +4577,7 @@ Partial Class Frm_Engineering
         '
         'Label17
         '
-        Me.Label17.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(583, 3)
         Me.Label17.Margin = New System.Windows.Forms.Padding(3)
         Me.Label17.Name = "Label17"
@@ -4588,7 +4588,7 @@ Partial Class Frm_Engineering
         '
         'Label16
         '
-        Me.Label16.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(553, 3)
         Me.Label16.Margin = New System.Windows.Forms.Padding(3)
         Me.Label16.Name = "Label16"
@@ -4599,7 +4599,7 @@ Partial Class Frm_Engineering
         '
         'Label15
         '
-        Me.Label15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(523, 3)
         Me.Label15.Margin = New System.Windows.Forms.Padding(3)
         Me.Label15.Name = "Label15"
@@ -4610,7 +4610,7 @@ Partial Class Frm_Engineering
         '
         'Label14
         '
-        Me.Label14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(493, 3)
         Me.Label14.Margin = New System.Windows.Forms.Padding(3)
         Me.Label14.Name = "Label14"
@@ -4621,7 +4621,7 @@ Partial Class Frm_Engineering
         '
         'Label13
         '
-        Me.Label13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(463, 3)
         Me.Label13.Margin = New System.Windows.Forms.Padding(3)
         Me.Label13.Name = "Label13"
@@ -4632,7 +4632,7 @@ Partial Class Frm_Engineering
         '
         'Label12
         '
-        Me.Label12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(433, 3)
         Me.Label12.Margin = New System.Windows.Forms.Padding(3)
         Me.Label12.Name = "Label12"
@@ -4643,7 +4643,7 @@ Partial Class Frm_Engineering
         '
         'Label11
         '
-        Me.Label11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(403, 3)
         Me.Label11.Margin = New System.Windows.Forms.Padding(3)
         Me.Label11.Name = "Label11"
@@ -4654,7 +4654,7 @@ Partial Class Frm_Engineering
         '
         'Label10
         '
-        Me.Label10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(373, 3)
         Me.Label10.Margin = New System.Windows.Forms.Padding(3)
         Me.Label10.Name = "Label10"
@@ -4665,7 +4665,7 @@ Partial Class Frm_Engineering
         '
         'Label9
         '
-        Me.Label9.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(343, 3)
         Me.Label9.Margin = New System.Windows.Forms.Padding(3)
         Me.Label9.Name = "Label9"
@@ -4676,7 +4676,7 @@ Partial Class Frm_Engineering
         '
         'Label8
         '
-        Me.Label8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(313, 3)
         Me.Label8.Margin = New System.Windows.Forms.Padding(3)
         Me.Label8.Name = "Label8"
@@ -4687,7 +4687,7 @@ Partial Class Frm_Engineering
         '
         'Label7
         '
-        Me.Label7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(283, 3)
         Me.Label7.Margin = New System.Windows.Forms.Padding(3)
         Me.Label7.Name = "Label7"
@@ -4698,7 +4698,7 @@ Partial Class Frm_Engineering
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(253, 3)
         Me.Label6.Margin = New System.Windows.Forms.Padding(3)
         Me.Label6.Name = "Label6"
@@ -4709,7 +4709,7 @@ Partial Class Frm_Engineering
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(223, 3)
         Me.Label5.Margin = New System.Windows.Forms.Padding(3)
         Me.Label5.Name = "Label5"
@@ -4720,7 +4720,7 @@ Partial Class Frm_Engineering
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(193, 3)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3)
         Me.Label4.Name = "Label4"
@@ -4731,7 +4731,7 @@ Partial Class Frm_Engineering
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(163, 3)
         Me.Label3.Margin = New System.Windows.Forms.Padding(3)
         Me.Label3.Name = "Label3"
@@ -4742,7 +4742,7 @@ Partial Class Frm_Engineering
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(133, 3)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3)
         Me.Label2.Name = "Label2"
@@ -4753,7 +4753,7 @@ Partial Class Frm_Engineering
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(103, 3)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3)
         Me.Label1.Name = "Label1"
@@ -4764,7 +4764,7 @@ Partial Class Frm_Engineering
         '
         'lbl_AxisOrder
         '
-        Me.lbl_AxisOrder.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_AxisOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_AxisOrder.Location = New System.Drawing.Point(3, 0)
         Me.lbl_AxisOrder.Name = "lbl_AxisOrder"
         Me.lbl_AxisOrder.Size = New System.Drawing.Size(94, 30)
@@ -4774,7 +4774,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Home
         '
-        Me.lbl_Home.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Home.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Home.Location = New System.Drawing.Point(3, 30)
         Me.lbl_Home.Name = "lbl_Home"
         Me.lbl_Home.Size = New System.Drawing.Size(94, 30)
@@ -4784,7 +4784,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Plimit
         '
-        Me.lbl_Plimit.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Plimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Plimit.Location = New System.Drawing.Point(3, 60)
         Me.lbl_Plimit.Name = "lbl_Plimit"
         Me.lbl_Plimit.Size = New System.Drawing.Size(94, 30)
@@ -4794,7 +4794,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Nlimit
         '
-        Me.lbl_Nlimit.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Nlimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_Nlimit.Location = New System.Drawing.Point(3, 90)
         Me.lbl_Nlimit.Name = "lbl_Nlimit"
         Me.lbl_Nlimit.Size = New System.Drawing.Size(94, 30)
@@ -4804,7 +4804,7 @@ Partial Class Frm_Engineering
         '
         'lbl_ServoAlarm
         '
-        Me.lbl_ServoAlarm.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_ServoAlarm.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_ServoAlarm.Location = New System.Drawing.Point(3, 120)
         Me.lbl_ServoAlarm.Name = "lbl_ServoAlarm"
         Me.lbl_ServoAlarm.Size = New System.Drawing.Size(94, 30)
@@ -4814,7 +4814,7 @@ Partial Class Frm_Engineering
         '
         'BZ_RoundPanel7
         '
-        Me.BZ_RoundPanel7.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.BZ_RoundPanel7.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BZ_RoundPanel7.BZ_Radius = 11
         Me.BZ_RoundPanel7.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel7.Controls.Add(Me.GroupBox1)
@@ -4831,18 +4831,18 @@ Partial Class Frm_Engineering
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel2)
-        Me.GroupBox1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(196, 435)
         Me.GroupBox1.TabIndex = 6
-        Me.GroupBox1.TabStop = false
+        Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Card 0 Input"
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label166, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label165, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label164, 0, 2)
@@ -4862,29 +4862,29 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(8, 15)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 16
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(180, 416)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'Label166
         '
         Me.Label166.BackColor = System.Drawing.Color.White
-        Me.Label166.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label166.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label166.Location = New System.Drawing.Point(3, 3)
         Me.Label166.Margin = New System.Windows.Forms.Padding(3)
         Me.Label166.Name = "Label166"
@@ -4896,7 +4896,7 @@ Partial Class Frm_Engineering
         'Label165
         '
         Me.Label165.BackColor = System.Drawing.Color.White
-        Me.Label165.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label165.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label165.Location = New System.Drawing.Point(3, 29)
         Me.Label165.Margin = New System.Windows.Forms.Padding(3)
         Me.Label165.Name = "Label165"
@@ -4908,7 +4908,7 @@ Partial Class Frm_Engineering
         'Label164
         '
         Me.Label164.BackColor = System.Drawing.Color.White
-        Me.Label164.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label164.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label164.Location = New System.Drawing.Point(3, 55)
         Me.Label164.Margin = New System.Windows.Forms.Padding(3)
         Me.Label164.Name = "Label164"
@@ -4920,7 +4920,7 @@ Partial Class Frm_Engineering
         'Label163
         '
         Me.Label163.BackColor = System.Drawing.Color.White
-        Me.Label163.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label163.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label163.Location = New System.Drawing.Point(3, 81)
         Me.Label163.Margin = New System.Windows.Forms.Padding(3)
         Me.Label163.Name = "Label163"
@@ -4932,7 +4932,7 @@ Partial Class Frm_Engineering
         'Label162
         '
         Me.Label162.BackColor = System.Drawing.Color.White
-        Me.Label162.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label162.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label162.Location = New System.Drawing.Point(3, 107)
         Me.Label162.Margin = New System.Windows.Forms.Padding(3)
         Me.Label162.Name = "Label162"
@@ -4944,7 +4944,7 @@ Partial Class Frm_Engineering
         'Label161
         '
         Me.Label161.BackColor = System.Drawing.Color.White
-        Me.Label161.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label161.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label161.Location = New System.Drawing.Point(3, 133)
         Me.Label161.Margin = New System.Windows.Forms.Padding(3)
         Me.Label161.Name = "Label161"
@@ -4956,7 +4956,7 @@ Partial Class Frm_Engineering
         'Label160
         '
         Me.Label160.BackColor = System.Drawing.Color.White
-        Me.Label160.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label160.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label160.Location = New System.Drawing.Point(3, 159)
         Me.Label160.Margin = New System.Windows.Forms.Padding(3)
         Me.Label160.Name = "Label160"
@@ -4968,7 +4968,7 @@ Partial Class Frm_Engineering
         'Label159
         '
         Me.Label159.BackColor = System.Drawing.Color.White
-        Me.Label159.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label159.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label159.Location = New System.Drawing.Point(3, 185)
         Me.Label159.Margin = New System.Windows.Forms.Padding(3)
         Me.Label159.Name = "Label159"
@@ -4980,7 +4980,7 @@ Partial Class Frm_Engineering
         'Label158
         '
         Me.Label158.BackColor = System.Drawing.Color.White
-        Me.Label158.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label158.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label158.Location = New System.Drawing.Point(3, 211)
         Me.Label158.Margin = New System.Windows.Forms.Padding(3)
         Me.Label158.Name = "Label158"
@@ -4992,7 +4992,7 @@ Partial Class Frm_Engineering
         'Label157
         '
         Me.Label157.BackColor = System.Drawing.Color.White
-        Me.Label157.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label157.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label157.Location = New System.Drawing.Point(3, 237)
         Me.Label157.Margin = New System.Windows.Forms.Padding(3)
         Me.Label157.Name = "Label157"
@@ -5004,7 +5004,7 @@ Partial Class Frm_Engineering
         'Label156
         '
         Me.Label156.BackColor = System.Drawing.Color.White
-        Me.Label156.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label156.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label156.Location = New System.Drawing.Point(3, 263)
         Me.Label156.Margin = New System.Windows.Forms.Padding(3)
         Me.Label156.Name = "Label156"
@@ -5016,7 +5016,7 @@ Partial Class Frm_Engineering
         'Label155
         '
         Me.Label155.BackColor = System.Drawing.Color.White
-        Me.Label155.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label155.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label155.Location = New System.Drawing.Point(3, 289)
         Me.Label155.Margin = New System.Windows.Forms.Padding(3)
         Me.Label155.Name = "Label155"
@@ -5028,7 +5028,7 @@ Partial Class Frm_Engineering
         'Label154
         '
         Me.Label154.BackColor = System.Drawing.Color.White
-        Me.Label154.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label154.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label154.Location = New System.Drawing.Point(3, 315)
         Me.Label154.Margin = New System.Windows.Forms.Padding(3)
         Me.Label154.Name = "Label154"
@@ -5040,7 +5040,7 @@ Partial Class Frm_Engineering
         'Label153
         '
         Me.Label153.BackColor = System.Drawing.Color.White
-        Me.Label153.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label153.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label153.Location = New System.Drawing.Point(3, 341)
         Me.Label153.Margin = New System.Windows.Forms.Padding(3)
         Me.Label153.Name = "Label153"
@@ -5052,7 +5052,7 @@ Partial Class Frm_Engineering
         'Label152
         '
         Me.Label152.BackColor = System.Drawing.Color.White
-        Me.Label152.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label152.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label152.Location = New System.Drawing.Point(3, 367)
         Me.Label152.Margin = New System.Windows.Forms.Padding(3)
         Me.Label152.Name = "Label152"
@@ -5064,7 +5064,7 @@ Partial Class Frm_Engineering
         'Label151
         '
         Me.Label151.BackColor = System.Drawing.Color.White
-        Me.Label151.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label151.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label151.Location = New System.Drawing.Point(3, 393)
         Me.Label151.Margin = New System.Windows.Forms.Padding(3)
         Me.Label151.Name = "Label151"
@@ -5077,18 +5077,18 @@ Partial Class Frm_Engineering
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox5.Controls.Add(Me.TableLayoutPanel6)
-        Me.GroupBox5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(809, 5)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(196, 435)
         Me.GroupBox5.TabIndex = 7
-        Me.GroupBox5.TabStop = false
+        Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Extend IO Card 1 Input"
         '
         'TableLayoutPanel6
         '
         Me.TableLayoutPanel6.ColumnCount = 1
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.Label215, 0, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label216, 0, 1)
         Me.TableLayoutPanel6.Controls.Add(Me.Label217, 0, 2)
@@ -5108,29 +5108,29 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel6.Location = New System.Drawing.Point(8, 15)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 16
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel6.Size = New System.Drawing.Size(180, 416)
         Me.TableLayoutPanel6.TabIndex = 5
         '
         'Label215
         '
         Me.Label215.BackColor = System.Drawing.Color.White
-        Me.Label215.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label215.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label215.Location = New System.Drawing.Point(3, 3)
         Me.Label215.Margin = New System.Windows.Forms.Padding(3)
         Me.Label215.Name = "Label215"
@@ -5142,7 +5142,7 @@ Partial Class Frm_Engineering
         'Label216
         '
         Me.Label216.BackColor = System.Drawing.Color.White
-        Me.Label216.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label216.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label216.Location = New System.Drawing.Point(3, 29)
         Me.Label216.Margin = New System.Windows.Forms.Padding(3)
         Me.Label216.Name = "Label216"
@@ -5154,7 +5154,7 @@ Partial Class Frm_Engineering
         'Label217
         '
         Me.Label217.BackColor = System.Drawing.Color.White
-        Me.Label217.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label217.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label217.Location = New System.Drawing.Point(3, 55)
         Me.Label217.Margin = New System.Windows.Forms.Padding(3)
         Me.Label217.Name = "Label217"
@@ -5166,7 +5166,7 @@ Partial Class Frm_Engineering
         'Label218
         '
         Me.Label218.BackColor = System.Drawing.Color.White
-        Me.Label218.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label218.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label218.Location = New System.Drawing.Point(3, 81)
         Me.Label218.Margin = New System.Windows.Forms.Padding(3)
         Me.Label218.Name = "Label218"
@@ -5178,7 +5178,7 @@ Partial Class Frm_Engineering
         'Label219
         '
         Me.Label219.BackColor = System.Drawing.Color.White
-        Me.Label219.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label219.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label219.Location = New System.Drawing.Point(3, 107)
         Me.Label219.Margin = New System.Windows.Forms.Padding(3)
         Me.Label219.Name = "Label219"
@@ -5190,7 +5190,7 @@ Partial Class Frm_Engineering
         'Label220
         '
         Me.Label220.BackColor = System.Drawing.Color.White
-        Me.Label220.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label220.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label220.Location = New System.Drawing.Point(3, 133)
         Me.Label220.Margin = New System.Windows.Forms.Padding(3)
         Me.Label220.Name = "Label220"
@@ -5202,7 +5202,7 @@ Partial Class Frm_Engineering
         'Label221
         '
         Me.Label221.BackColor = System.Drawing.Color.White
-        Me.Label221.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label221.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label221.Location = New System.Drawing.Point(3, 159)
         Me.Label221.Margin = New System.Windows.Forms.Padding(3)
         Me.Label221.Name = "Label221"
@@ -5214,7 +5214,7 @@ Partial Class Frm_Engineering
         'Label222
         '
         Me.Label222.BackColor = System.Drawing.Color.White
-        Me.Label222.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label222.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label222.Location = New System.Drawing.Point(3, 185)
         Me.Label222.Margin = New System.Windows.Forms.Padding(3)
         Me.Label222.Name = "Label222"
@@ -5226,7 +5226,7 @@ Partial Class Frm_Engineering
         'Label223
         '
         Me.Label223.BackColor = System.Drawing.Color.White
-        Me.Label223.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label223.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label223.Location = New System.Drawing.Point(3, 211)
         Me.Label223.Margin = New System.Windows.Forms.Padding(3)
         Me.Label223.Name = "Label223"
@@ -5238,7 +5238,7 @@ Partial Class Frm_Engineering
         'Label224
         '
         Me.Label224.BackColor = System.Drawing.Color.White
-        Me.Label224.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label224.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label224.Location = New System.Drawing.Point(3, 237)
         Me.Label224.Margin = New System.Windows.Forms.Padding(3)
         Me.Label224.Name = "Label224"
@@ -5250,7 +5250,7 @@ Partial Class Frm_Engineering
         'Label225
         '
         Me.Label225.BackColor = System.Drawing.Color.White
-        Me.Label225.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label225.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label225.Location = New System.Drawing.Point(3, 263)
         Me.Label225.Margin = New System.Windows.Forms.Padding(3)
         Me.Label225.Name = "Label225"
@@ -5262,7 +5262,7 @@ Partial Class Frm_Engineering
         'Label226
         '
         Me.Label226.BackColor = System.Drawing.Color.White
-        Me.Label226.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label226.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label226.Location = New System.Drawing.Point(3, 289)
         Me.Label226.Margin = New System.Windows.Forms.Padding(3)
         Me.Label226.Name = "Label226"
@@ -5274,7 +5274,7 @@ Partial Class Frm_Engineering
         'Label227
         '
         Me.Label227.BackColor = System.Drawing.Color.White
-        Me.Label227.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label227.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label227.Location = New System.Drawing.Point(3, 315)
         Me.Label227.Margin = New System.Windows.Forms.Padding(3)
         Me.Label227.Name = "Label227"
@@ -5286,7 +5286,7 @@ Partial Class Frm_Engineering
         'Label228
         '
         Me.Label228.BackColor = System.Drawing.Color.White
-        Me.Label228.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label228.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label228.Location = New System.Drawing.Point(3, 341)
         Me.Label228.Margin = New System.Windows.Forms.Padding(3)
         Me.Label228.Name = "Label228"
@@ -5298,7 +5298,7 @@ Partial Class Frm_Engineering
         'Label229
         '
         Me.Label229.BackColor = System.Drawing.Color.White
-        Me.Label229.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label229.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label229.Location = New System.Drawing.Point(3, 367)
         Me.Label229.Margin = New System.Windows.Forms.Padding(3)
         Me.Label229.Name = "Label229"
@@ -5310,7 +5310,7 @@ Partial Class Frm_Engineering
         'Label230
         '
         Me.Label230.BackColor = System.Drawing.Color.White
-        Me.Label230.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label230.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label230.Location = New System.Drawing.Point(3, 393)
         Me.Label230.Margin = New System.Windows.Forms.Padding(3)
         Me.Label230.Name = "Label230"
@@ -5323,18 +5323,18 @@ Partial Class Frm_Engineering
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel3)
-        Me.GroupBox2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(206, 5)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(196, 435)
         Me.GroupBox2.TabIndex = 7
-        Me.GroupBox2.TabStop = false
+        Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Card 1 Input"
         '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label167, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label168, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label169, 0, 2)
@@ -5354,29 +5354,29 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(8, 15)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 16
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(180, 416)
         Me.TableLayoutPanel3.TabIndex = 2
         '
         'Label167
         '
         Me.Label167.BackColor = System.Drawing.Color.White
-        Me.Label167.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label167.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label167.Location = New System.Drawing.Point(3, 3)
         Me.Label167.Margin = New System.Windows.Forms.Padding(3)
         Me.Label167.Name = "Label167"
@@ -5388,7 +5388,7 @@ Partial Class Frm_Engineering
         'Label168
         '
         Me.Label168.BackColor = System.Drawing.Color.White
-        Me.Label168.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label168.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label168.Location = New System.Drawing.Point(3, 29)
         Me.Label168.Margin = New System.Windows.Forms.Padding(3)
         Me.Label168.Name = "Label168"
@@ -5400,7 +5400,7 @@ Partial Class Frm_Engineering
         'Label169
         '
         Me.Label169.BackColor = System.Drawing.Color.White
-        Me.Label169.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label169.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label169.Location = New System.Drawing.Point(3, 55)
         Me.Label169.Margin = New System.Windows.Forms.Padding(3)
         Me.Label169.Name = "Label169"
@@ -5412,7 +5412,7 @@ Partial Class Frm_Engineering
         'Label170
         '
         Me.Label170.BackColor = System.Drawing.Color.White
-        Me.Label170.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label170.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label170.Location = New System.Drawing.Point(3, 81)
         Me.Label170.Margin = New System.Windows.Forms.Padding(3)
         Me.Label170.Name = "Label170"
@@ -5424,7 +5424,7 @@ Partial Class Frm_Engineering
         'Label171
         '
         Me.Label171.BackColor = System.Drawing.Color.White
-        Me.Label171.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label171.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label171.Location = New System.Drawing.Point(3, 107)
         Me.Label171.Margin = New System.Windows.Forms.Padding(3)
         Me.Label171.Name = "Label171"
@@ -5436,7 +5436,7 @@ Partial Class Frm_Engineering
         'Label172
         '
         Me.Label172.BackColor = System.Drawing.Color.White
-        Me.Label172.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label172.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label172.Location = New System.Drawing.Point(3, 133)
         Me.Label172.Margin = New System.Windows.Forms.Padding(3)
         Me.Label172.Name = "Label172"
@@ -5448,7 +5448,7 @@ Partial Class Frm_Engineering
         'Label173
         '
         Me.Label173.BackColor = System.Drawing.Color.White
-        Me.Label173.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label173.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label173.Location = New System.Drawing.Point(3, 159)
         Me.Label173.Margin = New System.Windows.Forms.Padding(3)
         Me.Label173.Name = "Label173"
@@ -5460,7 +5460,7 @@ Partial Class Frm_Engineering
         'Label174
         '
         Me.Label174.BackColor = System.Drawing.Color.White
-        Me.Label174.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label174.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label174.Location = New System.Drawing.Point(3, 185)
         Me.Label174.Margin = New System.Windows.Forms.Padding(3)
         Me.Label174.Name = "Label174"
@@ -5472,7 +5472,7 @@ Partial Class Frm_Engineering
         'Label175
         '
         Me.Label175.BackColor = System.Drawing.Color.White
-        Me.Label175.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label175.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label175.Location = New System.Drawing.Point(3, 211)
         Me.Label175.Margin = New System.Windows.Forms.Padding(3)
         Me.Label175.Name = "Label175"
@@ -5484,7 +5484,7 @@ Partial Class Frm_Engineering
         'Label176
         '
         Me.Label176.BackColor = System.Drawing.Color.White
-        Me.Label176.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label176.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label176.Location = New System.Drawing.Point(3, 237)
         Me.Label176.Margin = New System.Windows.Forms.Padding(3)
         Me.Label176.Name = "Label176"
@@ -5496,7 +5496,7 @@ Partial Class Frm_Engineering
         'Label177
         '
         Me.Label177.BackColor = System.Drawing.Color.White
-        Me.Label177.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label177.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label177.Location = New System.Drawing.Point(3, 263)
         Me.Label177.Margin = New System.Windows.Forms.Padding(3)
         Me.Label177.Name = "Label177"
@@ -5508,7 +5508,7 @@ Partial Class Frm_Engineering
         'Label178
         '
         Me.Label178.BackColor = System.Drawing.Color.White
-        Me.Label178.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label178.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label178.Location = New System.Drawing.Point(3, 289)
         Me.Label178.Margin = New System.Windows.Forms.Padding(3)
         Me.Label178.Name = "Label178"
@@ -5520,7 +5520,7 @@ Partial Class Frm_Engineering
         'Label179
         '
         Me.Label179.BackColor = System.Drawing.Color.White
-        Me.Label179.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label179.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label179.Location = New System.Drawing.Point(3, 315)
         Me.Label179.Margin = New System.Windows.Forms.Padding(3)
         Me.Label179.Name = "Label179"
@@ -5532,7 +5532,7 @@ Partial Class Frm_Engineering
         'Label180
         '
         Me.Label180.BackColor = System.Drawing.Color.White
-        Me.Label180.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label180.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label180.Location = New System.Drawing.Point(3, 341)
         Me.Label180.Margin = New System.Windows.Forms.Padding(3)
         Me.Label180.Name = "Label180"
@@ -5544,7 +5544,7 @@ Partial Class Frm_Engineering
         'Label181
         '
         Me.Label181.BackColor = System.Drawing.Color.White
-        Me.Label181.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label181.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label181.Location = New System.Drawing.Point(3, 367)
         Me.Label181.Margin = New System.Windows.Forms.Padding(3)
         Me.Label181.Name = "Label181"
@@ -5556,7 +5556,7 @@ Partial Class Frm_Engineering
         'Label182
         '
         Me.Label182.BackColor = System.Drawing.Color.White
-        Me.Label182.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label182.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label182.Location = New System.Drawing.Point(3, 393)
         Me.Label182.Margin = New System.Windows.Forms.Padding(3)
         Me.Label182.Name = "Label182"
@@ -5569,18 +5569,18 @@ Partial Class Frm_Engineering
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox4.Controls.Add(Me.TableLayoutPanel5)
-        Me.GroupBox4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(608, 5)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(196, 435)
         Me.GroupBox4.TabIndex = 9
-        Me.GroupBox4.TabStop = false
+        Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Extend IO Card 0 Input"
         '
         'TableLayoutPanel5
         '
         Me.TableLayoutPanel5.ColumnCount = 1
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.Label199, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.Label200, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label201, 0, 2)
@@ -5600,29 +5600,29 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(8, 15)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 16
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(180, 416)
         Me.TableLayoutPanel5.TabIndex = 4
         '
         'Label199
         '
         Me.Label199.BackColor = System.Drawing.Color.White
-        Me.Label199.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label199.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label199.Location = New System.Drawing.Point(3, 3)
         Me.Label199.Margin = New System.Windows.Forms.Padding(3)
         Me.Label199.Name = "Label199"
@@ -5634,7 +5634,7 @@ Partial Class Frm_Engineering
         'Label200
         '
         Me.Label200.BackColor = System.Drawing.Color.White
-        Me.Label200.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label200.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label200.Location = New System.Drawing.Point(3, 29)
         Me.Label200.Margin = New System.Windows.Forms.Padding(3)
         Me.Label200.Name = "Label200"
@@ -5646,7 +5646,7 @@ Partial Class Frm_Engineering
         'Label201
         '
         Me.Label201.BackColor = System.Drawing.Color.White
-        Me.Label201.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label201.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label201.Location = New System.Drawing.Point(3, 55)
         Me.Label201.Margin = New System.Windows.Forms.Padding(3)
         Me.Label201.Name = "Label201"
@@ -5658,7 +5658,7 @@ Partial Class Frm_Engineering
         'Label202
         '
         Me.Label202.BackColor = System.Drawing.Color.White
-        Me.Label202.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label202.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label202.Location = New System.Drawing.Point(3, 81)
         Me.Label202.Margin = New System.Windows.Forms.Padding(3)
         Me.Label202.Name = "Label202"
@@ -5670,7 +5670,7 @@ Partial Class Frm_Engineering
         'Label203
         '
         Me.Label203.BackColor = System.Drawing.Color.White
-        Me.Label203.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label203.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label203.Location = New System.Drawing.Point(3, 107)
         Me.Label203.Margin = New System.Windows.Forms.Padding(3)
         Me.Label203.Name = "Label203"
@@ -5682,7 +5682,7 @@ Partial Class Frm_Engineering
         'Label204
         '
         Me.Label204.BackColor = System.Drawing.Color.White
-        Me.Label204.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label204.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label204.Location = New System.Drawing.Point(3, 133)
         Me.Label204.Margin = New System.Windows.Forms.Padding(3)
         Me.Label204.Name = "Label204"
@@ -5694,7 +5694,7 @@ Partial Class Frm_Engineering
         'Label205
         '
         Me.Label205.BackColor = System.Drawing.Color.White
-        Me.Label205.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label205.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label205.Location = New System.Drawing.Point(3, 159)
         Me.Label205.Margin = New System.Windows.Forms.Padding(3)
         Me.Label205.Name = "Label205"
@@ -5706,7 +5706,7 @@ Partial Class Frm_Engineering
         'Label206
         '
         Me.Label206.BackColor = System.Drawing.Color.White
-        Me.Label206.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label206.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label206.Location = New System.Drawing.Point(3, 185)
         Me.Label206.Margin = New System.Windows.Forms.Padding(3)
         Me.Label206.Name = "Label206"
@@ -5718,7 +5718,7 @@ Partial Class Frm_Engineering
         'Label207
         '
         Me.Label207.BackColor = System.Drawing.Color.White
-        Me.Label207.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label207.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label207.Location = New System.Drawing.Point(3, 211)
         Me.Label207.Margin = New System.Windows.Forms.Padding(3)
         Me.Label207.Name = "Label207"
@@ -5730,7 +5730,7 @@ Partial Class Frm_Engineering
         'Label208
         '
         Me.Label208.BackColor = System.Drawing.Color.White
-        Me.Label208.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label208.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label208.Location = New System.Drawing.Point(3, 237)
         Me.Label208.Margin = New System.Windows.Forms.Padding(3)
         Me.Label208.Name = "Label208"
@@ -5742,7 +5742,7 @@ Partial Class Frm_Engineering
         'Label209
         '
         Me.Label209.BackColor = System.Drawing.Color.White
-        Me.Label209.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label209.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label209.Location = New System.Drawing.Point(3, 263)
         Me.Label209.Margin = New System.Windows.Forms.Padding(3)
         Me.Label209.Name = "Label209"
@@ -5754,7 +5754,7 @@ Partial Class Frm_Engineering
         'Label210
         '
         Me.Label210.BackColor = System.Drawing.Color.White
-        Me.Label210.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label210.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label210.Location = New System.Drawing.Point(3, 289)
         Me.Label210.Margin = New System.Windows.Forms.Padding(3)
         Me.Label210.Name = "Label210"
@@ -5766,7 +5766,7 @@ Partial Class Frm_Engineering
         'Label211
         '
         Me.Label211.BackColor = System.Drawing.Color.White
-        Me.Label211.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label211.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label211.Location = New System.Drawing.Point(3, 315)
         Me.Label211.Margin = New System.Windows.Forms.Padding(3)
         Me.Label211.Name = "Label211"
@@ -5778,7 +5778,7 @@ Partial Class Frm_Engineering
         'Label212
         '
         Me.Label212.BackColor = System.Drawing.Color.White
-        Me.Label212.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label212.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label212.Location = New System.Drawing.Point(3, 341)
         Me.Label212.Margin = New System.Windows.Forms.Padding(3)
         Me.Label212.Name = "Label212"
@@ -5790,7 +5790,7 @@ Partial Class Frm_Engineering
         'Label213
         '
         Me.Label213.BackColor = System.Drawing.Color.White
-        Me.Label213.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label213.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label213.Location = New System.Drawing.Point(3, 367)
         Me.Label213.Margin = New System.Windows.Forms.Padding(3)
         Me.Label213.Name = "Label213"
@@ -5802,7 +5802,7 @@ Partial Class Frm_Engineering
         'Label214
         '
         Me.Label214.BackColor = System.Drawing.Color.White
-        Me.Label214.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label214.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label214.Location = New System.Drawing.Point(3, 393)
         Me.Label214.Margin = New System.Windows.Forms.Padding(3)
         Me.Label214.Name = "Label214"
@@ -5815,18 +5815,18 @@ Partial Class Frm_Engineering
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.TableLayoutPanel4)
-        Me.GroupBox3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(407, 5)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(196, 435)
         Me.GroupBox3.TabIndex = 8
-        Me.GroupBox3.TabStop = false
+        Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Card 2 Input"
         '
         'TableLayoutPanel4
         '
         Me.TableLayoutPanel4.ColumnCount = 1
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.Label183, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.Label184, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.Label185, 0, 2)
@@ -5846,29 +5846,29 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(8, 15)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 16
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(180, 416)
         Me.TableLayoutPanel4.TabIndex = 3
         '
         'Label183
         '
         Me.Label183.BackColor = System.Drawing.Color.White
-        Me.Label183.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label183.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label183.Location = New System.Drawing.Point(3, 3)
         Me.Label183.Margin = New System.Windows.Forms.Padding(3)
         Me.Label183.Name = "Label183"
@@ -5880,7 +5880,7 @@ Partial Class Frm_Engineering
         'Label184
         '
         Me.Label184.BackColor = System.Drawing.Color.White
-        Me.Label184.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label184.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label184.Location = New System.Drawing.Point(3, 29)
         Me.Label184.Margin = New System.Windows.Forms.Padding(3)
         Me.Label184.Name = "Label184"
@@ -5892,7 +5892,7 @@ Partial Class Frm_Engineering
         'Label185
         '
         Me.Label185.BackColor = System.Drawing.Color.White
-        Me.Label185.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label185.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label185.Location = New System.Drawing.Point(3, 55)
         Me.Label185.Margin = New System.Windows.Forms.Padding(3)
         Me.Label185.Name = "Label185"
@@ -5904,7 +5904,7 @@ Partial Class Frm_Engineering
         'Label186
         '
         Me.Label186.BackColor = System.Drawing.Color.White
-        Me.Label186.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label186.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label186.Location = New System.Drawing.Point(3, 81)
         Me.Label186.Margin = New System.Windows.Forms.Padding(3)
         Me.Label186.Name = "Label186"
@@ -5916,7 +5916,7 @@ Partial Class Frm_Engineering
         'Label187
         '
         Me.Label187.BackColor = System.Drawing.Color.White
-        Me.Label187.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label187.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label187.Location = New System.Drawing.Point(3, 107)
         Me.Label187.Margin = New System.Windows.Forms.Padding(3)
         Me.Label187.Name = "Label187"
@@ -5928,7 +5928,7 @@ Partial Class Frm_Engineering
         'Label188
         '
         Me.Label188.BackColor = System.Drawing.Color.White
-        Me.Label188.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label188.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label188.Location = New System.Drawing.Point(3, 133)
         Me.Label188.Margin = New System.Windows.Forms.Padding(3)
         Me.Label188.Name = "Label188"
@@ -5940,7 +5940,7 @@ Partial Class Frm_Engineering
         'Label189
         '
         Me.Label189.BackColor = System.Drawing.Color.White
-        Me.Label189.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label189.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label189.Location = New System.Drawing.Point(3, 159)
         Me.Label189.Margin = New System.Windows.Forms.Padding(3)
         Me.Label189.Name = "Label189"
@@ -5952,7 +5952,7 @@ Partial Class Frm_Engineering
         'Label190
         '
         Me.Label190.BackColor = System.Drawing.Color.White
-        Me.Label190.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label190.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label190.Location = New System.Drawing.Point(3, 185)
         Me.Label190.Margin = New System.Windows.Forms.Padding(3)
         Me.Label190.Name = "Label190"
@@ -5964,7 +5964,7 @@ Partial Class Frm_Engineering
         'Label191
         '
         Me.Label191.BackColor = System.Drawing.Color.White
-        Me.Label191.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label191.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label191.Location = New System.Drawing.Point(3, 211)
         Me.Label191.Margin = New System.Windows.Forms.Padding(3)
         Me.Label191.Name = "Label191"
@@ -5976,7 +5976,7 @@ Partial Class Frm_Engineering
         'Label192
         '
         Me.Label192.BackColor = System.Drawing.Color.White
-        Me.Label192.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label192.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label192.Location = New System.Drawing.Point(3, 237)
         Me.Label192.Margin = New System.Windows.Forms.Padding(3)
         Me.Label192.Name = "Label192"
@@ -5988,7 +5988,7 @@ Partial Class Frm_Engineering
         'Label193
         '
         Me.Label193.BackColor = System.Drawing.Color.White
-        Me.Label193.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label193.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label193.Location = New System.Drawing.Point(3, 263)
         Me.Label193.Margin = New System.Windows.Forms.Padding(3)
         Me.Label193.Name = "Label193"
@@ -6000,7 +6000,7 @@ Partial Class Frm_Engineering
         'Label194
         '
         Me.Label194.BackColor = System.Drawing.Color.White
-        Me.Label194.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label194.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label194.Location = New System.Drawing.Point(3, 289)
         Me.Label194.Margin = New System.Windows.Forms.Padding(3)
         Me.Label194.Name = "Label194"
@@ -6012,7 +6012,7 @@ Partial Class Frm_Engineering
         'Label195
         '
         Me.Label195.BackColor = System.Drawing.Color.White
-        Me.Label195.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label195.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label195.Location = New System.Drawing.Point(3, 315)
         Me.Label195.Margin = New System.Windows.Forms.Padding(3)
         Me.Label195.Name = "Label195"
@@ -6024,7 +6024,7 @@ Partial Class Frm_Engineering
         'Label196
         '
         Me.Label196.BackColor = System.Drawing.Color.White
-        Me.Label196.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label196.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label196.Location = New System.Drawing.Point(3, 341)
         Me.Label196.Margin = New System.Windows.Forms.Padding(3)
         Me.Label196.Name = "Label196"
@@ -6036,7 +6036,7 @@ Partial Class Frm_Engineering
         'Label197
         '
         Me.Label197.BackColor = System.Drawing.Color.White
-        Me.Label197.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label197.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label197.Location = New System.Drawing.Point(3, 367)
         Me.Label197.Margin = New System.Windows.Forms.Padding(3)
         Me.Label197.Name = "Label197"
@@ -6048,7 +6048,7 @@ Partial Class Frm_Engineering
         'Label198
         '
         Me.Label198.BackColor = System.Drawing.Color.White
-        Me.Label198.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label198.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.Label198.Location = New System.Drawing.Point(3, 393)
         Me.Label198.Margin = New System.Windows.Forms.Padding(3)
         Me.Label198.Name = "Label198"
@@ -6065,11 +6065,11 @@ Partial Class Frm_Engineering
         Me.TabPage3.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "I/O输出界面"
-        Me.TabPage3.UseVisualStyleBackColor = true
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel9
         '
-        Me.BZ_RoundPanel9.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.BZ_RoundPanel9.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BZ_RoundPanel9.BZ_Radius = 11
         Me.BZ_RoundPanel9.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel9.Controls.Add(Me.GroupBox10)
@@ -6085,18 +6085,18 @@ Partial Class Frm_Engineering
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.TableLayoutPanel11)
-        Me.GroupBox10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox10.Location = New System.Drawing.Point(807, 5)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(196, 596)
         Me.GroupBox10.TabIndex = 5
-        Me.GroupBox10.TabStop = false
+        Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "Extend IO Card 1 Output"
         '
         'TableLayoutPanel11
         '
         Me.TableLayoutPanel11.ColumnCount = 1
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel11.Controls.Add(Me.btn_Out_5_00, 0, 0)
         Me.TableLayoutPanel11.Controls.Add(Me.btn_Out_5_01, 0, 1)
         Me.TableLayoutPanel11.Controls.Add(Me.btn_Out_5_02, 0, 2)
@@ -6116,23 +6116,23 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel11.Location = New System.Drawing.Point(3, 20)
         Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
         Me.TableLayoutPanel11.RowCount = 16
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel11.Size = New System.Drawing.Size(190, 560)
         Me.TableLayoutPanel11.TabIndex = 0
         '
@@ -6140,225 +6140,225 @@ Partial Class Frm_Engineering
         '
         Me.btn_Out_5_00.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_00.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_00.Location = New System.Drawing.Point(3, 3)
         Me.btn_Out_5_00.Name = "btn_Out_5_00"
         Me.btn_Out_5_00.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_00.TabIndex = 3
         Me.btn_Out_5_00.Text = "00-"
         Me.btn_Out_5_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_00.UseVisualStyleBackColor = false
+        Me.btn_Out_5_00.UseVisualStyleBackColor = False
         '
         'btn_Out_5_01
         '
         Me.btn_Out_5_01.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_01.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_01.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_01.Location = New System.Drawing.Point(3, 38)
         Me.btn_Out_5_01.Name = "btn_Out_5_01"
         Me.btn_Out_5_01.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_01.TabIndex = 3
         Me.btn_Out_5_01.Text = "01-"
         Me.btn_Out_5_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_01.UseVisualStyleBackColor = false
+        Me.btn_Out_5_01.UseVisualStyleBackColor = False
         '
         'btn_Out_5_02
         '
         Me.btn_Out_5_02.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_02.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_02.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_02.Location = New System.Drawing.Point(3, 73)
         Me.btn_Out_5_02.Name = "btn_Out_5_02"
         Me.btn_Out_5_02.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_02.TabIndex = 3
         Me.btn_Out_5_02.Text = "02-"
         Me.btn_Out_5_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_02.UseVisualStyleBackColor = false
+        Me.btn_Out_5_02.UseVisualStyleBackColor = False
         '
         'btn_Out_5_03
         '
         Me.btn_Out_5_03.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_03.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_03.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_03.Location = New System.Drawing.Point(3, 108)
         Me.btn_Out_5_03.Name = "btn_Out_5_03"
         Me.btn_Out_5_03.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_03.TabIndex = 3
         Me.btn_Out_5_03.Text = "03-"
         Me.btn_Out_5_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_03.UseVisualStyleBackColor = false
+        Me.btn_Out_5_03.UseVisualStyleBackColor = False
         '
         'btn_Out_5_04
         '
         Me.btn_Out_5_04.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_04.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_04.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_04.Location = New System.Drawing.Point(3, 143)
         Me.btn_Out_5_04.Name = "btn_Out_5_04"
         Me.btn_Out_5_04.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_04.TabIndex = 3
         Me.btn_Out_5_04.Text = "04-"
         Me.btn_Out_5_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_04.UseVisualStyleBackColor = false
+        Me.btn_Out_5_04.UseVisualStyleBackColor = False
         '
         'btn_Out_5_05
         '
         Me.btn_Out_5_05.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_05.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_05.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_05.Location = New System.Drawing.Point(3, 178)
         Me.btn_Out_5_05.Name = "btn_Out_5_05"
         Me.btn_Out_5_05.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_05.TabIndex = 3
         Me.btn_Out_5_05.Text = "05-"
         Me.btn_Out_5_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_05.UseVisualStyleBackColor = false
+        Me.btn_Out_5_05.UseVisualStyleBackColor = False
         '
         'btn_Out_5_06
         '
         Me.btn_Out_5_06.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_06.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_06.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_06.Location = New System.Drawing.Point(3, 213)
         Me.btn_Out_5_06.Name = "btn_Out_5_06"
         Me.btn_Out_5_06.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_06.TabIndex = 3
         Me.btn_Out_5_06.Text = "06-"
         Me.btn_Out_5_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_06.UseVisualStyleBackColor = false
+        Me.btn_Out_5_06.UseVisualStyleBackColor = False
         '
         'btn_Out_5_07
         '
         Me.btn_Out_5_07.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_07.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_07.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_07.Location = New System.Drawing.Point(3, 248)
         Me.btn_Out_5_07.Name = "btn_Out_5_07"
         Me.btn_Out_5_07.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_07.TabIndex = 3
         Me.btn_Out_5_07.Text = "07-"
         Me.btn_Out_5_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_07.UseVisualStyleBackColor = false
+        Me.btn_Out_5_07.UseVisualStyleBackColor = False
         '
         'btn_Out_5_08
         '
         Me.btn_Out_5_08.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_08.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_08.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_08.Location = New System.Drawing.Point(3, 283)
         Me.btn_Out_5_08.Name = "btn_Out_5_08"
         Me.btn_Out_5_08.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_08.TabIndex = 3
         Me.btn_Out_5_08.Text = "08-L1真空吸载具"
         Me.btn_Out_5_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_08.UseVisualStyleBackColor = false
+        Me.btn_Out_5_08.UseVisualStyleBackColor = False
         '
         'btn_Out_5_09
         '
         Me.btn_Out_5_09.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_09.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_09.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_09.Location = New System.Drawing.Point(3, 318)
         Me.btn_Out_5_09.Name = "btn_Out_5_09"
         Me.btn_Out_5_09.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_09.TabIndex = 3
         Me.btn_Out_5_09.Text = "09-L2真空吸载具"
         Me.btn_Out_5_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_09.UseVisualStyleBackColor = false
+        Me.btn_Out_5_09.UseVisualStyleBackColor = False
         '
         'btn_Out_5_10
         '
         Me.btn_Out_5_10.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_10.Location = New System.Drawing.Point(3, 353)
         Me.btn_Out_5_10.Name = "btn_Out_5_10"
         Me.btn_Out_5_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_10.TabIndex = 3
         Me.btn_Out_5_10.Text = "10-L3真空吸载具"
         Me.btn_Out_5_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_10.UseVisualStyleBackColor = false
+        Me.btn_Out_5_10.UseVisualStyleBackColor = False
         '
         'btn_Out_5_11
         '
         Me.btn_Out_5_11.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_11.Location = New System.Drawing.Point(3, 388)
         Me.btn_Out_5_11.Name = "btn_Out_5_11"
         Me.btn_Out_5_11.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_11.TabIndex = 3
         Me.btn_Out_5_11.Text = "11-夹镜头保护盖加紧气缸"
         Me.btn_Out_5_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_11.UseVisualStyleBackColor = false
+        Me.btn_Out_5_11.UseVisualStyleBackColor = False
         '
         'btn_Out_5_12
         '
         Me.btn_Out_5_12.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_12.Location = New System.Drawing.Point(3, 423)
         Me.btn_Out_5_12.Name = "btn_Out_5_12"
         Me.btn_Out_5_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_12.TabIndex = 3
         Me.btn_Out_5_12.Text = "12-夹镜头保护盖升降气缸"
         Me.btn_Out_5_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_12.UseVisualStyleBackColor = false
+        Me.btn_Out_5_12.UseVisualStyleBackColor = False
         '
         'btn_Out_5_13
         '
         Me.btn_Out_5_13.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_13.Location = New System.Drawing.Point(3, 458)
         Me.btn_Out_5_13.Name = "btn_Out_5_13"
         Me.btn_Out_5_13.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_13.TabIndex = 3
         Me.btn_Out_5_13.Text = "13-"
         Me.btn_Out_5_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_13.UseVisualStyleBackColor = false
+        Me.btn_Out_5_13.UseVisualStyleBackColor = False
         '
         'btn_Out_5_14
         '
         Me.btn_Out_5_14.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_14.Location = New System.Drawing.Point(3, 493)
         Me.btn_Out_5_14.Name = "btn_Out_5_14"
         Me.btn_Out_5_14.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_14.TabIndex = 3
         Me.btn_Out_5_14.Text = "14-"
         Me.btn_Out_5_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_14.UseVisualStyleBackColor = false
+        Me.btn_Out_5_14.UseVisualStyleBackColor = False
         '
         'btn_Out_5_15
         '
         Me.btn_Out_5_15.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_5_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_5_15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_5_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_5_15.Location = New System.Drawing.Point(3, 528)
         Me.btn_Out_5_15.Name = "btn_Out_5_15"
         Me.btn_Out_5_15.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_5_15.TabIndex = 2
         Me.btn_Out_5_15.Text = "15-"
         Me.btn_Out_5_15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_5_15.UseVisualStyleBackColor = false
+        Me.btn_Out_5_15.UseVisualStyleBackColor = False
         '
         'GroupBox9
         '
         Me.GroupBox9.Controls.Add(Me.TableLayoutPanel10)
-        Me.GroupBox9.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox9.Location = New System.Drawing.Point(606, 5)
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.Size = New System.Drawing.Size(196, 596)
         Me.GroupBox9.TabIndex = 4
-        Me.GroupBox9.TabStop = false
+        Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Extend IO Card 0 Output"
         '
         'TableLayoutPanel10
         '
         Me.TableLayoutPanel10.ColumnCount = 1
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel10.Controls.Add(Me.btn_Out_4_00, 0, 0)
         Me.TableLayoutPanel10.Controls.Add(Me.btn_Out_4_01, 0, 1)
         Me.TableLayoutPanel10.Controls.Add(Me.btn_Out_4_02, 0, 2)
@@ -6378,23 +6378,23 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel10.Location = New System.Drawing.Point(3, 20)
         Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
         Me.TableLayoutPanel10.RowCount = 16
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel10.Size = New System.Drawing.Size(190, 560)
         Me.TableLayoutPanel10.TabIndex = 0
         '
@@ -6402,225 +6402,225 @@ Partial Class Frm_Engineering
         '
         Me.btn_Out_4_00.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_00.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_00.Location = New System.Drawing.Point(3, 3)
         Me.btn_Out_4_00.Name = "btn_Out_4_00"
         Me.btn_Out_4_00.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_00.TabIndex = 3
         Me.btn_Out_4_00.Text = "00-步进电机伺服使能"
         Me.btn_Out_4_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_00.UseVisualStyleBackColor = false
+        Me.btn_Out_4_00.UseVisualStyleBackColor = False
         '
         'btn_Out_4_01
         '
         Me.btn_Out_4_01.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_01.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_01.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_01.Location = New System.Drawing.Point(3, 38)
         Me.btn_Out_4_01.Name = "btn_Out_4_01"
         Me.btn_Out_4_01.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_01.TabIndex = 3
         Me.btn_Out_4_01.Text = "01-"
         Me.btn_Out_4_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_01.UseVisualStyleBackColor = false
+        Me.btn_Out_4_01.UseVisualStyleBackColor = False
         '
         'btn_Out_4_02
         '
         Me.btn_Out_4_02.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_02.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_02.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_02.Location = New System.Drawing.Point(3, 73)
         Me.btn_Out_4_02.Name = "btn_Out_4_02"
         Me.btn_Out_4_02.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_02.TabIndex = 3
         Me.btn_Out_4_02.Text = "02-"
         Me.btn_Out_4_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_02.UseVisualStyleBackColor = false
+        Me.btn_Out_4_02.UseVisualStyleBackColor = False
         '
         'btn_Out_4_03
         '
         Me.btn_Out_4_03.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_03.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_03.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_03.Location = New System.Drawing.Point(3, 108)
         Me.btn_Out_4_03.Name = "btn_Out_4_03"
         Me.btn_Out_4_03.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_03.TabIndex = 3
         Me.btn_Out_4_03.Text = "03-"
         Me.btn_Out_4_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_03.UseVisualStyleBackColor = false
+        Me.btn_Out_4_03.UseVisualStyleBackColor = False
         '
         'btn_Out_4_04
         '
         Me.btn_Out_4_04.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_04.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_04.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_04.Location = New System.Drawing.Point(3, 143)
         Me.btn_Out_4_04.Name = "btn_Out_4_04"
         Me.btn_Out_4_04.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_04.TabIndex = 3
         Me.btn_Out_4_04.Text = "04-"
         Me.btn_Out_4_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_04.UseVisualStyleBackColor = false
+        Me.btn_Out_4_04.UseVisualStyleBackColor = False
         '
         'btn_Out_4_05
         '
         Me.btn_Out_4_05.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_05.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_05.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_05.Location = New System.Drawing.Point(3, 178)
         Me.btn_Out_4_05.Name = "btn_Out_4_05"
         Me.btn_Out_4_05.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_05.TabIndex = 3
         Me.btn_Out_4_05.Text = "05-左料盘电磁铁"
         Me.btn_Out_4_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_05.UseVisualStyleBackColor = false
+        Me.btn_Out_4_05.UseVisualStyleBackColor = False
         '
         'btn_Out_4_06
         '
         Me.btn_Out_4_06.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_06.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_06.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_06.Location = New System.Drawing.Point(3, 213)
         Me.btn_Out_4_06.Name = "btn_Out_4_06"
         Me.btn_Out_4_06.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_06.TabIndex = 3
         Me.btn_Out_4_06.Text = "06-右料盘电磁铁"
         Me.btn_Out_4_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_06.UseVisualStyleBackColor = false
+        Me.btn_Out_4_06.UseVisualStyleBackColor = False
         '
         'btn_Out_4_07
         '
         Me.btn_Out_4_07.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_07.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_07.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_07.Location = New System.Drawing.Point(3, 248)
         Me.btn_Out_4_07.Name = "btn_Out_4_07"
         Me.btn_Out_4_07.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_07.TabIndex = 3
         Me.btn_Out_4_07.Text = "07-PAM料盘加紧气缸加紧"
         Me.btn_Out_4_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_07.UseVisualStyleBackColor = false
+        Me.btn_Out_4_07.UseVisualStyleBackColor = False
         '
         'btn_Out_4_08
         '
         Me.btn_Out_4_08.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_08.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_08.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_08.Location = New System.Drawing.Point(3, 283)
         Me.btn_Out_4_08.Name = "btn_Out_4_08"
         Me.btn_Out_4_08.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_08.TabIndex = 3
         Me.btn_Out_4_08.Text = "08-PAM料盘加紧气缸张开"
         Me.btn_Out_4_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_08.UseVisualStyleBackColor = false
+        Me.btn_Out_4_08.UseVisualStyleBackColor = False
         '
         'btn_Out_4_09
         '
         Me.btn_Out_4_09.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_09.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_09.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_09.Location = New System.Drawing.Point(3, 318)
         Me.btn_Out_4_09.Name = "btn_Out_4_09"
         Me.btn_Out_4_09.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_09.TabIndex = 3
         Me.btn_Out_4_09.Text = "09-PAM料盘平移气缸伸出"
         Me.btn_Out_4_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_09.UseVisualStyleBackColor = false
+        Me.btn_Out_4_09.UseVisualStyleBackColor = False
         '
         'btn_Out_4_10
         '
         Me.btn_Out_4_10.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_10.Location = New System.Drawing.Point(3, 353)
         Me.btn_Out_4_10.Name = "btn_Out_4_10"
         Me.btn_Out_4_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_10.TabIndex = 3
         Me.btn_Out_4_10.Text = "10-PAM料盘平移气缸缩回"
         Me.btn_Out_4_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_10.UseVisualStyleBackColor = false
+        Me.btn_Out_4_10.UseVisualStyleBackColor = False
         '
         'btn_Out_4_11
         '
         Me.btn_Out_4_11.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_11.Location = New System.Drawing.Point(3, 388)
         Me.btn_Out_4_11.Name = "btn_Out_4_11"
         Me.btn_Out_4_11.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_11.TabIndex = 3
         Me.btn_Out_4_11.Text = "11-UV固化移动气缸"
         Me.btn_Out_4_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_11.UseVisualStyleBackColor = false
+        Me.btn_Out_4_11.UseVisualStyleBackColor = False
         '
         'btn_Out_4_12
         '
         Me.btn_Out_4_12.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_12.Location = New System.Drawing.Point(3, 423)
         Me.btn_Out_4_12.Name = "btn_Out_4_12"
         Me.btn_Out_4_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_12.TabIndex = 3
         Me.btn_Out_4_12.Text = "12-"
         Me.btn_Out_4_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_12.UseVisualStyleBackColor = false
+        Me.btn_Out_4_12.UseVisualStyleBackColor = False
         '
         'btn_Out_4_13
         '
         Me.btn_Out_4_13.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_13.Location = New System.Drawing.Point(3, 458)
         Me.btn_Out_4_13.Name = "btn_Out_4_13"
         Me.btn_Out_4_13.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_13.TabIndex = 3
         Me.btn_Out_4_13.Text = "13-擦胶电机使能"
         Me.btn_Out_4_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_13.UseVisualStyleBackColor = false
+        Me.btn_Out_4_13.UseVisualStyleBackColor = False
         '
         'btn_Out_4_14
         '
         Me.btn_Out_4_14.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_14.Location = New System.Drawing.Point(3, 493)
         Me.btn_Out_4_14.Name = "btn_Out_4_14"
         Me.btn_Out_4_14.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_14.TabIndex = 3
         Me.btn_Out_4_14.Text = "14-擦胶电机工作"
         Me.btn_Out_4_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_14.UseVisualStyleBackColor = false
+        Me.btn_Out_4_14.UseVisualStyleBackColor = False
         '
         'btn_Out_4_15
         '
         Me.btn_Out_4_15.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_4_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_4_15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_4_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_4_15.Location = New System.Drawing.Point(3, 528)
         Me.btn_Out_4_15.Name = "btn_Out_4_15"
         Me.btn_Out_4_15.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_4_15.TabIndex = 2
         Me.btn_Out_4_15.Text = "15-擦胶加紧气缸电磁阀"
         Me.btn_Out_4_15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_4_15.UseVisualStyleBackColor = false
+        Me.btn_Out_4_15.UseVisualStyleBackColor = False
         '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.TableLayoutPanel9)
-        Me.GroupBox8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox8.Location = New System.Drawing.Point(405, 5)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(196, 596)
         Me.GroupBox8.TabIndex = 3
-        Me.GroupBox8.TabStop = false
+        Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Card 2"
         '
         'TableLayoutPanel9
         '
         Me.TableLayoutPanel9.ColumnCount = 1
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel9.Controls.Add(Me.btn_Out_3_00, 0, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.btn_Out_3_01, 0, 1)
         Me.TableLayoutPanel9.Controls.Add(Me.btn_Out_3_02, 0, 2)
@@ -6640,23 +6640,23 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel9.Location = New System.Drawing.Point(3, 20)
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 16
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel9.Size = New System.Drawing.Size(190, 560)
         Me.TableLayoutPanel9.TabIndex = 0
         '
@@ -6664,225 +6664,225 @@ Partial Class Frm_Engineering
         '
         Me.btn_Out_3_00.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_00.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_00.Location = New System.Drawing.Point(3, 3)
         Me.btn_Out_3_00.Name = "btn_Out_3_00"
         Me.btn_Out_3_00.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_00.TabIndex = 3
         Me.btn_Out_3_00.Text = "00-启动按钮指示灯"
         Me.btn_Out_3_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_00.UseVisualStyleBackColor = false
+        Me.btn_Out_3_00.UseVisualStyleBackColor = False
         '
         'btn_Out_3_01
         '
         Me.btn_Out_3_01.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_01.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_01.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_01.Location = New System.Drawing.Point(3, 38)
         Me.btn_Out_3_01.Name = "btn_Out_3_01"
         Me.btn_Out_3_01.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_01.TabIndex = 3
         Me.btn_Out_3_01.Text = "01-点胶站Z轴刹车"
         Me.btn_Out_3_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_01.UseVisualStyleBackColor = false
+        Me.btn_Out_3_01.UseVisualStyleBackColor = False
         '
         'btn_Out_3_02
         '
         Me.btn_Out_3_02.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_02.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_02.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_02.Location = New System.Drawing.Point(3, 73)
         Me.btn_Out_3_02.Name = "btn_Out_3_02"
         Me.btn_Out_3_02.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_02.TabIndex = 3
         Me.btn_Out_3_02.Text = "02-组装站Z轴刹车"
         Me.btn_Out_3_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_02.UseVisualStyleBackColor = false
+        Me.btn_Out_3_02.UseVisualStyleBackColor = False
         '
         'btn_Out_3_03
         '
         Me.btn_Out_3_03.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_03.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_03.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_03.Location = New System.Drawing.Point(3, 108)
         Me.btn_Out_3_03.Name = "btn_Out_3_03"
         Me.btn_Out_3_03.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_03.TabIndex = 3
         Me.btn_Out_3_03.Text = "03-取料站Z轴刹车"
         Me.btn_Out_3_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_03.UseVisualStyleBackColor = false
+        Me.btn_Out_3_03.UseVisualStyleBackColor = False
         '
         'btn_Out_3_04
         '
         Me.btn_Out_3_04.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_04.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_04.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_04.Location = New System.Drawing.Point(3, 143)
         Me.btn_Out_3_04.Name = "btn_Out_3_04"
         Me.btn_Out_3_04.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_04.TabIndex = 3
         Me.btn_Out_3_04.Text = "04-日光灯"
         Me.btn_Out_3_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_04.UseVisualStyleBackColor = false
+        Me.btn_Out_3_04.UseVisualStyleBackColor = False
         '
         'btn_Out_3_05
         '
         Me.btn_Out_3_05.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_05.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_05.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_05.Location = New System.Drawing.Point(3, 178)
         Me.btn_Out_3_05.Name = "btn_Out_3_05"
         Me.btn_Out_3_05.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_05.TabIndex = 3
         Me.btn_Out_3_05.Text = "05-三色灯红"
         Me.btn_Out_3_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_05.UseVisualStyleBackColor = false
+        Me.btn_Out_3_05.UseVisualStyleBackColor = False
         '
         'btn_Out_3_06
         '
         Me.btn_Out_3_06.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_06.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_06.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_06.Location = New System.Drawing.Point(3, 213)
         Me.btn_Out_3_06.Name = "btn_Out_3_06"
         Me.btn_Out_3_06.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_06.TabIndex = 3
         Me.btn_Out_3_06.Text = "06-三色灯黄"
         Me.btn_Out_3_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_06.UseVisualStyleBackColor = false
+        Me.btn_Out_3_06.UseVisualStyleBackColor = False
         '
         'btn_Out_3_07
         '
         Me.btn_Out_3_07.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_07.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_07.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_07.Location = New System.Drawing.Point(3, 248)
         Me.btn_Out_3_07.Name = "btn_Out_3_07"
         Me.btn_Out_3_07.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_07.TabIndex = 3
         Me.btn_Out_3_07.Text = "07-三色灯绿"
         Me.btn_Out_3_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_07.UseVisualStyleBackColor = false
+        Me.btn_Out_3_07.UseVisualStyleBackColor = False
         '
         'btn_Out_3_08
         '
         Me.btn_Out_3_08.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_08.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_08.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_08.Location = New System.Drawing.Point(3, 283)
         Me.btn_Out_3_08.Name = "btn_Out_3_08"
         Me.btn_Out_3_08.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_08.TabIndex = 3
         Me.btn_Out_3_08.Text = "08-三色灯蜂鸣器"
         Me.btn_Out_3_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_08.UseVisualStyleBackColor = false
+        Me.btn_Out_3_08.UseVisualStyleBackColor = False
         '
         'btn_Out_3_09
         '
         Me.btn_Out_3_09.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_09.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_09.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_09.Location = New System.Drawing.Point(3, 318)
         Me.btn_Out_3_09.Name = "btn_Out_3_09"
         Me.btn_Out_3_09.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_09.TabIndex = 3
         Me.btn_Out_3_09.Text = "09-点胶1升降气缸电磁阀"
         Me.btn_Out_3_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_09.UseVisualStyleBackColor = false
+        Me.btn_Out_3_09.UseVisualStyleBackColor = False
         '
         'btn_Out_3_10
         '
         Me.btn_Out_3_10.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_10.Location = New System.Drawing.Point(3, 353)
         Me.btn_Out_3_10.Name = "btn_Out_3_10"
         Me.btn_Out_3_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_10.TabIndex = 3
         Me.btn_Out_3_10.Text = "10-"
         Me.btn_Out_3_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_10.UseVisualStyleBackColor = false
+        Me.btn_Out_3_10.UseVisualStyleBackColor = False
         '
         'btn_Out_3_11
         '
         Me.btn_Out_3_11.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_11.Location = New System.Drawing.Point(3, 388)
         Me.btn_Out_3_11.Name = "btn_Out_3_11"
         Me.btn_Out_3_11.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_11.TabIndex = 3
         Me.btn_Out_3_11.Text = "11-点胶2升降气缸电磁阀"
         Me.btn_Out_3_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_11.UseVisualStyleBackColor = false
+        Me.btn_Out_3_11.UseVisualStyleBackColor = False
         '
         'btn_Out_3_12
         '
         Me.btn_Out_3_12.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_12.Location = New System.Drawing.Point(3, 423)
         Me.btn_Out_3_12.Name = "btn_Out_3_12"
         Me.btn_Out_3_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_12.TabIndex = 3
         Me.btn_Out_3_12.Text = "12-"
         Me.btn_Out_3_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_12.UseVisualStyleBackColor = false
+        Me.btn_Out_3_12.UseVisualStyleBackColor = False
         '
         'btn_Out_3_13
         '
         Me.btn_Out_3_13.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_13.Location = New System.Drawing.Point(3, 458)
         Me.btn_Out_3_13.Name = "btn_Out_3_13"
         Me.btn_Out_3_13.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_13.TabIndex = 3
         Me.btn_Out_3_13.Text = "13-OK指示灯"
         Me.btn_Out_3_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_13.UseVisualStyleBackColor = false
+        Me.btn_Out_3_13.UseVisualStyleBackColor = False
         '
         'btn_Out_3_14
         '
         Me.btn_Out_3_14.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_14.Location = New System.Drawing.Point(3, 493)
         Me.btn_Out_3_14.Name = "btn_Out_3_14"
         Me.btn_Out_3_14.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_14.TabIndex = 3
         Me.btn_Out_3_14.Text = "14-NG指示灯"
         Me.btn_Out_3_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_14.UseVisualStyleBackColor = false
+        Me.btn_Out_3_14.UseVisualStyleBackColor = False
         '
         'btn_Out_3_15
         '
         Me.btn_Out_3_15.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_3_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_3_15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_3_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_3_15.Location = New System.Drawing.Point(3, 528)
         Me.btn_Out_3_15.Name = "btn_Out_3_15"
         Me.btn_Out_3_15.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_15.TabIndex = 2
         Me.btn_Out_3_15.Text = "15-蜂鸣器"
         Me.btn_Out_3_15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_3_15.UseVisualStyleBackColor = false
+        Me.btn_Out_3_15.UseVisualStyleBackColor = False
         '
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.TableLayoutPanel8)
-        Me.GroupBox7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox7.Location = New System.Drawing.Point(204, 5)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(196, 596)
         Me.GroupBox7.TabIndex = 2
-        Me.GroupBox7.TabStop = false
+        Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Card 1"
         '
         'TableLayoutPanel8
         '
         Me.TableLayoutPanel8.ColumnCount = 1
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.btn_Out_1_00, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.btn_Out_1_01, 0, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.btn_Out_1_02, 0, 2)
@@ -6902,23 +6902,23 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel8.Location = New System.Drawing.Point(3, 20)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 16
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel8.Size = New System.Drawing.Size(190, 560)
         Me.TableLayoutPanel8.TabIndex = 0
         '
@@ -6926,225 +6926,225 @@ Partial Class Frm_Engineering
         '
         Me.btn_Out_1_00.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_00.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_00.Location = New System.Drawing.Point(3, 3)
         Me.btn_Out_1_00.Name = "btn_Out_1_00"
         Me.btn_Out_1_00.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_00.TabIndex = 3
         Me.btn_Out_1_00.Text = "00-L0阻挡气缸电磁阀"
         Me.btn_Out_1_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_00.UseVisualStyleBackColor = false
+        Me.btn_Out_1_00.UseVisualStyleBackColor = False
         '
         'btn_Out_1_01
         '
         Me.btn_Out_1_01.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_01.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_01.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_01.Location = New System.Drawing.Point(3, 38)
         Me.btn_Out_1_01.Name = "btn_Out_1_01"
         Me.btn_Out_1_01.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_01.TabIndex = 3
         Me.btn_Out_1_01.Text = "01-"
         Me.btn_Out_1_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_01.UseVisualStyleBackColor = false
+        Me.btn_Out_1_01.UseVisualStyleBackColor = False
         '
         'btn_Out_1_02
         '
         Me.btn_Out_1_02.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_02.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_02.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_02.Location = New System.Drawing.Point(3, 73)
         Me.btn_Out_1_02.Name = "btn_Out_1_02"
         Me.btn_Out_1_02.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_02.TabIndex = 3
         Me.btn_Out_1_02.Text = "02-L1阻挡气缸电磁阀"
         Me.btn_Out_1_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_02.UseVisualStyleBackColor = false
+        Me.btn_Out_1_02.UseVisualStyleBackColor = False
         '
         'btn_Out_1_03
         '
         Me.btn_Out_1_03.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_03.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_03.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_03.Location = New System.Drawing.Point(3, 108)
         Me.btn_Out_1_03.Name = "btn_Out_1_03"
         Me.btn_Out_1_03.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_03.TabIndex = 3
         Me.btn_Out_1_03.Text = "03-"
         Me.btn_Out_1_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_03.UseVisualStyleBackColor = false
+        Me.btn_Out_1_03.UseVisualStyleBackColor = False
         '
         'btn_Out_1_04
         '
         Me.btn_Out_1_04.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_04.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_04.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_04.Location = New System.Drawing.Point(3, 143)
         Me.btn_Out_1_04.Name = "btn_Out_1_04"
         Me.btn_Out_1_04.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_04.TabIndex = 3
         Me.btn_Out_1_04.Text = "04-L2阻挡气缸电磁阀"
         Me.btn_Out_1_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_04.UseVisualStyleBackColor = false
+        Me.btn_Out_1_04.UseVisualStyleBackColor = False
         '
         'btn_Out_1_05
         '
         Me.btn_Out_1_05.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_05.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_05.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_05.Location = New System.Drawing.Point(3, 178)
         Me.btn_Out_1_05.Name = "btn_Out_1_05"
         Me.btn_Out_1_05.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_05.TabIndex = 3
         Me.btn_Out_1_05.Text = "05-"
         Me.btn_Out_1_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_05.UseVisualStyleBackColor = false
+        Me.btn_Out_1_05.UseVisualStyleBackColor = False
         '
         'btn_Out_1_06
         '
         Me.btn_Out_1_06.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_06.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_06.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_06.Location = New System.Drawing.Point(3, 213)
         Me.btn_Out_1_06.Name = "btn_Out_1_06"
         Me.btn_Out_1_06.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_06.TabIndex = 3
         Me.btn_Out_1_06.Text = "06-L3阻挡气缸电磁阀"
         Me.btn_Out_1_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_06.UseVisualStyleBackColor = false
+        Me.btn_Out_1_06.UseVisualStyleBackColor = False
         '
         'btn_Out_1_07
         '
         Me.btn_Out_1_07.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_07.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_07.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_07.Location = New System.Drawing.Point(3, 248)
         Me.btn_Out_1_07.Name = "btn_Out_1_07"
         Me.btn_Out_1_07.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_07.TabIndex = 3
         Me.btn_Out_1_07.Text = "07-"
         Me.btn_Out_1_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_07.UseVisualStyleBackColor = false
+        Me.btn_Out_1_07.UseVisualStyleBackColor = False
         '
         'btn_Out_1_08
         '
         Me.btn_Out_1_08.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_08.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_08.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_08.Location = New System.Drawing.Point(3, 283)
         Me.btn_Out_1_08.Name = "btn_Out_1_08"
         Me.btn_Out_1_08.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_08.TabIndex = 3
         Me.btn_Out_1_08.Text = "08-L1顶升气缸电磁阀"
         Me.btn_Out_1_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_08.UseVisualStyleBackColor = false
+        Me.btn_Out_1_08.UseVisualStyleBackColor = False
         '
         'btn_Out_1_09
         '
         Me.btn_Out_1_09.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_09.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_09.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_09.Location = New System.Drawing.Point(3, 318)
         Me.btn_Out_1_09.Name = "btn_Out_1_09"
         Me.btn_Out_1_09.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_09.TabIndex = 3
         Me.btn_Out_1_09.Text = "09-"
         Me.btn_Out_1_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_09.UseVisualStyleBackColor = false
+        Me.btn_Out_1_09.UseVisualStyleBackColor = False
         '
         'btn_Out_1_10
         '
         Me.btn_Out_1_10.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_10.Location = New System.Drawing.Point(3, 353)
         Me.btn_Out_1_10.Name = "btn_Out_1_10"
         Me.btn_Out_1_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_10.TabIndex = 3
         Me.btn_Out_1_10.Text = "10-L2顶升气缸电磁阀"
         Me.btn_Out_1_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_10.UseVisualStyleBackColor = false
+        Me.btn_Out_1_10.UseVisualStyleBackColor = False
         '
         'btn_Out_1_11
         '
         Me.btn_Out_1_11.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_11.Location = New System.Drawing.Point(3, 388)
         Me.btn_Out_1_11.Name = "btn_Out_1_11"
         Me.btn_Out_1_11.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_11.TabIndex = 3
         Me.btn_Out_1_11.Text = "11-"
         Me.btn_Out_1_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_11.UseVisualStyleBackColor = false
+        Me.btn_Out_1_11.UseVisualStyleBackColor = False
         '
         'btn_Out_1_12
         '
         Me.btn_Out_1_12.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_12.Location = New System.Drawing.Point(3, 423)
         Me.btn_Out_1_12.Name = "btn_Out_1_12"
         Me.btn_Out_1_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_12.TabIndex = 3
         Me.btn_Out_1_12.Text = "12-L3顶升气缸电磁阀"
         Me.btn_Out_1_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_12.UseVisualStyleBackColor = false
+        Me.btn_Out_1_12.UseVisualStyleBackColor = False
         '
         'btn_Out_1_13
         '
         Me.btn_Out_1_13.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_13.Location = New System.Drawing.Point(3, 458)
         Me.btn_Out_1_13.Name = "btn_Out_1_13"
         Me.btn_Out_1_13.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_13.TabIndex = 14
         Me.btn_Out_1_13.Text = "13-点胶1点胶"
         Me.btn_Out_1_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_13.UseVisualStyleBackColor = false
+        Me.btn_Out_1_13.UseVisualStyleBackColor = False
         '
         'btn_Out_1_14
         '
         Me.btn_Out_1_14.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_14.Location = New System.Drawing.Point(3, 493)
         Me.btn_Out_1_14.Name = "btn_Out_1_14"
         Me.btn_Out_1_14.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_14.TabIndex = 3
         Me.btn_Out_1_14.Text = "14-点胶2点胶"
         Me.btn_Out_1_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_14.UseVisualStyleBackColor = false
+        Me.btn_Out_1_14.UseVisualStyleBackColor = False
         '
         'btn_Out_1_15
         '
         Me.btn_Out_1_15.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_1_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_1_15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_1_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_1_15.Location = New System.Drawing.Point(3, 528)
         Me.btn_Out_1_15.Name = "btn_Out_1_15"
         Me.btn_Out_1_15.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_1_15.TabIndex = 2
         Me.btn_Out_1_15.Text = "15-真空泵"
         Me.btn_Out_1_15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_1_15.UseVisualStyleBackColor = false
+        Me.btn_Out_1_15.UseVisualStyleBackColor = False
         '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.TableLayoutPanel7)
-        Me.GroupBox6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.GroupBox6.Location = New System.Drawing.Point(3, 5)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(196, 596)
         Me.GroupBox6.TabIndex = 1
-        Me.GroupBox6.TabStop = false
+        Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Card 0"
         '
         'TableLayoutPanel7
         '
         Me.TableLayoutPanel7.ColumnCount = 1
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.btn_Out_0_00, 0, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.btn_Out_0_01, 0, 1)
         Me.TableLayoutPanel7.Controls.Add(Me.btn_Out_0_02, 0, 2)
@@ -7164,23 +7164,23 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 20)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 16
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35!))
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel7.Size = New System.Drawing.Size(190, 560)
         Me.TableLayoutPanel7.TabIndex = 0
         '
@@ -7188,209 +7188,209 @@ Partial Class Frm_Engineering
         '
         Me.btn_Out_0_00.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_00.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_00.Location = New System.Drawing.Point(3, 3)
         Me.btn_Out_0_00.Name = "btn_Out_0_00"
         Me.btn_Out_0_00.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_00.TabIndex = 1
         Me.btn_Out_0_00.Text = "00-"
         Me.btn_Out_0_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_00.UseVisualStyleBackColor = false
+        Me.btn_Out_0_00.UseVisualStyleBackColor = False
         '
         'btn_Out_0_01
         '
         Me.btn_Out_0_01.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_01.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_01.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_01.Location = New System.Drawing.Point(3, 38)
         Me.btn_Out_0_01.Name = "btn_Out_0_01"
         Me.btn_Out_0_01.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_01.TabIndex = 2
         Me.btn_Out_0_01.Text = "01-"
         Me.btn_Out_0_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_01.UseVisualStyleBackColor = false
+        Me.btn_Out_0_01.UseVisualStyleBackColor = False
         '
         'btn_Out_0_02
         '
         Me.btn_Out_0_02.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_02.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_02.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_02.Location = New System.Drawing.Point(3, 73)
         Me.btn_Out_0_02.Name = "btn_Out_0_02"
         Me.btn_Out_0_02.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_02.TabIndex = 3
         Me.btn_Out_0_02.Text = "02-"
         Me.btn_Out_0_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_02.UseVisualStyleBackColor = false
+        Me.btn_Out_0_02.UseVisualStyleBackColor = False
         '
         'btn_Out_0_03
         '
         Me.btn_Out_0_03.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_03.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_03.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_03.Location = New System.Drawing.Point(3, 108)
         Me.btn_Out_0_03.Name = "btn_Out_0_03"
         Me.btn_Out_0_03.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_03.TabIndex = 4
         Me.btn_Out_0_03.Text = "03-"
         Me.btn_Out_0_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_03.UseVisualStyleBackColor = false
+        Me.btn_Out_0_03.UseVisualStyleBackColor = False
         '
         'btn_Out_0_04
         '
         Me.btn_Out_0_04.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_04.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_04.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_04.Location = New System.Drawing.Point(3, 143)
         Me.btn_Out_0_04.Name = "btn_Out_0_04"
         Me.btn_Out_0_04.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_04.TabIndex = 5
         Me.btn_Out_0_04.Text = "04-"
         Me.btn_Out_0_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_04.UseVisualStyleBackColor = false
+        Me.btn_Out_0_04.UseVisualStyleBackColor = False
         '
         'btn_Out_0_05
         '
         Me.btn_Out_0_05.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_05.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_05.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_05.Location = New System.Drawing.Point(3, 178)
         Me.btn_Out_0_05.Name = "btn_Out_0_05"
         Me.btn_Out_0_05.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_05.TabIndex = 6
         Me.btn_Out_0_05.Text = "05-"
         Me.btn_Out_0_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_05.UseVisualStyleBackColor = false
+        Me.btn_Out_0_05.UseVisualStyleBackColor = False
         '
         'btn_Out_0_06
         '
         Me.btn_Out_0_06.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_06.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_06.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_06.Location = New System.Drawing.Point(3, 213)
         Me.btn_Out_0_06.Name = "btn_Out_0_06"
         Me.btn_Out_0_06.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_06.TabIndex = 7
         Me.btn_Out_0_06.Text = "06-"
         Me.btn_Out_0_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_06.UseVisualStyleBackColor = false
+        Me.btn_Out_0_06.UseVisualStyleBackColor = False
         '
         'btn_Out_0_07
         '
         Me.btn_Out_0_07.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_07.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_07.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_07.Location = New System.Drawing.Point(3, 248)
         Me.btn_Out_0_07.Name = "btn_Out_0_07"
         Me.btn_Out_0_07.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_07.TabIndex = 8
         Me.btn_Out_0_07.Text = "07-"
         Me.btn_Out_0_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_07.UseVisualStyleBackColor = false
+        Me.btn_Out_0_07.UseVisualStyleBackColor = False
         '
         'btn_Out_0_08
         '
         Me.btn_Out_0_08.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_08.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_08.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_08.Location = New System.Drawing.Point(3, 283)
         Me.btn_Out_0_08.Name = "btn_Out_0_08"
         Me.btn_Out_0_08.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_08.TabIndex = 9
         Me.btn_Out_0_08.Text = "08-组装站吸排线吸真空"
         Me.btn_Out_0_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_08.UseVisualStyleBackColor = false
+        Me.btn_Out_0_08.UseVisualStyleBackColor = False
         '
         'btn_Out_0_09
         '
         Me.btn_Out_0_09.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_09.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_09.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_09.Location = New System.Drawing.Point(3, 318)
         Me.btn_Out_0_09.Name = "btn_Out_0_09"
         Me.btn_Out_0_09.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_09.TabIndex = 10
         Me.btn_Out_0_09.Text = "09-组装站吸排线破真空"
         Me.btn_Out_0_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_09.UseVisualStyleBackColor = false
+        Me.btn_Out_0_09.UseVisualStyleBackColor = False
         '
         'btn_Out_0_10
         '
         Me.btn_Out_0_10.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_10.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_10.Location = New System.Drawing.Point(3, 353)
         Me.btn_Out_0_10.Name = "btn_Out_0_10"
         Me.btn_Out_0_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_10.TabIndex = 11
         Me.btn_Out_0_10.Text = "10-取料站吸排线吸真空"
         Me.btn_Out_0_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_10.UseVisualStyleBackColor = false
+        Me.btn_Out_0_10.UseVisualStyleBackColor = False
         '
         'btn_Out_0_11
         '
         Me.btn_Out_0_11.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_11.Location = New System.Drawing.Point(3, 388)
         Me.btn_Out_0_11.Name = "btn_Out_0_11"
         Me.btn_Out_0_11.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_11.TabIndex = 12
         Me.btn_Out_0_11.Text = "11-取料站吸排线破真空"
         Me.btn_Out_0_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_11.UseVisualStyleBackColor = false
+        Me.btn_Out_0_11.UseVisualStyleBackColor = False
         '
         'btn_Out_0_12
         '
         Me.btn_Out_0_12.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_12.Location = New System.Drawing.Point(3, 423)
         Me.btn_Out_0_12.Name = "btn_Out_0_12"
         Me.btn_Out_0_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_12.TabIndex = 13
         Me.btn_Out_0_12.Text = "12-组装站取料吸真空"
         Me.btn_Out_0_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_12.UseVisualStyleBackColor = false
+        Me.btn_Out_0_12.UseVisualStyleBackColor = False
         '
         'btn_Out_0_13
         '
         Me.btn_Out_0_13.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_13.Location = New System.Drawing.Point(3, 458)
         Me.btn_Out_0_13.Name = "btn_Out_0_13"
         Me.btn_Out_0_13.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_13.TabIndex = 14
         Me.btn_Out_0_13.Text = "13-组装站取料破真空"
         Me.btn_Out_0_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_13.UseVisualStyleBackColor = false
+        Me.btn_Out_0_13.UseVisualStyleBackColor = False
         '
         'btn_Out_0_14
         '
         Me.btn_Out_0_14.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_14.Location = New System.Drawing.Point(3, 493)
         Me.btn_Out_0_14.Name = "btn_Out_0_14"
         Me.btn_Out_0_14.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_14.TabIndex = 15
         Me.btn_Out_0_14.Text = "14-取料站取料吸真空"
         Me.btn_Out_0_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_14.UseVisualStyleBackColor = false
+        Me.btn_Out_0_14.UseVisualStyleBackColor = False
         '
         'btn_Out_0_15
         '
         Me.btn_Out_0_15.BackColor = System.Drawing.Color.Transparent
         Me.btn_Out_0_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Out_0_15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Out_0_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_Out_0_15.Location = New System.Drawing.Point(3, 528)
         Me.btn_Out_0_15.Name = "btn_Out_0_15"
         Me.btn_Out_0_15.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_0_15.TabIndex = 16
         Me.btn_Out_0_15.Text = "15-取料站取料破真空"
         Me.btn_Out_0_15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Out_0_15.UseVisualStyleBackColor = false
+        Me.btn_Out_0_15.UseVisualStyleBackColor = False
         '
         'TabPage4
         '
@@ -7401,14 +7401,14 @@ Partial Class Frm_Engineering
         Me.TabPage4.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "手动调试界面"
-        Me.TabPage4.UseVisualStyleBackColor = true
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'tab_Log
         '
         Me.tab_Log.Controls.Add(Me.TabPage10)
         Me.tab_Log.Controls.Add(Me.TabPage11)
         Me.tab_Log.Controls.Add(Me.TabPage12)
-        Me.tab_Log.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.tab_Log.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.tab_Log.Location = New System.Drawing.Point(0, 0)
         Me.tab_Log.Name = "tab_Log"
         Me.tab_Log.SelectedIndex = 0
@@ -7420,13 +7420,13 @@ Partial Class Frm_Engineering
         Me.TabPage10.Controls.Add(Me.btn_ClearLog)
         Me.TabPage10.Controls.Add(Me.btn_enlarge)
         Me.TabPage10.Controls.Add(Me.listbox_Debug)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage10.Location = New System.Drawing.Point(4, 25)
         Me.TabPage10.Name = "TabPage10"
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(247, 587)
+        Me.TabPage10.Size = New System.Drawing.Size(247, 586)
         Me.TabPage10.TabIndex = 0
         Me.TabPage10.Text = "Log"
-        Me.TabPage10.UseVisualStyleBackColor = true
+        Me.TabPage10.UseVisualStyleBackColor = True
         '
         'btn_ClearLog
         '
@@ -7435,7 +7435,7 @@ Partial Class Frm_Engineering
         Me.btn_ClearLog.Size = New System.Drawing.Size(50, 30)
         Me.btn_ClearLog.TabIndex = 3
         Me.btn_ClearLog.Text = "Clear"
-        Me.btn_ClearLog.UseVisualStyleBackColor = true
+        Me.btn_ClearLog.UseVisualStyleBackColor = True
         '
         'btn_enlarge
         '
@@ -7444,36 +7444,36 @@ Partial Class Frm_Engineering
         Me.btn_enlarge.Size = New System.Drawing.Size(50, 30)
         Me.btn_enlarge.TabIndex = 2
         Me.btn_enlarge.Text = ">>"
-        Me.btn_enlarge.UseVisualStyleBackColor = true
+        Me.btn_enlarge.UseVisualStyleBackColor = True
         '
         'listbox_Debug
         '
         Me.listbox_Debug.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.listbox_Debug.Font = New System.Drawing.Font("HelveticaNeue", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.listbox_Debug.FormattingEnabled = true
-        Me.listbox_Debug.ItemHeight = 14
+        Me.listbox_Debug.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listbox_Debug.FormattingEnabled = True
+        Me.listbox_Debug.ItemHeight = 15
         Me.listbox_Debug.Location = New System.Drawing.Point(0, 2)
         Me.listbox_Debug.Name = "listbox_Debug"
-        Me.listbox_Debug.Size = New System.Drawing.Size(245, 536)
+        Me.listbox_Debug.Size = New System.Drawing.Size(245, 529)
         Me.listbox_Debug.TabIndex = 0
         '
         'TabPage11
         '
         Me.TabPage11.Controls.Add(Me.TableLayoutPanel16)
-        Me.TabPage11.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage11.Location = New System.Drawing.Point(4, 25)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(247, 587)
+        Me.TabPage11.Size = New System.Drawing.Size(247, 586)
         Me.TabPage11.TabIndex = 1
         Me.TabPage11.Text = "CCD"
-        Me.TabPage11.UseVisualStyleBackColor = true
+        Me.TabPage11.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel16
         '
         Me.TableLayoutPanel16.ColumnCount = 3
-        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80!))
-        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80!))
-        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
         Me.TableLayoutPanel16.Controls.Add(Me.btn_T61, 1, 2)
         Me.TableLayoutPanel16.Controls.Add(Me.btn_T51, 0, 2)
         Me.TableLayoutPanel16.Controls.Add(Me.btn_T43, 2, 1)
@@ -7485,118 +7485,297 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel16.Location = New System.Drawing.Point(3, 5)
         Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
         Me.TableLayoutPanel16.RowCount = 10
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
         Me.TableLayoutPanel16.Size = New System.Drawing.Size(240, 530)
         Me.TableLayoutPanel16.TabIndex = 105
         '
         'btn_T61
         '
-        Me.btn_T61.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T61.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T61.Location = New System.Drawing.Point(85, 111)
         Me.btn_T61.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T61.Name = "btn_T61"
         Me.btn_T61.Size = New System.Drawing.Size(70, 43)
         Me.btn_T61.TabIndex = 112
         Me.btn_T61.Text = "T6,1"
-        Me.btn_T61.UseVisualStyleBackColor = true
+        Me.btn_T61.UseVisualStyleBackColor = True
         '
         'btn_T51
         '
-        Me.btn_T51.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T51.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T51.Location = New System.Drawing.Point(5, 111)
         Me.btn_T51.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T51.Name = "btn_T51"
         Me.btn_T51.Size = New System.Drawing.Size(70, 43)
         Me.btn_T51.TabIndex = 111
         Me.btn_T51.Text = "T5,1"
-        Me.btn_T51.UseVisualStyleBackColor = true
+        Me.btn_T51.UseVisualStyleBackColor = True
         '
         'btn_T43
         '
-        Me.btn_T43.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T43.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T43.Location = New System.Drawing.Point(165, 58)
         Me.btn_T43.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T43.Name = "btn_T43"
         Me.btn_T43.Size = New System.Drawing.Size(70, 43)
         Me.btn_T43.TabIndex = 110
         Me.btn_T43.Text = "T4,3"
-        Me.btn_T43.UseVisualStyleBackColor = true
+        Me.btn_T43.UseVisualStyleBackColor = True
         '
         'btn_T42
         '
-        Me.btn_T42.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T42.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T42.Location = New System.Drawing.Point(85, 58)
         Me.btn_T42.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T42.Name = "btn_T42"
         Me.btn_T42.Size = New System.Drawing.Size(70, 43)
         Me.btn_T42.TabIndex = 109
         Me.btn_T42.Text = "T4,2"
-        Me.btn_T42.UseVisualStyleBackColor = true
+        Me.btn_T42.UseVisualStyleBackColor = True
         '
         'btn_T41
         '
-        Me.btn_T41.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T41.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T41.Location = New System.Drawing.Point(5, 58)
         Me.btn_T41.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T41.Name = "btn_T41"
         Me.btn_T41.Size = New System.Drawing.Size(70, 43)
         Me.btn_T41.TabIndex = 108
         Me.btn_T41.Text = "T4,1"
-        Me.btn_T41.UseVisualStyleBackColor = true
+        Me.btn_T41.UseVisualStyleBackColor = True
         '
         'btn_T31
         '
-        Me.btn_T31.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T31.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T31.Location = New System.Drawing.Point(165, 5)
         Me.btn_T31.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T31.Name = "btn_T31"
         Me.btn_T31.Size = New System.Drawing.Size(70, 43)
         Me.btn_T31.TabIndex = 107
         Me.btn_T31.Text = "T3,1"
-        Me.btn_T31.UseVisualStyleBackColor = true
+        Me.btn_T31.UseVisualStyleBackColor = True
         '
         'btn_T21
         '
-        Me.btn_T21.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T21.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T21.Location = New System.Drawing.Point(85, 5)
         Me.btn_T21.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T21.Name = "btn_T21"
         Me.btn_T21.Size = New System.Drawing.Size(70, 43)
         Me.btn_T21.TabIndex = 106
         Me.btn_T21.Text = "T2,1"
-        Me.btn_T21.UseVisualStyleBackColor = true
+        Me.btn_T21.UseVisualStyleBackColor = True
         '
         'btn_T11
         '
-        Me.btn_T11.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_T11.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_T11.Location = New System.Drawing.Point(5, 5)
         Me.btn_T11.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_T11.Name = "btn_T11"
         Me.btn_T11.Size = New System.Drawing.Size(70, 43)
         Me.btn_T11.TabIndex = 104
         Me.btn_T11.Text = "T1,1"
-        Me.btn_T11.UseVisualStyleBackColor = true
+        Me.btn_T11.UseVisualStyleBackColor = True
         '
         'TabPage12
         '
         Me.TabPage12.Controls.Add(Me.Grp)
         Me.TabPage12.Controls.Add(Me.gupStep)
         Me.TabPage12.Controls.Add(Me.gupVel)
-        Me.TabPage12.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 25)
         Me.TabPage12.Name = "TabPage12"
-        Me.TabPage12.Size = New System.Drawing.Size(247, 587)
+        Me.TabPage12.Size = New System.Drawing.Size(247, 586)
         Me.TabPage12.TabIndex = 2
         Me.TabPage12.Text = "Step & Vel"
-        Me.TabPage12.UseVisualStyleBackColor = true
+        Me.TabPage12.UseVisualStyleBackColor = True
+        '
+        'Grp
+        '
+        Me.Grp.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Grp.Controls.Add(Me.Label336)
+        Me.Grp.Controls.Add(Me.txt_MaterialSelected)
+        Me.Grp.Controls.Add(Me.rad_Brc11)
+        Me.Grp.Controls.Add(Me.rad_Brc10)
+        Me.Grp.Controls.Add(Me.rad_Brc9)
+        Me.Grp.Controls.Add(Me.rad_Brc8)
+        Me.Grp.Controls.Add(Me.rad_Brc7)
+        Me.Grp.Controls.Add(Me.rad_Brc6)
+        Me.Grp.Controls.Add(Me.rad_Brc5)
+        Me.Grp.Controls.Add(Me.rad_Brc4)
+        Me.Grp.Controls.Add(Me.rad_Brc3)
+        Me.Grp.Controls.Add(Me.rad_Brc2)
+        Me.Grp.Controls.Add(Me.rad_Brc1)
+        Me.Grp.Controls.Add(Me.rad_Brc0)
+        Me.Grp.Location = New System.Drawing.Point(9, 247)
+        Me.Grp.Name = "Grp"
+        Me.Grp.Size = New System.Drawing.Size(227, 148)
+        Me.Grp.TabIndex = 265
+        Me.Grp.TabStop = False
+        Me.Grp.Text = "选择载具中料的序号"
+        '
+        'Label336
+        '
+        Me.Label336.AutoSize = True
+        Me.Label336.Location = New System.Drawing.Point(8, 123)
+        Me.Label336.Name = "Label336"
+        Me.Label336.Size = New System.Drawing.Size(98, 16)
+        Me.Label336.TabIndex = 279
+        Me.Label336.Text = "单站调试选料"
+        '
+        'txt_MaterialSelected
+        '
+        Me.txt_MaterialSelected.BackColor = System.Drawing.SystemColors.Window
+        Me.txt_MaterialSelected.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.txt_MaterialSelected.ForeColor = System.Drawing.Color.Blue
+        Me.txt_MaterialSelected.Location = New System.Drawing.Point(117, 121)
+        Me.txt_MaterialSelected.Name = "txt_MaterialSelected"
+        Me.txt_MaterialSelected.Size = New System.Drawing.Size(63, 21)
+        Me.txt_MaterialSelected.TabIndex = 278
+        Me.txt_MaterialSelected.Text = "10"
+        Me.txt_MaterialSelected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'rad_Brc11
+        '
+        Me.rad_Brc11.AutoSize = True
+        Me.rad_Brc11.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc11.Location = New System.Drawing.Point(174, 90)
+        Me.rad_Brc11.Name = "rad_Brc11"
+        Me.rad_Brc11.Size = New System.Drawing.Size(40, 20)
+        Me.rad_Brc11.TabIndex = 277
+        Me.rad_Brc11.Text = "12"
+        Me.rad_Brc11.UseVisualStyleBackColor = True
+        '
+        'rad_Brc10
+        '
+        Me.rad_Brc10.AutoSize = True
+        Me.rad_Brc10.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc10.Location = New System.Drawing.Point(149, 69)
+        Me.rad_Brc10.Name = "rad_Brc10"
+        Me.rad_Brc10.Size = New System.Drawing.Size(40, 20)
+        Me.rad_Brc10.TabIndex = 276
+        Me.rad_Brc10.Text = "11"
+        Me.rad_Brc10.UseVisualStyleBackColor = True
+        '
+        'rad_Brc9
+        '
+        Me.rad_Brc9.AutoSize = True
+        Me.rad_Brc9.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc9.Location = New System.Drawing.Point(110, 90)
+        Me.rad_Brc9.Name = "rad_Brc9"
+        Me.rad_Brc9.Size = New System.Drawing.Size(40, 20)
+        Me.rad_Brc9.TabIndex = 275
+        Me.rad_Brc9.Text = "10"
+        Me.rad_Brc9.UseVisualStyleBackColor = True
+        '
+        'rad_Brc8
+        '
+        Me.rad_Brc8.AutoSize = True
+        Me.rad_Brc8.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc8.Location = New System.Drawing.Point(85, 69)
+        Me.rad_Brc8.Name = "rad_Brc8"
+        Me.rad_Brc8.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc8.TabIndex = 274
+        Me.rad_Brc8.Text = "9"
+        Me.rad_Brc8.UseVisualStyleBackColor = True
+        '
+        'rad_Brc7
+        '
+        Me.rad_Brc7.AutoSize = True
+        Me.rad_Brc7.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc7.Location = New System.Drawing.Point(46, 90)
+        Me.rad_Brc7.Name = "rad_Brc7"
+        Me.rad_Brc7.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc7.TabIndex = 273
+        Me.rad_Brc7.Text = "8"
+        Me.rad_Brc7.UseVisualStyleBackColor = True
+        '
+        'rad_Brc6
+        '
+        Me.rad_Brc6.AutoSize = True
+        Me.rad_Brc6.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc6.Location = New System.Drawing.Point(21, 69)
+        Me.rad_Brc6.Name = "rad_Brc6"
+        Me.rad_Brc6.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc6.TabIndex = 272
+        Me.rad_Brc6.Text = "7"
+        Me.rad_Brc6.UseVisualStyleBackColor = True
+        '
+        'rad_Brc5
+        '
+        Me.rad_Brc5.AutoSize = True
+        Me.rad_Brc5.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc5.Location = New System.Drawing.Point(174, 43)
+        Me.rad_Brc5.Name = "rad_Brc5"
+        Me.rad_Brc5.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc5.TabIndex = 271
+        Me.rad_Brc5.Text = "6"
+        Me.rad_Brc5.UseVisualStyleBackColor = True
+        '
+        'rad_Brc4
+        '
+        Me.rad_Brc4.AutoSize = True
+        Me.rad_Brc4.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc4.Location = New System.Drawing.Point(149, 23)
+        Me.rad_Brc4.Name = "rad_Brc4"
+        Me.rad_Brc4.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc4.TabIndex = 270
+        Me.rad_Brc4.Text = "5"
+        Me.rad_Brc4.UseVisualStyleBackColor = True
+        '
+        'rad_Brc3
+        '
+        Me.rad_Brc3.AutoSize = True
+        Me.rad_Brc3.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc3.Location = New System.Drawing.Point(110, 43)
+        Me.rad_Brc3.Name = "rad_Brc3"
+        Me.rad_Brc3.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc3.TabIndex = 269
+        Me.rad_Brc3.Text = "4"
+        Me.rad_Brc3.UseVisualStyleBackColor = True
+        '
+        'rad_Brc2
+        '
+        Me.rad_Brc2.AutoSize = True
+        Me.rad_Brc2.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc2.Location = New System.Drawing.Point(85, 23)
+        Me.rad_Brc2.Name = "rad_Brc2"
+        Me.rad_Brc2.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc2.TabIndex = 268
+        Me.rad_Brc2.Text = "3"
+        Me.rad_Brc2.UseVisualStyleBackColor = True
+        '
+        'rad_Brc1
+        '
+        Me.rad_Brc1.AutoSize = True
+        Me.rad_Brc1.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc1.Location = New System.Drawing.Point(46, 43)
+        Me.rad_Brc1.Name = "rad_Brc1"
+        Me.rad_Brc1.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc1.TabIndex = 267
+        Me.rad_Brc1.Text = "2"
+        Me.rad_Brc1.UseVisualStyleBackColor = True
+        '
+        'rad_Brc0
+        '
+        Me.rad_Brc0.AutoSize = True
+        Me.rad_Brc0.Checked = True
+        Me.rad_Brc0.ForeColor = System.Drawing.Color.Blue
+        Me.rad_Brc0.Location = New System.Drawing.Point(21, 23)
+        Me.rad_Brc0.Name = "rad_Brc0"
+        Me.rad_Brc0.Size = New System.Drawing.Size(33, 20)
+        Me.rad_Brc0.TabIndex = 266
+        Me.rad_Brc0.TabStop = True
+        Me.rad_Brc0.Text = "1"
+        Me.rad_Brc0.UseVisualStyleBackColor = True
         '
         'gupStep
         '
@@ -7608,19 +7787,19 @@ Partial Class Frm_Engineering
         Me.gupStep.Controls.Add(Me.radStepS2_0)
         Me.gupStep.Controls.Add(Me.radStepS2_2)
         Me.gupStep.Controls.Add(Me.radStepS2_5)
-        Me.gupStep.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.gupStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gupStep.ForeColor = System.Drawing.Color.Red
         Me.gupStep.Location = New System.Drawing.Point(10, 11)
         Me.gupStep.Name = "gupStep"
         Me.gupStep.Size = New System.Drawing.Size(110, 230)
         Me.gupStep.TabIndex = 264
-        Me.gupStep.TabStop = false
+        Me.gupStep.TabStop = False
         Me.gupStep.Text = "步长(mm)"
         '
         'txtStepS2
         '
         Me.txtStepS2.BackColor = System.Drawing.SystemColors.Window
-        Me.txtStepS2.Font = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.txtStepS2.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.txtStepS2.ForeColor = System.Drawing.Color.Red
         Me.txtStepS2.Location = New System.Drawing.Point(22, 184)
         Me.txtStepS2.Name = "txtStepS2"
@@ -7631,71 +7810,71 @@ Partial Class Frm_Engineering
         '
         'radStepS2_3
         '
-        Me.radStepS2_3.AutoSize = true
+        Me.radStepS2_3.AutoSize = True
         Me.radStepS2_3.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_3.Location = New System.Drawing.Point(22, 101)
         Me.radStepS2_3.Name = "radStepS2_3"
-        Me.radStepS2_3.Size = New System.Drawing.Size(38, 16)
+        Me.radStepS2_3.Size = New System.Drawing.Size(40, 17)
         Me.radStepS2_3.TabIndex = 3
         Me.radStepS2_3.Text = "0.1"
-        Me.radStepS2_3.UseVisualStyleBackColor = true
+        Me.radStepS2_3.UseVisualStyleBackColor = True
         '
         'radStepS2_4
         '
-        Me.radStepS2_4.AutoSize = true
+        Me.radStepS2_4.AutoSize = True
         Me.radStepS2_4.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_4.Location = New System.Drawing.Point(22, 128)
         Me.radStepS2_4.Name = "radStepS2_4"
-        Me.radStepS2_4.Size = New System.Drawing.Size(38, 16)
+        Me.radStepS2_4.Size = New System.Drawing.Size(40, 17)
         Me.radStepS2_4.TabIndex = 4
         Me.radStepS2_4.Text = "0.5"
-        Me.radStepS2_4.UseVisualStyleBackColor = true
+        Me.radStepS2_4.UseVisualStyleBackColor = True
         '
         'radStepS2_1
         '
-        Me.radStepS2_1.AutoSize = true
-        Me.radStepS2_1.Checked = true
+        Me.radStepS2_1.AutoSize = True
+        Me.radStepS2_1.Checked = True
         Me.radStepS2_1.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_1.Location = New System.Drawing.Point(22, 47)
         Me.radStepS2_1.Name = "radStepS2_1"
-        Me.radStepS2_1.Size = New System.Drawing.Size(44, 16)
+        Me.radStepS2_1.Size = New System.Drawing.Size(46, 17)
         Me.radStepS2_1.TabIndex = 1
-        Me.radStepS2_1.TabStop = true
+        Me.radStepS2_1.TabStop = True
         Me.radStepS2_1.Text = "0.01"
-        Me.radStepS2_1.UseVisualStyleBackColor = true
+        Me.radStepS2_1.UseVisualStyleBackColor = True
         '
         'radStepS2_0
         '
-        Me.radStepS2_0.AutoSize = true
+        Me.radStepS2_0.AutoSize = True
         Me.radStepS2_0.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_0.Location = New System.Drawing.Point(22, 20)
         Me.radStepS2_0.Name = "radStepS2_0"
-        Me.radStepS2_0.Size = New System.Drawing.Size(45, 16)
+        Me.radStepS2_0.Size = New System.Drawing.Size(46, 17)
         Me.radStepS2_0.TabIndex = 0
         Me.radStepS2_0.Text = "JOG"
-        Me.radStepS2_0.UseVisualStyleBackColor = true
+        Me.radStepS2_0.UseVisualStyleBackColor = True
         '
         'radStepS2_2
         '
-        Me.radStepS2_2.AutoSize = true
+        Me.radStepS2_2.AutoSize = True
         Me.radStepS2_2.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_2.Location = New System.Drawing.Point(22, 74)
         Me.radStepS2_2.Name = "radStepS2_2"
-        Me.radStepS2_2.Size = New System.Drawing.Size(44, 16)
+        Me.radStepS2_2.Size = New System.Drawing.Size(46, 17)
         Me.radStepS2_2.TabIndex = 2
         Me.radStepS2_2.Text = "0.05"
-        Me.radStepS2_2.UseVisualStyleBackColor = true
+        Me.radStepS2_2.UseVisualStyleBackColor = True
         '
         'radStepS2_5
         '
-        Me.radStepS2_5.AutoSize = true
+        Me.radStepS2_5.AutoSize = True
         Me.radStepS2_5.ForeColor = System.Drawing.Color.Red
         Me.radStepS2_5.Location = New System.Drawing.Point(22, 155)
         Me.radStepS2_5.Name = "radStepS2_5"
-        Me.radStepS2_5.Size = New System.Drawing.Size(59, 16)
+        Me.radStepS2_5.Size = New System.Drawing.Size(61, 17)
         Me.radStepS2_5.TabIndex = 5
         Me.radStepS2_5.Text = "自定义"
-        Me.radStepS2_5.UseVisualStyleBackColor = true
+        Me.radStepS2_5.UseVisualStyleBackColor = True
         '
         'gupVel
         '
@@ -7707,19 +7886,19 @@ Partial Class Frm_Engineering
         Me.gupVel.Controls.Add(Me.radVelS2_2)
         Me.gupVel.Controls.Add(Me.radVelS2_1)
         Me.gupVel.Controls.Add(Me.radVelS2_0)
-        Me.gupVel.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.gupVel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gupVel.ForeColor = System.Drawing.Color.Blue
         Me.gupVel.Location = New System.Drawing.Point(126, 11)
         Me.gupVel.Name = "gupVel"
         Me.gupVel.Size = New System.Drawing.Size(110, 230)
         Me.gupVel.TabIndex = 263
-        Me.gupVel.TabStop = false
+        Me.gupVel.TabStop = False
         Me.gupVel.Text = "速度(mm/s)"
         '
         'txtVelS2
         '
         Me.txtVelS2.BackColor = System.Drawing.SystemColors.Window
-        Me.txtVelS2.Font = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.txtVelS2.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.txtVelS2.ForeColor = System.Drawing.Color.Blue
         Me.txtVelS2.Location = New System.Drawing.Point(24, 184)
         Me.txtVelS2.Name = "txtVelS2"
@@ -7730,65 +7909,65 @@ Partial Class Frm_Engineering
         '
         'radVelS2_5
         '
-        Me.radVelS2_5.AutoSize = true
+        Me.radVelS2_5.AutoSize = True
         Me.radVelS2_5.Location = New System.Drawing.Point(24, 155)
         Me.radVelS2_5.Name = "radVelS2_5"
-        Me.radVelS2_5.Size = New System.Drawing.Size(59, 16)
+        Me.radVelS2_5.Size = New System.Drawing.Size(61, 17)
         Me.radVelS2_5.TabIndex = 5
         Me.radVelS2_5.Text = "自定义"
-        Me.radVelS2_5.UseVisualStyleBackColor = true
+        Me.radVelS2_5.UseVisualStyleBackColor = True
         '
         'radVelS2_4
         '
-        Me.radVelS2_4.AutoSize = true
+        Me.radVelS2_4.AutoSize = True
         Me.radVelS2_4.Location = New System.Drawing.Point(24, 128)
         Me.radVelS2_4.Name = "radVelS2_4"
-        Me.radVelS2_4.Size = New System.Drawing.Size(35, 16)
+        Me.radVelS2_4.Size = New System.Drawing.Size(37, 17)
         Me.radVelS2_4.TabIndex = 4
         Me.radVelS2_4.Text = "20"
-        Me.radVelS2_4.UseVisualStyleBackColor = true
+        Me.radVelS2_4.UseVisualStyleBackColor = True
         '
         'radVelS2_3
         '
-        Me.radVelS2_3.AutoSize = true
+        Me.radVelS2_3.AutoSize = True
         Me.radVelS2_3.Location = New System.Drawing.Point(24, 101)
         Me.radVelS2_3.Name = "radVelS2_3"
-        Me.radVelS2_3.Size = New System.Drawing.Size(35, 16)
+        Me.radVelS2_3.Size = New System.Drawing.Size(37, 17)
         Me.radVelS2_3.TabIndex = 3
         Me.radVelS2_3.Text = "15"
-        Me.radVelS2_3.UseVisualStyleBackColor = true
+        Me.radVelS2_3.UseVisualStyleBackColor = True
         '
         'radVelS2_2
         '
-        Me.radVelS2_2.AutoSize = true
+        Me.radVelS2_2.AutoSize = True
         Me.radVelS2_2.Location = New System.Drawing.Point(24, 74)
         Me.radVelS2_2.Name = "radVelS2_2"
-        Me.radVelS2_2.Size = New System.Drawing.Size(35, 16)
+        Me.radVelS2_2.Size = New System.Drawing.Size(37, 17)
         Me.radVelS2_2.TabIndex = 2
         Me.radVelS2_2.Text = "10"
-        Me.radVelS2_2.UseVisualStyleBackColor = true
+        Me.radVelS2_2.UseVisualStyleBackColor = True
         '
         'radVelS2_1
         '
-        Me.radVelS2_1.AutoSize = true
-        Me.radVelS2_1.Checked = true
+        Me.radVelS2_1.AutoSize = True
+        Me.radVelS2_1.Checked = True
         Me.radVelS2_1.Location = New System.Drawing.Point(24, 47)
         Me.radVelS2_1.Name = "radVelS2_1"
-        Me.radVelS2_1.Size = New System.Drawing.Size(29, 16)
+        Me.radVelS2_1.Size = New System.Drawing.Size(31, 17)
         Me.radVelS2_1.TabIndex = 2
-        Me.radVelS2_1.TabStop = true
+        Me.radVelS2_1.TabStop = True
         Me.radVelS2_1.Text = "5"
-        Me.radVelS2_1.UseVisualStyleBackColor = true
+        Me.radVelS2_1.UseVisualStyleBackColor = True
         '
         'radVelS2_0
         '
-        Me.radVelS2_0.AutoSize = true
+        Me.radVelS2_0.AutoSize = True
         Me.radVelS2_0.Location = New System.Drawing.Point(24, 20)
         Me.radVelS2_0.Name = "radVelS2_0"
-        Me.radVelS2_0.Size = New System.Drawing.Size(29, 16)
+        Me.radVelS2_0.Size = New System.Drawing.Size(31, 17)
         Me.radVelS2_0.TabIndex = 0
         Me.radVelS2_0.Text = "1"
-        Me.radVelS2_0.UseVisualStyleBackColor = true
+        Me.radVelS2_0.UseVisualStyleBackColor = True
         '
         'TabCon
         '
@@ -7808,13 +7987,13 @@ Partial Class Frm_Engineering
         '
         Me.TabPage6.Controls.Add(Me.Panel4)
         Me.TabPage6.Controls.Add(Me.GroupBox13)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 34)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage6.Size = New System.Drawing.Size(744, 577)
         Me.TabPage6.TabIndex = 0
         Me.TabPage6.Text = "点胶站调试"
-        Me.TabPage6.UseVisualStyleBackColor = true
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
         'Panel4
         '
@@ -7835,97 +8014,98 @@ Partial Class Frm_Engineering
         '
         'btn_S2IO8
         '
-        Me.btn_S2IO8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO8.Location = New System.Drawing.Point(590, 130)
         Me.btn_S2IO8.Name = "btn_S2IO8"
         Me.btn_S2IO8.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO8.TabIndex = 135
         Me.btn_S2IO8.Text = "StandBy"
-        Me.btn_S2IO8.UseVisualStyleBackColor = true
+        Me.btn_S2IO8.UseVisualStyleBackColor = True
         '
         'btn_S2IO7
         '
-        Me.btn_S2IO7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO7.Location = New System.Drawing.Point(590, 92)
         Me.btn_S2IO7.Name = "btn_S2IO7"
         Me.btn_S2IO7.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO7.TabIndex = 134
         Me.btn_S2IO7.Text = "StandBy"
-        Me.btn_S2IO7.UseVisualStyleBackColor = true
+        Me.btn_S2IO7.UseVisualStyleBackColor = True
         '
         'LaserTri_S2
         '
-        Me.LaserTri_S2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.LaserTri_S2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.LaserTri_S2.Location = New System.Drawing.Point(27, 24)
         Me.LaserTri_S2.Name = "LaserTri_S2"
         Me.LaserTri_S2.Size = New System.Drawing.Size(75, 30)
         Me.LaserTri_S2.TabIndex = 102
         Me.LaserTri_S2.Text = "镭射触发"
-        Me.LaserTri_S2.UseVisualStyleBackColor = true
+        Me.LaserTri_S2.UseVisualStyleBackColor = True
         '
         'btn_S2IO6
         '
-        Me.btn_S2IO6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO6.Location = New System.Drawing.Point(590, 56)
         Me.btn_S2IO6.Name = "btn_S2IO6"
         Me.btn_S2IO6.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO6.TabIndex = 133
         Me.btn_S2IO6.Text = "点胶2点胶"
-        Me.btn_S2IO6.UseVisualStyleBackColor = true
+        Me.btn_S2IO6.UseVisualStyleBackColor = True
         '
         'btn_S2IO5
         '
-        Me.btn_S2IO5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO5.Location = New System.Drawing.Point(590, 20)
         Me.btn_S2IO5.Name = "btn_S2IO5"
         Me.btn_S2IO5.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO5.TabIndex = 132
         Me.btn_S2IO5.Text = "点胶1点胶"
-        Me.btn_S2IO5.UseVisualStyleBackColor = true
+        Me.btn_S2IO5.UseVisualStyleBackColor = True
         '
         'btn_S2IO4
         '
-        Me.btn_S2IO4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO4.Location = New System.Drawing.Point(470, 130)
         Me.btn_S2IO4.Name = "btn_S2IO4"
         Me.btn_S2IO4.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO4.TabIndex = 131
         Me.btn_S2IO4.Text = "StandBy"
-        Me.btn_S2IO4.UseVisualStyleBackColor = true
+        Me.btn_S2IO4.UseVisualStyleBackColor = True
         '
         'btn_S2IO3
         '
-        Me.btn_S2IO3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO3.Location = New System.Drawing.Point(470, 92)
         Me.btn_S2IO3.Name = "btn_S2IO3"
         Me.btn_S2IO3.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO3.TabIndex = 130
         Me.btn_S2IO3.Text = "StandBy"
-        Me.btn_S2IO3.UseVisualStyleBackColor = true
+        Me.btn_S2IO3.UseVisualStyleBackColor = True
         '
         'btn_S2IO2
         '
-        Me.btn_S2IO2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO2.Location = New System.Drawing.Point(470, 56)
         Me.btn_S2IO2.Name = "btn_S2IO2"
         Me.btn_S2IO2.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO2.TabIndex = 129
         Me.btn_S2IO2.Text = "点胶2气缸升降"
-        Me.btn_S2IO2.UseVisualStyleBackColor = true
+        Me.btn_S2IO2.UseVisualStyleBackColor = True
         '
         'btn_S2IO1
         '
-        Me.btn_S2IO1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S2IO1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.btn_S2IO1.Location = New System.Drawing.Point(470, 20)
         Me.btn_S2IO1.Name = "btn_S2IO1"
         Me.btn_S2IO1.Size = New System.Drawing.Size(110, 30)
         Me.btn_S2IO1.TabIndex = 128
         Me.btn_S2IO1.Text = "点胶1气缸升降"
-        Me.btn_S2IO1.UseVisualStyleBackColor = true
+        Me.btn_S2IO1.UseVisualStyleBackColor = True
         '
         'GroupBox13
         '
         Me.GroupBox13.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox13.Controls.Add(Me.btnTrayGlue)
         Me.GroupBox13.Controls.Add(Me.btn_AtuoNeedle1)
         Me.GroupBox13.Controls.Add(Me.Button2)
         Me.GroupBox13.Controls.Add(Me.btn_ClrGlue0)
@@ -7964,13 +8144,22 @@ Partial Class Frm_Engineering
         Me.GroupBox13.Controls.Add(Me.labEncPos1)
         Me.GroupBox13.Controls.Add(Me.txt_Pos1)
         Me.GroupBox13.Controls.Add(Me.btn_Servo1)
-        Me.GroupBox13.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.GroupBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox13.Location = New System.Drawing.Point(3, 2)
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Size = New System.Drawing.Size(735, 384)
         Me.GroupBox13.TabIndex = 3
-        Me.GroupBox13.TabStop = false
+        Me.GroupBox13.TabStop = False
         Me.GroupBox13.Text = "单工位调试"
+        '
+        'btnTrayGlue
+        '
+        Me.btnTrayGlue.Location = New System.Drawing.Point(370, 333)
+        Me.btnTrayGlue.Name = "btnTrayGlue"
+        Me.btnTrayGlue.Size = New System.Drawing.Size(88, 33)
+        Me.btnTrayGlue.TabIndex = 108
+        Me.btnTrayGlue.Text = "点胶矩阵计算"
+        Me.btnTrayGlue.UseVisualStyleBackColor = true
         '
         'btn_AtuoNeedle1
         '
@@ -8101,7 +8290,7 @@ Partial Class Frm_Engineering
         '
         'Label237
         '
-        Me.Label237.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label237.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label237.Location = New System.Drawing.Point(367, 223)
         Me.Label237.Name = "Label237"
         Me.Label237.Size = New System.Drawing.Size(100, 28)
@@ -8138,7 +8327,7 @@ Partial Class Frm_Engineering
         '
         'Label234
         '
-        Me.Label234.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label234.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label234.Location = New System.Drawing.Point(367, 195)
         Me.Label234.Name = "Label234"
         Me.Label234.Size = New System.Drawing.Size(100, 28)
@@ -8169,7 +8358,7 @@ Partial Class Frm_Engineering
         '
         'Label233
         '
-        Me.Label233.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label233.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label233.Location = New System.Drawing.Point(367, 167)
         Me.Label233.Name = "Label233"
         Me.Label233.Size = New System.Drawing.Size(100, 28)
@@ -8179,7 +8368,7 @@ Partial Class Frm_Engineering
         '
         'Label232
         '
-        Me.Label232.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label232.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label232.Location = New System.Drawing.Point(367, 137)
         Me.Label232.Name = "Label232"
         Me.Label232.Size = New System.Drawing.Size(100, 28)
@@ -8327,7 +8516,7 @@ Partial Class Frm_Engineering
         '
         Me.btn_AutoRun_GlueStation.FlatAppearance.BorderSize = 0
         Me.btn_AutoRun_GlueStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_AutoRun_GlueStation.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_AutoRun_GlueStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_AutoRun_GlueStation.Location = New System.Drawing.Point(69, 69)
         Me.btn_AutoRun_GlueStation.Name = "btn_AutoRun_GlueStation"
         Me.btn_AutoRun_GlueStation.Size = New System.Drawing.Size(60, 60)
@@ -8337,7 +8526,7 @@ Partial Class Frm_Engineering
         '
         'Label231
         '
-        Me.Label231.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label231.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label231.Location = New System.Drawing.Point(367, 24)
         Me.Label231.Name = "Label231"
         Me.Label231.Size = New System.Drawing.Size(100, 28)
@@ -8435,12 +8624,12 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos1.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos1.Font = New System.Drawing.Font("HelveticaNeue", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.cbo_Pos1.Font = New System.Drawing.Font("Microsoft Sans Serif", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.cbo_Pos1.FormattingEnabled = true
         Me.cbo_Pos1.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos1.Location = New System.Drawing.Point(473, 24)
         Me.cbo_Pos1.Name = "cbo_Pos1"
-        Me.cbo_Pos1.Size = New System.Drawing.Size(200, 24)
+        Me.cbo_Pos1.Size = New System.Drawing.Size(200, 25)
         Me.cbo_Pos1.TabIndex = 60
         '
         'labPrfPos1
@@ -8484,10 +8673,10 @@ Partial Class Frm_Engineering
         '
         Me.TabPage7.Controls.Add(Me.Panel2)
         Me.TabPage7.Controls.Add(Me.GroupBox14)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 34)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage7.Size = New System.Drawing.Size(744, 577)
         Me.TabPage7.TabIndex = 1
         Me.TabPage7.Text = "组装站调试"
         Me.TabPage7.UseVisualStyleBackColor = true
@@ -8515,7 +8704,7 @@ Partial Class Frm_Engineering
         '
         'Label236
         '
-        Me.Label236.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label236.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label236.Location = New System.Drawing.Point(76, 36)
         Me.Label236.Name = "Label236"
         Me.Label236.Size = New System.Drawing.Size(25, 14)
@@ -8525,7 +8714,7 @@ Partial Class Frm_Engineering
         '
         'lbl_PressSTD
         '
-        Me.lbl_PressSTD.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_PressSTD.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.lbl_PressSTD.Location = New System.Drawing.Point(41, 36)
         Me.lbl_PressSTD.Name = "lbl_PressSTD"
         Me.lbl_PressSTD.Size = New System.Drawing.Size(35, 14)
@@ -8535,7 +8724,7 @@ Partial Class Frm_Engineering
         '
         'Label252
         '
-        Me.Label252.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label252.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label252.Location = New System.Drawing.Point(76, 9)
         Me.Label252.Name = "Label252"
         Me.Label252.Size = New System.Drawing.Size(25, 14)
@@ -8545,7 +8734,7 @@ Partial Class Frm_Engineering
         '
         'lbl_PressS_3
         '
-        Me.lbl_PressS_3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_PressS_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.lbl_PressS_3.Location = New System.Drawing.Point(41, 9)
         Me.lbl_PressS_3.Name = "lbl_PressS_3"
         Me.lbl_PressS_3.Size = New System.Drawing.Size(35, 14)
@@ -8555,7 +8744,7 @@ Partial Class Frm_Engineering
         '
         'Label250
         '
-        Me.Label250.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label250.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label250.Location = New System.Drawing.Point(6, 9)
         Me.Label250.Name = "Label250"
         Me.Label250.Size = New System.Drawing.Size(35, 14)
@@ -8565,7 +8754,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO8
         '
-        Me.btn_S3IO8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO8.Location = New System.Drawing.Point(590, 130)
         Me.btn_S3IO8.Name = "btn_S3IO8"
         Me.btn_S3IO8.Size = New System.Drawing.Size(110, 30)
@@ -8575,7 +8764,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO7
         '
-        Me.btn_S3IO7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO7.Location = New System.Drawing.Point(590, 92)
         Me.btn_S3IO7.Name = "btn_S3IO7"
         Me.btn_S3IO7.Size = New System.Drawing.Size(110, 30)
@@ -8585,7 +8774,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO6
         '
-        Me.btn_S3IO6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO6.Location = New System.Drawing.Point(590, 56)
         Me.btn_S3IO6.Name = "btn_S3IO6"
         Me.btn_S3IO6.Size = New System.Drawing.Size(110, 30)
@@ -8595,7 +8784,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO5
         '
-        Me.btn_S3IO5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO5.Location = New System.Drawing.Point(590, 20)
         Me.btn_S3IO5.Name = "btn_S3IO5"
         Me.btn_S3IO5.Size = New System.Drawing.Size(110, 30)
@@ -8605,7 +8794,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO4
         '
-        Me.btn_S3IO4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO4.Location = New System.Drawing.Point(470, 130)
         Me.btn_S3IO4.Name = "btn_S3IO4"
         Me.btn_S3IO4.Size = New System.Drawing.Size(110, 30)
@@ -8615,7 +8804,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO3
         '
-        Me.btn_S3IO3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO3.Location = New System.Drawing.Point(470, 92)
         Me.btn_S3IO3.Name = "btn_S3IO3"
         Me.btn_S3IO3.Size = New System.Drawing.Size(110, 30)
@@ -8625,7 +8814,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO2
         '
-        Me.btn_S3IO2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO2.Location = New System.Drawing.Point(470, 56)
         Me.btn_S3IO2.Name = "btn_S3IO2"
         Me.btn_S3IO2.Size = New System.Drawing.Size(110, 30)
@@ -8635,7 +8824,7 @@ Partial Class Frm_Engineering
         '
         'btn_S3IO1
         '
-        Me.btn_S3IO1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S3IO1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S3IO1.Location = New System.Drawing.Point(470, 20)
         Me.btn_S3IO1.Name = "btn_S3IO1"
         Me.btn_S3IO1.Size = New System.Drawing.Size(110, 30)
@@ -8681,7 +8870,7 @@ Partial Class Frm_Engineering
         Me.GroupBox14.Controls.Add(Me.labEncPos8)
         Me.GroupBox14.Controls.Add(Me.labPrfPos8)
         Me.GroupBox14.Controls.Add(Me.Label242)
-        Me.GroupBox14.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.GroupBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox14.Location = New System.Drawing.Point(3, 2)
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.Size = New System.Drawing.Size(735, 384)
@@ -8794,7 +8983,7 @@ Partial Class Frm_Engineering
         '
         'Label245
         '
-        Me.Label245.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label245.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label245.Location = New System.Drawing.Point(367, 195)
         Me.Label245.Name = "Label245"
         Me.Label245.Size = New System.Drawing.Size(100, 28)
@@ -8825,7 +9014,7 @@ Partial Class Frm_Engineering
         '
         'Label246
         '
-        Me.Label246.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label246.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label246.Location = New System.Drawing.Point(367, 167)
         Me.Label246.Name = "Label246"
         Me.Label246.Size = New System.Drawing.Size(100, 28)
@@ -8835,7 +9024,7 @@ Partial Class Frm_Engineering
         '
         'Label247
         '
-        Me.Label247.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label247.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label247.Location = New System.Drawing.Point(367, 137)
         Me.Label247.Name = "Label247"
         Me.Label247.Size = New System.Drawing.Size(100, 28)
@@ -8981,7 +9170,7 @@ Partial Class Frm_Engineering
         '
         Me.btn_AutoRun_PasteStation.FlatAppearance.BorderSize = 0
         Me.btn_AutoRun_PasteStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_AutoRun_PasteStation.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_AutoRun_PasteStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_AutoRun_PasteStation.Location = New System.Drawing.Point(69, 69)
         Me.btn_AutoRun_PasteStation.Name = "btn_AutoRun_PasteStation"
         Me.btn_AutoRun_PasteStation.Size = New System.Drawing.Size(60, 60)
@@ -8991,7 +9180,7 @@ Partial Class Frm_Engineering
         '
         'Label248
         '
-        Me.Label248.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label248.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label248.Location = New System.Drawing.Point(367, 24)
         Me.Label248.Name = "Label248"
         Me.Label248.Size = New System.Drawing.Size(100, 28)
@@ -9089,12 +9278,12 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos2.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos2.Font = New System.Drawing.Font("HelveticaNeue", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.cbo_Pos2.Font = New System.Drawing.Font("Microsoft Sans Serif", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.cbo_Pos2.FormattingEnabled = true
         Me.cbo_Pos2.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos2.Location = New System.Drawing.Point(473, 24)
         Me.cbo_Pos2.Name = "cbo_Pos2"
-        Me.cbo_Pos2.Size = New System.Drawing.Size(200, 24)
+        Me.cbo_Pos2.Size = New System.Drawing.Size(200, 25)
         Me.cbo_Pos2.TabIndex = 60
         '
         'labPrfPos5
@@ -9154,7 +9343,7 @@ Partial Class Frm_Engineering
         '
         'Label242
         '
-        Me.Label242.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label242.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label242.Location = New System.Drawing.Point(367, 223)
         Me.Label242.Name = "Label242"
         Me.Label242.Size = New System.Drawing.Size(100, 28)
@@ -9166,9 +9355,9 @@ Partial Class Frm_Engineering
         '
         Me.TabPage8.Controls.Add(Me.Panel6)
         Me.TabPage8.Controls.Add(Me.GroupBox17)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 34)
         Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage8.Size = New System.Drawing.Size(744, 577)
         Me.TabPage8.TabIndex = 2
         Me.TabPage8.Text = "取料站调试"
         Me.TabPage8.UseVisualStyleBackColor = true
@@ -9191,7 +9380,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO4
         '
-        Me.btn_S4IO4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO4.Location = New System.Drawing.Point(470, 130)
         Me.btn_S4IO4.Name = "btn_S4IO4"
         Me.btn_S4IO4.Size = New System.Drawing.Size(110, 30)
@@ -9201,7 +9390,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO8
         '
-        Me.btn_S4IO8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO8.Location = New System.Drawing.Point(590, 130)
         Me.btn_S4IO8.Name = "btn_S4IO8"
         Me.btn_S4IO8.Size = New System.Drawing.Size(110, 30)
@@ -9211,7 +9400,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO7
         '
-        Me.btn_S4IO7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO7.Location = New System.Drawing.Point(590, 92)
         Me.btn_S4IO7.Name = "btn_S4IO7"
         Me.btn_S4IO7.Size = New System.Drawing.Size(110, 30)
@@ -9221,7 +9410,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO1
         '
-        Me.btn_S4IO1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO1.Location = New System.Drawing.Point(470, 20)
         Me.btn_S4IO1.Name = "btn_S4IO1"
         Me.btn_S4IO1.Size = New System.Drawing.Size(110, 30)
@@ -9231,7 +9420,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO6
         '
-        Me.btn_S4IO6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO6.Location = New System.Drawing.Point(590, 56)
         Me.btn_S4IO6.Name = "btn_S4IO6"
         Me.btn_S4IO6.Size = New System.Drawing.Size(110, 30)
@@ -9241,7 +9430,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO2
         '
-        Me.btn_S4IO2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO2.Location = New System.Drawing.Point(470, 56)
         Me.btn_S4IO2.Name = "btn_S4IO2"
         Me.btn_S4IO2.Size = New System.Drawing.Size(110, 30)
@@ -9251,7 +9440,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO5
         '
-        Me.btn_S4IO5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO5.Location = New System.Drawing.Point(590, 20)
         Me.btn_S4IO5.Name = "btn_S4IO5"
         Me.btn_S4IO5.Size = New System.Drawing.Size(110, 30)
@@ -9261,7 +9450,7 @@ Partial Class Frm_Engineering
         '
         'btn_S4IO3
         '
-        Me.btn_S4IO3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S4IO3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S4IO3.Location = New System.Drawing.Point(470, 92)
         Me.btn_S4IO3.Name = "btn_S4IO3"
         Me.btn_S4IO3.Size = New System.Drawing.Size(110, 30)
@@ -9304,7 +9493,7 @@ Partial Class Frm_Engineering
         Me.GroupBox17.Controls.Add(Me.labEncPos9)
         Me.GroupBox17.Controls.Add(Me.txt_Pos9)
         Me.GroupBox17.Controls.Add(Me.btn_Servo9)
-        Me.GroupBox17.Font = New System.Drawing.Font("HelveticaNeue", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.GroupBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox17.Location = New System.Drawing.Point(3, 2)
         Me.GroupBox17.Name = "GroupBox17"
         Me.GroupBox17.Size = New System.Drawing.Size(735, 384)
@@ -9382,7 +9571,7 @@ Partial Class Frm_Engineering
         '
         'Label255
         '
-        Me.Label255.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label255.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label255.Location = New System.Drawing.Point(367, 223)
         Me.Label255.Name = "Label255"
         Me.Label255.Size = New System.Drawing.Size(100, 28)
@@ -9418,7 +9607,7 @@ Partial Class Frm_Engineering
         '
         'Label258
         '
-        Me.Label258.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label258.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label258.Location = New System.Drawing.Point(367, 195)
         Me.Label258.Name = "Label258"
         Me.Label258.Size = New System.Drawing.Size(100, 28)
@@ -9449,7 +9638,7 @@ Partial Class Frm_Engineering
         '
         'Label259
         '
-        Me.Label259.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label259.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label259.Location = New System.Drawing.Point(367, 167)
         Me.Label259.Name = "Label259"
         Me.Label259.Size = New System.Drawing.Size(100, 28)
@@ -9459,7 +9648,7 @@ Partial Class Frm_Engineering
         '
         'Label260
         '
-        Me.Label260.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label260.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label260.Location = New System.Drawing.Point(367, 137)
         Me.Label260.Name = "Label260"
         Me.Label260.Size = New System.Drawing.Size(100, 28)
@@ -9605,7 +9794,7 @@ Partial Class Frm_Engineering
         '
         Me.btn_AutoRun_PreTakerStation.FlatAppearance.BorderSize = 0
         Me.btn_AutoRun_PreTakerStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_AutoRun_PreTakerStation.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_AutoRun_PreTakerStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_AutoRun_PreTakerStation.Location = New System.Drawing.Point(69, 69)
         Me.btn_AutoRun_PreTakerStation.Name = "btn_AutoRun_PreTakerStation"
         Me.btn_AutoRun_PreTakerStation.Size = New System.Drawing.Size(60, 60)
@@ -9615,7 +9804,7 @@ Partial Class Frm_Engineering
         '
         'Label261
         '
-        Me.Label261.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label261.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label261.Location = New System.Drawing.Point(367, 24)
         Me.Label261.Name = "Label261"
         Me.Label261.Size = New System.Drawing.Size(100, 28)
@@ -9713,12 +9902,12 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos3.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos3.Font = New System.Drawing.Font("HelveticaNeue", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.cbo_Pos3.Font = New System.Drawing.Font("Microsoft Sans Serif", 45!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.cbo_Pos3.FormattingEnabled = true
         Me.cbo_Pos3.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos3.Location = New System.Drawing.Point(473, 24)
         Me.cbo_Pos3.Name = "cbo_Pos3"
-        Me.cbo_Pos3.Size = New System.Drawing.Size(200, 24)
+        Me.cbo_Pos3.Size = New System.Drawing.Size(200, 25)
         Me.cbo_Pos3.TabIndex = 60
         '
         'labPrfPos9
@@ -9764,9 +9953,9 @@ Partial Class Frm_Engineering
         Me.TabPage5.Controls.Add(Me.GroupBox15)
         Me.TabPage5.Controls.Add(Me.GroupBox12)
         Me.TabPage5.Controls.Add(Me.GroupBox11)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 34)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage5.Size = New System.Drawing.Size(744, 577)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "其他轴调试"
         Me.TabPage5.UseVisualStyleBackColor = true
@@ -9793,7 +9982,7 @@ Partial Class Frm_Engineering
         Me.GroupBox16.Controls.Add(Me.radGet7)
         Me.GroupBox16.Controls.Add(Me.labPrfPos19)
         Me.GroupBox16.Controls.Add(Me.btn_Home18)
-        Me.GroupBox16.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox16.Location = New System.Drawing.Point(376, 289)
         Me.GroupBox16.Name = "GroupBox16"
         Me.GroupBox16.Size = New System.Drawing.Size(365, 280)
@@ -9810,7 +9999,7 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel19.Controls.Add(Me.btn_N19, 0, 1)
         Me.TableLayoutPanel19.Controls.Add(Me.btn_P19, 0, 0)
         Me.TableLayoutPanel19.Controls.Add(Me.btn_P18, 1, 0)
-        Me.TableLayoutPanel19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TableLayoutPanel19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TableLayoutPanel19.Location = New System.Drawing.Point(204, 23)
         Me.TableLayoutPanel19.Name = "TableLayoutPanel19"
         Me.TableLayoutPanel19.RowCount = 2
@@ -9824,7 +10013,7 @@ Partial Class Frm_Engineering
         Me.btn_N18.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N18.FlatAppearance.BorderSize = 0
         Me.btn_N18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N18.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N18.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N18.Image = CType(resources.GetObject("btn_N18.Image"),System.Drawing.Image)
         Me.btn_N18.Location = New System.Drawing.Point(63, 62)
         Me.btn_N18.Name = "btn_N18"
@@ -9839,7 +10028,7 @@ Partial Class Frm_Engineering
         Me.btn_N19.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N19.FlatAppearance.BorderSize = 0
         Me.btn_N19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N19.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N19.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N19.Image = CType(resources.GetObject("btn_N19.Image"),System.Drawing.Image)
         Me.btn_N19.Location = New System.Drawing.Point(3, 62)
         Me.btn_N19.Name = "btn_N19"
@@ -9854,7 +10043,7 @@ Partial Class Frm_Engineering
         Me.btn_P19.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P19.FlatAppearance.BorderSize = 0
         Me.btn_P19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P19.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P19.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P19.Image = CType(resources.GetObject("btn_P19.Image"),System.Drawing.Image)
         Me.btn_P19.Location = New System.Drawing.Point(3, 3)
         Me.btn_P19.Name = "btn_P19"
@@ -9869,7 +10058,7 @@ Partial Class Frm_Engineering
         Me.btn_P18.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P18.FlatAppearance.BorderSize = 0
         Me.btn_P18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P18.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P18.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P18.Image = CType(resources.GetObject("btn_P18.Image"),System.Drawing.Image)
         Me.btn_P18.Location = New System.Drawing.Point(63, 3)
         Me.btn_P18.Name = "btn_P18"
@@ -9882,7 +10071,7 @@ Partial Class Frm_Engineering
         'btn_Servo18
         '
         Me.btn_Servo18.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo18.Location = New System.Drawing.Point(113, 45)
         Me.btn_Servo18.Name = "btn_Servo18"
         Me.btn_Servo18.Size = New System.Drawing.Size(70, 33)
@@ -9893,7 +10082,7 @@ Partial Class Frm_Engineering
         '
         'Label276
         '
-        Me.Label276.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label276.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label276.Location = New System.Drawing.Point(20, 146)
         Me.Label276.Name = "Label276"
         Me.Label276.Size = New System.Drawing.Size(84, 28)
@@ -9903,17 +10092,17 @@ Partial Class Frm_Engineering
         '
         'txt_Pos18
         '
-        Me.txt_Pos18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos18.Location = New System.Drawing.Point(170, 216)
         Me.txt_Pos18.Name = "txt_Pos18"
-        Me.txt_Pos18.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos18.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos18.TabIndex = 104
         Me.txt_Pos18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btn_Home19
         '
         Me.btn_Home19.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home19.Location = New System.Drawing.Point(23, 94)
         Me.btn_Home19.Name = "btn_Home19"
         Me.btn_Home19.Size = New System.Drawing.Size(70, 33)
@@ -9923,7 +10112,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos18
         '
-        Me.labEncPos18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos18.Location = New System.Drawing.Point(297, 219)
         Me.labEncPos18.Name = "labEncPos18"
         Me.labEncPos18.Size = New System.Drawing.Size(50, 16)
@@ -9934,7 +10123,7 @@ Partial Class Frm_Engineering
         'btn_Servo19
         '
         Me.btn_Servo19.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo19.Location = New System.Drawing.Point(113, 94)
         Me.btn_Servo19.Name = "btn_Servo19"
         Me.btn_Servo19.Size = New System.Drawing.Size(70, 33)
@@ -9945,7 +10134,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos18
         '
-        Me.labPrfPos18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos18.Location = New System.Drawing.Point(241, 219)
         Me.labPrfPos18.Name = "labPrfPos18"
         Me.labPrfPos18.Size = New System.Drawing.Size(50, 16)
@@ -9955,7 +10144,7 @@ Partial Class Frm_Engineering
         '
         'Label279
         '
-        Me.Label279.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label279.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label279.Location = New System.Drawing.Point(110, 241)
         Me.Label279.Name = "Label279"
         Me.Label279.Size = New System.Drawing.Size(50, 22)
@@ -9967,17 +10156,17 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos7.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos7.Font = New System.Drawing.Font("HelveticaNeue", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cbo_Pos7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.cbo_Pos7.FormattingEnabled = true
         Me.cbo_Pos7.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos7.Location = New System.Drawing.Point(113, 148)
         Me.cbo_Pos7.Name = "cbo_Pos7"
-        Me.cbo_Pos7.Size = New System.Drawing.Size(234, 24)
+        Me.cbo_Pos7.Size = New System.Drawing.Size(234, 25)
         Me.cbo_Pos7.TabIndex = 107
         '
         'Label280
         '
-        Me.Label280.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label280.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label280.Location = New System.Drawing.Point(110, 216)
         Me.Label280.Name = "Label280"
         Me.Label280.Size = New System.Drawing.Size(50, 22)
@@ -9988,7 +10177,7 @@ Partial Class Frm_Engineering
         'btn_GoPos7
         '
         Me.btn_GoPos7.BackColor = System.Drawing.Color.Transparent
-        Me.btn_GoPos7.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_GoPos7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_GoPos7.Location = New System.Drawing.Point(267, 177)
         Me.btn_GoPos7.Name = "btn_GoPos7"
         Me.btn_GoPos7.Size = New System.Drawing.Size(80, 33)
@@ -9999,7 +10188,7 @@ Partial Class Frm_Engineering
         'btn_SavePos7
         '
         Me.btn_SavePos7.BackColor = System.Drawing.Color.Transparent
-        Me.btn_SavePos7.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_SavePos7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_SavePos7.Location = New System.Drawing.Point(113, 177)
         Me.btn_SavePos7.Name = "btn_SavePos7"
         Me.btn_SavePos7.Size = New System.Drawing.Size(80, 33)
@@ -10010,7 +10199,7 @@ Partial Class Frm_Engineering
         'radWrite7
         '
         Me.radWrite7.Checked = true
-        Me.radWrite7.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radWrite7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radWrite7.Location = New System.Drawing.Point(29, 241)
         Me.radWrite7.Name = "radWrite7"
         Me.radWrite7.Size = New System.Drawing.Size(50, 22)
@@ -10021,16 +10210,16 @@ Partial Class Frm_Engineering
         '
         'txt_Pos19
         '
-        Me.txt_Pos19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos19.Location = New System.Drawing.Point(170, 241)
         Me.txt_Pos19.Name = "txt_Pos19"
-        Me.txt_Pos19.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos19.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos19.TabIndex = 110
         Me.txt_Pos19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chk_En7
         '
-        Me.chk_En7.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.chk_En7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.chk_En7.Location = New System.Drawing.Point(29, 186)
         Me.chk_En7.Name = "chk_En7"
         Me.chk_En7.Size = New System.Drawing.Size(75, 22)
@@ -10040,7 +10229,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos19
         '
-        Me.labEncPos19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos19.Location = New System.Drawing.Point(297, 245)
         Me.labEncPos19.Name = "labEncPos19"
         Me.labEncPos19.Size = New System.Drawing.Size(50, 16)
@@ -10050,7 +10239,7 @@ Partial Class Frm_Engineering
         '
         'radGet7
         '
-        Me.radGet7.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radGet7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radGet7.Location = New System.Drawing.Point(29, 216)
         Me.radGet7.Name = "radGet7"
         Me.radGet7.Size = New System.Drawing.Size(50, 22)
@@ -10061,7 +10250,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos19
         '
-        Me.labPrfPos19.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos19.Location = New System.Drawing.Point(241, 245)
         Me.labPrfPos19.Name = "labPrfPos19"
         Me.labPrfPos19.Size = New System.Drawing.Size(50, 16)
@@ -10072,7 +10261,7 @@ Partial Class Frm_Engineering
         'btn_Home18
         '
         Me.btn_Home18.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home18.Location = New System.Drawing.Point(23, 45)
         Me.btn_Home18.Name = "btn_Home18"
         Me.btn_Home18.Size = New System.Drawing.Size(70, 33)
@@ -10096,7 +10285,7 @@ Partial Class Frm_Engineering
         Me.GroupBox15.Controls.Add(Me.chk_En6)
         Me.GroupBox15.Controls.Add(Me.radGet6)
         Me.GroupBox15.Controls.Add(Me.btn_Home17)
-        Me.GroupBox15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox15.Location = New System.Drawing.Point(5, 289)
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(365, 280)
@@ -10111,7 +10300,7 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60!))
         Me.TableLayoutPanel18.Controls.Add(Me.btn_P17, 1, 0)
         Me.TableLayoutPanel18.Controls.Add(Me.btn_N17, 0, 0)
-        Me.TableLayoutPanel18.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TableLayoutPanel18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TableLayoutPanel18.Location = New System.Drawing.Point(204, 23)
         Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
         Me.TableLayoutPanel18.RowCount = 2
@@ -10125,7 +10314,7 @@ Partial Class Frm_Engineering
         Me.btn_P17.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P17.FlatAppearance.BorderSize = 0
         Me.btn_P17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P17.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P17.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P17.Image = CType(resources.GetObject("btn_P17.Image"),System.Drawing.Image)
         Me.btn_P17.Location = New System.Drawing.Point(63, 3)
         Me.btn_P17.Name = "btn_P17"
@@ -10140,7 +10329,7 @@ Partial Class Frm_Engineering
         Me.btn_N17.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N17.FlatAppearance.BorderSize = 0
         Me.btn_N17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N17.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N17.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N17.Image = CType(resources.GetObject("btn_N17.Image"),System.Drawing.Image)
         Me.btn_N17.Location = New System.Drawing.Point(3, 3)
         Me.btn_N17.Name = "btn_N17"
@@ -10153,7 +10342,7 @@ Partial Class Frm_Engineering
         'btn_Servo17
         '
         Me.btn_Servo17.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo17.Location = New System.Drawing.Point(113, 45)
         Me.btn_Servo17.Name = "btn_Servo17"
         Me.btn_Servo17.Size = New System.Drawing.Size(70, 33)
@@ -10164,7 +10353,7 @@ Partial Class Frm_Engineering
         '
         'Label269
         '
-        Me.Label269.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label269.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label269.Location = New System.Drawing.Point(20, 146)
         Me.Label269.Name = "Label269"
         Me.Label269.Size = New System.Drawing.Size(84, 28)
@@ -10174,16 +10363,16 @@ Partial Class Frm_Engineering
         '
         'txt_Pos17
         '
-        Me.txt_Pos17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos17.Location = New System.Drawing.Point(170, 216)
         Me.txt_Pos17.Name = "txt_Pos17"
-        Me.txt_Pos17.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos17.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos17.TabIndex = 104
         Me.txt_Pos17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'labEncPos17
         '
-        Me.labEncPos17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos17.Location = New System.Drawing.Point(297, 219)
         Me.labEncPos17.Name = "labEncPos17"
         Me.labEncPos17.Size = New System.Drawing.Size(50, 16)
@@ -10193,7 +10382,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos17
         '
-        Me.labPrfPos17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos17.Location = New System.Drawing.Point(241, 219)
         Me.labPrfPos17.Name = "labPrfPos17"
         Me.labPrfPos17.Size = New System.Drawing.Size(50, 16)
@@ -10205,17 +10394,17 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos6.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos6.Font = New System.Drawing.Font("HelveticaNeue", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cbo_Pos6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.cbo_Pos6.FormattingEnabled = true
         Me.cbo_Pos6.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos6.Location = New System.Drawing.Point(113, 148)
         Me.cbo_Pos6.Name = "cbo_Pos6"
-        Me.cbo_Pos6.Size = New System.Drawing.Size(234, 24)
+        Me.cbo_Pos6.Size = New System.Drawing.Size(234, 25)
         Me.cbo_Pos6.TabIndex = 107
         '
         'Label273
         '
-        Me.Label273.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label273.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label273.Location = New System.Drawing.Point(110, 216)
         Me.Label273.Name = "Label273"
         Me.Label273.Size = New System.Drawing.Size(50, 22)
@@ -10226,7 +10415,7 @@ Partial Class Frm_Engineering
         'btn_GoPos6
         '
         Me.btn_GoPos6.BackColor = System.Drawing.Color.Transparent
-        Me.btn_GoPos6.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_GoPos6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_GoPos6.Location = New System.Drawing.Point(267, 177)
         Me.btn_GoPos6.Name = "btn_GoPos6"
         Me.btn_GoPos6.Size = New System.Drawing.Size(80, 33)
@@ -10237,7 +10426,7 @@ Partial Class Frm_Engineering
         'btn_SavePos6
         '
         Me.btn_SavePos6.BackColor = System.Drawing.Color.Transparent
-        Me.btn_SavePos6.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_SavePos6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_SavePos6.Location = New System.Drawing.Point(113, 177)
         Me.btn_SavePos6.Name = "btn_SavePos6"
         Me.btn_SavePos6.Size = New System.Drawing.Size(80, 33)
@@ -10248,7 +10437,7 @@ Partial Class Frm_Engineering
         'radWrite6
         '
         Me.radWrite6.Checked = true
-        Me.radWrite6.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radWrite6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radWrite6.Location = New System.Drawing.Point(29, 241)
         Me.radWrite6.Name = "radWrite6"
         Me.radWrite6.Size = New System.Drawing.Size(50, 22)
@@ -10259,7 +10448,7 @@ Partial Class Frm_Engineering
         '
         'chk_En6
         '
-        Me.chk_En6.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.chk_En6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.chk_En6.Location = New System.Drawing.Point(29, 186)
         Me.chk_En6.Name = "chk_En6"
         Me.chk_En6.Size = New System.Drawing.Size(75, 22)
@@ -10269,7 +10458,7 @@ Partial Class Frm_Engineering
         '
         'radGet6
         '
-        Me.radGet6.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radGet6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radGet6.Location = New System.Drawing.Point(29, 216)
         Me.radGet6.Name = "radGet6"
         Me.radGet6.Size = New System.Drawing.Size(50, 22)
@@ -10281,7 +10470,7 @@ Partial Class Frm_Engineering
         'btn_Home17
         '
         Me.btn_Home17.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home17.Location = New System.Drawing.Point(23, 45)
         Me.btn_Home17.Name = "btn_Home17"
         Me.btn_Home17.Size = New System.Drawing.Size(70, 33)
@@ -10311,7 +10500,7 @@ Partial Class Frm_Engineering
         Me.GroupBox12.Controls.Add(Me.radGet5)
         Me.GroupBox12.Controls.Add(Me.labPrfPos16)
         Me.GroupBox12.Controls.Add(Me.btn_Home15)
-        Me.GroupBox12.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox12.Location = New System.Drawing.Point(376, 3)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(365, 280)
@@ -10328,7 +10517,7 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel17.Controls.Add(Me.btn_P16, 0, 1)
         Me.TableLayoutPanel17.Controls.Add(Me.btn_P15, 1, 0)
         Me.TableLayoutPanel17.Controls.Add(Me.btn_N15, 0, 0)
-        Me.TableLayoutPanel17.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TableLayoutPanel17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TableLayoutPanel17.Location = New System.Drawing.Point(204, 23)
         Me.TableLayoutPanel17.Name = "TableLayoutPanel17"
         Me.TableLayoutPanel17.RowCount = 2
@@ -10342,7 +10531,7 @@ Partial Class Frm_Engineering
         Me.btn_N16.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N16.FlatAppearance.BorderSize = 0
         Me.btn_N16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N16.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N16.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N16.Image = CType(resources.GetObject("btn_N16.Image"),System.Drawing.Image)
         Me.btn_N16.Location = New System.Drawing.Point(3, 62)
         Me.btn_N16.Name = "btn_N16"
@@ -10357,7 +10546,7 @@ Partial Class Frm_Engineering
         Me.btn_P16.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P16.FlatAppearance.BorderSize = 0
         Me.btn_P16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P16.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P16.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P16.Image = CType(resources.GetObject("btn_P16.Image"),System.Drawing.Image)
         Me.btn_P16.Location = New System.Drawing.Point(63, 62)
         Me.btn_P16.Name = "btn_P16"
@@ -10372,7 +10561,7 @@ Partial Class Frm_Engineering
         Me.btn_P15.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P15.FlatAppearance.BorderSize = 0
         Me.btn_P15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P15.Image = CType(resources.GetObject("btn_P15.Image"),System.Drawing.Image)
         Me.btn_P15.Location = New System.Drawing.Point(63, 3)
         Me.btn_P15.Name = "btn_P15"
@@ -10387,7 +10576,7 @@ Partial Class Frm_Engineering
         Me.btn_N15.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N15.FlatAppearance.BorderSize = 0
         Me.btn_N15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N15.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N15.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N15.Image = CType(resources.GetObject("btn_N15.Image"),System.Drawing.Image)
         Me.btn_N15.Location = New System.Drawing.Point(3, 3)
         Me.btn_N15.Name = "btn_N15"
@@ -10400,7 +10589,7 @@ Partial Class Frm_Engineering
         'btn_Servo15
         '
         Me.btn_Servo15.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo15.Location = New System.Drawing.Point(113, 45)
         Me.btn_Servo15.Name = "btn_Servo15"
         Me.btn_Servo15.Size = New System.Drawing.Size(70, 33)
@@ -10411,7 +10600,7 @@ Partial Class Frm_Engineering
         '
         'Label238
         '
-        Me.Label238.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label238.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label238.Location = New System.Drawing.Point(20, 146)
         Me.Label238.Name = "Label238"
         Me.Label238.Size = New System.Drawing.Size(84, 28)
@@ -10421,17 +10610,17 @@ Partial Class Frm_Engineering
         '
         'txt_Pos15
         '
-        Me.txt_Pos15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos15.Location = New System.Drawing.Point(170, 216)
         Me.txt_Pos15.Name = "txt_Pos15"
-        Me.txt_Pos15.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos15.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos15.TabIndex = 104
         Me.txt_Pos15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btn_Home16
         '
         Me.btn_Home16.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home16.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home16.Location = New System.Drawing.Point(23, 94)
         Me.btn_Home16.Name = "btn_Home16"
         Me.btn_Home16.Size = New System.Drawing.Size(70, 33)
@@ -10441,7 +10630,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos15
         '
-        Me.labEncPos15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos15.Location = New System.Drawing.Point(297, 219)
         Me.labEncPos15.Name = "labEncPos15"
         Me.labEncPos15.Size = New System.Drawing.Size(50, 16)
@@ -10452,7 +10641,7 @@ Partial Class Frm_Engineering
         'btn_Servo16
         '
         Me.btn_Servo16.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo16.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo16.Location = New System.Drawing.Point(113, 94)
         Me.btn_Servo16.Name = "btn_Servo16"
         Me.btn_Servo16.Size = New System.Drawing.Size(70, 33)
@@ -10463,7 +10652,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos15
         '
-        Me.labPrfPos15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos15.Location = New System.Drawing.Point(241, 219)
         Me.labPrfPos15.Name = "labPrfPos15"
         Me.labPrfPos15.Size = New System.Drawing.Size(50, 16)
@@ -10473,7 +10662,7 @@ Partial Class Frm_Engineering
         '
         'Label263
         '
-        Me.Label263.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label263.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label263.Location = New System.Drawing.Point(110, 241)
         Me.Label263.Name = "Label263"
         Me.Label263.Size = New System.Drawing.Size(50, 22)
@@ -10485,17 +10674,17 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos5.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos5.Font = New System.Drawing.Font("HelveticaNeue", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cbo_Pos5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.cbo_Pos5.FormattingEnabled = true
         Me.cbo_Pos5.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos5.Location = New System.Drawing.Point(113, 148)
         Me.cbo_Pos5.Name = "cbo_Pos5"
-        Me.cbo_Pos5.Size = New System.Drawing.Size(234, 24)
+        Me.cbo_Pos5.Size = New System.Drawing.Size(234, 25)
         Me.cbo_Pos5.TabIndex = 107
         '
         'Label266
         '
-        Me.Label266.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label266.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label266.Location = New System.Drawing.Point(110, 216)
         Me.Label266.Name = "Label266"
         Me.Label266.Size = New System.Drawing.Size(50, 22)
@@ -10506,7 +10695,7 @@ Partial Class Frm_Engineering
         'btn_GoPos5
         '
         Me.btn_GoPos5.BackColor = System.Drawing.Color.Transparent
-        Me.btn_GoPos5.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_GoPos5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_GoPos5.Location = New System.Drawing.Point(267, 177)
         Me.btn_GoPos5.Name = "btn_GoPos5"
         Me.btn_GoPos5.Size = New System.Drawing.Size(80, 33)
@@ -10517,7 +10706,7 @@ Partial Class Frm_Engineering
         'btn_SavePos5
         '
         Me.btn_SavePos5.BackColor = System.Drawing.Color.Transparent
-        Me.btn_SavePos5.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_SavePos5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_SavePos5.Location = New System.Drawing.Point(113, 177)
         Me.btn_SavePos5.Name = "btn_SavePos5"
         Me.btn_SavePos5.Size = New System.Drawing.Size(80, 33)
@@ -10528,7 +10717,7 @@ Partial Class Frm_Engineering
         'radWrite5
         '
         Me.radWrite5.Checked = true
-        Me.radWrite5.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radWrite5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radWrite5.Location = New System.Drawing.Point(29, 241)
         Me.radWrite5.Name = "radWrite5"
         Me.radWrite5.Size = New System.Drawing.Size(50, 22)
@@ -10539,16 +10728,16 @@ Partial Class Frm_Engineering
         '
         'txt_Pos16
         '
-        Me.txt_Pos16.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos16.Location = New System.Drawing.Point(170, 241)
         Me.txt_Pos16.Name = "txt_Pos16"
-        Me.txt_Pos16.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos16.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos16.TabIndex = 110
         Me.txt_Pos16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chk_En5
         '
-        Me.chk_En5.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.chk_En5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.chk_En5.Location = New System.Drawing.Point(29, 186)
         Me.chk_En5.Name = "chk_En5"
         Me.chk_En5.Size = New System.Drawing.Size(75, 22)
@@ -10558,7 +10747,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos16
         '
-        Me.labEncPos16.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos16.Location = New System.Drawing.Point(297, 245)
         Me.labEncPos16.Name = "labEncPos16"
         Me.labEncPos16.Size = New System.Drawing.Size(50, 16)
@@ -10568,7 +10757,7 @@ Partial Class Frm_Engineering
         '
         'radGet5
         '
-        Me.radGet5.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radGet5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radGet5.Location = New System.Drawing.Point(29, 216)
         Me.radGet5.Name = "radGet5"
         Me.radGet5.Size = New System.Drawing.Size(50, 22)
@@ -10579,7 +10768,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos16
         '
-        Me.labPrfPos16.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos16.Location = New System.Drawing.Point(241, 245)
         Me.labPrfPos16.Name = "labPrfPos16"
         Me.labPrfPos16.Size = New System.Drawing.Size(50, 16)
@@ -10590,7 +10779,7 @@ Partial Class Frm_Engineering
         'btn_Home15
         '
         Me.btn_Home15.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home15.Location = New System.Drawing.Point(23, 45)
         Me.btn_Home15.Name = "btn_Home15"
         Me.btn_Home15.Size = New System.Drawing.Size(70, 33)
@@ -10620,7 +10809,7 @@ Partial Class Frm_Engineering
         Me.GroupBox11.Controls.Add(Me.radGet4)
         Me.GroupBox11.Controls.Add(Me.labPrfPos14)
         Me.GroupBox11.Controls.Add(Me.btn_Home13)
-        Me.GroupBox11.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox11.Location = New System.Drawing.Point(5, 3)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(365, 280)
@@ -10637,7 +10826,7 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel15.Controls.Add(Me.btn_P14, 0, 1)
         Me.TableLayoutPanel15.Controls.Add(Me.btn_P13, 1, 0)
         Me.TableLayoutPanel15.Controls.Add(Me.btn_N13, 0, 0)
-        Me.TableLayoutPanel15.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TableLayoutPanel15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TableLayoutPanel15.Location = New System.Drawing.Point(204, 23)
         Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
         Me.TableLayoutPanel15.RowCount = 2
@@ -10651,7 +10840,7 @@ Partial Class Frm_Engineering
         Me.btn_N14.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N14.FlatAppearance.BorderSize = 0
         Me.btn_N14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N14.Image = CType(resources.GetObject("btn_N14.Image"),System.Drawing.Image)
         Me.btn_N14.Location = New System.Drawing.Point(3, 62)
         Me.btn_N14.Name = "btn_N14"
@@ -10666,7 +10855,7 @@ Partial Class Frm_Engineering
         Me.btn_P14.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P14.FlatAppearance.BorderSize = 0
         Me.btn_P14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P14.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P14.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P14.Image = CType(resources.GetObject("btn_P14.Image"),System.Drawing.Image)
         Me.btn_P14.Location = New System.Drawing.Point(63, 62)
         Me.btn_P14.Name = "btn_P14"
@@ -10681,7 +10870,7 @@ Partial Class Frm_Engineering
         Me.btn_P13.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_P13.FlatAppearance.BorderSize = 0
         Me.btn_P13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_P13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_P13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_P13.Image = CType(resources.GetObject("btn_P13.Image"),System.Drawing.Image)
         Me.btn_P13.Location = New System.Drawing.Point(63, 3)
         Me.btn_P13.Name = "btn_P13"
@@ -10696,7 +10885,7 @@ Partial Class Frm_Engineering
         Me.btn_N13.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_N13.FlatAppearance.BorderSize = 0
         Me.btn_N13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_N13.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_N13.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_N13.Image = CType(resources.GetObject("btn_N13.Image"),System.Drawing.Image)
         Me.btn_N13.Location = New System.Drawing.Point(3, 3)
         Me.btn_N13.Name = "btn_N13"
@@ -10709,7 +10898,7 @@ Partial Class Frm_Engineering
         'btn_Servo13
         '
         Me.btn_Servo13.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo13.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo13.Location = New System.Drawing.Point(113, 45)
         Me.btn_Servo13.Name = "btn_Servo13"
         Me.btn_Servo13.Size = New System.Drawing.Size(70, 33)
@@ -10720,7 +10909,7 @@ Partial Class Frm_Engineering
         '
         'Label235
         '
-        Me.Label235.Font = New System.Drawing.Font("HelveticaNeue", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label235.Font = New System.Drawing.Font("Microsoft Sans Serif", 40!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label235.Location = New System.Drawing.Point(20, 146)
         Me.Label235.Name = "Label235"
         Me.Label235.Size = New System.Drawing.Size(84, 28)
@@ -10730,17 +10919,17 @@ Partial Class Frm_Engineering
         '
         'txt_Pos13
         '
-        Me.txt_Pos13.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos13.Location = New System.Drawing.Point(170, 216)
         Me.txt_Pos13.Name = "txt_Pos13"
-        Me.txt_Pos13.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos13.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos13.TabIndex = 104
         Me.txt_Pos13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btn_Home14
         '
         Me.btn_Home14.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home14.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home14.Location = New System.Drawing.Point(23, 94)
         Me.btn_Home14.Name = "btn_Home14"
         Me.btn_Home14.Size = New System.Drawing.Size(70, 33)
@@ -10750,7 +10939,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos13
         '
-        Me.labEncPos13.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos13.Location = New System.Drawing.Point(297, 219)
         Me.labEncPos13.Name = "labEncPos13"
         Me.labEncPos13.Size = New System.Drawing.Size(50, 16)
@@ -10761,7 +10950,7 @@ Partial Class Frm_Engineering
         'btn_Servo14
         '
         Me.btn_Servo14.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Servo14.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Servo14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Servo14.Location = New System.Drawing.Point(113, 94)
         Me.btn_Servo14.Name = "btn_Servo14"
         Me.btn_Servo14.Size = New System.Drawing.Size(70, 33)
@@ -10772,7 +10961,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos13
         '
-        Me.labPrfPos13.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos13.Location = New System.Drawing.Point(241, 219)
         Me.labPrfPos13.Name = "labPrfPos13"
         Me.labPrfPos13.Size = New System.Drawing.Size(50, 16)
@@ -10782,7 +10971,7 @@ Partial Class Frm_Engineering
         '
         'Label239
         '
-        Me.Label239.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label239.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label239.Location = New System.Drawing.Point(110, 241)
         Me.Label239.Name = "Label239"
         Me.Label239.Size = New System.Drawing.Size(50, 22)
@@ -10794,17 +10983,17 @@ Partial Class Frm_Engineering
         '
         Me.cbo_Pos4.AutoCompleteCustomSource.AddRange(New String() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "6", "7", "8", "9", "0", "1", "2", "3"})
         Me.cbo_Pos4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Pos4.Font = New System.Drawing.Font("HelveticaNeue", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cbo_Pos4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.cbo_Pos4.FormattingEnabled = true
         Me.cbo_Pos4.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cbo_Pos4.Location = New System.Drawing.Point(113, 148)
         Me.cbo_Pos4.Name = "cbo_Pos4"
-        Me.cbo_Pos4.Size = New System.Drawing.Size(234, 24)
+        Me.cbo_Pos4.Size = New System.Drawing.Size(234, 25)
         Me.cbo_Pos4.TabIndex = 107
         '
         'Label262
         '
-        Me.Label262.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label262.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label262.Location = New System.Drawing.Point(110, 216)
         Me.Label262.Name = "Label262"
         Me.Label262.Size = New System.Drawing.Size(50, 22)
@@ -10815,7 +11004,7 @@ Partial Class Frm_Engineering
         'btn_GoPos4
         '
         Me.btn_GoPos4.BackColor = System.Drawing.Color.Transparent
-        Me.btn_GoPos4.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_GoPos4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_GoPos4.Location = New System.Drawing.Point(267, 177)
         Me.btn_GoPos4.Name = "btn_GoPos4"
         Me.btn_GoPos4.Size = New System.Drawing.Size(80, 33)
@@ -10826,7 +11015,7 @@ Partial Class Frm_Engineering
         'btn_SavePos4
         '
         Me.btn_SavePos4.BackColor = System.Drawing.Color.Transparent
-        Me.btn_SavePos4.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_SavePos4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_SavePos4.Location = New System.Drawing.Point(113, 177)
         Me.btn_SavePos4.Name = "btn_SavePos4"
         Me.btn_SavePos4.Size = New System.Drawing.Size(80, 33)
@@ -10837,7 +11026,7 @@ Partial Class Frm_Engineering
         'radWrite4
         '
         Me.radWrite4.Checked = true
-        Me.radWrite4.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radWrite4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radWrite4.Location = New System.Drawing.Point(29, 241)
         Me.radWrite4.Name = "radWrite4"
         Me.radWrite4.Size = New System.Drawing.Size(50, 22)
@@ -10848,16 +11037,16 @@ Partial Class Frm_Engineering
         '
         'txt_Pos14
         '
-        Me.txt_Pos14.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txt_Pos14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txt_Pos14.Location = New System.Drawing.Point(170, 241)
         Me.txt_Pos14.Name = "txt_Pos14"
-        Me.txt_Pos14.Size = New System.Drawing.Size(70, 22)
+        Me.txt_Pos14.Size = New System.Drawing.Size(70, 21)
         Me.txt_Pos14.TabIndex = 110
         Me.txt_Pos14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chk_En4
         '
-        Me.chk_En4.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.chk_En4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.chk_En4.Location = New System.Drawing.Point(29, 186)
         Me.chk_En4.Name = "chk_En4"
         Me.chk_En4.Size = New System.Drawing.Size(75, 22)
@@ -10867,7 +11056,7 @@ Partial Class Frm_Engineering
         '
         'labEncPos14
         '
-        Me.labEncPos14.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labEncPos14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labEncPos14.Location = New System.Drawing.Point(297, 245)
         Me.labEncPos14.Name = "labEncPos14"
         Me.labEncPos14.Size = New System.Drawing.Size(50, 16)
@@ -10877,7 +11066,7 @@ Partial Class Frm_Engineering
         '
         'radGet4
         '
-        Me.radGet4.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.radGet4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.radGet4.Location = New System.Drawing.Point(29, 216)
         Me.radGet4.Name = "radGet4"
         Me.radGet4.Size = New System.Drawing.Size(50, 22)
@@ -10888,7 +11077,7 @@ Partial Class Frm_Engineering
         '
         'labPrfPos14
         '
-        Me.labPrfPos14.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.labPrfPos14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.labPrfPos14.Location = New System.Drawing.Point(241, 245)
         Me.labPrfPos14.Name = "labPrfPos14"
         Me.labPrfPos14.Size = New System.Drawing.Size(50, 16)
@@ -10899,7 +11088,7 @@ Partial Class Frm_Engineering
         'btn_Home13
         '
         Me.btn_Home13.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Home13.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btn_Home13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btn_Home13.Location = New System.Drawing.Point(23, 45)
         Me.btn_Home13.Name = "btn_Home13"
         Me.btn_Home13.Size = New System.Drawing.Size(70, 33)
@@ -10914,9 +11103,9 @@ Partial Class Frm_Engineering
         Me.TabPage9.Controls.Add(Me.GroupBox19)
         Me.TabPage9.Controls.Add(Me.GroupBox20)
         Me.TabPage9.Controls.Add(Me.Panel10)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 34)
         Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage9.Size = New System.Drawing.Size(744, 577)
         Me.TabPage9.TabIndex = 3
         Me.TabPage9.Text = "流水线调试"
         Me.TabPage9.UseVisualStyleBackColor = true
@@ -10934,7 +11123,7 @@ Partial Class Frm_Engineering
         Me.GroupBox22.Controls.Add(Me.btn_MotorRunPositive3)
         Me.GroupBox22.Controls.Add(Me.btn_MotorRunNegative3)
         Me.GroupBox22.Controls.Add(Me.btn_StopL3)
-        Me.GroupBox22.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox22.Location = New System.Drawing.Point(560, 5)
         Me.GroupBox22.Name = "GroupBox22"
         Me.GroupBox22.Size = New System.Drawing.Size(180, 380)
@@ -11112,7 +11301,7 @@ Partial Class Frm_Engineering
         Me.GroupBox21.Controls.Add(Me.btn_MotorRunPositive2)
         Me.GroupBox21.Controls.Add(Me.btn_MotorRunNegative2)
         Me.GroupBox21.Controls.Add(Me.btn_StopL2)
-        Me.GroupBox21.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox21.Location = New System.Drawing.Point(375, 5)
         Me.GroupBox21.Name = "GroupBox21"
         Me.GroupBox21.Size = New System.Drawing.Size(180, 380)
@@ -11290,7 +11479,7 @@ Partial Class Frm_Engineering
         Me.GroupBox19.Controls.Add(Me.btn_MotorRunPositive1)
         Me.GroupBox19.Controls.Add(Me.btn_MotorRunNegative1)
         Me.GroupBox19.Controls.Add(Me.btn_StopL1)
-        Me.GroupBox19.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox19.Location = New System.Drawing.Point(190, 5)
         Me.GroupBox19.Name = "GroupBox19"
         Me.GroupBox19.Size = New System.Drawing.Size(180, 380)
@@ -11464,7 +11653,7 @@ Partial Class Frm_Engineering
         Me.GroupBox20.Controls.Add(Me.btn_MotorRunPositive0)
         Me.GroupBox20.Controls.Add(Me.btn_MotorRunNegative0)
         Me.GroupBox20.Controls.Add(Me.btn_StopL0)
-        Me.GroupBox20.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.GroupBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.GroupBox20.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox20.Name = "GroupBox20"
         Me.GroupBox20.Size = New System.Drawing.Size(180, 380)
@@ -11474,7 +11663,7 @@ Partial Class Frm_Engineering
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Button3.Location = New System.Drawing.Point(5, 216)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 30)
@@ -11582,7 +11771,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO4
         '
-        Me.btn_S5IO4.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO4.Location = New System.Drawing.Point(470, 130)
         Me.btn_S5IO4.Name = "btn_S5IO4"
         Me.btn_S5IO4.Size = New System.Drawing.Size(110, 30)
@@ -11592,7 +11781,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO8
         '
-        Me.btn_S5IO8.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO8.Location = New System.Drawing.Point(590, 130)
         Me.btn_S5IO8.Name = "btn_S5IO8"
         Me.btn_S5IO8.Size = New System.Drawing.Size(110, 30)
@@ -11602,7 +11791,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO7
         '
-        Me.btn_S5IO7.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO7.Location = New System.Drawing.Point(590, 92)
         Me.btn_S5IO7.Name = "btn_S5IO7"
         Me.btn_S5IO7.Size = New System.Drawing.Size(110, 30)
@@ -11612,7 +11801,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO1
         '
-        Me.btn_S5IO1.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO1.Location = New System.Drawing.Point(470, 20)
         Me.btn_S5IO1.Name = "btn_S5IO1"
         Me.btn_S5IO1.Size = New System.Drawing.Size(110, 30)
@@ -11622,7 +11811,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO6
         '
-        Me.btn_S5IO6.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO6.Location = New System.Drawing.Point(590, 56)
         Me.btn_S5IO6.Name = "btn_S5IO6"
         Me.btn_S5IO6.Size = New System.Drawing.Size(110, 30)
@@ -11632,7 +11821,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO2
         '
-        Me.btn_S5IO2.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO2.Location = New System.Drawing.Point(470, 56)
         Me.btn_S5IO2.Name = "btn_S5IO2"
         Me.btn_S5IO2.Size = New System.Drawing.Size(110, 30)
@@ -11642,7 +11831,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO5
         '
-        Me.btn_S5IO5.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO5.Location = New System.Drawing.Point(590, 20)
         Me.btn_S5IO5.Name = "btn_S5IO5"
         Me.btn_S5IO5.Size = New System.Drawing.Size(110, 30)
@@ -11652,7 +11841,7 @@ Partial Class Frm_Engineering
         '
         'btn_S5IO3
         '
-        Me.btn_S5IO3.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_S5IO3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_S5IO3.Location = New System.Drawing.Point(470, 92)
         Me.btn_S5IO3.Name = "btn_S5IO3"
         Me.btn_S5IO3.Size = New System.Drawing.Size(110, 30)
@@ -11665,9 +11854,9 @@ Partial Class Frm_Engineering
         Me.TabPage13.Controls.Add(Me.BZ_RoundPanel11)
         Me.TabPage13.Controls.Add(Me.BZ_RoundPanel10)
         Me.TabPage13.Controls.Add(Me.BZ_RoundPanel3)
-        Me.TabPage13.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage13.Location = New System.Drawing.Point(4, 34)
         Me.TabPage13.Name = "TabPage13"
-        Me.TabPage13.Size = New System.Drawing.Size(744, 579)
+        Me.TabPage13.Size = New System.Drawing.Size(744, 577)
         Me.TabPage13.TabIndex = 5
         Me.TabPage13.Text = "其他"
         Me.TabPage13.UseVisualStyleBackColor = true
@@ -11718,7 +11907,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistNeedle1ToCCD_Y
         '
-        Me.txt_DistNeedle1ToCCD_Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistNeedle1ToCCD_Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistNeedle1ToCCD_Y.Location = New System.Drawing.Point(26, 53)
         Me.txt_DistNeedle1ToCCD_Y.Multiline = true
         Me.txt_DistNeedle1ToCCD_Y.Name = "txt_DistNeedle1ToCCD_Y"
@@ -11727,7 +11916,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistNeedle1ToCCD_X
         '
-        Me.txt_DistNeedle1ToCCD_X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistNeedle1ToCCD_X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistNeedle1ToCCD_X.Location = New System.Drawing.Point(26, 26)
         Me.txt_DistNeedle1ToCCD_X.Multiline = true
         Me.txt_DistNeedle1ToCCD_X.Name = "txt_DistNeedle1ToCCD_X"
@@ -11736,7 +11925,7 @@ Partial Class Frm_Engineering
         '
         'Label277
         '
-        Me.Label277.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label277.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label277.Location = New System.Drawing.Point(6, 23)
         Me.Label277.Name = "Label277"
         Me.Label277.Padding = New System.Windows.Forms.Padding(3)
@@ -11747,7 +11936,7 @@ Partial Class Frm_Engineering
         '
         'Label281
         '
-        Me.Label281.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label281.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label281.Location = New System.Drawing.Point(6, 50)
         Me.Label281.Name = "Label281"
         Me.Label281.Padding = New System.Windows.Forms.Padding(3)
@@ -11758,7 +11947,7 @@ Partial Class Frm_Engineering
         '
         'Label282
         '
-        Me.Label282.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label282.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label282.Location = New System.Drawing.Point(26, 3)
         Me.Label282.Name = "Label282"
         Me.Label282.Size = New System.Drawing.Size(124, 14)
@@ -11792,7 +11981,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistLaserToCCD_Y
         '
-        Me.txt_DistLaserToCCD_Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistLaserToCCD_Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistLaserToCCD_Y.Location = New System.Drawing.Point(156, 53)
         Me.txt_DistLaserToCCD_Y.Multiline = true
         Me.txt_DistLaserToCCD_Y.Name = "txt_DistLaserToCCD_Y"
@@ -11801,7 +11990,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistNeedle0ToCCD_Y
         '
-        Me.txt_DistNeedle0ToCCD_Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistNeedle0ToCCD_Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistNeedle0ToCCD_Y.Location = New System.Drawing.Point(26, 53)
         Me.txt_DistNeedle0ToCCD_Y.Multiline = true
         Me.txt_DistNeedle0ToCCD_Y.Name = "txt_DistNeedle0ToCCD_Y"
@@ -11810,7 +11999,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistNeedle0ToCCD_X
         '
-        Me.txt_DistNeedle0ToCCD_X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistNeedle0ToCCD_X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistNeedle0ToCCD_X.Location = New System.Drawing.Point(26, 26)
         Me.txt_DistNeedle0ToCCD_X.Multiline = true
         Me.txt_DistNeedle0ToCCD_X.Name = "txt_DistNeedle0ToCCD_X"
@@ -11819,7 +12008,7 @@ Partial Class Frm_Engineering
         '
         'Label284
         '
-        Me.Label284.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label284.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label284.Location = New System.Drawing.Point(6, 23)
         Me.Label284.Name = "Label284"
         Me.Label284.Padding = New System.Windows.Forms.Padding(3)
@@ -11830,7 +12019,7 @@ Partial Class Frm_Engineering
         '
         'Label285
         '
-        Me.Label285.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label285.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label285.Location = New System.Drawing.Point(156, 3)
         Me.Label285.Name = "Label285"
         Me.Label285.Size = New System.Drawing.Size(124, 14)
@@ -11839,7 +12028,7 @@ Partial Class Frm_Engineering
         '
         'Label286
         '
-        Me.Label286.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label286.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label286.Location = New System.Drawing.Point(6, 50)
         Me.Label286.Name = "Label286"
         Me.Label286.Padding = New System.Windows.Forms.Padding(3)
@@ -11850,7 +12039,7 @@ Partial Class Frm_Engineering
         '
         'Label287
         '
-        Me.Label287.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label287.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label287.Location = New System.Drawing.Point(26, 3)
         Me.Label287.Name = "Label287"
         Me.Label287.Size = New System.Drawing.Size(124, 14)
@@ -11859,7 +12048,7 @@ Partial Class Frm_Engineering
         '
         'txt_DistLaserToCCD_X
         '
-        Me.txt_DistLaserToCCD_X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_DistLaserToCCD_X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_DistLaserToCCD_X.Location = New System.Drawing.Point(156, 26)
         Me.txt_DistLaserToCCD_X.Multiline = true
         Me.txt_DistLaserToCCD_X.Name = "txt_DistLaserToCCD_X"
@@ -11884,7 +12073,7 @@ Partial Class Frm_Engineering
         '
         'btn_Needle1BaseZClear
         '
-        Me.btn_Needle1BaseZClear.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Needle1BaseZClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_Needle1BaseZClear.Location = New System.Drawing.Point(229, 199)
         Me.btn_Needle1BaseZClear.Name = "btn_Needle1BaseZClear"
         Me.btn_Needle1BaseZClear.Size = New System.Drawing.Size(110, 23)
@@ -11894,7 +12083,7 @@ Partial Class Frm_Engineering
         '
         'btn_Needle1BaseXYClear
         '
-        Me.btn_Needle1BaseXYClear.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Needle1BaseXYClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_Needle1BaseXYClear.Location = New System.Drawing.Point(229, 150)
         Me.btn_Needle1BaseXYClear.Name = "btn_Needle1BaseXYClear"
         Me.btn_Needle1BaseXYClear.Size = New System.Drawing.Size(110, 23)
@@ -11904,7 +12093,7 @@ Partial Class Frm_Engineering
         '
         'btn_Needle0BaseZClear
         '
-        Me.btn_Needle0BaseZClear.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Needle0BaseZClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_Needle0BaseZClear.Location = New System.Drawing.Point(229, 78)
         Me.btn_Needle0BaseZClear.Name = "btn_Needle0BaseZClear"
         Me.btn_Needle0BaseZClear.Size = New System.Drawing.Size(110, 23)
@@ -11914,7 +12103,7 @@ Partial Class Frm_Engineering
         '
         'btn_Needle0BaseXYClear
         '
-        Me.btn_Needle0BaseXYClear.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.btn_Needle0BaseXYClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.btn_Needle0BaseXYClear.Location = New System.Drawing.Point(229, 29)
         Me.btn_Needle0BaseXYClear.Name = "btn_Needle0BaseXYClear"
         Me.btn_Needle0BaseXYClear.Size = New System.Drawing.Size(110, 23)
@@ -11952,7 +12141,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff1Z
         '
-        Me.txt_Diff1Z.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff1Z.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff1Z.Location = New System.Drawing.Point(126, 80)
         Me.txt_Diff1Z.Multiline = true
         Me.txt_Diff1Z.Name = "txt_Diff1Z"
@@ -11961,7 +12150,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base1Z
         '
-        Me.txt_Base1Z.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base1Z.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base1Z.Location = New System.Drawing.Point(26, 80)
         Me.txt_Base1Z.Multiline = true
         Me.txt_Base1Z.Name = "txt_Base1Z"
@@ -11970,7 +12159,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff1Y
         '
-        Me.txt_Diff1Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff1Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff1Y.Location = New System.Drawing.Point(126, 53)
         Me.txt_Diff1Y.Multiline = true
         Me.txt_Diff1Y.Name = "txt_Diff1Y"
@@ -11979,7 +12168,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base1Y
         '
-        Me.txt_Base1Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base1Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base1Y.Location = New System.Drawing.Point(26, 53)
         Me.txt_Base1Y.Multiline = true
         Me.txt_Base1Y.Name = "txt_Base1Y"
@@ -11988,7 +12177,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base1X
         '
-        Me.txt_Base1X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base1X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base1X.Location = New System.Drawing.Point(26, 26)
         Me.txt_Base1X.Multiline = true
         Me.txt_Base1X.Name = "txt_Base1X"
@@ -11997,7 +12186,7 @@ Partial Class Frm_Engineering
         '
         'Label270
         '
-        Me.Label270.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label270.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label270.Location = New System.Drawing.Point(6, 23)
         Me.Label270.Name = "Label270"
         Me.Label270.Padding = New System.Windows.Forms.Padding(3)
@@ -12008,7 +12197,7 @@ Partial Class Frm_Engineering
         '
         'Label271
         '
-        Me.Label271.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label271.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label271.Location = New System.Drawing.Point(126, 3)
         Me.Label271.Name = "Label271"
         Me.Label271.Size = New System.Drawing.Size(90, 14)
@@ -12017,7 +12206,7 @@ Partial Class Frm_Engineering
         '
         'Label272
         '
-        Me.Label272.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label272.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label272.Location = New System.Drawing.Point(6, 50)
         Me.Label272.Name = "Label272"
         Me.Label272.Padding = New System.Windows.Forms.Padding(3)
@@ -12028,7 +12217,7 @@ Partial Class Frm_Engineering
         '
         'Label274
         '
-        Me.Label274.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label274.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label274.Location = New System.Drawing.Point(26, 3)
         Me.Label274.Name = "Label274"
         Me.Label274.Size = New System.Drawing.Size(90, 14)
@@ -12037,7 +12226,7 @@ Partial Class Frm_Engineering
         '
         'Label275
         '
-        Me.Label275.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label275.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label275.Location = New System.Drawing.Point(6, 77)
         Me.Label275.Name = "Label275"
         Me.Label275.Padding = New System.Windows.Forms.Padding(3)
@@ -12048,7 +12237,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff1X
         '
-        Me.txt_Diff1X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff1X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff1X.Location = New System.Drawing.Point(126, 26)
         Me.txt_Diff1X.Multiline = true
         Me.txt_Diff1X.Name = "txt_Diff1X"
@@ -12085,7 +12274,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff0Z
         '
-        Me.txt_Diff0Z.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff0Z.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff0Z.Location = New System.Drawing.Point(126, 80)
         Me.txt_Diff0Z.Multiline = true
         Me.txt_Diff0Z.Name = "txt_Diff0Z"
@@ -12094,7 +12283,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base0Z
         '
-        Me.txt_Base0Z.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base0Z.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base0Z.Location = New System.Drawing.Point(26, 80)
         Me.txt_Base0Z.Multiline = true
         Me.txt_Base0Z.Name = "txt_Base0Z"
@@ -12103,7 +12292,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff0Y
         '
-        Me.txt_Diff0Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff0Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff0Y.Location = New System.Drawing.Point(126, 53)
         Me.txt_Diff0Y.Multiline = true
         Me.txt_Diff0Y.Name = "txt_Diff0Y"
@@ -12112,7 +12301,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base0Y
         '
-        Me.txt_Base0Y.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base0Y.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base0Y.Location = New System.Drawing.Point(26, 53)
         Me.txt_Base0Y.Multiline = true
         Me.txt_Base0Y.Name = "txt_Base0Y"
@@ -12121,7 +12310,7 @@ Partial Class Frm_Engineering
         '
         'txt_Base0X
         '
-        Me.txt_Base0X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Base0X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Base0X.Location = New System.Drawing.Point(26, 26)
         Me.txt_Base0X.Multiline = true
         Me.txt_Base0X.Name = "txt_Base0X"
@@ -12130,7 +12319,7 @@ Partial Class Frm_Engineering
         '
         'Label251
         '
-        Me.Label251.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label251.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label251.Location = New System.Drawing.Point(6, 23)
         Me.Label251.Name = "Label251"
         Me.Label251.Padding = New System.Windows.Forms.Padding(3)
@@ -12141,7 +12330,7 @@ Partial Class Frm_Engineering
         '
         'Label268
         '
-        Me.Label268.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label268.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label268.Location = New System.Drawing.Point(126, 3)
         Me.Label268.Name = "Label268"
         Me.Label268.Size = New System.Drawing.Size(90, 14)
@@ -12150,7 +12339,7 @@ Partial Class Frm_Engineering
         '
         'Label267
         '
-        Me.Label267.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label267.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label267.Location = New System.Drawing.Point(6, 50)
         Me.Label267.Name = "Label267"
         Me.Label267.Padding = New System.Windows.Forms.Padding(3)
@@ -12161,7 +12350,7 @@ Partial Class Frm_Engineering
         '
         'lbl_Base
         '
-        Me.lbl_Base.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_Base.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.lbl_Base.Location = New System.Drawing.Point(26, 3)
         Me.lbl_Base.Name = "lbl_Base"
         Me.lbl_Base.Size = New System.Drawing.Size(90, 14)
@@ -12170,7 +12359,7 @@ Partial Class Frm_Engineering
         '
         'Label257
         '
-        Me.Label257.Font = New System.Drawing.Font("HelveticaNeue", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.Label257.Font = New System.Drawing.Font("Microsoft Sans Serif", 34!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.Label257.Location = New System.Drawing.Point(6, 77)
         Me.Label257.Name = "Label257"
         Me.Label257.Padding = New System.Windows.Forms.Padding(3)
@@ -12181,7 +12370,7 @@ Partial Class Frm_Engineering
         '
         'txt_Diff0X
         '
-        Me.txt_Diff0X.Font = New System.Drawing.Font("HelveticaNeue", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.txt_Diff0X.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
         Me.txt_Diff0X.Location = New System.Drawing.Point(126, 26)
         Me.txt_Diff0X.Multiline = true
         Me.txt_Diff0X.Name = "txt_Diff0X"
@@ -12195,185 +12384,6 @@ Partial Class Frm_Engineering
         'Timer_GoHome
         '
         Me.Timer_GoHome.Interval = 10
-        '
-        'Grp
-        '
-        Me.Grp.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Grp.Controls.Add(Me.Label336)
-        Me.Grp.Controls.Add(Me.txt_MaterialSelected)
-        Me.Grp.Controls.Add(Me.rad_Brc11)
-        Me.Grp.Controls.Add(Me.rad_Brc10)
-        Me.Grp.Controls.Add(Me.rad_Brc9)
-        Me.Grp.Controls.Add(Me.rad_Brc8)
-        Me.Grp.Controls.Add(Me.rad_Brc7)
-        Me.Grp.Controls.Add(Me.rad_Brc6)
-        Me.Grp.Controls.Add(Me.rad_Brc5)
-        Me.Grp.Controls.Add(Me.rad_Brc4)
-        Me.Grp.Controls.Add(Me.rad_Brc3)
-        Me.Grp.Controls.Add(Me.rad_Brc2)
-        Me.Grp.Controls.Add(Me.rad_Brc1)
-        Me.Grp.Controls.Add(Me.rad_Brc0)
-        Me.Grp.Location = New System.Drawing.Point(9, 247)
-        Me.Grp.Name = "Grp"
-        Me.Grp.Size = New System.Drawing.Size(227, 148)
-        Me.Grp.TabIndex = 265
-        Me.Grp.TabStop = false
-        Me.Grp.Text = "选择载具中料的序号"
-        '
-        'rad_Brc0
-        '
-        Me.rad_Brc0.AutoSize = true
-        Me.rad_Brc0.Checked = true
-        Me.rad_Brc0.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc0.Location = New System.Drawing.Point(21, 23)
-        Me.rad_Brc0.Name = "rad_Brc0"
-        Me.rad_Brc0.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc0.TabIndex = 266
-        Me.rad_Brc0.TabStop = true
-        Me.rad_Brc0.Text = "1"
-        Me.rad_Brc0.UseVisualStyleBackColor = true
-        '
-        'rad_Brc1
-        '
-        Me.rad_Brc1.AutoSize = true
-        Me.rad_Brc1.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc1.Location = New System.Drawing.Point(46, 43)
-        Me.rad_Brc1.Name = "rad_Brc1"
-        Me.rad_Brc1.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc1.TabIndex = 267
-        Me.rad_Brc1.Text = "2"
-        Me.rad_Brc1.UseVisualStyleBackColor = true
-        '
-        'rad_Brc2
-        '
-        Me.rad_Brc2.AutoSize = true
-        Me.rad_Brc2.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc2.Location = New System.Drawing.Point(85, 23)
-        Me.rad_Brc2.Name = "rad_Brc2"
-        Me.rad_Brc2.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc2.TabIndex = 268
-        Me.rad_Brc2.Text = "3"
-        Me.rad_Brc2.UseVisualStyleBackColor = true
-        '
-        'rad_Brc3
-        '
-        Me.rad_Brc3.AutoSize = true
-        Me.rad_Brc3.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc3.Location = New System.Drawing.Point(110, 43)
-        Me.rad_Brc3.Name = "rad_Brc3"
-        Me.rad_Brc3.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc3.TabIndex = 269
-        Me.rad_Brc3.Text = "4"
-        Me.rad_Brc3.UseVisualStyleBackColor = true
-        '
-        'rad_Brc4
-        '
-        Me.rad_Brc4.AutoSize = true
-        Me.rad_Brc4.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc4.Location = New System.Drawing.Point(149, 23)
-        Me.rad_Brc4.Name = "rad_Brc4"
-        Me.rad_Brc4.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc4.TabIndex = 270
-        Me.rad_Brc4.Text = "5"
-        Me.rad_Brc4.UseVisualStyleBackColor = true
-        '
-        'rad_Brc5
-        '
-        Me.rad_Brc5.AutoSize = true
-        Me.rad_Brc5.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc5.Location = New System.Drawing.Point(174, 43)
-        Me.rad_Brc5.Name = "rad_Brc5"
-        Me.rad_Brc5.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc5.TabIndex = 271
-        Me.rad_Brc5.Text = "6"
-        Me.rad_Brc5.UseVisualStyleBackColor = true
-        '
-        'rad_Brc6
-        '
-        Me.rad_Brc6.AutoSize = true
-        Me.rad_Brc6.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc6.Location = New System.Drawing.Point(21, 69)
-        Me.rad_Brc6.Name = "rad_Brc6"
-        Me.rad_Brc6.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc6.TabIndex = 272
-        Me.rad_Brc6.Text = "7"
-        Me.rad_Brc6.UseVisualStyleBackColor = true
-        '
-        'rad_Brc7
-        '
-        Me.rad_Brc7.AutoSize = true
-        Me.rad_Brc7.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc7.Location = New System.Drawing.Point(46, 90)
-        Me.rad_Brc7.Name = "rad_Brc7"
-        Me.rad_Brc7.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc7.TabIndex = 273
-        Me.rad_Brc7.Text = "8"
-        Me.rad_Brc7.UseVisualStyleBackColor = true
-        '
-        'rad_Brc8
-        '
-        Me.rad_Brc8.AutoSize = true
-        Me.rad_Brc8.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc8.Location = New System.Drawing.Point(85, 69)
-        Me.rad_Brc8.Name = "rad_Brc8"
-        Me.rad_Brc8.Size = New System.Drawing.Size(32, 19)
-        Me.rad_Brc8.TabIndex = 274
-        Me.rad_Brc8.Text = "9"
-        Me.rad_Brc8.UseVisualStyleBackColor = true
-        '
-        'rad_Brc9
-        '
-        Me.rad_Brc9.AutoSize = true
-        Me.rad_Brc9.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc9.Location = New System.Drawing.Point(110, 90)
-        Me.rad_Brc9.Name = "rad_Brc9"
-        Me.rad_Brc9.Size = New System.Drawing.Size(39, 19)
-        Me.rad_Brc9.TabIndex = 275
-        Me.rad_Brc9.Text = "10"
-        Me.rad_Brc9.UseVisualStyleBackColor = true
-        '
-        'rad_Brc10
-        '
-        Me.rad_Brc10.AutoSize = true
-        Me.rad_Brc10.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc10.Location = New System.Drawing.Point(149, 69)
-        Me.rad_Brc10.Name = "rad_Brc10"
-        Me.rad_Brc10.Size = New System.Drawing.Size(39, 19)
-        Me.rad_Brc10.TabIndex = 276
-        Me.rad_Brc10.Text = "11"
-        Me.rad_Brc10.UseVisualStyleBackColor = true
-        '
-        'rad_Brc11
-        '
-        Me.rad_Brc11.AutoSize = true
-        Me.rad_Brc11.ForeColor = System.Drawing.Color.Blue
-        Me.rad_Brc11.Location = New System.Drawing.Point(174, 90)
-        Me.rad_Brc11.Name = "rad_Brc11"
-        Me.rad_Brc11.Size = New System.Drawing.Size(39, 19)
-        Me.rad_Brc11.TabIndex = 277
-        Me.rad_Brc11.Text = "12"
-        Me.rad_Brc11.UseVisualStyleBackColor = true
-        '
-        'txt_MaterialSelected
-        '
-        Me.txt_MaterialSelected.BackColor = System.Drawing.SystemColors.Window
-        Me.txt_MaterialSelected.Font = New System.Drawing.Font("宋体", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
-        Me.txt_MaterialSelected.ForeColor = System.Drawing.Color.Blue
-        Me.txt_MaterialSelected.Location = New System.Drawing.Point(117, 121)
-        Me.txt_MaterialSelected.Name = "txt_MaterialSelected"
-        Me.txt_MaterialSelected.Size = New System.Drawing.Size(63, 21)
-        Me.txt_MaterialSelected.TabIndex = 278
-        Me.txt_MaterialSelected.Text = "10"
-        Me.txt_MaterialSelected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label336
-        '
-        Me.Label336.AutoSize = true
-        Me.Label336.Location = New System.Drawing.Point(8, 123)
-        Me.Label336.Name = "Label336"
-        Me.Label336.Size = New System.Drawing.Size(103, 15)
-        Me.Label336.TabIndex = 279
-        Me.Label336.Text = "单站调试选料"
         '
         'Frm_Engineering
         '
@@ -12438,6 +12448,8 @@ Partial Class Frm_Engineering
         Me.TabPage11.ResumeLayout(false)
         Me.TableLayoutPanel16.ResumeLayout(false)
         Me.TabPage12.ResumeLayout(false)
+        Me.Grp.ResumeLayout(false)
+        Me.Grp.PerformLayout
         Me.gupStep.ResumeLayout(false)
         Me.gupStep.PerformLayout
         Me.gupVel.ResumeLayout(false)
@@ -12488,8 +12500,6 @@ Partial Class Frm_Engineering
         Me.TableLayoutPanel21.PerformLayout
         Me.TableLayoutPanel20.ResumeLayout(false)
         Me.TableLayoutPanel20.PerformLayout
-        Me.Grp.ResumeLayout(false)
-        Me.Grp.PerformLayout
         Me.ResumeLayout(false)
 
 End Sub
@@ -13396,4 +13406,5 @@ End Sub
     Friend WithEvents rad_Brc0 As System.Windows.Forms.RadioButton
     Friend WithEvents Label336 As System.Windows.Forms.Label
     Friend WithEvents txt_MaterialSelected As System.Windows.Forms.TextBox
+    Friend WithEvents btnTrayGlue As System.Windows.Forms.Button
 End Class

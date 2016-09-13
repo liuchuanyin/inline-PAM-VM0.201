@@ -128,6 +128,12 @@ Public Module Variables
     ''' <remarks></remarks>
     Public Path_AlarmFile As String = "D:\BZ-Parameter\Alarm List.xml"
 
+    ''' <summary>
+    ''' Tray盘矩阵点位保存文件
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Path_TrayMatrix As String = "D:\BZ-Parameter\TrayMatrix.xml"
+
 #End Region
 
 #Region "时间变量"

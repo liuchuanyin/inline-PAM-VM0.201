@@ -219,17 +219,63 @@
     End Sub
 #End Region
 
-#Region "Tray矩阵计算"
+#Region "Tray矩阵计算及文件读写保存"
     Structure sctTrayMatrix
+        ''' <summary>
+        ''' 点胶矩阵
+        ''' </summary>
+        ''' <remarks></remarks>
         Dim TrayGlue() As Dist_XY
+        ''' <summary>
+        ''' 精补矩阵
+        ''' </summary>
+        ''' <remarks></remarks>
         Dim TrayFineCompensation() As Dist_XY
+        ''' <summary>
+        ''' 贴合矩阵
+        ''' </summary>
+        ''' <remarks></remarks>
         Dim TrayPaste() As Dist_XY
+        ''' <summary>
+        ''' 取料矩阵
+        ''' </summary>
+        ''' <remarks></remarks>
         Dim TrayPreTaker() As Dist_XY
+        ''' <summary>
+        ''' 复检矩阵
+        ''' </summary>
+        ''' <remarks></remarks>
         Dim TrayRecheck() As Dist_XY
+
+        ''' <summary>
+        ''' 重新定义各数组大小
+        ''' </summary>
+        ''' <remarks></remarks>
+        Sub Init()
+            ReDim TrayGlue(24)
+            ReDim TrayFineCompensation(24)
+            ReDim TrayPaste(24)
+            ReDim TrayPreTaker(100)
+            ReDim TrayRecheck(24)
+        End Sub
     End Structure
 
+    ''' <summary>
+    ''' Tray矩阵数据，包括点胶矩阵，精被矩阵等
+    ''' </summary>
+    ''' <remarks></remarks>
     Public TrayMatrix As sctTrayMatrix
 
+    ''' <summary>
+    ''' 输入XY平面的三个坐标，行数与列数，得到均分的所有点的XY坐标
+    ''' </summary>
+    ''' <param name="P0"></param>
+    ''' <param name="P1"></param>
+    ''' <param name="P2"></param>
+    ''' <param name="Row"></param>
+    ''' <param name="Column"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function PointRefresh(P0 As Dist_XY, P1 As Dist_XY, P2 As Dist_XY, Row As Integer, Column As Integer) As Dist_XY()
         Dim tempRowPoint0() As Dist_XY
         Dim tempRowPoint1() As Dist_XY
@@ -260,9 +306,17 @@
             Next
         Next
 
-        Return Point 
+        Return Point
     End Function
 
+    ''' <summary>
+    ''' 根据平等四边行的三个点求第四个点的坐标
+    ''' </summary>
+    ''' <param name="tempP0"></param>
+    ''' <param name="tempP1"></param>
+    ''' <param name="tempP2"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Private Function ParallelogramFourthPoint(tempP0 As Dist_XY, tempP1 As Dist_XY, tempP2 As Dist_XY) As Dist_XY
         Dim tempP3 As Dist_XY
         tempP3.X = tempP2.X - tempP1.X + tempP0.X
@@ -270,6 +324,14 @@
         Return tempP3
     End Function
 
+    ''' <summary>
+    ''' 给出线段起点坐标，终点坐标，均分点数，得到线段上所有均分点坐标
+    ''' </summary>
+    ''' <param name="StartPoint"></param>
+    ''' <param name="EndPoint"></param>
+    ''' <param name="AveragenNum"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Private Function AveragePoint(StartPoint As Dist_XY, EndPoint As Dist_XY, AveragenNum As Integer) As Dist_XY()
         '首先对输入的均分点数进行判断,包括起始点和终止点,所以均分点必须>=2
         If AveragenNum < 2 Then AveragenNum = 2
@@ -280,11 +342,51 @@
 
         For i = 0 To n
             TempPoint(i).X = (i * EndPoint.X + (n - i) * StartPoint.X) / n
-            TempPoint(i).Y = (i * EndPoint.Y + (n - i) * StartPoint.Y) / n 
+            TempPoint(i).Y = (i * EndPoint.Y + (n - i) * StartPoint.Y) / n
         Next
 
         Return TempPoint
     End Function
+
+    ''' <summary>
+    ''' 从文件读取Tray矩阵点位数据
+    ''' </summary>
+    ''' <param name="path"></param>
+    ''' <param name="data"></param>
+    ''' <remarks></remarks>
+    Public Sub ReadMatrixPos(ByVal path As String, ByVal data As sctTrayMatrix)
+        TrayMatrix.Init()
+        Try
+            If IO.File.Exists(path) = False Then
+                Call WriteMatrixPos(path, TrayMatrix)
+            End If
+
+            Dim reader As New System.Xml.Serialization.XmlSerializer(GetType(sctTrayMatrix))
+            Dim file As New System.IO.StreamReader(path)
+
+            TrayMatrix = CType(reader.Deserialize(file), sctTrayMatrix)
+            file.Close()
+        Catch ex As Exception
+            MsgBox("Tray矩阵点位读取失败:" & ex.Message)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' 将Tray矩阵点位数据写入到文件
+    ''' </summary>
+    ''' <param name="FileName"></param>
+    ''' <param name="WriteData"></param>
+    ''' <remarks></remarks>
+    Public Sub WriteMatrixPos(ByVal FileName As String, ByRef WriteData As sctTrayMatrix)
+        Try
+            Dim writer As New System.Xml.Serialization.XmlSerializer(GetType(sctTrayMatrix))
+            Dim file As New System.IO.StreamWriter(FileName) 
+            writer.Serialize(file, WriteData)
+            file.Close()
+        Catch ex As Exception
+            MsgBox("Tray矩阵点位文件创建/写入失败:" & ex.Message)
+        End Try
+    End Sub
 #End Region
 
 End Module

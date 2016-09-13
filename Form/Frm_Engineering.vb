@@ -356,10 +356,10 @@
         cbo_Pos1.Items.Add("胶针2 XY轴校正位置") '12
         cbo_Pos1.Items.Add("胶针2 Z轴校正位置") '13
         cbo_Pos1.Items.Add("CCD 拍第1颗料位置") '14
-        cbo_Pos1.Items.Add("CCD 拍第3颗料位置") '15
+        cbo_Pos1.Items.Add("CCD 拍第5颗料位置") '15
         cbo_Pos1.Items.Add("CCD 拍第6颗料位置") '16
         cbo_Pos1.Items.Add("CCD 拍第7颗料位置") '17
-        cbo_Pos1.Items.Add("CCD 拍第9颗料位置") '18
+        cbo_Pos1.Items.Add("CCD 拍第11颗料位置") '18
         cbo_Pos1.Items.Add("CCD 拍第12颗料位置") '19
         cbo_Pos1.Items.Add("CCD 校正位置") '20
 
@@ -2480,5 +2480,66 @@
 
     Private Sub Btn_GluePar_Click(sender As Object, e As EventArgs) Handles Btn_GluePar.Click
         Frm_GluePar.Show()
+    End Sub
+
+   
+    Private Sub btnTrayGlue_Click(sender As Object, e As EventArgs) Handles btnTrayGlue.Click
+        Dim en As Boolean
+        Dim index As Integer
+        Dim P(5) As Dist_XY
+        Dim tempPoint0(), tempPoint1() As Dist_XY
+        Dim Rows As Integer = 2
+        Dim Columns As Integer = 3
+
+        '先判断P14-P19点这6个参加矩阵计算的点的XY坐标是否为0，如果有为0的话则提示是否需要继续计算 
+        en = False
+        en = en Or Par_Pos.St_Glue(14).X = 0 Or Par_Pos.St_Glue(14).Y = 0
+        en = en Or Par_Pos.St_Glue(15).X = 0 Or Par_Pos.St_Glue(15).Y = 0
+        en = en Or Par_Pos.St_Glue(16).X = 0 Or Par_Pos.St_Glue(16).Y = 0
+        en = en Or Par_Pos.St_Glue(17).X = 0 Or Par_Pos.St_Glue(17).Y = 0
+        en = en Or Par_Pos.St_Glue(18).X = 0 Or Par_Pos.St_Glue(18).Y = 0
+        en = en Or Par_Pos.St_Glue(19).X = 0 Or Par_Pos.St_Glue(19).Y = 0
+
+        If en Then
+            If MessageBox.Show("点位中P14到P19中有点位的X坐标或Y坐标值为0，是否继续进行矩阵点位计算", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+                Exit Sub
+            End If
+        End If
+
+        '将点位中的坐标转成dis_xy结构体，给PointRefresh（）计算矩阵
+        For i = 0 To 5
+            P(i).X = Par_Pos.St_Glue(i + 14).X
+            P(i).Y = Par_Pos.St_Glue(i + 14).Y
+        Next
+
+        '判断矩阵计算点位返回异常
+        tempPoint0 = PointRefresh(P(0), P(1), P(2), Rows, Columns)
+        tempPoint1 = PointRefresh(P(3), P(4), P(5), Rows, Columns)
+        If tempPoint0.Length < 1 Or tempPoint1.Length < 1 Then MessageBox.Show("矩阵点位计算失败") : Exit Sub
+
+        '将矩阵进行转换并合并，以下为示意图
+
+        '将原矩阵
+        ''''''0,1,2''''
+        ''''''3,4,5''''
+
+        '转换成以下矩阵
+        ''''''0,2,4''''
+        ''''''1,3,5''''
+
+        index = 0
+        For i = 0 To Columns - 1
+            For j = 0 To Rows - 1
+                TrayMatrix.TrayGlue(index) = tempPoint0(i + j * Columns)
+                index = index + 1
+            Next
+        Next
+
+        For i = 0 To Columns - 1
+            For j = 0 To Rows - 1
+                TrayMatrix.TrayGlue(index) = tempPoint1(i + j * Columns)
+                index = index + 1
+            Next
+        Next
     End Sub
 End Class
