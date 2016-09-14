@@ -1232,5 +1232,159 @@ Module Motion
         End If
     End Sub
 
+    ''' <summary>
+    ''' 直线插补用到的结构体
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Structure sLnXYZR
+        Dim cardNo As Short
+        Dim crd As Short
+        Dim X As Integer
+        Dim Y As Integer
+        Dim Z As Integer
+        Dim R As Integer
+        Dim synVel As Double
+        Dim synAcc As Double
+        Dim velEnd As Double
+        Dim fifo As Short
+    End Structure
+
+    ''' <summary>
+    ''' 直线插补运动
+    ''' </summary>
+    ''' <param name="cardNum">卡号</param>
+    ''' <param name="ArrayXY">走的直线的坐标数组</param>
+    ''' <param name="Speed">速度</param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function LineXY_Motion(ByVal cardNum As Short, ArrayXY() As Dist_XY, Speed As Double) As Boolean
+        Dim i As Integer
+        Dim n As Integer
+        Dim crdprm As TCrdPrm   '声明坐标系结构体参数
+        Dim cLnXY As sLnXYZR
+        Dim rtn As Short
+        n = ArrayXY.Count
+        With crdprm             '设置坐标系参数
+            .dimension = 2     '指定坐标系维数为2(X、Y)
+            .synVelMax = 1000   '该坐标系最大合成速度(Pulse/ms)
+            .synAccMax = 3      '该坐标系最大合成加速度(Pulse/ms^2)
+            .evenTime = 50      '每个插补段的最小匀速段时间(ms)
+            .profile1 = 1       '坐标系X维映射相应的规划轴
+            .profile2 = 2       '坐标系Y维映射相应的规划轴
+            .setOriginFlag = 1  '需要明确指定坐标系原点的位置(为0则用当前规划位置作为坐标系的原点)
+            .originPos1 = 0     '指定X维坐标系原点(为0则和机械原点重合)
+            .originPos2 = 0     '指定Y维坐标系原点(为0则和机械原点重合)
+        End With
+        rtn = GT_SetCrdPrm(cardNum, 1, crdprm)  '建立坐标系1
+        If rtn <> 0 Then    '判断坐标系建立是否成功
+            Return False
+        End If
+
+        With cLnXY
+            .cardNo = cardNum      '指定坐标系的卡号
+            .crd = 1                '指定坐标系号
+            .synVel = Speed         '合成目标速度
+            .synAcc = 0.5      '合成加速度
+            .velEnd = Speed    '终点速度
+            .fifo = 0               '缓冲区选择
+        End With
+
+        rtn = GT_CrdClear(cLnXY.cardNo, cLnXY.crd, cLnXY.fifo)    '清除FIFO
+
+        For i = 0 To n - 2 '向FIFO循环压入插补运动数据
+            rtn = GT_LnXY(cLnXY.cardNo, cLnXY.crd, ArrayXY(i).X * 1000, ArrayXY(i).Y * 1000, cLnXY.synVel, cLnXY.synAcc, cLnXY.velEnd, cLnXY.fifo)
+            If rtn <> 0 Then
+                Return False
+            End If
+        Next i
+        rtn = GT_LnXY(cLnXY.cardNo, cLnXY.crd, ArrayXY(n - 1).X * 1000, ArrayXY(n - 1).Y * 1000, Speed, cLnXY.synAcc, 0, cLnXY.fifo)
+        If rtn <> 0 Then
+            Return False
+        End If
+
+        rtn = GT_CrdStart(cLnXY.cardNo, cLnXY.crd, cLnXY.fifo)   '启动坐标系1的2维直线插补运动
+        If rtn <> 0 Then
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    ''' <summary>
+    ''' 平面二维圆弧插补运动(以圆弧的终点坐标及半径描述的圆弧)
+    ''' </summary>
+    ''' <param name="cardNum">卡号</param>
+    ''' <param name="ArrayXY">圆弧终点坐标</param>
+    ''' <param name="Radius">半径</param>
+    ''' <param name="Speed">合成速度</param>
+    ''' <param name="Dir">方向：0-顺时针圆弧；1-逆时针圆弧</param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function ArcXY_Motion(ByVal cardNum As Short, ByVal ArrayXY As Dist_XY, ByVal Radius As Double, ByVal Speed As Double, ByVal Dir As Short) As Boolean
+        Dim crdprm As TCrdPrm   '声明坐标系结构体参数
+        Dim cLnXY As sLnXYZR
+        Dim rtn As Short
+
+        With crdprm             '设置坐标系参数
+            .dimension = 2     '指定坐标系维数为2
+            .synVelMax = 1000   '该坐标系最大合成速度(Pulse/ms)
+            .synAccMax = 0.5      '该坐标系最大合成加速度(Pulse/ms^2)
+            .evenTime = 50      '每个插补段的最小匀速段时间(ms)
+            .profile1 = 1       '坐标系X维映射相应的规划轴
+            .profile2 = 2       '坐标系Y维映射相应的规划轴
+            .setOriginFlag = 1  '需要明确指定坐标系原点的位置(为0则用当前规划位置作为坐标系的原点)
+            .originPos1 = 0     '指定X维坐标系原点(为0则和机械原点重合)
+            .originPos2 = 0     '指定Y维坐标系原点(为0则和机械原点重合)
+        End With
+        rtn = GT_SetCrdPrm(cardNum, 1, crdprm)  '建立坐标系1
+        If rtn <> 0 Then    '判断坐标系建立是否成功
+            Return False
+        End If
+
+        With cLnXY
+            .cardNo = cardNum      '指定坐标系的卡号
+            .crd = 1                '指定坐标系号
+            .synVel = Speed         '合成目标速度
+            .synAcc = 0.5     '合成加速度
+            .velEnd = 0    '终点速度
+            .fifo = 0               '缓冲区选择
+        End With
+
+        rtn = GT_CrdClear(cLnXY.cardNo, cLnXY.crd, cLnXY.fifo)    '清除FIFO
+        If rtn <> 0 Then
+            Return False
+        End If
+        rtn = GT_ArcXYR(cLnXY.cardNo, cLnXY.crd, ArrayXY.X * 1000, ArrayXY.Y * 1000, Radius, Dir, Speed, cLnXY.synAcc, cLnXY.velEnd, cLnXY.fifo)
+        If rtn <> 0 Then
+            Return False
+        End If
+        rtn = GT_CrdStart(cLnXY.cardNo, cLnXY.crd, cLnXY.fifo)   '启动坐标系1插补运动
+        If rtn <> 0 Then
+            Return False
+        End If
+        Return True
+    End Function
+
+    ''' <summary>
+    ''' 判断插补运动是否完成
+    ''' </summary>
+    ''' <param name="cardNum"></param>
+    ''' <param name="crd"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function ZSPD_Line(ByVal cardNum As Short, ByVal crd As Short) As Boolean
+        Dim sRtn As Short, state As Short, Segment As Integer
+
+        sRtn = GT_CrdStatus(cardNum, crd, state, Segment, 0)
+        If sRtn = 0 Then
+            If state <> 0 Then
+                Return False
+            End If
+        Else
+            Return False
+        End If
+        Return True
+    End Function
+
 
 End Module

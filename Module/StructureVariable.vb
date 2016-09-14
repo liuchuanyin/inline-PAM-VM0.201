@@ -95,6 +95,8 @@
         Dim Needle_NeedCalibration() As Boolean
         Dim Probe1_Base() As Pos_XYZ  '校针基准点
         Dim Probe1_Diff() As Dist_XYZ '校针基准差值
+
+        Dim Dis_LN() As Double        '镭射零点与较针Z轴之间的差值
         '镭射偏移值
         Dim Laser_offset As Double
 
@@ -111,6 +113,7 @@
             ReDim Needle_NeedCalibration(1)
             ReDim Probe1_Base(1)
             ReDim Probe1_Diff(1)
+            ReDim Dis_LN(1)
         End Sub
     End Structure
 

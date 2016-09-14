@@ -1368,11 +1368,19 @@
             Case 2
                 Par_Pos.Needle_NeedCalibration(0) = False
             Case 3
+                Par_Pos.Dis_LN(0) = Par_Pos.St_Glue(8).Z - Par_Pos.St_Glue(3).Z
+                Par_Pos.Dis_LN(1) = Par_Pos.St_Glue(13).Z - Par_Pos.St_Glue(3).Z
             Case 4
+
+            Case 8
+                Par_Pos.Dis_LN(0) = Par_Pos.St_Glue(8).Z - Par_Pos.St_Glue(3).Z
+            Case 13
+                Par_Pos.Dis_LN(1) = Par_Pos.St_Glue(13).Z - Par_Pos.St_Glue(3).Z
         End Select
 
         Call Write_Par_Pos(Path_Par_Pos, Par_Pos)
         Write_Log(1, "1工位 " & cbo_Pos1.SelectedItem.ToString & " 点位保存成功", Path_Log)
+
         Select Case cbo_Pos1.SelectedIndex
             Case 14, 15
                 '//获取镭射和针头位置之间X，Y的距离

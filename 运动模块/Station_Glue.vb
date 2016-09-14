@@ -3,10 +3,22 @@
     Public Step_Glue As Integer
     '产品索引号
     Public index_InGlue As Short
+    ''' <summary>
+    ''' 镭射点索引号(1个产品有N个镭射点)
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public index_Laser As Short
     Public Step_Gopos(7) As Integer
     Public Probe_Result As Boolean
     Public ClrGlue_Work As sFlag3
     Public step_clrGlue As Integer
+    Public flgGlue As sFlag3
+
+    ''' <summary>
+    ''' 记录Laser测量的高度原始值
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public LaserGlueH() As Double
 
     Public Sub GoPos_Glue(ByVal index As Short)
         'Static timeStart As Long
@@ -426,11 +438,17 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 点胶站拍照定位，镭射，点胶
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Sub Autorun_GlueStation()
         ' GLue_Sta.workState =0 工作进行中
         ' GLue_Sta.workState =1 工作完成
         ' GLue_Sta.workState =2 工作进行中:点胶进行中
         Static timeStart As Long    '记录开始时间
+        Dim Result, TempPosZ As Short
+
 
         Select Case Step_Glue
             Case 10
@@ -444,6 +462,7 @@
                 '流水线上有载具，且载具可用
                 If Tray_Pallet(1).isHaveTray And Tray_Pallet(1).isTrayOK Then
                     index_InGlue = 0
+                    index_Laser = 0
                     Step_Glue = 200
                 End If
 
@@ -483,20 +502,131 @@
                     Step_Glue = 360
                 End If
 
-            Case 360
-                If par.chkFn(4) Then
+            Case 360 
+                'Z轴停止后延时0.5S开始拍照
+                If GetTickCount - timeStart > 500 Then
+                    Step_Glue = 380
+                End If 
 
+            Case 380 '判断CCD是否在锁定中
+                If TriggerCCD("T1,1", index_InGlue, Tray_Pallet(1).Tray_Barcode, Tray_Pallet(1).Hole(index_InGlue).ProductBarcode) Then
+                    Step_Glue = 400
+                ElseIf par.chkFn(4) Then   '装配演示中
+                    Step_Glue = 400
+                End If
+
+            Case 400  '判断CCD1返回值OK
+                If Cam_Status(1) = 1 Then
+                    '重新定义此数组大小
+                    ReDim LaserGlueH(Cam1LaserPoint.Length - 1)
+                    Step_Glue = 410
+                End If
+
+            Case 410 'Z轴回待机位置
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)
+                Step_Glue = 420
+
+            Case 420
+                If Not isAxisMoving(0, GlueZ) Then
+                    Step_Glue = 440
+                End If
+
+                ''step440--580进行连续镭射量测 
+
+            Case 440 'XY轴去第n个镭射点位置 
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Cam1LaserPoint(index_Laser).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Cam1LaserPoint(index_Laser).Y)
+                Step_Glue = 460
+
+            Case 460 '去镭射点Z轴高度
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) Then
+                    Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(1).Z)
+                    Step_Glue = 480
+                End If
+
+            Case 480 '判断Z轴停止
+                If (Not isAxisMoving(0, GlueZ)) Then
+                    timeStart = GetTickCount
+                    Step_Glue = 500
+                End If
+
+            Case 500
+                If par.chkFn(4) Then  '装配演示
+                    '演示装配
+                ElseIf GetTickCount - timeStart > 500 Then
+                    Step_Glue = 520
+                End If
+
+            Case 520
+                If Com2_Send("M1" & vbCr) = False Then    'COM2发送镭射触发测距命令
+                    'COM2口发送数据异常
                 Else
-                    'Z轴停止后延时0.5S开始拍照
-                    If GetTickCount - timeStart > 500 Then
-                        Step_Glue = 380
+                    Step_Glue = 540
+                End If
+
+            Case 540
+                Result = Com2_Return() '等待COM2镭射触发结束
+                If Result = 0 Then
+                    Step_Glue = 560
+                ElseIf Result = 1 Then
+                    '镭射异常
+                End If
+
+            Case 560
+                TempPosZ = COM2_Data(0)
+                If Math.Abs(TempPosZ) < Math.Abs(par.num(16)) And COM2_String <> "M1,-FFFFFFF" And TempPosZ <> 0 Then
+                    LaserGlueH(index_Laser) = -TempPosZ
+                    Step_Glue = 580
+                Else
+                    '镭射超出范围
+                End If
+
+            Case 580  '判断镭射点是否全部工作完成
+                index_Laser = index_Laser + 1
+                If index_Laser < Cam1LaserPoint.Length Then
+                    Step_Glue = 440
+                Else
+                    Step_Glue = 600
+                End If
+
+            Case 600  'Z轴抬升到待机位置
+                AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)
+                Step_Glue = 620
+
+            Case 620  '判断Z轴停止
+                If Not isAxisMoving(0, GlueZ) Then
+                    Step_Glue = 640
+                End If
+
+            Case 640  '将之前得到的点位数据转化成点胶最终用的XYZ的值
+                Call SouceToTarget(0)  '计算1号胶针
+                Step_Glue = 660
+
+            Case 660  '开始点胶
+                GLue_Sta.workState = 2 '工作进行中:点胶进行中
+
+                If MACTYPE = "PAM-1" Then
+                    Call PAM1Glue(flgGlue)
+                ElseIf MACTYPE = "PAM-2" Then
+
+                ElseIf MACTYPE = "PAM-3" Then
+
+                ElseIf MACTYPE = "PAM-B" Then
+
+                End If
+
+                If flgGlue.State = False Then
+                    GLue_Sta.workState = 0 '状态由点胶中改成工作进行中
+                    If flgGlue.Result = True Then
+                        Step_Glue = 680
+                    Else
+                        Step_Glue = 9000
                     End If
                 End If
 
-            Case 380 '判断CCD是否在锁定中
-                'If TriggerCCD("T1,1", Tray_Pallet(1).Tray_Barcode & Tray_Pallet(1).Hole(index_InGlue).ProductBarcode) Then
-
-                'End If
+            Case 680
+                '单个穴位点胶完成
+                Step_Glue = 7000
 
             Case 7000
                 '共计12颗料，index从0开始
@@ -521,8 +651,273 @@
                 Step_Glue = 0
 
         End Select
-
+         
     End Sub
 
+    ''' <summary>
+    ''' 将CCD1给的点胶点位加上较针偏移值
+    ''' </summary>
+    ''' <param name="index">0代表一号胶针，1代表二号胶针</param>
+    ''' <remarks></remarks>
+    Private Sub SouceToTarget(index As Integer)
+
+        Select Case index
+            Case 0
+                '计算点胶点XY的最终值，保存到Cam1GluePoint()中
+                For i = 0 To Cam1GluePoint.Length - 1
+                    Cam1GluePoint(i).X = Cam1GluePoint(i).X + Par_Pos.Probe1_Diff(0).X
+                    Cam1GluePoint(i).Y = Cam1GluePoint(i).X + Par_Pos.Probe1_Diff(0).Y
+                Next
+                '计算点胶点Z的最终值，保存到LaserGlueH()中
+                For i = 0 To LaserGlueH.Length - 1
+                    '               镭射打点Z轴高度      '镭射零点与针头间距离 '镭射量出来的高度  '针头较什Z向差值           '镭射偏移值
+                    LaserGlueH(i) = Par_Pos.St_Glue(1).Z + Par_Pos.Dis_LN(0) + LaserGlueH(i) + Par_Pos.Probe1_Diff(0).Z + Par_Pos.Laser_offset
+                Next
+            Case 1
+                For i = 0 To Cam1GluePoint.Length - 1
+                    Cam1GluePoint(i).X = Cam1GluePoint(i).X + Par_Pos.Probe1_Diff(1).X
+                    Cam1GluePoint(i).Y = Cam1GluePoint(i).X + Par_Pos.Probe1_Diff(1).Y
+                Next
+
+                For i = 0 To LaserGlueH.Length - 1
+                    '               镭射打点Z轴高度      '镭射零点与针头间距离 '镭射量出来的高度  '针头较什Z向差值           '镭射偏移值
+                    LaserGlueH(i) = Par_Pos.St_Glue(1).Z + Par_Pos.Dis_LN(1) + LaserGlueH(i) + Par_Pos.Probe1_Diff(1).Z + Par_Pos.Laser_offset
+                Next
+        End Select
+    End Sub
+
+    ''' <summary>
+    ''' PAM1点胶步序号
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private PAM1GlueStep As Integer
+
+    ''' <summary>
+    ''' 圆弧插补运动半径3.69mm
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Const RADIUS As Double = 3690
+
+    ''' <summary>
+    ''' PAM1点胶路径索引号
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public index_PAM1Glue As Integer
+
+    ''' <summary>
+    ''' PAM1点胶路径
+    ''' </summary>
+    ''' <param name="Status"></param>
+    ''' <remarks></remarks>
+    Private Sub PAM1Glue(ByRef Status As sFlag3)
+        '''''''''''''''''需要CCD给出4个镭射点LaserGlueH（3）'''''''''''''''''''
+        '''''''''''''''''需要CCD给出16个点胶点Cam1GluePoint(15)''''''''''''''''
+        '''''''''''''''''一共有8段圆弧，需要Par_Glue.Segment(7)''''''''''''''''
+
+        Static PAM1TimWatch As Long
+        Dim Result As Short
+        Dim Z_Glue As Double
+        Dim sPoint() As Dist_XY
+
+        On Error Resume Next
+        Select Case PAM1GlueStep
+            Case 0
+                If GLue_Sta.workState = 2 Then
+                    index_PAM1Glue = 0
+                    Status.State = True
+                    PAM1GlueStep = 100
+                End If
+
+                '***************************圆弧开始***************************
+            Case 100
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)  'Z轴回待机位置
+                PAM1GlueStep = 120
+
+            Case 120
+                If Not isAxisMoving(0, GlueZ) Then
+                    PAM1GlueStep = 140
+                End If
+
+            Case 140
+                'X,Y去点胶位置1
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Cam1GluePoint(0).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Cam1GluePoint(0).Y)
+                PAM1GlueStep = 160
+
+            Case 160
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) = False Then
+                    SetEXO(2, 9, True)  '点胶升降气缸1打下
+                    PAM1TimWatch = GetTickCount
+                    PAM1GlueStep = 180
+                End If
+
+            Case 180  'Z轴下降第一段高速
+                If GetTickCount - PAM1TimWatch > 500 Then '气缸到位延时
+                    If EXI(2, 10) = True And EXI(2, 9) = False Then
+                        PAM1GlueStep = 190
+                    ElseIf GetTickCount - PAM1TimWatch > 2000 Then
+                        Frm_DialogAddMessage("点胶气缸下降异常,请检查")
+                        PAM1GlueStep = 9000
+                    End If
+                End If
+
+            Case 190 '走到点胶点上方5mm
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), LaserGlueH(index_PAM1Glue / 4) - 5) 'LaserGlueH(index_PAM1Glue / 4)因为4个点胶点共用一个Laser点
+                PAM1GlueStep = 200
+
+            Case 200
+                If Not isAxisMoving(0, GlueZ) Then
+                    PAM1GlueStep = 205
+                End If
+
+            Case 205
+                'X,Y去点胶位置1
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Cam1GluePoint(index_PAM1Glue).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Cam1GluePoint(index_PAM1Glue).Y)
+                PAM1GlueStep = 210
+
+            Case 215
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) = False Then
+                    PAM1TimWatch = GetTickCount
+                    PAM1GlueStep = 220
+                End If
+
+            Case 220  'Z轴下降第二段低速
+                If par.chkFn(4) Then '判断是否开启演示装配
+                    Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ) / 5, LaserGlueH(index_PAM1Glue / 4) - 2) 'Z轴移到点胶位置1
+                Else
+                    Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ) / 5, LaserGlueH(index_PAM1Glue / 4))
+                End If
+                PAM1GlueStep = 240
+
+            Case 240
+                If Not isAxisMoving(0, GlueZ) Then
+                    PAM1TimWatch = GetTickCount
+                    PAM1GlueStep = 260
+                End If
+
+            Case 260
+                If EXI(2, 10) = True And EXI(2, 9) = False Then
+                    If par.chkFn(4) = False Then '判断是否开启演示装配
+                        SetEXO(1, 13, True)      '打开点胶阀1
+                    End If
+                    PAM1TimWatch = GetTickCount
+                    PAM1GlueStep = 280
+                End If
+
+            Case 280
+                '圆弧点胶第一段开始时延时
+                If GetTickCount - PAM1TimWatch >= (Par_Glue.Segment(index_PAM1Glue / 2).startDelay * 1000) Then 'Par_Glue.Segment(index_PAM1Glue / 2)是因为2个点胶点共用这1个Segment参数
+                    ReDim sPoint(2)
+                    PAM1GlueStep = 300
+                End If
+
+            Case 300
+                Call ArcXY_Motion(0, Cam1GluePoint(index_PAM1Glue + 1), RADIUS, Par_Glue.Segment(index_PAM1Glue / 2).vel, 0)
+                PAM1TimWatch = GetTickCount
+                PAM1GlueStep = 320
+
+            Case 320
+                '因为ArcXY_Motion设置的坐标系号为1
+                If ZSPD_Line(0, 1) Then
+                    PAM1TimWatch = GetTickCount
+                    PAM1GlueStep = 340
+                ElseIf GetTickCount - PAM1TimWatch > 10000 Then
+                    PAM1GlueStep = 9000
+                End If
+
+            Case 340
+                If GetTickCount - PAM1TimWatch > Par_Glue.Segment(index_PAM1Glue / 2).endDelay * 1000 Then
+                    SetEXO(1, 13, False)      '关闭点胶阀1
+                    PAM1GlueStep = 360
+                End If
+
+            Case 360
+                index_PAM1Glue = index_PAM1Glue + 2
+                If index_PAM1Glue >= 16 Then
+                    index_PAM1Glue = 0
+                    PAM1GlueStep = 380
+                Else
+                    PAM1GlueStep = 190
+                End If
+
+            Case 380
+                SetEXO(2, 9, False)  '点胶升降气缸1缩回
+                PAM1TimWatch = GetTickCount
+                PAM1GlueStep = 400
+
+            Case 400
+                '气缸上升到位
+                If EXI(2, 9) = True And EXI(2, 10) = False Then
+                    PAM1GlueStep = 420
+                End If
+
+            Case 420
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)  'Z轴回待机位置 
+                PAM1GlueStep = 440
+
+            Case 440
+                If Not isAxisMoving(0, GlueZ) Then
+                    PAM1GlueStep = 460
+                End If
+
+            Case 460
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(0).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Par_Pos.St_Glue(0).Y)
+                PAM1GlueStep = 480
+
+            Case 480
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) = False Then
+                    PAM1GlueStep = 8000
+                End If
+
+                '点胶成功
+            Case 8000
+                Status.Result = True
+                Status.State = False
+                PAM1GlueStep = 0
+                Exit Sub
+
+                '点胶失败
+            Case 9000
+                SetEXO(1, 13, False)      '关闭点胶阀1
+                SetEXO(2, 9, False)      '点胶升降气缸1缩回
+                PAM1TimWatch = GetTickCount
+                PAM1GlueStep = 9010
+
+            Case 9010
+                '气缸上升到位
+                '气缸上升到位
+                If EXI(2, 9) = True And EXI(2, 10) = False Then
+                    PAM1GlueStep = 9020
+                End If
+
+            Case 9020
+                Call AbsMotion(0, GlueZ, AxisPar.MoveVel(0, GlueZ), Par_Pos.St_Glue(0).Z)  'Z轴回待机位置 
+                PAM1GlueStep = 9030
+
+            Case 9030
+                If Not isAxisMoving(0, GlueZ) Then
+                    PAM1GlueStep = 9040
+                End If
+
+            Case 9040
+                Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(0).X)
+                Call AbsMotion(0, GlueY, AxisPar.MoveVel(0, GlueY), Par_Pos.St_Glue(0).Y)
+                PAM1GlueStep = 9050
+
+            Case 9050
+                If (Not isAxisMoving(0, GlueX)) And (Not isAxisMoving(0, GlueY)) = False Then
+                    PAM1GlueStep = 9400
+                End If
+
+            Case 9400
+                SetEXO(1, 13, False)      '关闭点胶阀1
+                Status.Result = False
+                Status.State = False
+                PAM1GlueStep = 0
+                Exit Sub
+        End Select
+    End Sub
 
 End Module
