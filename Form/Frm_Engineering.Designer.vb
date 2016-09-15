@@ -23,7 +23,7 @@ Partial Class Frm_Engineering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Engineering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -637,6 +637,7 @@ Partial Class Frm_Engineering
         Me.btn_S3IO2 = New System.Windows.Forms.Button()
         Me.btn_S3IO1 = New System.Windows.Forms.Button()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.btnTrayPaste = New System.Windows.Forms.Button()
         Me.btn_LoadCell_Ca = New System.Windows.Forms.Button()
         Me.btn_CaCCD3 = New System.Windows.Forms.Button()
         Me.btn_CaCCD24 = New System.Windows.Forms.Button()
@@ -692,6 +693,7 @@ Partial Class Frm_Engineering
         Me.btn_S4IO5 = New System.Windows.Forms.Button()
         Me.btn_S4IO3 = New System.Windows.Forms.Button()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
+        Me.btnTrayPreTk = New System.Windows.Forms.Button()
         Me.btn_Home12 = New System.Windows.Forms.Button()
         Me.btn_Home11 = New System.Windows.Forms.Button()
         Me.btn_Servo12 = New System.Windows.Forms.Button()
@@ -777,6 +779,7 @@ Partial Class Frm_Engineering
         Me.radGet6 = New System.Windows.Forms.RadioButton()
         Me.btn_Home17 = New System.Windows.Forms.Button()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.btnTrayRecheck = New System.Windows.Forms.Button()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_N16 = New System.Windows.Forms.Button()
         Me.btn_P16 = New System.Windows.Forms.Button()
@@ -802,6 +805,7 @@ Partial Class Frm_Engineering
         Me.labPrfPos16 = New System.Windows.Forms.Label()
         Me.btn_Home15 = New System.Windows.Forms.Button()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.btnTrayFineCpt = New System.Windows.Forms.Button()
         Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_N14 = New System.Windows.Forms.Button()
         Me.btn_P14 = New System.Windows.Forms.Button()
@@ -929,96 +933,92 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
-        Me.btnTrayFineCpt = New System.Windows.Forms.Button()
-        Me.btnTrayRecheck = New System.Windows.Forms.Button()
-        Me.btnTrayPaste = New System.Windows.Forms.Button()
-        Me.btnTrayPreTk = New System.Windows.Forms.Button()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.BZ_RoundPanel6.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BZ_RoundPanel4.SuspendLayout()
-        Me.BZ_RoundPanel2.SuspendLayout()
-        Me.BZ_RoundPanel1.SuspendLayout()
-        Me.RoundPanel.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Tray3.SuspendLayout()
-        Me.Tray2.SuspendLayout()
-        Me.Tray1.SuspendLayout()
-        CType(Me.PB_Right1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BZ_RoundPanel5.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.BZ_RoundPanel8.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.BZ_RoundPanel7.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.TableLayoutPanel6.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.BZ_RoundPanel9.SuspendLayout()
-        Me.GroupBox10.SuspendLayout()
-        Me.TableLayoutPanel11.SuspendLayout()
-        Me.GroupBox9.SuspendLayout()
-        Me.TableLayoutPanel10.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
-        Me.TableLayoutPanel9.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.TableLayoutPanel7.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.tab_Log.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
-        Me.TabPage11.SuspendLayout()
-        Me.TableLayoutPanel16.SuspendLayout()
-        Me.TabPage12.SuspendLayout()
-        Me.Grp.SuspendLayout()
-        Me.gupStep.SuspendLayout()
-        Me.gupVel.SuspendLayout()
-        Me.TabCon.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.GroupBox13.SuspendLayout()
-        Me.TableLayoutPanel12.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.GroupBox14.SuspendLayout()
-        Me.TableLayoutPanel13.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.GroupBox17.SuspendLayout()
-        Me.TableLayoutPanel14.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.GroupBox16.SuspendLayout()
-        Me.TableLayoutPanel19.SuspendLayout()
-        Me.GroupBox15.SuspendLayout()
-        Me.TableLayoutPanel18.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
-        Me.TableLayoutPanel17.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
-        Me.TableLayoutPanel15.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
-        Me.GroupBox22.SuspendLayout()
-        Me.GroupBox21.SuspendLayout()
-        Me.GroupBox19.SuspendLayout()
-        Me.GroupBox20.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        Me.TabPage13.SuspendLayout()
-        Me.BZ_RoundPanel10.SuspendLayout()
-        Me.TableLayoutPanel22.SuspendLayout()
-        Me.TableLayoutPanel23.SuspendLayout()
-        Me.BZ_RoundPanel3.SuspendLayout()
-        Me.TableLayoutPanel21.SuspendLayout()
-        Me.TableLayoutPanel20.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.BZ_RoundPanel6.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.BZ_RoundPanel4.SuspendLayout
+        Me.BZ_RoundPanel2.SuspendLayout
+        Me.BZ_RoundPanel1.SuspendLayout
+        Me.RoundPanel.SuspendLayout
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Tray3.SuspendLayout
+        Me.Tray2.SuspendLayout
+        Me.Tray1.SuspendLayout
+        CType(Me.PB_Right1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.BZ_RoundPanel5.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        Me.BZ_RoundPanel8.SuspendLayout
+        Me.TableLayoutPanel1.SuspendLayout
+        Me.BZ_RoundPanel7.SuspendLayout
+        Me.GroupBox1.SuspendLayout
+        Me.TableLayoutPanel2.SuspendLayout
+        Me.GroupBox5.SuspendLayout
+        Me.TableLayoutPanel6.SuspendLayout
+        Me.GroupBox2.SuspendLayout
+        Me.TableLayoutPanel3.SuspendLayout
+        Me.GroupBox4.SuspendLayout
+        Me.TableLayoutPanel5.SuspendLayout
+        Me.GroupBox3.SuspendLayout
+        Me.TableLayoutPanel4.SuspendLayout
+        Me.TabPage3.SuspendLayout
+        Me.BZ_RoundPanel9.SuspendLayout
+        Me.GroupBox10.SuspendLayout
+        Me.TableLayoutPanel11.SuspendLayout
+        Me.GroupBox9.SuspendLayout
+        Me.TableLayoutPanel10.SuspendLayout
+        Me.GroupBox8.SuspendLayout
+        Me.TableLayoutPanel9.SuspendLayout
+        Me.GroupBox7.SuspendLayout
+        Me.TableLayoutPanel8.SuspendLayout
+        Me.GroupBox6.SuspendLayout
+        Me.TableLayoutPanel7.SuspendLayout
+        Me.TabPage4.SuspendLayout
+        Me.tab_Log.SuspendLayout
+        Me.TabPage10.SuspendLayout
+        Me.TabPage11.SuspendLayout
+        Me.TableLayoutPanel16.SuspendLayout
+        Me.TabPage12.SuspendLayout
+        Me.Grp.SuspendLayout
+        Me.gupStep.SuspendLayout
+        Me.gupVel.SuspendLayout
+        Me.TabCon.SuspendLayout
+        Me.TabPage6.SuspendLayout
+        Me.Panel4.SuspendLayout
+        Me.GroupBox13.SuspendLayout
+        Me.TableLayoutPanel12.SuspendLayout
+        Me.TabPage7.SuspendLayout
+        Me.Panel2.SuspendLayout
+        Me.GroupBox14.SuspendLayout
+        Me.TableLayoutPanel13.SuspendLayout
+        Me.TabPage8.SuspendLayout
+        Me.Panel6.SuspendLayout
+        Me.GroupBox17.SuspendLayout
+        Me.TableLayoutPanel14.SuspendLayout
+        Me.TabPage5.SuspendLayout
+        Me.GroupBox16.SuspendLayout
+        Me.TableLayoutPanel19.SuspendLayout
+        Me.GroupBox15.SuspendLayout
+        Me.TableLayoutPanel18.SuspendLayout
+        Me.GroupBox12.SuspendLayout
+        Me.TableLayoutPanel17.SuspendLayout
+        Me.GroupBox11.SuspendLayout
+        Me.TableLayoutPanel15.SuspendLayout
+        Me.TabPage9.SuspendLayout
+        Me.GroupBox22.SuspendLayout
+        Me.GroupBox21.SuspendLayout
+        Me.GroupBox19.SuspendLayout
+        Me.GroupBox20.SuspendLayout
+        Me.Panel10.SuspendLayout
+        Me.TabPage13.SuspendLayout
+        Me.BZ_RoundPanel10.SuspendLayout
+        Me.TableLayoutPanel22.SuspendLayout
+        Me.TableLayoutPanel23.SuspendLayout
+        Me.BZ_RoundPanel3.SuspendLayout
+        Me.TableLayoutPanel21.SuspendLayout
+        Me.TableLayoutPanel20.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
@@ -1026,8 +1026,8 @@ Partial Class Frm_Engineering
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.HotTrack = True
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TabControl1.HotTrack = true
         Me.TabControl1.ItemSize = New System.Drawing.Size(200, 35)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
@@ -1045,14 +1045,14 @@ Partial Class Frm_Engineering
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel1)
         Me.TabPage1.Controls.Add(Me.RoundPanel)
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel5)
-        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 39)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "工程师主界面"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'BZ_RoundPanel6
         '
@@ -1071,8 +1071,8 @@ Partial Class Frm_Engineering
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 30
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.Size = New System.Drawing.Size(808, 160)
         Me.DataGridView1.TabIndex = 1
@@ -8783,7 +8783,7 @@ Partial Class Frm_Engineering
         Me.btn_S3IO6.Name = "btn_S3IO6"
         Me.btn_S3IO6.Size = New System.Drawing.Size(110, 30)
         Me.btn_S3IO6.TabIndex = 125
-        Me.btn_S3IO6.Text = "stangby"
+        Me.btn_S3IO6.Text = "UV灯关闭"
         Me.btn_S3IO6.UseVisualStyleBackColor = true
         '
         'btn_S3IO5
@@ -8882,6 +8882,15 @@ Partial Class Frm_Engineering
         Me.GroupBox14.TabIndex = 266
         Me.GroupBox14.TabStop = false
         Me.GroupBox14.Text = "单工位调试"
+        '
+        'btnTrayPaste
+        '
+        Me.btnTrayPaste.Location = New System.Drawing.Point(370, 313)
+        Me.btnTrayPaste.Name = "btnTrayPaste"
+        Me.btnTrayPaste.Size = New System.Drawing.Size(80, 33)
+        Me.btnTrayPaste.TabIndex = 111
+        Me.btnTrayPaste.Text = "贴合矩阵"
+        Me.btnTrayPaste.UseVisualStyleBackColor = true
         '
         'btn_LoadCell_Ca
         '
@@ -9506,6 +9515,15 @@ Partial Class Frm_Engineering
         Me.GroupBox17.TabIndex = 266
         Me.GroupBox17.TabStop = false
         Me.GroupBox17.Text = "单工位调试"
+        '
+        'btnTrayPreTk
+        '
+        Me.btnTrayPreTk.Location = New System.Drawing.Point(593, 287)
+        Me.btnTrayPreTk.Name = "btnTrayPreTk"
+        Me.btnTrayPreTk.Size = New System.Drawing.Size(80, 33)
+        Me.btnTrayPreTk.TabIndex = 112
+        Me.btnTrayPreTk.Text = "取料矩阵"
+        Me.btnTrayPreTk.UseVisualStyleBackColor = true
         '
         'btn_Home12
         '
@@ -10515,6 +10533,17 @@ Partial Class Frm_Engineering
         Me.GroupBox12.TabStop = false
         Me.GroupBox12.Text = "复检XY调试"
         '
+        'btnTrayRecheck
+        '
+        Me.btnTrayRecheck.BackColor = System.Drawing.Color.Transparent
+        Me.btnTrayRecheck.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnTrayRecheck.Location = New System.Drawing.Point(23, 104)
+        Me.btnTrayRecheck.Name = "btnTrayRecheck"
+        Me.btnTrayRecheck.Size = New System.Drawing.Size(70, 33)
+        Me.btnTrayRecheck.TabIndex = 137
+        Me.btnTrayRecheck.Text = "复检矩阵"
+        Me.btnTrayRecheck.UseVisualStyleBackColor = false
+        '
         'TableLayoutPanel17
         '
         Me.TableLayoutPanel17.ColumnCount = 2
@@ -10824,6 +10853,17 @@ Partial Class Frm_Engineering
         Me.GroupBox11.TabIndex = 136
         Me.GroupBox11.TabStop = false
         Me.GroupBox11.Text = "精补XY调试"
+        '
+        'btnTrayFineCpt
+        '
+        Me.btnTrayFineCpt.BackColor = System.Drawing.Color.Transparent
+        Me.btnTrayFineCpt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnTrayFineCpt.Location = New System.Drawing.Point(23, 104)
+        Me.btnTrayFineCpt.Name = "btnTrayFineCpt"
+        Me.btnTrayFineCpt.Size = New System.Drawing.Size(70, 33)
+        Me.btnTrayFineCpt.TabIndex = 136
+        Me.btnTrayFineCpt.Text = "精补矩阵"
+        Me.btnTrayFineCpt.UseVisualStyleBackColor = false
         '
         'TableLayoutPanel15
         '
@@ -12392,46 +12432,6 @@ Partial Class Frm_Engineering
         'Timer_GoHome
         '
         Me.Timer_GoHome.Interval = 10
-        '
-        'btnTrayFineCpt
-        '
-        Me.btnTrayFineCpt.BackColor = System.Drawing.Color.Transparent
-        Me.btnTrayFineCpt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnTrayFineCpt.Location = New System.Drawing.Point(23, 104)
-        Me.btnTrayFineCpt.Name = "btnTrayFineCpt"
-        Me.btnTrayFineCpt.Size = New System.Drawing.Size(70, 33)
-        Me.btnTrayFineCpt.TabIndex = 136
-        Me.btnTrayFineCpt.Text = "精补矩阵"
-        Me.btnTrayFineCpt.UseVisualStyleBackColor = false
-        '
-        'btnTrayRecheck
-        '
-        Me.btnTrayRecheck.BackColor = System.Drawing.Color.Transparent
-        Me.btnTrayRecheck.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnTrayRecheck.Location = New System.Drawing.Point(23, 104)
-        Me.btnTrayRecheck.Name = "btnTrayRecheck"
-        Me.btnTrayRecheck.Size = New System.Drawing.Size(70, 33)
-        Me.btnTrayRecheck.TabIndex = 137
-        Me.btnTrayRecheck.Text = "复检矩阵"
-        Me.btnTrayRecheck.UseVisualStyleBackColor = false
-        '
-        'btnTrayPaste
-        '
-        Me.btnTrayPaste.Location = New System.Drawing.Point(370, 313)
-        Me.btnTrayPaste.Name = "btnTrayPaste"
-        Me.btnTrayPaste.Size = New System.Drawing.Size(80, 33)
-        Me.btnTrayPaste.TabIndex = 111
-        Me.btnTrayPaste.Text = "贴合矩阵"
-        Me.btnTrayPaste.UseVisualStyleBackColor = true
-        '
-        'btnTrayPreTk
-        '
-        Me.btnTrayPreTk.Location = New System.Drawing.Point(593, 287)
-        Me.btnTrayPreTk.Name = "btnTrayPreTk"
-        Me.btnTrayPreTk.Size = New System.Drawing.Size(80, 33)
-        Me.btnTrayPreTk.TabIndex = 112
-        Me.btnTrayPreTk.Text = "取料矩阵"
-        Me.btnTrayPreTk.UseVisualStyleBackColor = true
         '
         'Frm_Engineering
         '

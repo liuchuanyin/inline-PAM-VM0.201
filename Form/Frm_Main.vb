@@ -560,7 +560,7 @@ Com_Err:
         Static TempCom As String
         Dim TempStr As String = ""
         Dim startNum As Long, EndNum As Long
-        'Dim rtn As Short
+        Dim rtn As Short
         Dim i As Integer
         Dim LoadCell As Double
 
@@ -581,13 +581,12 @@ Com_Err:
                             COM1_Work.Result = True
                             LoadCell = Val(Mid(TempCom, startNum + 1, EndNum - startNum - 1))
                             Press(0) = Format(LoadCell / 100, "0.000")
-                            'If S3_AutoRun_Step = 500 Then
-                            '    If Press(0) > par.num(19) Then
-                            '        rtn = GT_Stop(0, 2 ^ (S3_Z - 1), 2 ^ (S3_Z - 1)) '紧急停止Z 轴
-                            '        ListBoxAddMessage("3工位贴合压力：" & Press(0))
-                            '        'Com1_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
-                            '    End If
-                            'End If
+                            If Step_Paste = 840 Then
+                                If Press(0) >= par.num(21) Then
+                                    rtn = GT_Stop(0, 2 ^ (PasteZ - 1), 2 ^ (PasteZ - 1))    '紧急停止Z 轴 
+                                    Com1_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
+                                End If
+                            End If
                             Exit For
                         End If
                     Next i
@@ -1066,6 +1065,7 @@ Com_Err:
     Private Sub Timer_Sys_Tick(sender As Object, e As EventArgs) Handles Timer_Sys.Tick
         Timer_Sys.Enabled = False
         Static CountT As Integer = 0
+        Static CountUVTime(7) As Integer
 
         Call EMC_Stop()
         'OK NG指示灯
@@ -1098,7 +1098,22 @@ Com_Err:
         End If
         CountT += 1
 
-        If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 100) Then CCD_Lock_Flag = False
+        '开启UV灯防呆功能的话，如果UV灯开启时间连续超过设定时间就自动关闭
+        If par.chkFn(11) Then
+            For i = 1 To Flag_UVIsOpened.Length
+                If Flag_UVIsOpened(i) Then
+                    CountUVTime(i) = CountUVTime(i) + 1
+                    '超过设定值就关闭UV灯
+                    If CountUVTime(i) * 10 > par.num(17) * 1000 Then
+                        UV_Close(ControllerHandle(i), 0)
+                    End If
+                Else
+                    CountUVTime(i) = 0
+                End If
+            Next
+        End If
+         
+        If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 1000) Then CCD_Lock_Flag = False
 
         Timer_Sys.Enabled = True
     End Sub
@@ -1346,5 +1361,5 @@ Com_Err:
             End If
         End If
     End Sub
-
+     
 End Class

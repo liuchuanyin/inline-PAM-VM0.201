@@ -378,6 +378,7 @@
         cbo_Pos2.Items.Add("CCD 拍第7颗料位置") '11
         cbo_Pos2.Items.Add("CCD 拍第11颗料位置") '12
         cbo_Pos2.Items.Add("CCD 拍第12颗料位置") '13
+        cbo_Pos2.Items.Add("贴合Y轴极限安全位置") '14
 
 
         cbo_Pos3.Items.Clear()
@@ -390,6 +391,8 @@
         cbo_Pos3.Items.Add("夹镜头保护盖位置") '6
         cbo_Pos3.Items.Add("压力传感器自动标定位置1") '7
         cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
+        cbo_Pos3.Items.Add("取料Y轴极限安全位置")     '9
+
 
         cbo_Pos4.Items.Clear()
         cbo_Pos4.Items.Add("初始位置")            '0
@@ -410,8 +413,10 @@
         cbo_Pos5.Items.Add("第12颗料复检位置")    '6
 
         cbo_Pos6.Items.Clear()
-        cbo_Pos6.Items.Add("初始位置")
-        cbo_Pos6.Items.Add("第一颗料固化位置")
+        cbo_Pos6.Items.Add("初始位置")            '0
+        cbo_Pos6.Items.Add("第一颗料固化位置")    '1
+        cbo_Pos6.Items.Add("第三颗料固化位置")    '2
+        cbo_Pos6.Items.Add("第五颗料固化位置")    '3
 
         cbo_Pos7.Items.Clear()
         cbo_Pos7.Items.Add("Z1，Z2初始位置")
@@ -1887,7 +1892,7 @@
             Exit Sub
         End If
         List_DebugAddMessage("组装站开始自动运行……")
-        'Call ManualRun_Glue()
+        Call ManualRun_Paste()
     End Sub
 
     '取料站站自动运行
@@ -1994,9 +1999,10 @@
                         Frm_DialogAddMessage("请检查UV灯连接是否正常！")
                     End If
                 Else
-                    If Flag_UVConnect(1) And Flag_UVConnect(4) Then
+                    If Flag_UVConnect(1) And Flag_UVConnect(2) And Flag_UVConnect(6) Then
                         Call UV_Open(ControllerHandle(1), 0, 255)
-                        Call UV_Open(ControllerHandle(4), 0, 255)
+                        Call UV_Open(ControllerHandle(2), 0, 255)
+                        Call UV_Open(ControllerHandle(6), 0, 255)
                     Else
                         Frm_DialogAddMessage("请检查UV灯连接是否正常！")
                     End If
@@ -2012,9 +2018,10 @@
                         Frm_DialogAddMessage("请检查UV灯连接是否正常！")
                     End If
                 Else
-                    If Flag_UVConnect(1) And Flag_UVConnect(4) Then
+                    If Flag_UVConnect(1) And Flag_UVConnect(2) And Flag_UVConnect(6) Then
                         Call UV_Close(ControllerHandle(1), 0)
-                        Call UV_Close(ControllerHandle(4), 0)
+                        Call UV_Close(ControllerHandle(2), 0)
+                        Call UV_Close(ControllerHandle(6), 0)
                     Else
                         Frm_DialogAddMessage("请检查UV灯连接是否正常！")
                     End If

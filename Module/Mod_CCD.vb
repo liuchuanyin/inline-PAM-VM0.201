@@ -34,25 +34,25 @@
     ''' CCD3返回精补坐标
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam2Data() As Double
+    Public Cam2Data(5, 50) As Double
 
     ''' <summary>
     ''' CCD3返回的精补点的坐标
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam3Data() As Double
+    Public Cam3Data(5, 50) As Double
 
     ''' <summary>
     ''' 获取PAM3贴的ROMEO的SN
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam3SN() As String
+    Public Cam3SN As String
 
     ''' <summary>
     ''' CCD4返回取料点的X,Y,A
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam4Data() As Double
+    Public Cam4Data(5, 50) As Double
 
     ''' <summary>
     ''' 返回的moduleSN
@@ -64,13 +64,13 @@
     ''' 复检下相机得到的数据
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam5Data() As String
+    Public Cam5Data(5, 50) As String
 
     ''' <summary>
     ''' 复检上相机得到的数据
     ''' </summary>
     ''' <remarks></remarks>
-    Public Cam6Data() As String
+    Public Cam6Data(5, 50) As String
 
     ''' <summary>
     ''' 触发相机
@@ -94,6 +94,9 @@
 
         CCD_Lock_Flag = True
 
+        '复位得到的数据
+        ReDim Winsock1_Data(200)
+
         Try
             '根据通讯协议，来组织命令
             Select Case CamNo_FunNo
@@ -108,43 +111,62 @@
                 Case "T2,1"
                     '复位CCD2相关数据
                     Cam_Status(2) = 0
-                    ReDim Cam2Data(0)
+                    For i = 0 To 50
+                        Cam2Data(1, i) = 0
+                    Next
 
                     station = 4
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
+                Case "T2,2"
+                    '复位CCD2相关数据
+                    Cam_Status(2) = 0
+                    For i = 0 To 50
+                        Cam2Data(2, i) = 0
+                    Next
+
+                    station = 4
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
+                     
                 Case "T3,1"
                     '复位CCD3相关数据
                     Cam_Status(3) = 0
-                    ReDim Cam3Data(0)
-                     
+                    For i = 0 To 50
+                        Cam3Data(1, i) = 0
+                    Next
+
                     station = 2
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(0, PasteX).ToString & "," & CurrEncPos(2, PasteY1).ToString & "," & CurrEncPos(0, PasteR).ToString & vbCrLf
                 Case "T3,2"
                     '复位CCD3相关数据 
                     Cam_Status(3) = 0
-                    ReDim Cam3SN(0)
+                    Cam3SN = ""
 
                     station = 2
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & vbCrLf
                 Case "T4,1"
                     '复位CCD4相关数据 
-                    Cam_Status(4) = 0 
-                    ReDim Cam4Data(0)
-                    Cam4SN = ""
+                    Cam_Status(4) = 0
+                    For i = 0 To 50
+                        Cam4Data(1, i) = 0
+                    Next 
 
                     station = 3
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(0, PreTakerX).ToString & "," & CurrEncPos(2, PreTakerY1).ToString & "," & CurrEncPos(1, PreTakerR).ToString & vbCrLf
                 Case "T5,1"
                     '复位CCD5相关数据 
                     Cam_Status(5) = 0
-                    ReDim Cam5Data(0)
+                    For i = 0 To 50
+                        Cam5Data(1, i) = 0
+                    Next
 
                     station = 5
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & vbCrLf
                 Case "T6,1"
                     '复位CCD6相关数据 
                     Cam_Status(6) = 0
-                    ReDim Cam5Data(0)
+                    For i = 0 To 50
+                        Cam6Data(1, i) = 0
+                    Next
 
                     station = 5
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & vbCrLf
@@ -235,13 +257,19 @@
                     '记录接收到的相机数据
                     Write_Log(4, "CCD2 Receive:" & str_winsock, Path_Log)
                     If Cam_Status(2) = 1 Then
-                        ReDim Cam2Data(Winsock1_Data.Length - 6)
-                        '精补的坐标X
-                        Cam2Data(0) = CType(Winsock1_Data(4), Double)
-                        '精补的坐标Y
-                        Cam2Data(1) = CType(Winsock1_Data(5), Double)
-                        '精补的坐标A
-                        Cam2Data(2) = CType(Winsock1_Data(6), Double)
+                        Select Case Winsock1_Data(1)
+                            Case 1
+                               
+                            Case 2
+                                '精补的坐标X
+                                Cam2Data(2, 0) = CType(Winsock1_Data(4), Double)
+                                '精补的坐标Y
+                                Cam2Data(2, 1) = CType(Winsock1_Data(5), Double)
+                                '精补的坐标A
+                                Cam2Data(2, 2) = CType(Winsock1_Data(6), Double)
+                                '精确补偿CC
+                                Cam2Data(2, 3) = CType(Winsock1_Data(7), Double)
+                        End Select
                     End If
 
                 Case "T3"
@@ -249,17 +277,15 @@
                     Write_Log(2, "CCD3 Receive:" & str_winsock, Path_Log) '记录接收到的相机数据
                     If Cam_Status(3) = 1 Then
                         Select Case Winsock1_Data(1)
-                            Case 1
-                                ReDim Cam3Data(Winsock1_Data.Length - 6)
+                            Case 1 
                                 '精补点位的坐标X
-                                Cam3Data(0) = CType(Winsock1_Data(4), Double)
+                                Cam3Data(1, 0) = CType(Winsock1_Data(4), Double)
                                 '精补点位的坐标Y
-                                Cam3Data(1) = CType(Winsock1_Data(5), Double)
+                                Cam3Data(1, 1) = CType(Winsock1_Data(5), Double)
                                 '精补点位的坐标A
-                                Cam3Data(2) = CType(Winsock1_Data(6), Double)
-                            Case 2
-                                ReDim Cam3SN(Winsock1_Data.Length - 6)
-                                Cam3SN(0) = Winsock1_Data(4).ToString
+                                Cam3Data(1, 2) = CType(Winsock1_Data(6), Double)
+                            Case 2 
+                                Cam3SN = "" = Winsock1_Data(4).ToString
                         End Select
                     End If
 
@@ -267,25 +293,34 @@
                     Cam_Status(4) = CType(Winsock1_Data(2), Integer)
                     Write_Log(3, "CCD4 Receive:" & str_winsock, Path_Log) '记录接收到的相机数据
                     If Cam_Status(4) = 1 Then
-                        ReDim Cam4Data(Winsock1_Data.Length - 6)
-                        Cam4Data(0) = CType(Winsock1_Data(4), Double)
-                        Cam4Data(1) = CType(Winsock1_Data(5), Double)
-                        Cam4Data(2) = CType(Winsock1_Data(6), Double)
-                        Cam4SN = CType(Winsock1_Data(7), String)
+                        Select Winsock1_Data(1)
+                            Case 1
+                                Cam4Data(1, 0) = CType(Winsock1_Data(4), Double)
+                                Cam4Data(1, 1) = CType(Winsock1_Data(5), Double)
+                                Cam4Data(1, 2) = CType(Winsock1_Data(6), Double)
+                                Cam4SN = CType(Winsock1_Data(7), String)
+                            Case 2
+                        End Select
                     End If
 
                 Case "T5"
                     Cam_Status(5) = CType(Winsock1_Data(2), Integer)
                     Write_Log(4, "CCD5 Receive:" & str_winsock, Path_Log) '记录接收到的相机数据
                     If Cam_Status(5) = 1 Then
-                       
+                       Select Winsock1_Data(1)
+                            Case 1
+
+                        End Select
                     End If
 
                 Case "T6"
                     Cam_Status(6) = CType(Winsock1_Data(2), Integer)
                     Write_Log(5, "CCD6 Receive:" & str_winsock, Path_Log) '记录接收到的相机数据
                     If Cam_Status(6) = 1 Then
-                        
+                        Select Winsock1_Data(1)
+                            Case 1
+
+                        End Select
                     End If 
             End Select
         Catch ex As Exception

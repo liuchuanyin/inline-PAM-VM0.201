@@ -516,10 +516,12 @@
                 End If
 
             Case 400  '判断CCD1返回值OK
-                If Cam_Status(1) = 1 Then
-                    '重新定义此数组大小
-                    ReDim LaserGlueH(Cam1LaserPoint.Length - 1)
-                    Step_Glue = 410
+                If Winsock1_Data(0) = "T1" And Winsock1_Data(1) = 1 Then
+                    If Cam_Status(1) = 1 Then
+                        '重新定义此数组大小
+                        ReDim LaserGlueH(Cam1LaserPoint.Length - 1)
+                        Step_Glue = 410
+                    End If
                 End If
 
             Case 410 'Z轴回待机位置

@@ -327,8 +327,9 @@
 
             Case 800
                 '组装站Y轴向取料站方向偏移150mm 方向是加
-                Call AbsMotion(2, PasteY1, AxisPar.HomeVel(2, PasteY1), 150)
-                Step_MachineIni = 900
+                If AbsMotion(2, PasteY1, AxisPar.HomeVel(2, PasteY1), 150) = True Then
+                    Step_MachineIni = 900
+                End If
 
             Case 900
                 If GetDi(0, 1) = 1 Then

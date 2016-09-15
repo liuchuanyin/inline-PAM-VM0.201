@@ -7,6 +7,7 @@
     Public Flag_UVConnect(7) As Boolean
     Public ControllerHandle(7) As Integer
     Public UVControllerIP(7) As String
+    Public Flag_UVIsOpened(7) As Boolean
 
     ''' <summary>
     ''' UV灯初始化
@@ -17,7 +18,7 @@
             UVControllerIP(i) = "192.168.0.10" & i
             Flag_UVConnect(i) = False
             If UV_Connect(UVControllerIP(i), ControllerHandle(i)) Then
-                Flag_UVConnect(1) = True
+                Flag_UVConnect(i) = True
             End If
             If Flag_UVConnect(i) = False Then
                 Frm_DialogAddMessage("UV Controller " & i & " Connect Failed!")
@@ -54,6 +55,7 @@
     Public Sub UV_Open(ByVal controllerHandle As Integer, Index As Integer, indenstiy As Integer)
         OPTControllerAPI.OPTController_TurnOnChannel(controllerHandle, 0)
         OPTControllerAPI.OPTController_SetIntensity(controllerHandle, 0, indenstiy)
+        Flag_UVIsOpened(controllerHandle) = True
     End Sub
 
     ''' <summary>
@@ -78,6 +80,7 @@
     Public Sub UV_Close(ByVal controllerHandle As Integer, Index As Integer)
         'OPTControllerAPI.OPTController_TurnOffChannel(controllerHandle, 0)
         OPTControllerAPI.OPTController_SetIntensity(controllerHandle, Index, 0)
+        Flag_UVIsOpened(controllerHandle) = True
     End Sub
 
     ''' <summary>

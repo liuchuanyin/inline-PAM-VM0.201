@@ -1099,11 +1099,109 @@ Module Motion
     ''' <param name="Speed">速度:mm/s</param>
     ''' <param name="Dist">相对于原点的位移距离</param>
     ''' <remarks></remarks>
-    Public Sub AbsMotion(ByVal Card As Integer, ByVal Axis As Integer, ByVal Speed As Double, ByVal Dist As Double)
+    'Public Sub AbsMotion(ByVal Card As Integer, ByVal Axis As Integer, ByVal Speed As Double, ByVal Dist As Double)
+    '    Dim TempPos, TempVel As Double
+    '    Dim Pos, Vel As Double
+    '    Dim TrapPrm As TTrapPrm
+    '    Dim rtn As Short
+
+    '    TempVel = Speed
+    '    TempPos = Dist
+    '    rtn = GT_ClrSts(Card, Axis)               '清除当前轴的错误标志
+    '    rtn = GT_PrfTrap(Card, Axis)              '将当前轴设置为点位运动模式
+    '    rtn = GT_GetTrapPrm(Card, Axis, TrapPrm)  '读取当前轴点位模式运动参数
+
+    '    TrapPrm.acc = AxisPar.acc(Card, Axis)       '载入当前轴的加速度
+    '    TrapPrm.dec = AxisPar.dec(Card, Axis)       '载入当前轴的减速度
+
+    '    rtn = GT_SetTrapPrm(Card, Axis, TrapPrm)    '设置当前轴加速度、减速度、起跳速度、平滑时间
+
+    '    Select Case Card
+    '        Case 0
+    '            Select Case Axis
+    '                Case 1, 2, 3, 4, 5, 7, 8
+    '                    Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+    '                    Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+    '                Case 6
+    '                    Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
+    '                    Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)          '(*计算目标位置脉冲数量*)
+    '            End Select
+    '        Case 1
+    '            Select Case Axis
+    '                Case 2, 3, 4, 5, 6, 7, 8
+    '                    Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+    '                    Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+    '                Case 1
+    '                    Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
+    '                    Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)          '(*计算目标位置脉冲数量*)
+    '            End Select
+    '        Case 2
+    '            Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+    '            Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+    '    End Select
+    '    rtn = GT_SetVel(Card, Axis, Vel)      '设置当前轴的目标速度
+    '    rtn = GT_SetPos(Card, Axis, Pos)      '设置当前轴的目标位置
+    '    rtn = GT_Update(Card, 2 ^ (Axis - 1))   '启动当前轴运动
+
+    '    AxisTime(Card, Axis) = GetTickCount()
+    'End Sub
+
+
+    Private LockedPaste As Boolean
+    Private LockedTake As Boolean
+    Public Function AbsMotion(ByVal Card As Integer, ByVal Axis As Integer, ByVal Speed As Double, ByVal Dist As Double) As Boolean
         Dim TempPos, TempVel As Double
         Dim Pos, Vel As Double
         Dim TrapPrm As TTrapPrm
         Dim rtn As Short
+
+        Dim PasetY_SafeLimet As Double
+        Dim TakeY_SafeLimet As Double
+
+        '龙门Y轴会有撞机风险
+        If Card = 2 Then
+            PasetY_SafeLimet = Par_Pos.St_Paste(14).Y
+            TakeY_SafeLimet = Par_Pos.St_PreTaker(9).Y
+
+            Select Case Axis
+                Case 1, 2
+                    '判断安全锁
+                    If LockedTake = True Then Return False
+
+                    '先判断运行方向，如果朝+方向运行，则继续向下判断
+                    If Dist - CurrEncPos(2, PasteY1) > 0 Or Dist - CurrEncPos(2, PasteY2) > 0 Then
+                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
+                        If Dist > PasetY_SafeLimet Then
+                            '最后判断对方轴是在安全区域以内并且停止中
+                            If (Not isAxisMoving(2, PreTakerY1)) And (Not isAxisMoving(2, PreTakerY2)) And (CurrEncPos(2, PreTakerY1) <= TakeY_SafeLimet) And (CurrEncPos(2, PreTakerY2) <= TakeY_SafeLimet) Then
+                                LockedPaste = True
+                            Else
+                                Return False
+                            End If
+                        End If
+                    End If
+
+                Case 3, 4
+                    '判断安全锁
+                    If LockedPaste = True Then Return False
+
+                    '先判断运行方向，如果朝+方向运行，则继续向下判断
+                    If Dist - CurrEncPos(2, PreTakerY1) > 0 Or Dist - CurrEncPos(2, PreTakerY2) > 0 Then
+                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
+                        If Dist > TakeY_SafeLimet Then
+                            '最后判断对方轴是在安全区域以内并且停止中
+                            If (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(2, PasteY2)) And (CurrEncPos(2, PasteY1) <= PasetY_SafeLimet) And (CurrEncPos(2, PasteY2) <= PasetY_SafeLimet) Then
+                                LockedTake = True
+                            Else
+                                Return False
+                            End If
+                        End If
+                    End If
+
+                Case Else
+                    Return False
+            End Select
+        End If
 
         TempVel = Speed
         TempPos = Dist
@@ -1144,7 +1242,20 @@ Module Motion
         rtn = GT_Update(Card, 2 ^ (Axis - 1))   '启动当前轴运动
 
         AxisTime(Card, Axis) = GetTickCount()
-    End Sub
+
+        '解锁
+        If Card = 2 Then
+            Select Case Axis
+                Case 1, 2
+                    LockedPaste = False
+                Case 3, 4
+                    LockedTake = False
+            End Select
+        End If
+
+        Return True
+    End Function
+
 
     'REL相对运动模式子程序，参数1：轴号；参数2：速度；参数3：相对于当前点的位移距离
     Public Sub RelMotion(ByVal Card As Integer, ByVal Axis As Integer, ByVal Speed As Double, ByVal Dist As Double)

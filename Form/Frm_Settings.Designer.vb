@@ -1120,7 +1120,7 @@ Partial Class Frm_Settings
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(195, 24)
         Me.CheckBox11.TabIndex = 10
-        Me.CheckBox11.Text = "11-"
+        Me.CheckBox11.Text = "11-开启UV灯防呆"
         Me.CheckBox11.UseVisualStyleBackColor = True
         '
         'CheckBox12
@@ -2568,7 +2568,7 @@ Partial Class Frm_Settings
         Me.lbl_Par17.Name = "lbl_Par17"
         Me.lbl_Par17.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par17.TabIndex = 28
-        Me.lbl_Par17.Text = "17-"
+        Me.lbl_Par17.Text = "17-UV防呆时间"
         Me.lbl_Par17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_Par18
@@ -2858,7 +2858,7 @@ Partial Class Frm_Settings
         Me.lbl_Par26.Name = "lbl_Par26"
         Me.lbl_Par26.Size = New System.Drawing.Size(114, 30)
         Me.lbl_Par26.TabIndex = 37
-        Me.lbl_Par26.Text = "26-"
+        Me.lbl_Par26.Text = "26-精补CC限定值"
         Me.lbl_Par26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txt_Par26

@@ -142,7 +142,7 @@ Partial Class Frm_Main
         Me.Btn_MachineInfo.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_MachineInfo.BZ_Radius = 11
         Me.Btn_MachineInfo.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_MachineInfo.Font = New System.Drawing.Font("HelveticaNeue", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_MachineInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MachineInfo.Location = New System.Drawing.Point(330, 5)
         Me.Btn_MachineInfo.Name = "Btn_MachineInfo"
         Me.Btn_MachineInfo.Size = New System.Drawing.Size(160, 60)
@@ -280,7 +280,7 @@ Partial Class Frm_Main
         Me.Btn_CPKGRR.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_CPKGRR.BZ_Radius = 11
         Me.Btn_CPKGRR.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_CPKGRR.Font = New System.Drawing.Font("HelveticaNeue", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CPKGRR.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CPKGRR.Location = New System.Drawing.Point(195, 296)
         Me.Btn_CPKGRR.Name = "Btn_CPKGRR"
         Me.Btn_CPKGRR.Size = New System.Drawing.Size(290, 60)
@@ -293,7 +293,7 @@ Partial Class Frm_Main
         Me.Btn_ModeEngineer.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_ModeEngineer.BZ_Radius = 11
         Me.Btn_ModeEngineer.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_ModeEngineer.Font = New System.Drawing.Font("HelveticaNeue", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ModeEngineer.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ModeEngineer.Location = New System.Drawing.Point(195, 198)
         Me.Btn_ModeEngineer.Name = "Btn_ModeEngineer"
         Me.Btn_ModeEngineer.Size = New System.Drawing.Size(290, 60)
@@ -306,7 +306,7 @@ Partial Class Frm_Main
         Me.Btn_ModeProduction.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_ModeProduction.BZ_Radius = 11
         Me.Btn_ModeProduction.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_ModeProduction.Font = New System.Drawing.Font("HelveticaNeue", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ModeProduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ModeProduction.Location = New System.Drawing.Point(195, 100)
         Me.Btn_ModeProduction.Name = "Btn_ModeProduction"
         Me.Btn_ModeProduction.Size = New System.Drawing.Size(290, 60)
@@ -333,16 +333,16 @@ Partial Class Frm_Main
         '
         'txt_Password
         '
-        Me.txt_Password.Font = New System.Drawing.Font("HelveticaNeue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Password.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Password.Location = New System.Drawing.Point(28, 228)
         Me.txt_Password.Name = "txt_Password"
-        Me.txt_Password.Size = New System.Drawing.Size(252, 32)
+        Me.txt_Password.Size = New System.Drawing.Size(252, 31)
         Me.txt_Password.TabIndex = 6
         Me.txt_Password.UseSystemPasswordChar = True
         '
         'ComboBox_User
         '
-        Me.ComboBox_User.Font = New System.Drawing.Font("HelveticaNeue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_User.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_User.FormattingEnabled = True
         Me.ComboBox_User.ItemHeight = 25
         Me.ComboBox_User.Location = New System.Drawing.Point(28, 152)
@@ -353,20 +353,20 @@ Partial Class Frm_Main
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("HelveticaNeue", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(23, 199)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Password"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("HelveticaNeue", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(25, 126)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 16)
+        Me.Label2.Size = New System.Drawing.Size(38, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "User"
         '
@@ -375,7 +375,7 @@ Partial Class Frm_Main
         Me.Btn_Exit.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_Exit.BZ_Radius = 11
         Me.Btn_Exit.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_Exit.Font = New System.Drawing.Font("HelveticaNeue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Exit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Exit.Location = New System.Drawing.Point(170, 310)
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.Size = New System.Drawing.Size(110, 40)
@@ -388,7 +388,7 @@ Partial Class Frm_Main
         Me.Btn_Login.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_Login.BZ_Radius = 11
         Me.Btn_Login.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_Login.Font = New System.Drawing.Font("HelveticaNeue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Login.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Login.Location = New System.Drawing.Point(25, 310)
         Me.Btn_Login.Name = "Btn_Login"
         Me.Btn_Login.Size = New System.Drawing.Size(110, 40)
@@ -420,7 +420,7 @@ Partial Class Frm_Main
         '
         'btn_SaveMacType
         '
-        Me.btn_SaveMacType.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_SaveMacType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_SaveMacType.Location = New System.Drawing.Point(139, 140)
         Me.btn_SaveMacType.Name = "btn_SaveMacType"
         Me.btn_SaveMacType.Size = New System.Drawing.Size(60, 60)
@@ -438,7 +438,7 @@ Partial Class Frm_Main
         '
         'lbl_MacType
         '
-        Me.lbl_MacType.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_MacType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_MacType.Location = New System.Drawing.Point(17, 99)
         Me.lbl_MacType.Name = "lbl_MacType"
         Me.lbl_MacType.Size = New System.Drawing.Size(90, 22)
@@ -449,11 +449,11 @@ Partial Class Frm_Main
         '
         'cbo_MacType
         '
-        Me.cbo_MacType.Font = New System.Drawing.Font("HelveticaNeue", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_MacType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_MacType.FormattingEnabled = True
         Me.cbo_MacType.Location = New System.Drawing.Point(113, 99)
         Me.cbo_MacType.Name = "cbo_MacType"
-        Me.cbo_MacType.Size = New System.Drawing.Size(120, 22)
+        Me.cbo_MacType.Size = New System.Drawing.Size(120, 23)
         Me.cbo_MacType.TabIndex = 69
         Me.cbo_MacType.Visible = False
         '

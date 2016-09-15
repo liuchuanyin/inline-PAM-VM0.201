@@ -10,6 +10,12 @@
         Dim isHaveCam As Boolean
         Dim Barcode As String
         Dim TakerPress As Double
+
+        Public Sub Init()
+            isHaveCam = False
+            Barcode = ""
+            TakerPress = 999
+        End Sub
     End Structure
 
     Public Cam_OnTransferPlate As TransferPlate
@@ -57,8 +63,9 @@
                 Case 20
                     Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(index).X)
                     Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(index).R)
-                    Call AbsMotion(2, PreTakerY1, AxisPar.MoveVel(0, PreTakerY1), Par_Pos.St_PreTaker(index).Y)
-                    Step_Gopos(3) = 30
+                    If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(0, PreTakerY1), Par_Pos.St_PreTaker(index).Y) = True Then
+                        Step_Gopos(3) = 30
+                    End If
 
                 Case 30
                     If isAxisMoving(0, PreTakerX) = False And isAxisMoving(1, PreTakerR) = False And isAxisMoving(2, PreTakerY1) = False Then
@@ -150,10 +157,10 @@
             Case 120
                 'XYR去指定位置
                 Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(1).X)
-                Call AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(1).Y)
                 Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(1).R)
-                Step_PreTaker = 130
-
+                If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(1).Y) = True Then
+                    Step_PreTaker = 130
+                End If
             Case 130
                 If isAxisMoving(0, PreTakerX) = False And isAxisMoving(1, PreTakerR) = False And isAxisMoving(2, PreTakerY1) = False Then
                     Step_PreTaker = 150
