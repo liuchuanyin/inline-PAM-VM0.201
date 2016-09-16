@@ -555,7 +555,12 @@ Com_Err:
         COM5_Init(par.CCD(5))
     End Sub
 
-    'COM1接收数据
+    ''' <summary>
+    ''' 组装站压力传感器
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub COM1_DataReceived(sender As Object, e As IO.Ports.SerialDataReceivedEventArgs) Handles COM1.DataReceived
         Static TempCom As String
         Dim TempStr As String = ""
@@ -581,7 +586,7 @@ Com_Err:
                             COM1_Work.Result = True
                             LoadCell = Val(Mid(TempCom, startNum + 1, EndNum - startNum - 1))
                             Press(0) = Format(LoadCell / 100, "0.000")
-                            If Step_Paste = 840 Then
+                            If Step_Paste = 860 Then
                                 If Press(0) >= par.num(21) Then
                                     rtn = GT_Stop(0, 2 ^ (PasteZ - 1), 2 ^ (PasteZ - 1))    '紧急停止Z 轴 
                                     Com1_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
@@ -600,7 +605,12 @@ Com_Err:
         End Try
     End Sub
 
-    'COM2接收数据
+    ''' <summary>
+    ''' 点胶站Laser
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub COM2_DataReceived(sender As Object, e As IO.Ports.SerialDataReceivedEventArgs) Handles COM2.DataReceived
         Static TempCom As String
         Dim TempStr As String
@@ -647,7 +657,7 @@ Com_Err:
         Static TempCom As String
         Dim TempStr As String = ""
         Dim startNum As Long, EndNum As Long
-        'Dim rtn As Short
+        Dim rtn As Short
         Dim i As Integer
         Dim LoadCell As Double
 
@@ -664,17 +674,17 @@ Com_Err:
                             startNum = i
                         End If
                         If startNum * EndNum <> 0 Then
-                            COM1_Work.State = False
-                            COM1_Work.Result = True
+                            COM3_Work.State = False
+                            COM3_Work.Result = True
                             LoadCell = Val(Mid(TempCom, startNum + 1, EndNum - startNum - 1))
                             Press(1) = Format(LoadCell / 100, "0.000")
-                            'If S3_AutoRun_Step = 500 Then
-                            '    If Press(0) > par.num(19) Then
-                            '        rtn = GT_Stop(0, 2 ^ (S3_Z - 1), 2 ^ (S3_Z - 1)) '紧急停止Z 轴
-                            '        ListBoxAddMessage("3工位贴合压力：" & Press(0))
-                            '        'Com1_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
-                            '    End If
-                            'End If
+                            If Step_PreTaker = 540 Then
+                                If Press(1) > par.num(22) Then
+                                    rtn = GT_Stop(0, 2 ^ (PreTakerZ - 1), 2 ^ (PreTakerZ - 1)) '紧急停止预取料Z 轴
+                                    ListBoxAddMessage("3工位贴合压力：" & Press(0))
+                                    Com3_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
+                                End If
+                            End If
                             Exit For
                         End If
                     Next i
@@ -1100,7 +1110,7 @@ Com_Err:
 
         '开启UV灯防呆功能的话，如果UV灯开启时间连续超过设定时间就自动关闭
         If par.chkFn(11) Then
-            For i = 1 To Flag_UVIsOpened.Length
+            For i = 1 To Flag_UVIsOpened.Length - 1
                 If Flag_UVIsOpened(i) Then
                     CountUVTime(i) = CountUVTime(i) + 1
                     '超过设定值就关闭UV灯
@@ -1114,7 +1124,7 @@ Com_Err:
         End If
          
         If CCD_Lock_Flag And isTimeout(Winsock1_TimmingWatch, 1000) Then CCD_Lock_Flag = False
-
+         
         Timer_Sys.Enabled = True
     End Sub
 

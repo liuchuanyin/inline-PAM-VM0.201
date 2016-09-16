@@ -295,9 +295,9 @@
                     If Cam_Status(4) = 1 Then
                         Select Winsock1_Data(1)
                             Case 1
-                                Cam4Data(1, 0) = CType(Winsock1_Data(4), Double)
-                                Cam4Data(1, 1) = CType(Winsock1_Data(5), Double)
-                                Cam4Data(1, 2) = CType(Winsock1_Data(6), Double)
+                                Cam4Data(1, 0) = CType(Winsock1_Data(4), Double)  'X
+                                Cam4Data(1, 1) = CType(Winsock1_Data(5), Double)  'Y
+                                Cam4Data(1, 2) = CType(Winsock1_Data(6), Double)  'A
                                 Cam4SN = CType(Winsock1_Data(7), String)
                             Case 2
                         End Select

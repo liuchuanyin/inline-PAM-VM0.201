@@ -9,7 +9,7 @@
                 '判断是否开启联机模式
                 If par.chkFn(21) Then
                     If EMI(1, 14) And isHaveTray(0) = False And Line_Sta(0).isWorking = False Then
-                        SetEMO(1, 15, True) '给上一台设备可以接受载具信号
+                        SetEMO(1, 13, True) '给上一台设备可以接受载具信号
                         Step_Line(0) = 100
                     End If
                 Else
@@ -43,7 +43,7 @@
             Case 210
                 Tray_Pallet(0).isHaveTray = True
                 Line_Sta(0).isHaveTray = True
-                SetEMO(1, 15, False) '给上一台设备可以接受载具信号False
+                SetEMO(1, 13, False) '给上一台设备可以接受载具信号False
                 ListBoxAddMessage(">> 0 段流水线已经接收到载具")
                 Step_Line(0) = 300
 

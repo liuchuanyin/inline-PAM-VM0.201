@@ -23,7 +23,7 @@ Partial Class Frm_Engineering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Engineering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -36,16 +36,16 @@ Partial Class Frm_Engineering
         Me.Btn_AutoRun = New BoTech.BZ_Button()
         Me.Btn_initialize = New BoTech.BZ_Button()
         Me.BZ_RoundPanel1 = New BoTech.BZ_RoundPanel()
-        Me.Label240 = New System.Windows.Forms.Label()
-        Me.Label241 = New System.Windows.Forms.Label()
-        Me.Label243 = New System.Windows.Forms.Label()
-        Me.lbl_StepS3_Glue = New System.Windows.Forms.Label()
-        Me.lbl_StepS2_Glue = New System.Windows.Forms.Label()
+        Me.lbl_StepS9 = New System.Windows.Forms.Label()
+        Me.lbl_StepS8 = New System.Windows.Forms.Label()
+        Me.lbl_StepS7 = New System.Windows.Forms.Label()
+        Me.lbl_StepS6 = New System.Windows.Forms.Label()
         Me.lbl_StepS5 = New System.Windows.Forms.Label()
         Me.lbl_StepS4 = New System.Windows.Forms.Label()
         Me.lbl_StepS3 = New System.Windows.Forms.Label()
         Me.lbl_StepS2 = New System.Windows.Forms.Label()
         Me.lbl_StepS1 = New System.Windows.Forms.Label()
+        Me.lbl_StepS0 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.lbl_BOZHON = New BoTech.BZ_Label()
         Me.RoundPanel = New BoTech.BZ_RoundPanel()
@@ -573,6 +573,7 @@ Partial Class Frm_Engineering
         Me.btn_S2IO2 = New System.Windows.Forms.Button()
         Me.btn_S2IO1 = New System.Windows.Forms.Button()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnTrayGlue = New System.Windows.Forms.Button()
         Me.btn_AtuoNeedle1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -933,92 +934,92 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
-        Me.TabControl1.SuspendLayout
-        Me.TabPage1.SuspendLayout
-        Me.BZ_RoundPanel6.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.BZ_RoundPanel4.SuspendLayout
-        Me.BZ_RoundPanel2.SuspendLayout
-        Me.BZ_RoundPanel1.SuspendLayout
-        Me.RoundPanel.SuspendLayout
-        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Tray3.SuspendLayout
-        Me.Tray2.SuspendLayout
-        Me.Tray1.SuspendLayout
-        CType(Me.PB_Right1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.BZ_RoundPanel5.SuspendLayout
-        Me.TabPage2.SuspendLayout
-        Me.BZ_RoundPanel8.SuspendLayout
-        Me.TableLayoutPanel1.SuspendLayout
-        Me.BZ_RoundPanel7.SuspendLayout
-        Me.GroupBox1.SuspendLayout
-        Me.TableLayoutPanel2.SuspendLayout
-        Me.GroupBox5.SuspendLayout
-        Me.TableLayoutPanel6.SuspendLayout
-        Me.GroupBox2.SuspendLayout
-        Me.TableLayoutPanel3.SuspendLayout
-        Me.GroupBox4.SuspendLayout
-        Me.TableLayoutPanel5.SuspendLayout
-        Me.GroupBox3.SuspendLayout
-        Me.TableLayoutPanel4.SuspendLayout
-        Me.TabPage3.SuspendLayout
-        Me.BZ_RoundPanel9.SuspendLayout
-        Me.GroupBox10.SuspendLayout
-        Me.TableLayoutPanel11.SuspendLayout
-        Me.GroupBox9.SuspendLayout
-        Me.TableLayoutPanel10.SuspendLayout
-        Me.GroupBox8.SuspendLayout
-        Me.TableLayoutPanel9.SuspendLayout
-        Me.GroupBox7.SuspendLayout
-        Me.TableLayoutPanel8.SuspendLayout
-        Me.GroupBox6.SuspendLayout
-        Me.TableLayoutPanel7.SuspendLayout
-        Me.TabPage4.SuspendLayout
-        Me.tab_Log.SuspendLayout
-        Me.TabPage10.SuspendLayout
-        Me.TabPage11.SuspendLayout
-        Me.TableLayoutPanel16.SuspendLayout
-        Me.TabPage12.SuspendLayout
-        Me.Grp.SuspendLayout
-        Me.gupStep.SuspendLayout
-        Me.gupVel.SuspendLayout
-        Me.TabCon.SuspendLayout
-        Me.TabPage6.SuspendLayout
-        Me.Panel4.SuspendLayout
-        Me.GroupBox13.SuspendLayout
-        Me.TableLayoutPanel12.SuspendLayout
-        Me.TabPage7.SuspendLayout
-        Me.Panel2.SuspendLayout
-        Me.GroupBox14.SuspendLayout
-        Me.TableLayoutPanel13.SuspendLayout
-        Me.TabPage8.SuspendLayout
-        Me.Panel6.SuspendLayout
-        Me.GroupBox17.SuspendLayout
-        Me.TableLayoutPanel14.SuspendLayout
-        Me.TabPage5.SuspendLayout
-        Me.GroupBox16.SuspendLayout
-        Me.TableLayoutPanel19.SuspendLayout
-        Me.GroupBox15.SuspendLayout
-        Me.TableLayoutPanel18.SuspendLayout
-        Me.GroupBox12.SuspendLayout
-        Me.TableLayoutPanel17.SuspendLayout
-        Me.GroupBox11.SuspendLayout
-        Me.TableLayoutPanel15.SuspendLayout
-        Me.TabPage9.SuspendLayout
-        Me.GroupBox22.SuspendLayout
-        Me.GroupBox21.SuspendLayout
-        Me.GroupBox19.SuspendLayout
-        Me.GroupBox20.SuspendLayout
-        Me.Panel10.SuspendLayout
-        Me.TabPage13.SuspendLayout
-        Me.BZ_RoundPanel10.SuspendLayout
-        Me.TableLayoutPanel22.SuspendLayout
-        Me.TableLayoutPanel23.SuspendLayout
-        Me.BZ_RoundPanel3.SuspendLayout
-        Me.TableLayoutPanel21.SuspendLayout
-        Me.TableLayoutPanel20.SuspendLayout
-        Me.SuspendLayout
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.BZ_RoundPanel6.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BZ_RoundPanel4.SuspendLayout()
+        Me.BZ_RoundPanel2.SuspendLayout()
+        Me.BZ_RoundPanel1.SuspendLayout()
+        Me.RoundPanel.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tray3.SuspendLayout()
+        Me.Tray2.SuspendLayout()
+        Me.Tray1.SuspendLayout()
+        CType(Me.PB_Right1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BZ_RoundPanel5.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.BZ_RoundPanel8.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.BZ_RoundPanel7.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.TableLayoutPanel6.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.BZ_RoundPanel9.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.TableLayoutPanel10.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.TableLayoutPanel9.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.tab_Log.SuspendLayout()
+        Me.TabPage10.SuspendLayout()
+        Me.TabPage11.SuspendLayout()
+        Me.TableLayoutPanel16.SuspendLayout()
+        Me.TabPage12.SuspendLayout()
+        Me.Grp.SuspendLayout()
+        Me.gupStep.SuspendLayout()
+        Me.gupVel.SuspendLayout()
+        Me.TabCon.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        Me.TableLayoutPanel12.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
+        Me.TableLayoutPanel13.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.GroupBox17.SuspendLayout()
+        Me.TableLayoutPanel14.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.GroupBox16.SuspendLayout()
+        Me.TableLayoutPanel19.SuspendLayout()
+        Me.GroupBox15.SuspendLayout()
+        Me.TableLayoutPanel18.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
+        Me.TableLayoutPanel17.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.TableLayoutPanel15.SuspendLayout()
+        Me.TabPage9.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.TabPage13.SuspendLayout()
+        Me.BZ_RoundPanel10.SuspendLayout()
+        Me.TableLayoutPanel22.SuspendLayout()
+        Me.TableLayoutPanel23.SuspendLayout()
+        Me.BZ_RoundPanel3.SuspendLayout()
+        Me.TableLayoutPanel21.SuspendLayout()
+        Me.TableLayoutPanel20.SuspendLayout()
+        Me.SuspendLayout()
         '
         'TabControl1
         '
@@ -1026,8 +1027,8 @@ Partial Class Frm_Engineering
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TabControl1.HotTrack = true
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.HotTrack = True
         Me.TabControl1.ItemSize = New System.Drawing.Size(200, 35)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
@@ -1045,14 +1046,14 @@ Partial Class Frm_Engineering
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel1)
         Me.TabPage1.Controls.Add(Me.RoundPanel)
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel5)
-        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134,Byte))
+        Me.TabPage1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 39)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1016, 617)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "工程师主界面"
-        Me.TabPage1.UseVisualStyleBackColor = true
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel6
         '
@@ -1071,15 +1072,15 @@ Partial Class Frm_Engineering
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 30
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.Size = New System.Drawing.Size(808, 160)
         Me.DataGridView1.TabIndex = 1
         '
         'BZ_RoundPanel4
         '
-        Me.BZ_RoundPanel4.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(175,Byte),Integer), CType(CType(218,Byte),Integer), CType(CType(150,Byte),Integer))
+        Me.BZ_RoundPanel4.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(175, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.BZ_RoundPanel4.BZ_Radius = 11
         Me.BZ_RoundPanel4.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
         Me.BZ_RoundPanel4.Controls.Add(Me.lbl_OKNG)
@@ -1090,7 +1091,7 @@ Partial Class Frm_Engineering
         '
         'lbl_OKNG
         '
-        Me.lbl_OKNG.Font = New System.Drawing.Font("Microsoft Sans Serif", 120!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
+        Me.lbl_OKNG.Font = New System.Drawing.Font("Microsoft Sans Serif", 120.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
         Me.lbl_OKNG.Location = New System.Drawing.Point(3, 24)
         Me.lbl_OKNG.Name = "lbl_OKNG"
         Me.lbl_OKNG.Size = New System.Drawing.Size(325, 82)
@@ -1119,45 +1120,45 @@ Partial Class Frm_Engineering
         '
         'Btn_AutoRun
         '
-        Me.Btn_AutoRun.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.Btn_AutoRun.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_AutoRun.BZ_Radius = 11
         Me.Btn_AutoRun.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_AutoRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_AutoRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AutoRun.Location = New System.Drawing.Point(15, 98)
         Me.Btn_AutoRun.Name = "Btn_AutoRun"
         Me.Btn_AutoRun.Size = New System.Drawing.Size(160, 45)
         Me.Btn_AutoRun.TabIndex = 1
         Me.Btn_AutoRun.Text = "自动装配"
-        Me.Btn_AutoRun.UseVisualStyleBackColor = true
+        Me.Btn_AutoRun.UseVisualStyleBackColor = True
         '
         'Btn_initialize
         '
-        Me.Btn_initialize.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234,Byte),Integer), CType(CType(234,Byte),Integer), CType(CType(235,Byte),Integer))
+        Me.Btn_initialize.BZ_Color = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btn_initialize.BZ_Radius = 11
         Me.Btn_initialize.BZ_RoundStyle = BoTech.BZ_Button.RoundStyle.All
-        Me.Btn_initialize.Font = New System.Drawing.Font("Microsoft Sans Serif", 15!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Btn_initialize.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_initialize.Location = New System.Drawing.Point(15, 27)
         Me.Btn_initialize.Name = "Btn_initialize"
         Me.Btn_initialize.Size = New System.Drawing.Size(160, 45)
         Me.Btn_initialize.TabIndex = 0
         Me.Btn_initialize.Text = "初始化"
-        Me.Btn_initialize.UseVisualStyleBackColor = true
+        Me.Btn_initialize.UseVisualStyleBackColor = True
         '
         'BZ_RoundPanel1
         '
         Me.BZ_RoundPanel1.BZ_Color = System.Drawing.Color.WhiteSmoke
         Me.BZ_RoundPanel1.BZ_Radius = 11
         Me.BZ_RoundPanel1.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
-        Me.BZ_RoundPanel1.Controls.Add(Me.Label240)
-        Me.BZ_RoundPanel1.Controls.Add(Me.Label241)
-        Me.BZ_RoundPanel1.Controls.Add(Me.Label243)
-        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS3_Glue)
-        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS2_Glue)
+        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS9)
+        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS8)
+        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS7)
+        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS6)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS5)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS4)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS3)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS2)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS1)
+        Me.BZ_RoundPanel1.Controls.Add(Me.lbl_StepS0)
         Me.BZ_RoundPanel1.Controls.Add(Me.ListBox1)
         Me.BZ_RoundPanel1.Controls.Add(Me.lbl_BOZHON)
         Me.BZ_RoundPanel1.Location = New System.Drawing.Point(2, 5)
@@ -1165,105 +1166,105 @@ Partial Class Frm_Engineering
         Me.BZ_RoundPanel1.Size = New System.Drawing.Size(190, 410)
         Me.BZ_RoundPanel1.TabIndex = 1
         '
-        'Label240
+        'lbl_StepS9
         '
-        Me.Label240.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.Label240.Location = New System.Drawing.Point(151, 391)
-        Me.Label240.Name = "Label240"
-        Me.Label240.Size = New System.Drawing.Size(35, 15)
-        Me.Label240.TabIndex = 11
-        Me.Label240.Text = "0"
-        Me.Label240.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl_StepS9.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS9.Location = New System.Drawing.Point(151, 391)
+        Me.lbl_StepS9.Name = "lbl_StepS9"
+        Me.lbl_StepS9.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_StepS9.TabIndex = 11
+        Me.lbl_StepS9.Text = "0"
+        Me.lbl_StepS9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label241
+        'lbl_StepS8
         '
-        Me.Label241.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.Label241.Location = New System.Drawing.Point(115, 391)
-        Me.Label241.Name = "Label241"
-        Me.Label241.Size = New System.Drawing.Size(35, 15)
-        Me.Label241.TabIndex = 10
-        Me.Label241.Text = "0"
-        Me.Label241.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl_StepS8.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS8.Location = New System.Drawing.Point(115, 391)
+        Me.lbl_StepS8.Name = "lbl_StepS8"
+        Me.lbl_StepS8.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_StepS8.TabIndex = 10
+        Me.lbl_StepS8.Text = "0"
+        Me.lbl_StepS8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label243
+        'lbl_StepS7
         '
-        Me.Label243.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.Label243.Location = New System.Drawing.Point(79, 391)
-        Me.Label243.Name = "Label243"
-        Me.Label243.Size = New System.Drawing.Size(35, 15)
-        Me.Label243.TabIndex = 9
-        Me.Label243.Text = "0"
-        Me.Label243.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl_StepS7.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS7.Location = New System.Drawing.Point(79, 391)
+        Me.lbl_StepS7.Name = "lbl_StepS7"
+        Me.lbl_StepS7.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_StepS7.TabIndex = 9
+        Me.lbl_StepS7.Text = "0"
+        Me.lbl_StepS7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lbl_StepS3_Glue
+        'lbl_StepS6
         '
-        Me.lbl_StepS3_Glue.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS3_Glue.Location = New System.Drawing.Point(43, 391)
-        Me.lbl_StepS3_Glue.Name = "lbl_StepS3_Glue"
-        Me.lbl_StepS3_Glue.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS3_Glue.TabIndex = 8
-        Me.lbl_StepS3_Glue.Text = "0"
-        Me.lbl_StepS3_Glue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbl_StepS2_Glue
-        '
-        Me.lbl_StepS2_Glue.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS2_Glue.Location = New System.Drawing.Point(7, 391)
-        Me.lbl_StepS2_Glue.Name = "lbl_StepS2_Glue"
-        Me.lbl_StepS2_Glue.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS2_Glue.TabIndex = 7
-        Me.lbl_StepS2_Glue.Text = "0"
-        Me.lbl_StepS2_Glue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl_StepS6.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS6.Location = New System.Drawing.Point(43, 391)
+        Me.lbl_StepS6.Name = "lbl_StepS6"
+        Me.lbl_StepS6.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_StepS6.TabIndex = 8
+        Me.lbl_StepS6.Text = "0"
+        Me.lbl_StepS6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_StepS5
         '
-        Me.lbl_StepS5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS5.Location = New System.Drawing.Point(151, 372)
+        Me.lbl_StepS5.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS5.Location = New System.Drawing.Point(7, 391)
         Me.lbl_StepS5.Name = "lbl_StepS5"
         Me.lbl_StepS5.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS5.TabIndex = 6
+        Me.lbl_StepS5.TabIndex = 7
         Me.lbl_StepS5.Text = "0"
         Me.lbl_StepS5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_StepS4
         '
-        Me.lbl_StepS4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS4.Location = New System.Drawing.Point(115, 372)
+        Me.lbl_StepS4.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS4.Location = New System.Drawing.Point(151, 372)
         Me.lbl_StepS4.Name = "lbl_StepS4"
         Me.lbl_StepS4.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS4.TabIndex = 5
+        Me.lbl_StepS4.TabIndex = 6
         Me.lbl_StepS4.Text = "0"
         Me.lbl_StepS4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_StepS3
         '
-        Me.lbl_StepS3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS3.Location = New System.Drawing.Point(79, 372)
+        Me.lbl_StepS3.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS3.Location = New System.Drawing.Point(115, 372)
         Me.lbl_StepS3.Name = "lbl_StepS3"
         Me.lbl_StepS3.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS3.TabIndex = 4
+        Me.lbl_StepS3.TabIndex = 5
         Me.lbl_StepS3.Text = "0"
         Me.lbl_StepS3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_StepS2
         '
-        Me.lbl_StepS2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS2.Location = New System.Drawing.Point(43, 372)
+        Me.lbl_StepS2.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS2.Location = New System.Drawing.Point(79, 372)
         Me.lbl_StepS2.Name = "lbl_StepS2"
         Me.lbl_StepS2.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS2.TabIndex = 3
+        Me.lbl_StepS2.TabIndex = 4
         Me.lbl_StepS2.Text = "0"
         Me.lbl_StepS2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbl_StepS1
         '
-        Me.lbl_StepS1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0,Byte))
-        Me.lbl_StepS1.Location = New System.Drawing.Point(7, 372)
+        Me.lbl_StepS1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS1.Location = New System.Drawing.Point(43, 372)
         Me.lbl_StepS1.Name = "lbl_StepS1"
         Me.lbl_StepS1.Size = New System.Drawing.Size(35, 15)
-        Me.lbl_StepS1.TabIndex = 2
+        Me.lbl_StepS1.TabIndex = 3
         Me.lbl_StepS1.Text = "0"
         Me.lbl_StepS1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lbl_StepS0
+        '
+        Me.lbl_StepS0.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
+        Me.lbl_StepS0.Location = New System.Drawing.Point(7, 372)
+        Me.lbl_StepS0.Name = "lbl_StepS0"
+        Me.lbl_StepS0.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_StepS0.TabIndex = 2
+        Me.lbl_StepS0.Text = "0"
+        Me.lbl_StepS0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ListBox1
         '
@@ -8109,6 +8110,7 @@ Partial Class Frm_Engineering
         'GroupBox13
         '
         Me.GroupBox13.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox13.Controls.Add(Me.Button1)
         Me.GroupBox13.Controls.Add(Me.btnTrayGlue)
         Me.GroupBox13.Controls.Add(Me.btn_AtuoNeedle1)
         Me.GroupBox13.Controls.Add(Me.Button2)
@@ -8155,6 +8157,15 @@ Partial Class Frm_Engineering
         Me.GroupBox13.TabIndex = 3
         Me.GroupBox13.TabStop = false
         Me.GroupBox13.Text = "单工位调试"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(151, 341)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 27)
+        Me.Button1.TabIndex = 109
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'btnTrayGlue
         '
@@ -13055,11 +13066,11 @@ End Sub
     Friend WithEvents labPrfPos8 As System.Windows.Forms.Label
     Friend WithEvents Label242 As System.Windows.Forms.Label
     Friend WithEvents lbl_OKNG As System.Windows.Forms.Label
-    Friend WithEvents lbl_StepS1 As System.Windows.Forms.Label
-    Friend WithEvents lbl_StepS5 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS0 As System.Windows.Forms.Label
     Friend WithEvents lbl_StepS4 As System.Windows.Forms.Label
     Friend WithEvents lbl_StepS3 As System.Windows.Forms.Label
     Friend WithEvents lbl_StepS2 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS1 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
@@ -13068,11 +13079,11 @@ End Sub
     Friend WithEvents btn_AutoLaserS2 As System.Windows.Forms.Button
     Friend WithEvents Timer_GoHome As System.Windows.Forms.Timer
     Friend WithEvents btn_T11 As System.Windows.Forms.Button
-    Friend WithEvents Label240 As System.Windows.Forms.Label
-    Friend WithEvents Label241 As System.Windows.Forms.Label
-    Friend WithEvents Label243 As System.Windows.Forms.Label
-    Friend WithEvents lbl_StepS3_Glue As System.Windows.Forms.Label
-    Friend WithEvents lbl_StepS2_Glue As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS9 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS8 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS7 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS6 As System.Windows.Forms.Label
+    Friend WithEvents lbl_StepS5 As System.Windows.Forms.Label
     Friend WithEvents lbl_PressPaste As System.Windows.Forms.Label
     Friend WithEvents Label249 As System.Windows.Forms.Label
     Friend WithEvents Label244 As System.Windows.Forms.Label
@@ -13459,4 +13470,5 @@ End Sub
     Friend WithEvents btnTrayRecheck As System.Windows.Forms.Button
     Friend WithEvents btnTrayPaste As System.Windows.Forms.Button
     Friend WithEvents btnTrayPreTk As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

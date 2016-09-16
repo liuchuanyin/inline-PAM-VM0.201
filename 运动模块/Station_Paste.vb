@@ -207,6 +207,10 @@
         Return mValue
     End Function
 
+    ''' <summary>
+    ''' 组装站自动运行
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Sub AutoRun_PasteStation()
         ' Paste_Sta.workState =0 工作进行中
         ' Paste_Sta.workState =1 工作完成
@@ -236,6 +240,8 @@
                 If Tray_Pallet(2).Hole(index_InPaste).isHaveProduct And Tray_Pallet(2).Hole(index_InPaste).isProductOk And Frm_Engineering.chk_Brc(index_InPaste).Checked Then
                     '当前穴位有料，且是OK的，并且选中要做这个
 
+                    ListBoxAddMessage("组装站开始组装第" & index_InPaste + 1 & "颗料！")
+
                     '判断完要做哪个穴位后，精补轴直接过去对应点位
                     AbsMotion(1, FineX, AxisPar.MoveVel(1, FineX), TrayMatrix.TrayFineCompensation(index_InPaste).X)
                     AbsMotion(1, FineY, AxisPar.MoveVel(1, FineY), TrayMatrix.TrayFineCompensation(index_InPaste).Y)
@@ -256,6 +262,7 @@
             Case 204  '延时0.5S
                 If GetTickCount - timeStart > 500 Then
                     If TriggerCCD("T2,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
+                        timeStart = GetTickCount
                         Step_Paste = 206
                     End If
                 End If
@@ -264,7 +271,11 @@
                 If Winsock1_Data(0) = "T2" And Winsock1_Data(1) = 1 Then
                     If Cam_Status(2) = 1 Then
                         Step_Paste = 210
+                    Else
+                        Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料异常，请检查有无产品")
                     End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料超时")
                 End If
 
             Case 210
@@ -331,8 +342,8 @@
 
             Case 370
                     If isAxisMoving(0, PasteZ) = False Then
-                        '吸料高度最后5mm降速运行
-                        Call AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ) / 5, Par_Pos.St_Paste(1).Z - 5)
+                    '吸料高度最后3mm降速运行
+                    Call AbsMotion(0, PasteZ, 3, Par_Pos.St_Paste(1).Z - 3)
                         Step_Paste = 390
                     End If
 
@@ -362,20 +373,14 @@
                     End If
 
             Case 440
-                    If Not isAxisMoving(0, PasteZ) Then
-                        If EXI(0, 12) And EXI(0, 8) Then
-                            '应该还要处理Cam_OnTransferPlate上面的标志位和数据
-                        CurNozTransferPlate = Cam_OnTransferPlate
-
-                        '清除原有吸料中转台的数据
-                        Cam_OnTransferPlate.Init()
-
+                If Not isAxisMoving(0, PasteZ) Then
+                    If EXI(0, 12) And EXI(0, 8) Then
                         Step_Paste = 460
 
-                        ElseIf GetTickCount - timeStart > 2 * 1000 Then
-                            '进行到抛料处理程序
-                        End If
+                    ElseIf GetTickCount - timeStart > 2 * 1000 Then
+                        '进行到抛料处理程序
                     End If
+                End If
 
             Case 460  '组装站X,Y,R到定位拍照位置
                     AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(2).X)
@@ -385,10 +390,19 @@
                     End If
 
             Case 480 'X,Y,R轴到位后就下降Z轴
-                    If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
-                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(2).Z)
-                        Step_Paste = 500
-                    End If
+                If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                    AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(2).Z)
+
+                    '应该还要处理Cam_OnTransferPlate上面的标志位和数据
+                    CurNozTransferPlate = Cam_OnTransferPlate
+
+                    '清除原有吸料中转台的数据
+                    Cam_OnTransferPlate.Init()
+
+                    Paste_Sta.workState = 3  '定位拍照中
+
+                    Step_Paste = 500
+                End If
 
             Case 500
                     If Not isAxisMoving(0, PasteZ) Then
@@ -427,6 +441,7 @@
 
             Case 620   '运动到精补位置的Z位置
                 If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                    Paste_Sta.workState = 4  '精补中
                     'Z轴运行到贴第1颗料精补位置的Z位置
                     AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(3).Z)
                     Step_Paste = 640
@@ -779,7 +794,7 @@
             End If
 
             If IsSysEmcStop Or Paste_Sta.isNormal = False Then
-                List_DebugAddMessage("1段流水线单站自动运行异常，停止自动运行！")
+                List_DebugAddMessage("2段流水线单站自动运行异常，停止自动运行！")
                 Exit Do
             End If
         Loop

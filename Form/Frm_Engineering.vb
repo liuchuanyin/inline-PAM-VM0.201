@@ -388,7 +388,7 @@
         cbo_Pos3.Items.Add("拍Tray盘最后一行最后一颗料位置")   '3
         cbo_Pos3.Items.Add("扫Tray盘第一颗料条码位置")  '4
         cbo_Pos3.Items.Add("取Tray盘第一颗料位置") '5
-        cbo_Pos3.Items.Add("夹镜头保护盖位置") '6
+        cbo_Pos3.Items.Add("物料中转平台放料位置") '6
         cbo_Pos3.Items.Add("压力传感器自动标定位置1") '7
         cbo_Pos3.Items.Add("压力传感器自动标定位置2") '8
         cbo_Pos3.Items.Add("取料Y轴极限安全位置")     '9
@@ -1901,7 +1901,7 @@
             Exit Sub
         End If
         List_DebugAddMessage("取料站开始自动运行……")
-        'Call ManualRun_Glue()
+        Call ManualRun_PreTaker()
     End Sub
 #End Region
 
@@ -2731,5 +2731,6 @@
     End Sub
      
 #End Region
- 
+  
+   
 End Class

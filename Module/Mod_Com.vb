@@ -22,7 +22,12 @@
     Public COM3_sData() As String
     Public COM3_Data(255) As Double
 
-
+    ''' <summary>
+    ''' 组装站压力传感器发送数据
+    ''' </summary>
+    ''' <param name="Command"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com1_Send(ByVal Command As String) As Boolean
         On Error Resume Next
         If Frm_Main.COM1.IsOpen = False Then
@@ -38,7 +43,11 @@
 
     End Function
 
-    'COM1口命令响应
+    ''' <summary>
+    ''' 组装站压力传感器命令响应
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com1_Return() As Integer
         Com1_Return = 2
         If COM1_Work.State = False Then
@@ -52,7 +61,12 @@
         End If
     End Function
 
-    'COM2发送命令
+    ''' <summary>
+    ''' 点胶站Laser发送数据
+    ''' </summary>
+    ''' <param name="command"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com2_Send(ByVal command As String) As Boolean
         On Error Resume Next
         If Not Frm_Main.COM2.IsOpen Then
@@ -66,7 +80,11 @@
         Return True
     End Function
 
-    'COM2口命令响应
+    ''' <summary>
+    ''' 点胶站Laser命令响应
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com2_Return() As Integer
         Com2_Return = 2
         If COM2_Work.State = False Then
@@ -80,7 +98,12 @@
         End If
     End Function
 
-    'COM3发送命令
+    ''' <summary>
+    ''' 预取料站压力传感器发送数据
+    ''' </summary>
+    ''' <param name="command"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com3_Send(ByVal command As String) As Boolean
         On Error Resume Next
         If Not Frm_Main.COM3.IsOpen Then
@@ -94,7 +117,11 @@
         Return True
     End Function
 
-    'COM3口命令响应
+    ''' <summary>
+    ''' 预取料站压力传感器命令处理 
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function Com3_Return() As Integer
         Com3_Return = 2
         If COM3_Work.State = False Then
@@ -123,7 +150,7 @@
 
     End Function
 
-    'COM1口命令响应
+    'COM4口命令响应
     Public Function Com4_Return() As Integer
         Com4_Return = 2
         If COM4_Work.State = False Then
