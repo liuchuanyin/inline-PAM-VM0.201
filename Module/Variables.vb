@@ -373,6 +373,18 @@ Public Module Variables
 
     Public Tray_Pallet(4) As Tray
 
+    ''' <summary>
+    ''' 记录当前的Tray_Pallet(2).Tray_Barcode
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public tempTray2_Barcode As String
+
+    ''' <summary>
+    ''' 临时记录各站的步序号
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public TempStep(10) As Integer
+
     Public Const Field0 As String = "设备" & vbCr & "编号"
     Public Const Field1 As String = "治具" & vbCr & "编号"
     Public Const Field2 As String = "装配时间"

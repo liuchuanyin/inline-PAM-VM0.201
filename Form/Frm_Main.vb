@@ -1130,11 +1130,58 @@ Com_Err:
 
     '///////////////自动运行定时器
     Private Sub Timer_AutoRun_Tick(sender As Object, e As EventArgs) Handles Timer_AutoRun.Tick
+        Dim strData, strName As String
+        Static strNameTemp As String
+
         Timer_AutoRun.Enabled = False
+
         If Not Flag_MachineAutoRun Then '判断是否进入自动运行状态
             Exit Sub
         End If
 
+        '********************************************************************************************
+        '**************步序号更换后马上记录，生成的文件名为载具号+时间点*****************************
+
+        '如果载具号有变化，就用载具号加时间点生成一个名称，并把名称记录下来给下一循环继续延用此名称
+        If tempTray2_Barcode <> Tray_Pallet(2).Tray_Barcode Or IsNothing(strNameTemp) Then
+            strName = Tray_Pallet(2).Tray_Barcode & "_" & Now.ToString("HHmmss") & ".csv"
+            strNameTemp = strName
+        Else
+            strName = strNameTemp
+        End If
+
+        If Tray_Pallet(2).isHaveTray = True And Tray_Pallet(2).Tray_Barcode <> "" And _
+           TempStep(1) <> Step_Glue Or TempStep(2) <> PAMGlueStep Or TempStep(3) <> Step_Paste Or _
+           TempStep(4) <> Step_PreTaker Or TempStep(5) <> Step_Recheck Or TempStep(6) <> Step_Line(0) Or _
+           TempStep(7) <> Step_Line(1) Or TempStep(8) <> Step_Line(2) Or TempStep(9) <> Step_Line(3) Then
+
+            strData = Step_Glue & "," & PAMGlueStep & "," & Step_Paste & "," & Step_PreTaker & "," & Step_Recheck & "," & _
+                    Step_Line(0) & "," & Step_Line(1) & "," & Step_Line(2) & "," & Step_Line(3)
+             
+            WriteCSV(strName, strData, Path_Log, 1)
+             
+        End If
+
+        tempTray2_Barcode = Tray_Pallet(2).Tray_Barcode
+        TempStep(1) = Step_Glue     '点胶主程序的步序号
+        TempStep(2) = PAMGlueStep   '点胶子程序的步序号
+        TempStep(3) = Step_Paste    '组装站主程序的步序号
+        TempStep(4) = Step_PreTaker    '预取料站主程序步序号
+        TempStep(5) = Step_Recheck  '复检站主程序步序号
+        TempStep(6) = Step_Line(0)  '流水线0主程序步序号
+        TempStep(7) = Step_Line(1)  '流水线1主程序步序号
+        TempStep(8) = Step_Line(2)  '流水线2主程序步序号
+        TempStep(9) = Step_Line(3)  '流水线3主程序步序号
+         
+        '********************************************************************************************
+        '********************************************************************************************
+
+
+
+        '这里加入自动运行
+
+
+         
         Timer_AutoRun.Enabled = True
     End Sub
 #End Region
@@ -1371,5 +1418,5 @@ Com_Err:
             End If
         End If
     End Sub
-     
+      
 End Class

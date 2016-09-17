@@ -360,24 +360,29 @@
                     Step_Paste = 420
 
             Case 420
-                    If EXI(0, 12) And EXI(0, 8) Then
-                        'Z轴抬升到待机位置
-                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
-                        timeStart = GetTickCount
-                        Step_Paste = 440
-                    ElseIf GetTickCount - timeStart > 3 * 1000 Then
-                        '如果真空3S内还是达不到，还是上升到Z待机位置
-                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
-                        timeStart = GetTickCount
-                        Step_Paste = 440
-                    End If
+                If EXI(0, 12) And EXI(0, 8) Then
+                    'Z轴抬升到待机位置
+                    AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                    timeStart = GetTickCount
+                    Step_Paste = 440
+                ElseIf GetTickCount - timeStart > 3 * 1000 Then
+                    '如果真空3S内还是达不到，还是上升到Z待机位置
+                    AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                    ListBoxAddMessage("组装站取料吸嘴负压或吸排线负压过小")
+                    timeStart = GetTickCount
+                    Step_Paste = 440
+                End If
 
             Case 440
                 If Not isAxisMoving(0, PasteZ) Then
                     If EXI(0, 12) And EXI(0, 8) Then
-                        Step_Paste = 460
-
+                        Step_Paste = 460 
                     ElseIf GetTickCount - timeStart > 2 * 1000 Then
+                        If EXI(0, 12) = False Then
+                            Frm_DialogAddMessage("组装站取料吸嘴负压太小，请检查！")
+                        ElseIf EXI(0, 8) = False Then
+                            Frm_DialogAddMessage("组装站排线吸嘴负压太小，请检查！")
+                        End If
                         '进行到抛料处理程序
                     End If
                 End If
@@ -411,56 +416,72 @@
                     End If
 
             Case 520 '停稳后进行定位拍照T3,1
-                    If GetTickCount - timeStart > 500 Then
-                        If TriggerCCD("T3,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
-                            Step_Paste = 540
-                        End If
+                If GetTickCount - timeStart > 500 Then
+                    If TriggerCCD("T3,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
+                        timeStart = GetTickCount
+                        Step_Paste = 540
                     End If
+                End If
 
             Case 540 '进行module定位拍照
                 If Winsock1_Data(0) = "T3" And Winsock1_Data(1) = 1 Then
                     If Cam_Status(3) = 1 Then
-                        '定位拍照完成后，Z轴抬升到安全高度
-                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
-                        Step_Paste = 560
+                        '判定CCD返回值没有超限
+
+
+
+                        Step_Paste = 550
+                    Else
+                        Frm_DialogAddMessage("组装站定位CCD3拍第" & index_InPaste + 1 & "颗料物料异常，请检查有无产品")
                     End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("组装站定位CCD3拍第" & index_InPaste + 1 & "颗料超时")
                 End If
 
+            Case 550
+                '定位拍照完成后，Z轴抬升到安全高度
+                AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                Step_Paste = 560
+
             Case 560
-                    If Not isAxisMoving(0, PasteZ) Then
+                If Not isAxisMoving(0, PasteZ) Then
+                    '判断预固化轴是否在待机位置
+                    If Math.Abs(CurrEncPos(BarcodeStrS1, CureX) - Par_Pos.St_Cure(0).X) < 5 Then
                         timeStart = GetTickCount
                         Step_Paste = 600
                     End If
+                End If
 
             Case 600  '运动到精补位置的X,Y,R位置
-                AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam3Data(1, 0))
-                AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam3Data(1, 2))
-                If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Cam3Data(1, 1)) = True Then
-                    Step_Paste = 620
-                End If
+                    AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam3Data(1, 0))
+                    AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam3Data(1, 2))
+                    If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Cam3Data(1, 1)) = True Then
+                        Step_Paste = 620
+                    End If
 
             Case 620   '运动到精补位置的Z位置
-                If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
-                    Paste_Sta.workState = 4  '精补中
-                    'Z轴运行到贴第1颗料精补位置的Z位置
-                    AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(3).Z)
-                    Step_Paste = 640
-                End If
+                    If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                        Paste_Sta.workState = 4  '精补中
+                        'Z轴运行到贴第1颗料精补位置的Z位置
+                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(3).Z)
+                        Step_Paste = 640
+                    End If
 
             Case 640  '判断Z轴停止
-                If Not isAxisMoving(0, PasteZ) Then
-                    timeStart = GetTickCount
-                    '清理一次精确补偿的次数
-                    Cnt_Buchang = 0
-                    Step_Paste = 660
-                End If
+                    If Not isAxisMoving(0, PasteZ) Then
+                        timeStart = GetTickCount
+                        '清理一次精确补偿的次数
+                        Cnt_Buchang = 0
+                        Step_Paste = 660
+                    End If
 
             Case 660 '精确补正拍照
-                If GetTickCount - timeStart > 500 Then
-                    If TriggerCCD("T2,2", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
-                        Step_Paste = 680
+                    If GetTickCount - timeStart > 500 Then
+                        If TriggerCCD("T2,2", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
+                            timeStart = GetTickCount
+                            Step_Paste = 680
+                        End If
                     End If
-                End If
 
             Case 680
                 If Winsock1_Data(0) = "T2" And Winsock1_Data(1) = 2 Then
@@ -469,8 +490,6 @@
                             '精确补偿OK
                             Step_Paste = 800
                         Else
-                            '判定精确补偿的位置是否超限???????
-
                             Cnt_Buchang = Cnt_Buchang + 1
                             If Cnt_Buchang > par.num(27) Then
                                 '精确补偿超限处理????????????
@@ -482,49 +501,49 @@
                         End If
 
                     Else
-                        'CCD2精补对位异常???????????????????
-
+                        Frm_DialogAddMessage("组装站精补CCD2拍第" & index_InPaste + 1 & "颗料物料异常，请检查有无产品")
                     End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("组装站精补CCD2拍第" & index_InPaste + 1 & "颗料物料超时")
                 End If
 
             Case 700
-                AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam2Data(2, 0))
-                AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam2Data(2, 2))
-                If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Cam2Data(2, 1)) Then
-                    Step_Paste = 720
-                End If
+                    AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam2Data(2, 0))
+                    AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam2Data(2, 2))
+                    If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Cam2Data(2, 1)) Then
+                        Step_Paste = 720
+                    End If
 
             Case 720
-                If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
-                    timeStart = GetTickCount
-                    Step_Paste = 660
-                End If
+                    If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                        timeStart = GetTickCount
+                        Step_Paste = 660
+                    End If
 
             Case 800 '精确补偿OK
-                If Com1_Send(":O000000o" & vbCrLf) = False Then    'COM1发送打开压力监视
-                    Call Frm_Main.COM1_Init(par.CCD(2))
-                    Delay(50)
-                    Com1_Send(":O000000o" & vbCrLf)
-                End If
-                Step_Paste = 820
+                    If Com1_Send(":O000000o" & vbCrLf) = False Then    'COM1发送打开压力监视
+                        Call Frm_Main.COM1_Init(par.CCD(2))
+                        Delay(50)
+                        Com1_Send(":O000000o" & vbCrLf)
+                    End If
+                    Step_Paste = 820
 
             Case 820
                 RstPastePress = Com1_Return() '等待压力传感器打开结束
                 If RstPastePress = 0 Then     '表示压力传感器打开成功
                     Step_Paste = 840
                 Else
-                    '压力传感器打开失败
+                    ListBoxAddMessage("组装站吸嘴压力传感器打开失败，请查检！")
                 End If
 
             Case 840
-                '以3mm/s的速度进行贴合，在COM1接收数据事件中判断压力是否到达，如果到达则立即停止Z轴
-                AbsMotion(0, PasteZ, 3, Par_Pos.St_Paste(4).Z)
-                Step_Paste = 860
+                    '以3mm/s的速度进行贴合，在COM1接收数据事件中判断压力是否到达，如果到达则立即停止Z轴
+                    AbsMotion(0, PasteZ, 3, Par_Pos.St_Paste(4).Z)
+                    Step_Paste = 860
 
             Case 860  '关闭压力传感器
                 If isAxisMoving(0, PasteZ) Then
                     Com1_Send(":Q000000q" & vbCrLf) ' 串口接收数据关闭
-
                     Step_Paste = 880
                 End If
 
@@ -535,152 +554,154 @@
                     UV_Open(ControllerHandle(6), 2, 255)
                     timeStart = GetTickCount
                     Step_Paste = 900
+                Else
+                    ListBoxAddMessage("UV灯控制器6连接失败，请检查！")
                 End If
 
             Case 900
-                '关闭UV灯控制器6所有的通道,关闭真空，破真空
-                If GetTickCount - timeStart > par.num(18) * 1000 Then
-                    UV_Close(ControllerHandle(6), 0)
+                    '关闭UV灯控制器6所有的通道,关闭真空，破真空
+                    If GetTickCount - timeStart > par.num(18) * 1000 Then
+                        UV_Close(ControllerHandle(6), 0)
 
-                    '关闭吸嘴真空和吸排线的真空
-                    SetEXO(0, 8, False)
-                    SetEXO(0, 12, False)
+                        '关闭吸嘴真空和吸排线的真空
+                        SetEXO(0, 8, False)
+                        SetEXO(0, 12, False)
 
-                    '打开吸嘴破真空和吸排线的破真空
-                    SetEXO(0, 9, True)
-                    SetEXO(0, 13, True)
+                        '打开吸嘴破真空和吸排线的破真空
+                        SetEXO(0, 9, True)
+                        SetEXO(0, 13, True)
 
-                    timeStart = GetTickCount
-                    Step_Paste = 920
-                End If
+                        timeStart = GetTickCount
+                        Step_Paste = 920
+                    End If
 
             Case 920 'Z轴慢速上抬3mm
-                If GetTickCount - timeStart > 500 Then
-                    '以3mm/s的速度Z轴上抬3mm
-                    AbsMotion(0, PasteZ, 3, Par_Pos.St_Paste(4).Z - 3)
-                    Step_Paste = 940
-                End If
+                    If GetTickCount - timeStart > 500 Then
+                        '以3mm/s的速度Z轴上抬3mm
+                        AbsMotion(0, PasteZ, 3, Par_Pos.St_Paste(4).Z - 3)
+                        Step_Paste = 940
+                    End If
 
             Case 940 'Z轴以正常速度上抬到初始位置
-                If Not isAxisMoving(0, PasteZ) Then
-                    AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
-                    Step_Paste = 960
-                End If
+                    If Not isAxisMoving(0, PasteZ) Then
+                        AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
+                        Step_Paste = 960
+                    End If
 
             Case 960 '记录数据
-                If Not isAxisMoving(0, PasteZ) Then
+                    If Not isAxisMoving(0, PasteZ) Then
 
-                    Tray_Pallet(2).Hole(index_InPaste).Press_Paste = Press(0)
-                    Tray_Pallet(2).Hole(index_InPaste).ProductBarcode = CurNozTransferPlate.Barcode
-                    Tray_Pallet(2).Hole(index_InPaste).Press_Taker = CurNozTransferPlate.TakerPress
-                    Tray_Pallet(2).Hole(index_InPaste).isProductOk = True
+                        Tray_Pallet(2).Hole(index_InPaste).Press_Paste = Press(0)
+                        Tray_Pallet(2).Hole(index_InPaste).ProductBarcode = CurNozTransferPlate.Barcode
+                        Tray_Pallet(2).Hole(index_InPaste).Press_Taker = CurNozTransferPlate.TakerPress
+                        Tray_Pallet(2).Hole(index_InPaste).isProductOk = True
 
-                    CurNozTransferPlate.Init()
+                        CurNozTransferPlate.Init()
 
-                    Step_Paste = 7000
-                End If
+                        Step_Paste = 7000
+                    End If
 
 
             Case 7000
-                '共计12颗料，index_InPaste从0开始
-                If index_InPaste < 11 Then
-                    index_InPaste += 1
-                    Step_Paste = 200 '去贴合下一颗料
-                Else
-                    Step_Paste = 7020 '工作完成
-                End If
+                    '共计12颗料，index_InPaste从0开始
+                    If index_InPaste < 11 Then
+                        index_InPaste += 1
+                        Step_Paste = 200 '去贴合下一颗料
+                    Else
+                        Step_Paste = 7020 '工作完成
+                    End If
 
             Case 7020  'X,Y,R回待机位置
-                AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
-                AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
-                If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
-                    Step_Paste = 7040
-                End If
+                    AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
+                    AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
+                    If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
+                        Step_Paste = 7040
+                    End If
 
             Case 7040 '将Index_CurePoint 预固化牵引次数清零
-                If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
-                    Index_CurePoint = 0
-                    Step_Paste = 7060
-                End If
- 
+                    If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                        Index_CurePoint = 0
+                        Step_Paste = 7060
+                    End If
+
             Case 7060   '用来判断预固化需要走哪些点位
-                If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
-                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(Index_CurePoint).X)
-                    Step_Paste = 7070
-                Else
-                    Step_Paste = 7120
-                End If
+                    If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
+                        AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(Index_CurePoint).X)
+                        Step_Paste = 7070
+                    Else
+                        Step_Paste = 7120
+                    End If
 
             Case 7070
-                If Not isAxisMoving(1, CureX) Then
-                    Step_Paste = 7080
-                End If
+                    If Not isAxisMoving(1, CureX) Then
+                        Step_Paste = 7080
+                    End If
 
             Case 7080 '打开预固化UV灯
-                If Flag_UVConnect(1) And Flag_UVConnect(2) Then
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Then
-                        UV_Open(ControllerHandle(1), 1, 255)
-                        UV_Open(ControllerHandle(1), 2, 255)
-                    End If
+                    If Flag_UVConnect(1) And Flag_UVConnect(2) Then
+                        If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Then
+                            UV_Open(ControllerHandle(1), 1, 255)
+                            UV_Open(ControllerHandle(1), 2, 255)
+                        End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Then
-                        UV_Open(ControllerHandle(1), 3, 255)
-                        UV_Open(ControllerHandle(1), 4, 255)
-                    End If
+                        If Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Then
+                            UV_Open(ControllerHandle(1), 3, 255)
+                            UV_Open(ControllerHandle(1), 4, 255)
+                        End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Then
-                        UV_Open(ControllerHandle(2), 1, 255)
-                        UV_Open(ControllerHandle(2), 2, 255)
-                    End If
+                        If Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Then
+                            UV_Open(ControllerHandle(2), 1, 255)
+                            UV_Open(ControllerHandle(2), 2, 255)
+                        End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
-                        UV_Open(ControllerHandle(2), 3, 255)
-                        UV_Open(ControllerHandle(2), 4, 255)
-                    End If
+                        If Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
+                            UV_Open(ControllerHandle(2), 3, 255)
+                            UV_Open(ControllerHandle(2), 4, 255)
+                        End If
 
-                    timeStart = GetTickCount
-                    Step_Paste = 7100
-                End If
+                        timeStart = GetTickCount
+                        Step_Paste = 7100
+                    End If
 
             Case 7100 '关闭预固化UV灯
-                If GetTickCount - timeStart > par.num(19) * 1000 Then
-                    UV_Close(ControllerHandle(1), 0)
-                    UV_Close(ControllerHandle(2), 0)
-                End If
+                    If GetTickCount - timeStart > par.num(19) * 1000 Then
+                        UV_Close(ControllerHandle(1), 0)
+                        UV_Close(ControllerHandle(2), 0)
+                    End If
 
             Case 7120
-                Index_CurePoint = Index_CurePoint + 1
-                If Index_CurePoint < 3 Then
-                    Step_Paste = 7060
-                Else
-                    Step_Paste = 7140
-                End If
+                    Index_CurePoint = Index_CurePoint + 1
+                    If Index_CurePoint < 3 Then
+                        Step_Paste = 7060
+                    Else
+                        Step_Paste = 7140
+                    End If
 
             Case 7140  '预固化轴回待机位置
-                AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(0).X)
-                Step_Paste = 7160
+                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(0).X)
+                    Step_Paste = 7160
 
             Case 7160
-                If Not isAxisMoving(1, CureX) Then
-                    Step_Paste = 7180
-                End If
+                    If Not isAxisMoving(1, CureX) Then
+                        Step_Paste = 7180
+                    End If
 
             Case 7180   '整个预固化完成
-                Step_Paste = 8000
+                    Step_Paste = 8000
 
 
             Case 8000
-                '组装工站工作完成
-                Paste_Sta.isWorking = False    '组装模组工作完成
-                Paste_Sta.isNormal = True
-                Paste_Sta.workState = 1  '工作完成
-                Step_Paste = 10  '开始下一个循环
+                    '组装工站工作完成
+                    Paste_Sta.isWorking = False    '组装模组工作完成
+                    Paste_Sta.isNormal = True
+                    Paste_Sta.workState = 1  '工作完成
+                    Step_Paste = 10  '开始下一个循环
 
             Case 9000
-                '工作异常需要急停处理
-                Paste_Sta.isNormal = False   '组装工站工作异常
-                Call Frm_Main.Machine_Stop()
-                Step_Paste = 0
+                    '工作异常需要急停处理
+                    Paste_Sta.isNormal = False   '组装工站工作异常
+                    Call Frm_Main.Machine_Stop()
+                    Step_Paste = 0
 
         End Select
 

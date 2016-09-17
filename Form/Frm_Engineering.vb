@@ -663,6 +663,17 @@
             Tray3.Controls.Item(i).BackColor = IIf(Tray_Pallet(3).Hole(i).isProductOk, Color.Lime, Color.Red)
         Next
 
+        lbl_StepS0.Text = Step_Glue       '点胶主程序的步序号
+        lbl_StepS1.Text = PAMGlueStep     '点胶子程序的步序号
+        lbl_StepS2.Text = Step_Paste      '组装站主程序的步序号
+        lbl_StepS3.Text = Step_PreTaker   '预取料站主程序步序号
+        lbl_StepS4.Text = Step_Recheck    '复检站主程序步序号
+        lbl_StepS5.Text = Step_Line(0)    '流水线0主程序步序号
+        lbl_StepS6.Text = Step_Line(1)    '流水线1主程序步序号
+        lbl_StepS7.Text = Step_Line(2)    '流水线2主程序步序号
+        lbl_StepS8.Text = Step_Line(3)    '流水线3主程序步序号
+        lbl_StepS9.Text = Step_MachineIni '初始化步序号显示
+
         Timer_Display.Enabled = True
     End Sub
 

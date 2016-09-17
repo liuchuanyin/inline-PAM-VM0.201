@@ -198,6 +198,7 @@
                 If isTimeout(timeStart, 500) Then
                     '触发CCD拍照 ,其中载具条码与module条码用时间代替
                     If TriggerCCD("T4,1", index_TakerMaterial, Now.ToString, Now.ToString) Then
+                        timeStart = GetTickCount
                         Step_PreTaker = 300
                     End If
                 End If
@@ -208,11 +209,11 @@
                     If Cam_Status(4) = 1 Then
                         PreTakerTransferPlate.Barcode = Cam4Data(1, 4)
                         Step_Paste = 400
-                    Else
-                        '拍照异常处理
-
-
+                    Else 
+                        Frm_DialogAddMessage("预取料站CCD1料盘拍第" & index_TakerMaterial + 1 & "颗料物料异常，请检查有无产品")
                     End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("预取料站CCD1料盘拍第" & index_TakerMaterial + 1 & "颗料物料超时")
                 End If
 
             Case 400
@@ -258,9 +259,7 @@
                 If RetPreTakerPress = 0 Then     '表示压力传感器打开成功
                     Step_PreTaker = 520
                 Else
-                    '压力传感器打开失败
-
-
+                    ListBoxAddMessage("预取料站吸嘴压力传感器打开失败，请查检！") 
                 End If 
                  
             Case 520
@@ -277,7 +276,6 @@
                 End If
 
             Case 560
-
                 SetEXO(0, 14, True)     '打开取料站取料吸嘴真空吸
                 SetEXO(0, 10, True)      '打开取料站排线吸嘴真空吸
                 timeStart = GetTickCount
@@ -290,7 +288,8 @@
                     timeStart = GetTickCount
                     Step_PreTaker = 600
                 ElseIf GetTickCount - timeStart > 3 * 1000 Then
-                    '如果真空3S内还是达不到，还是上升到Z待机位置
+                    '如果真空3S内还是达不到，还是上升
+                    ListBoxAddMessage("预取料站取料吸嘴负压或吸排线负压过小")
                     Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(0).Z)
                     timeStart = GetTickCount
                     Step_PreTaker = 600
@@ -302,13 +301,44 @@
                         '从料盘中取料成功
                         Step_PreTaker = 620
                     ElseIf GetTickCount - timeStart > 2 * 1000 Then
+                        If EXI(0, 14) = False Then
+                            Frm_DialogAddMessage("预取料站取料吸嘴负压太小，请检查！")
+                        ElseIf EXI(0, 10) Then
+                            Frm_DialogAddMessage("预取料站排线吸嘴负压太小，请检查！")
+                        End If
+                         
                         '从料盘中取料失败，进入抛料流程
-
-
-
-                    End If
-
+                        Step_PreTaker = 602
+                    End If 
                 End If
+
+            Case 602  '开始抛料，直接抛在当前料盘位
+                Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(5).Z - 5)
+                Step_PreTaker = 604
+
+            Case 604
+                If isAxisMoving(0, PreTakerZ) = False Then
+                    SetEXO(0, 14, False)     '关闭取料站取料吸嘴真空吸
+                    SetEXO(0, 10, False)     '关闭取料站排线吸嘴真空吸
+
+                    SetEXO(0, 15, True)     '打开取料站取料吸嘴破真空
+                    SetEXO(0, 11, True)     '打开取料站排线吸嘴破真空
+
+                    timeStart = GetTickCount
+                    Step_PreTaker = 606
+                End If
+
+            Case 606
+                If GetTickCount - timeStart > 500 Then
+                    Call AbsMotion(0, PreTakerZ, AxisPar.MoveVel(0, PreTakerZ), Par_Pos.St_PreTaker(0).Z)
+                    Step_PreTaker = 608
+                End If
+
+            Case 608
+                If isAxisMoving(0, PreTakerZ) = False Then
+                    Step_PreTaker = 980
+                End If
+
 
             Case 620  '去物料中转平台的位置
                 If Cam_OnTransferPlate.isHaveCam = False And Paste_Sta.workState <> 2 And EMI(1, 11) And EMI(1, 12) Then
@@ -326,9 +356,10 @@
 
                 ElseIf EMI(1, 11) = False Then
                     '夹镜头保护盖夹紧气缸未处于松开状态'
-
+                    Frm_DialogAddMessage("夹镜头保护盖夹紧气缸未处于松开状态,请检查！")
                 ElseIf EMI(1, 12) = False Then
                     '夹镜头保护盖升降气缸未处于上升状态
+                    Frm_DialogAddMessage("夹镜头保护盖升降气缸未处于上升状态,请检查！")
                 End If
 
             Case 700
@@ -362,24 +393,18 @@
                     SetEMO(1, 11, True) '夹抓气缸夹紧
                     timeStart = GetTickCount
                     Step_PreTaker = 780
-                ElseIf EMI(1, 11) = False Then
-                    '夹镜头保护盖夹紧气缸未处于松开状态'
-
-
-
-                ElseIf EMI(1, 12) = False Then
-                    '夹镜头保护盖升降气缸未处于上升状态
-
-
+                ElseIf EMI(1, 11) = False Then 
+                    Frm_DialogAddMessage("夹镜头保护盖夹紧气缸未处于松开状态,请检查！")
+                ElseIf EMI(1, 12) = False Then 
+                    Frm_DialogAddMessage("夹镜头保护盖升降气缸未处于上升状态,请检查！")
                 End If
-
-
+                 
             Case 780
                 If EMI(1, 11) = False Then
                     timeStart = GetTickCount
                     Step_PreTaker = 800
-                ElseIf GetTickCount - timeStart > 3000 Then
-                    '夹紧气缸夹紧动作异常
+                ElseIf GetTickCount - timeStart > 3000 Then 
+                    Frm_DialogAddMessage("夹镜头保护盖夹紧气缸夹紧动作异常,请检查！")
                 End If
 
             Case 800
@@ -393,9 +418,8 @@
                 If EMI(1, 12) = False Then
                     timeStart = GetTickCount
                     Step_PreTaker = 840
-                ElseIf GetTickCount - timeStart > 3000 Then
-                    '夹镜头保护盖升降气缸下拉异常
-
+                ElseIf GetTickCount - timeStart > 3000 Then 
+                    Frm_DialogAddMessage("夹镜头保护盖升降气缸下拉异常,请检查！")
                 End If
 
             Case 840
@@ -410,15 +434,15 @@
                     timeStart = GetTickCount
                     SetEMO(1, 12, False) '夹镜头保护盖气缸夹爪松开
                     Step_PreTaker = 880
-                ElseIf GetTickCount - timeStart > 3000 Then
-                    '夹镜头保护盖气缸夹爪松开失败
+                ElseIf GetTickCount - timeStart > 3000 Then 
+                    Frm_DialogAddMessage("夹镜头保护盖夹紧气缸夹松开动作异常,请检查！")
                 End If
 
             Case 880
                 If EMI(1, 12) Then
                     Step_PreTaker = 900
-                ElseIf GetTickCount - timeStart > 3000 Then
-                    ' '夹镜头保护盖升降气缸上升回位异常
+                ElseIf GetTickCount - timeStart > 3000 Then 
+                    Frm_DialogAddMessage("夹镜头保护盖升降气缸回位上升异常,请检查！")
                 End If
                  
             Case 900
@@ -455,7 +479,15 @@
                     '物料已经用完
                     PreTaker_Sta.workState = 1   '工作完成
                 Else
+                    Step_PreTaker = 1000
+                End If
+
+            Case 1000
+                If Cam_OnTransferPlate.isHaveCam = True Then
                     Step_PreTaker = 8000
+                Else
+                    '抛料完成后，
+                    Step_PreTaker = 10
                 End If
 
             Case 8000
@@ -470,8 +502,7 @@
                 PreTaker_Sta.isNormal = False   '组装工站工作异常
                 Call Frm_Main.Machine_Stop()
                 Step_PreTaker = 0
-
-
+                 
         End Select
     End Sub
 

@@ -67,19 +67,92 @@
             Case 200
                 If Tray_Pallet(3).Hole(index_InRecheck).isHaveProduct And Tray_Pallet(3).Hole(index_InRecheck).isProductOk And Frm_Engineering.chk_Brc(index_InRecheck).Checked Then
                     '当前穴位有料，且是OK的，并且选中要做这个
-                    Step_Recheck = 210
+                    Step_Recheck = 220
                 Else
                     '否则跳过这一颗料
                     ListBoxAddMessage("复检站跳过第" & index_InRecheck + 1 & "颗料！")
                     Step_Recheck = 7000
                 End If
 
-            Case 210
+            Case 220
+                AbsMotion(1, RecheckX, AxisPar.MoveVel(1, RecheckX), TrayMatrix.TrayRecheck(index_InRecheck).X)
+                AbsMotion(1, RecheckX, AxisPar.MoveVel(1, RecheckX), TrayMatrix.TrayRecheck(index_InRecheck).Y)
+                Step_Recheck = 240
+
+            Case 240
+                If isAxisMoving(1, RecheckX) = False And isAxisMoving(1, RecheckY) = False Then
+                    Step_Recheck = 260
+                End If
+
+            Case 260
+                If TriggerCCD("T5,1", index_InRecheck, Tray_Pallet(3).Tray_Barcode, Tray_Pallet(3).Hole(index_InRecheck).ProductBarcode) Then
+                    timeStart = GetTickCount
+                    Step_Recheck = 280
+                End If
+
+            Case 280
+                If Winsock1_Data(0) = "T5" And Winsock1_Data(1) = 1 Then
+                    If Cam_Status(5) = 1 Then
+                        Step_Recheck = 300
+                    Else
+                        Frm_DialogAddMessage("复检站CCD5拍第" & index_InRecheck + 1 & "颗料物料异常，请检查有无产品") 
+                    End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("复检站CCD5拍第" & index_InRecheck + 1 & "颗料物料超时")
+                End If
+
+            Case 300
+                If MACTYPE = "PAM-B" Then
+                    Step_Recheck = 320
+                Else
+                    Step_Recheck = 500
+                End If
+
+            Case 320
+                If TriggerCCD("T6,1", index_InRecheck, Tray_Pallet(3).Tray_Barcode, Tray_Pallet(3).Hole(index_InRecheck).ProductBarcode) Then
+                    timeStart = GetTickCount
+                    Step_Recheck = 340
+                End If
+
+            Case 340
+                If Winsock1_Data(0) = "T6" And Winsock1_Data(1) = 1 Then
+                    If Cam_Status(6) = 1 Then
+                        Step_Recheck = 360
+                    Else
+                        Frm_DialogAddMessage("复检站CCD6拍第" & index_InRecheck + 1 & "颗料物料异常，请检查有无产品")
+                    End If
+                ElseIf GetTickCount - timeStart > 5000 Then
+                    Frm_DialogAddMessage("复检站CCD6拍第" & index_InRecheck + 1 & "颗料物料超时")
+                End If
+
+            Case 360
+                Step_Recheck = 500
+
+            Case 500 '处理复检的拍照数据
+                If MACTYPE = "PAM-1" Then
+
+                ElseIf MACTYPE = "PAM-2" Then
+
+                ElseIf MACTYPE = "PAM-3" Then
+
+                ElseIf MACTYPE = "PAM-B" Then
+
+                End If
+
+                '处理完数据后开始下一颗料的复检
+                Step_Recheck = 7000
 
             Case 7000
-
+                '共计12颗料，index从0开始
+                If index_InRecheck < 11 Then
+                    index_InRecheck += 1
+                    Step_Recheck = 200 '去下一颗料点胶
+                Else
+                    Step_Recheck = 8000 '点胶完成
+                End If
+                 
             Case 8000
-                '工位正常工作完成
+                '复检工位正常工作完成
                 Recheck_Sta.isWorking = False    '点胶模组工作完成
                 Recheck_Sta.isNormal = True
                 Recheck_Sta.workState = 1  '工作完成

@@ -107,7 +107,8 @@
                     ReDim Cam1LaserPoint(0)
 
                     station = 1
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(0, GlueX).ToString & "," & CurrEncPos(0, GlueY).ToString & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & "," & CurrEncPos(0, GlueX).ToString & "," & CurrEncPos(0, GlueY).ToString & vbCrLf
                 Case "T2,1"
                     '复位CCD2相关数据
                     Cam_Status(2) = 0
@@ -116,7 +117,8 @@
                     Next
 
                     station = 4
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
                 Case "T2,2"
                     '复位CCD2相关数据
                     Cam_Status(2) = 0
@@ -125,7 +127,8 @@
                     Next
 
                     station = 4
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & "," & CurrEncPos(1, FineX).ToString & "," & CurrEncPos(1, FineY).ToString & vbCrLf
                      
                 Case "T3,1"
                     '复位CCD3相关数据
@@ -135,14 +138,16 @@
                     Next
 
                     station = 2
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(0, PasteX).ToString & "," & CurrEncPos(2, PasteY1).ToString & "," & CurrEncPos(0, PasteR).ToString & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & "," & CurrEncPos(0, PasteX).ToString & "," & CurrEncPos(2, PasteY1).ToString & "," & CurrEncPos(0, PasteR).ToString & vbCrLf
                 Case "T3,2"
                     '复位CCD3相关数据 
                     Cam_Status(3) = 0
                     Cam3SN = ""
 
                     station = 2
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & vbCrLf
                 Case "T4,1"
                     '复位CCD4相关数据 
                     Cam_Status(4) = 0
@@ -151,7 +156,8 @@
                     Next 
 
                     station = 3
-                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & "," & CurrEncPos(0, PreTakerX).ToString & "," & CurrEncPos(2, PreTakerY1).ToString & "," & CurrEncPos(1, PreTakerR).ToString & vbCrLf
+                    command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & _
+                              color & "," & CurrEncPos(0, PreTakerX).ToString & "," & CurrEncPos(2, PreTakerY1).ToString & "," & CurrEncPos(1, PreTakerR).ToString & vbCrLf
                 Case "T5,1"
                     '复位CCD5相关数据 
                     Cam_Status(5) = 0
@@ -161,6 +167,7 @@
 
                     station = 5
                     command = CamNo_FunNo & "," & HoldIndex & "," & Tray_SN & "," & ModSN & "," & MACTYPE & "," & color & vbCrLf
+
                 Case "T6,1"
                     '复位CCD6相关数据 
                     Cam_Status(6) = 0
@@ -334,5 +341,327 @@
         Return True
 
     End Function
+
+#Region "9/11点标定方法"
+
+    ''' <summary>
+    ''' 轴的表示
+    ''' </summary>
+    ''' <remarks></remarks>
+    Structure Axis
+        Public CardNum As Integer
+        Public AxisNum As Integer
+        Public SafePoint As Double
+        Public Speed As Double
+        Public IsEnable As Integer
+    End Structure
+
+    ''' <summary>
+    ''' 相机标定需要的参数结构体
+    ''' </summary>
+    ''' <remarks></remarks>
+    Structure CalibrationPar
+        ''' <summary>
+        ''' 相机号，如1，2，3
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public CameraNum As Integer
+
+        ''' <summary>
+        ''' 标定时X轴每次的移动的偏移量
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public OffsetX As Double
+
+        ''' <summary>
+        ''' 标定时Y轴每次的移动的偏移量
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public OffsetY As Double
+
+        ''' <summary>
+        ''' 标定时A轴每次的移动的偏移量
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public OffsetA As Double
+
+        ''' <summary>
+        ''' 9点或者11点
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public PointNum As Integer
+
+        ''' <summary>
+        ''' 标定起始点坐标
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public StartPosition As Dist_XYZA
+
+        ''' <summary>
+        ''' X轴
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public X As Axis
+
+        ''' <summary>
+        ''' Y轴
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public Y As Axis
+
+        ''' <summary>
+        ''' Z轴
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public Z As Axis
+
+        ''' <summary>
+        ''' R轴
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public A As Axis
+
+    End Structure
+
+    ''' <summary>
+    ''' 标定子程序的步序号
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Step_CCD_Calibration As Integer
+
+    ''' <summary>
+    ''' CCD标定子程序
+    ''' </summary>
+    ''' <param name="Par"></param>
+    ''' <param name="status"></param>
+    ''' <remarks></remarks>
+    Public Sub CCD_Calibration(ByVal Par As CalibrationPar, ByRef status As sFlag3)
+        Static TimingWatch As Long
+        Static index_Point As Integer
+        Static Pos_C(11) As Dist_XYA
+        Dim strCommand As String
+
+        Select Case Step_CCD_Calibration
+            Case 0
+                List_DebugAddMessage("CCD" & Par.CameraNum & "开始自动标定")
+                status.State = True
+                Step_CCD_Calibration = 10
+
+            Case 10
+                If Par.Z.IsEnable = True Then
+                    Call AbsMotion(Par.Z.CardNum, Par.Z.AxisNum, Par.Z.AxisNum, Par.Z.SafePoint)
+                    Step_CCD_Calibration = 20
+                Else
+                    Step_CCD_Calibration = 50
+                End If
+
+            Case 20
+                If isAxisMoving(Par.Z.CardNum, Par.Z.AxisNum) = False Then
+                    TimingWatch = GetTickCount
+                    Step_CCD_Calibration = 50
+                End If
+
+            Case 50
+                Call AbsMotion(Par.X.CardNum, Par.X.AxisNum, Par.X.Speed, Par.StartPosition.X)
+                Call AbsMotion(Par.Y.CardNum, Par.Y.AxisNum, Par.Y.Speed, Par.StartPosition.Y)
+                Step_CCD_Calibration = 60
+
+            Case 60
+                If isAxisMoving(Par.X.CardNum, Par.X.AxisNum) = False And isAxisMoving(Par.Y.CardNum, Par.Y.AxisNum) = False Then
+                    Step_CCD_Calibration = 70
+                End If
+
+            Case 70
+                If Par.A.IsEnable Then
+                    Call AbsMotion(Par.A.CardNum, Par.A.AxisNum, Par.A.Speed, Par.StartPosition.A)
+                    Step_CCD_Calibration = 80
+                Else
+                    Step_CCD_Calibration = 90
+                End If
+
+            Case 80
+                If isAxisMoving(Par.A.CardNum, Par.A.AxisNum) = False Then
+                    Step_CCD_Calibration = 90
+                End If
+
+            Case 90
+                If Par.Z.IsEnable = True Then
+                    Call AbsMotion(Par.Z.CardNum, Par.Z.AxisNum, Par.Z.AxisNum, Par.StartPosition.Z)
+                    Step_CCD_Calibration = 150
+                Else
+                    TimingWatch = GetTickCount
+                    Step_CCD_Calibration = 160
+                End If
+
+            Case 150
+                If isAxisMoving(Par.Z.CardNum, Par.Z.AxisNum) = False Then
+                    TimingWatch = GetTickCount
+                    Step_CCD_Calibration = 160
+                End If
+
+            Case 160
+                If GetTickCount - TimingWatch > 200 Then
+                    Step_CCD_Calibration = 200
+                End If
+
+            Case 200  '发送标定开始的命令
+                Winsock1_String = ""
+                strCommand = "SC," & Par.CameraNum & "," & Par.PointNum & vbCrLf
+                Frm_Main.Winsock1.SendData(strCommand)
+                Winsock1_TimmingWatch = GetTickCount
+                Step_CCD_Calibration = 210
+
+            Case 210
+                If Winsock1_String <> "" And Winsock1_Data(0) = "SC" Then
+                    If Winsock1_Data(1) = 1 Then
+                        List_DebugAddMessage("CCD" & Par.CameraNum & "确认OK，可以自动标定")
+                        Step_CCD_Calibration = 220
+                    ElseIf Winsock1_Data(1) = 0 Then
+                        List_DebugAddMessage("CCD" & Par.CameraNum & "进入自动标定失败！")
+                        Step_CCD_Calibration = 9000
+                    End If
+                ElseIf GetTickCount - Winsock1_TimmingWatch > 5000 Then
+                    Step_CCD_Calibration = 9000
+                    List_DebugAddMessage("CCD" & Par.CameraNum & "拍照超时，请检查！")
+                End If
+
+            Case 220
+                Step_CCD_Calibration = 240
+
+            Case 240
+                'S 型路线
+                Pos_C(1).X = Par.StartPosition.X
+                Pos_C(1).Y = Par.StartPosition.Y
+                Pos_C(1).A = Par.StartPosition.A
+                For i = 2 To 3
+                    Pos_C(i).X = Pos_C(i - 1).X + 15
+                    Pos_C(i).Y = Pos_C(i - 1).Y
+                    Pos_C(i).A = Par.StartPosition.A
+                Next
+                Pos_C(4).X = Pos_C(3).X
+                Pos_C(4).Y = Pos_C(3).Y + 15
+                Pos_C(4).A = Par.StartPosition.A
+                For i = 5 To 6
+                    Pos_C(i).X = Pos_C(i - 1).X - 15
+                    Pos_C(i).Y = Pos_C(i - 1).Y
+                    Pos_C(i).A = Par.StartPosition.A
+                Next
+                Pos_C(7).X = Pos_C(6).X
+                Pos_C(7).Y = Pos_C(6).Y + 15
+                Pos_C(7).A = Par.StartPosition.A
+                For i = 8 To 9
+                    Pos_C(i).X = Pos_C(i - 1).X + 15
+                    Pos_C(i).Y = Pos_C(i - 1).Y
+                    Pos_C(i).A = Par.StartPosition.A
+                Next
+                Pos_C(10).X = Pos_C(5).X
+                Pos_C(10).Y = Pos_C(5).Y
+                Pos_C(10).A = Par.StartPosition.A + 15
+                Pos_C(11).X = Pos_C(5).X
+                Pos_C(11).Y = Pos_C(5).Y
+                Pos_C(11).A = Par.StartPosition.A - 15
+                index_Point = 1
+                Step_CCD_Calibration = 260
+
+            Case 260  '走11个点位
+                List_DebugAddMessage("CCD" & Par.CameraNum & "去第" & index_Point & "个标定点位")
+                Call AbsMotion(Par.X.CardNum, Par.X.AxisNum, Par.X.Speed, Pos_C(index_Point).X)
+                Call AbsMotion(Par.Y.CardNum, Par.Y.AxisNum, Par.Y.Speed, Pos_C(index_Point).Y)
+                If Par.A.IsEnable Then
+                    Call AbsMotion(Par.A.CardNum, Par.A.AxisNum, Par.A.Speed, Pos_C(index_Point).A)
+                    Step_CCD_Calibration = 280
+                Else
+                    Step_CCD_Calibration = 300
+                End If
+
+            Case 280
+                If isAxisMoving(Par.X.CardNum, Par.X.AxisNum) = False And isAxisMoving(Par.Y.CardNum, Par.Y.AxisNum) = False And isAxisMoving(Par.A.CardNum, Par.A.AxisNum) = False Then
+                    TimingWatch = GetTickCount
+                    Step_CCD_Calibration = 320
+                End If
+
+            Case 300
+                If isAxisMoving(Par.X.CardNum, Par.X.AxisNum) = False And isAxisMoving(Par.Y.CardNum, Par.Y.AxisNum) = False Then
+                    TimingWatch = GetTickCount
+                    Step_CCD_Calibration = 320
+                End If
+
+            Case 320
+                If GetTickCount - TimingWatch > 500 Then
+                    Step_CCD_Calibration = 530
+                End If
+
+            Case 530
+                Winsock1_String = ""
+                strCommand = "C" & Par.CameraNum & "," & Pos_C(index_Point).X & "," & Pos_C(index_Point).Y & "," & Pos_C(index_Point).A & vbCrLf
+                Frm_Main.Winsock1.SendData(strCommand)
+                List_DebugAddMessage(strCommand)
+                Step_CCD_Calibration = 540
+
+            Case 540
+                If Winsock1_String <> "" And (Winsock1_Data(0) = "C" & Par.CameraNum) Then
+                    If Winsock1_Data(1) = 1 Then
+                        Step_CCD_Calibration = 550
+                    ElseIf Winsock1_Data(1) = 0 Then
+                        List_DebugAddMessage("CCD" & Par.CameraNum & "进入自动标定失败！")
+                        Step_CCD_Calibration = 9000
+                    End If
+                End If
+
+            Case 550
+                If index_Point = Par.PointNum Then
+                    '11个点走完
+                    Step_CCD_Calibration = 551
+                Else
+                    index_Point = index_Point + 1
+                    Step_CCD_Calibration = 260
+                End If
+
+            Case 551
+                Winsock1_String = ""
+                Frm_Main.Winsock1.SendData("EC" & vbCrLf)
+                TimingWatch = GetTickCount
+                Step_CCD_Calibration = 552
+
+            Case 552
+                If Winsock1_String <> "" Then
+                    Step_CCD_Calibration = 553
+                ElseIf GetTickCount - TimingWatch > 5000 Then
+                    Step_CCD_Calibration = 9000
+                    List_DebugAddMessage("CCD" & Par.CameraNum & "连接异常，请检查！")
+                End If
+
+            Case 553
+                If Winsock1_Data(0) = "EC" Then
+                    If Winsock1_Data(1) = 1 Then
+                        '标定成功
+                        List_DebugAddMessage("CCD" & Par.CameraNum & "标定成功")
+                        Step_CCD_Calibration = 560
+                    ElseIf Winsock1_Data(1) = 0 Then
+                        '标定失败
+                        List_DebugAddMessage("CCD" & Par.CameraNum & "标定失败")
+                        Step_CCD_Calibration = 9000
+                    End If
+                End If
+
+            Case 560
+                List_DebugAddMessage("CCD" & Par.CameraNum & "标定完成")
+                Step_CCD_Calibration = 8000
+
+            Case 8000
+                status.Result = True
+                status.Enable = False
+                status.State = False
+                Step_CCD_Calibration = 0
+
+            Case 9000  '相机标定失败
+                status.Result = False
+                status.Enable = False
+                status.State = False
+                Step_CCD_Calibration = 0
+
+        End Select
+    End Sub
+#End Region
 
 End Module

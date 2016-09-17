@@ -256,7 +256,7 @@ Module FuntctionSub
     '写CSV逗号分隔值文件
     '参数1：文件名(包含文件路径)
     '参数2：需要写入的数据
-    Public Function WriteCSV(ByVal FileName As String, ByVal Data As String, ByVal FilePath As String)
+    Public Function WriteCSV(ByVal FileName As String, ByVal Data As String, ByVal FilePath As String, Optional FileSource As Integer = 0)
         Dim FileNo As Integer   '文件号
         FilePath = FilePath & Format(Now.Date, "yyyy-MM-dd")
         If Dir(FilePath, vbDirectory) = "" Then
@@ -264,7 +264,12 @@ Module FuntctionSub
         End If
 
         If IO.File.Exists(FilePath & "\" & FileName & ".csv") = False Then
-            Call FileCopy("D:\BZ-Parameter\Template\PAM Template.csv", FilePath & "\" & FileName & ".csv")
+            Select Case FileSource
+                Case 0
+                    Call FileCopy("D:\BZ-Parameter\Template\PAM Template.csv", FilePath & "\" & FileName & ".csv")
+                Case 1
+                    Call FileCopy("D:\BZ-Parameter\Template\PAM StepNum.csv", FilePath & "\" & FileName & ".csv")
+            End Select
         End If
 
         On Error GoTo WriteDataError                    '激活文件写操作错误检测机制
@@ -275,6 +280,7 @@ Module FuntctionSub
 WriteDataError:
         FileClose(FileNo)                           '写入出错关闭当前打开的文件
     End Function
+
 #End Region
 
 #Region "功能：XML创建，读写操作"

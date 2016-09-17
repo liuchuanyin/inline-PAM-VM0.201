@@ -67,6 +67,13 @@
         Dim Z As Double
     End Structure
 
+    Public Structure Dist_XYZA
+        Dim X As Double
+        Dim Y As Double
+        Dim Z As Double
+        Dim A As Double
+    End Structure
+
     '针尖到CCD视野中心的距离
     'dist_NeedleToCCDCenter = CCD Capture Position - Needle Position
     Public dist_NeedleToCCDCenter(1) As Dist_XY
