@@ -220,6 +220,16 @@
         ' Paste_Sta.workState =5 工作进行中:抛料
         ' Paste_Sta.workState =6 工作进行中:等待取料机构向中转机构上放料
         Static timeStart As Long    '记录开始时间
+        Static PreIndex_InPaste As Integer '用来记录上一个生产穴位的索引号，给UV预固化使用
+        Static CureProcessFlag As sFlag4   '用此结构体传递给预固化子函数
+        Static FineProcessFlag As sFlag4   '用此结构体传递给精补轴运动子函数
+
+        '组装站暂停功能控制，但是UV灯有开启时不允许暂停，关闭UV后再自动暂停
+        If Flag_MachinePause = True Then
+            If Not (Flag_UVIsOpened(1) Or Flag_UVIsOpened(2) Or Flag_UVIsOpened(6)) Then
+                Exit Sub
+            End If
+        End If
 
         Select Case Step_Paste
             Case 10
@@ -232,53 +242,63 @@
             Case 100
                 '流水线上有载具，且载具可用
                 If Tray_Pallet(2).isHaveTray And Tray_Pallet(2).isTrayOK Then
+                    '初始化相关变量
                     index_InPaste = 0
+                    PreIndex_InPaste = -1  '必须初始化的值小于0，此变量作为是否调用预固化程序的开关
+                    CureProcessFlag.Init()
+
                     Step_Paste = 200
                 End If
 
             Case 200
                 If Tray_Pallet(2).Hole(index_InPaste).isHaveProduct And Tray_Pallet(2).Hole(index_InPaste).isProductOk And Frm_Engineering.chk_Brc(index_InPaste).Checked Then
                     '当前穴位有料，且是OK的，并且选中要做这个
-
                     ListBoxAddMessage("组装站开始组装第" & index_InPaste + 1 & "颗料！")
-
-                    '判断完要做哪个穴位后，精补轴直接过去对应点位
-                    AbsMotion(1, FineX, AxisPar.MoveVel(1, FineX), TrayMatrix.TrayFineCompensation(index_InPaste).X)
-                    AbsMotion(1, FineY, AxisPar.MoveVel(1, FineY), TrayMatrix.TrayFineCompensation(index_InPaste).Y)
-
-                    Step_Paste = 202
+                    Step_Paste = 210
                 Else
                     '否则跳过这一颗料
                     ListBoxAddMessage("组装站组装跳过第" & index_InPaste + 1 & "颗料！")
-                    Step_Paste = 4000
-                End If
-
-            Case 202 '判断精补轴到位
-                If (Not isAxisMoving(1, FineX)) And (Not isAxisMoving(1, FineY)) Then
-                    timeStart = GetTickCount
-                    Step_Paste = 204
-                End If
-
-            Case 204  '延时0.5S
-                If GetTickCount - timeStart > 500 Then
-                    If TriggerCCD("T2,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
-                        timeStart = GetTickCount
-                        Step_Paste = 206
-                    End If
-                End If
-
-            Case 206  '等待精补CCD2拍照完成
-                If Winsock1_Data(0) = "T2" And Winsock1_Data(1) = 1 Then
-                    If Cam_Status(2) = 1 Then
-                        Step_Paste = 210
-                    Else
-                        Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料异常，请检查有无产品")
-                    End If
-                ElseIf GetTickCount - timeStart > 5000 Then
-                    Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料超时")
+                    Step_Paste = 3850
                 End If
 
             Case 210
+                '开启精补轴子程序运行，在 Step_Paste = 510处判断是否完成
+                FineProcessFlag.Init()
+                FineProcessFlag.StepNum = 10
+                Step_Paste = 218
+
+                'Case 211
+                '    '判断完要做哪个穴位后，精补轴直接过去对应点位
+                '    AbsMotion(1, FineX, AxisPar.MoveVel(1, FineX), TrayMatrix.TrayFineCompensation(index_InPaste).X)
+                '    AbsMotion(1, FineY, AxisPar.MoveVel(1, FineY), TrayMatrix.TrayFineCompensation(index_InPaste).Y)
+                '    Step_Paste = 212
+
+                'Case 212 '判断精补轴到位
+                '    If (Not isAxisMoving(1, FineX)) And (Not isAxisMoving(1, FineY)) Then
+                '        timeStart = GetTickCount
+                '        Step_Paste = 214
+                '    End If
+
+                'Case 214  '延时0.5S
+                '    If GetTickCount - timeStart > 500 Then
+                '        If TriggerCCD("T2,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
+                '            timeStart = GetTickCount
+                '            Step_Paste = 216
+                '        End If
+                '    End If
+
+                'Case 216  '等待精补CCD2拍照完成
+                '    If Winsock1_Data(0) = "T2" And Winsock1_Data(1) = 1 Then
+                '        If Cam_Status(2) = 1 Then
+                '            Step_Paste = 218
+                '        Else
+                '            Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料异常，请检查有无产品")
+                '        End If
+                '    ElseIf GetTickCount - timeStart > 5000 Then
+                '        Frm_DialogAddMessage("组装站CCD2拍第" & index_InPaste + 1 & "颗料物料超时")
+                '    End If
+
+            Case 218
                 '中转机构上有料且，取料模组不在放料的过程中
                 If Cam_OnTransferPlate.isHaveCam And PreTaker_Sta.workState <> 4 Then
                     Paste_Sta.workState = 2    '工作进行中:取料
@@ -304,6 +324,15 @@
             Case 240
                 If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
                     Paste_Sta.workState = 6     '工作进行中:等待取料机构向中转机构上放料
+
+                    '开启预固化的子程序
+                    If PreIndex_InPaste >= 0 And CureProcessFlag.StepNum = 0 Then
+                        '先复位参数
+                        CureProcessFlag.Init()
+                        '再给参数赋值
+                        CureProcessFlag.StepNum = 10
+                    End If
+
                     ListBoxAddMessage("组装站运动到待机位置，等待取料模组放料")
                     Step_Paste = 250
                 End If
@@ -332,6 +361,15 @@
 
             Case 330
                 If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
+
+                    '开启预固化的子程序
+                    If PreIndex_InPaste >= 0 And CureProcessFlag.StepNum = 0 Then
+                        '先复位参数
+                        CureProcessFlag.Init()
+                        '再给参数赋值
+                        CureProcessFlag.StepNum = 10
+                    End If
+
                     ListBoxAddMessage("组装站X、Y、R轴运动到取料位置")
                     Step_Paste = 350
                 End If
@@ -413,6 +451,11 @@
             Case 500
                 If Not isAxisMoving(0, PasteZ) Then
                     timeStart = GetTickCount
+                    Step_Paste = 510
+                End If
+
+            Case 510  '判断精补轴运动子程序是否完成
+                If FineProcessFlag.Result = True And FineProcessFlag.State = False And FineProcessFlag.StepNum = 0 Then
                     Step_Paste = 520
                 End If
 
@@ -446,8 +489,8 @@
 
             Case 560
                 If Not isAxisMoving(0, PasteZ) Then
-                    '判断预固化轴是否在待机位置
-                    If Math.Abs(CurrEncPos(BarcodeStrS1, CureX) - Par_Pos.St_Cure(0).X) < 5 Then
+                    '判断预固化轴是否在待机位置,而且预固化子程序步序号为0的时候，代表预固化程序停止中
+                    If Math.Abs(CurrEncPos(BarcodeStrS1, CureX) - Par_Pos.St_Cure(0).X) < 5 And CureProcessFlag.StepNum = 0 Then
                         timeStart = GetTickCount
                         Step_Paste = 600
                     End If
@@ -599,102 +642,129 @@
 
                     CurNozTransferPlate.Init()
 
-                    Step_Paste = 4000
+                    '将当前工作的穴位牵引号记录进入PreIndex_InPaste,给预固化使用
+                    PreIndex_InPaste = index_InPaste
+
+                    Step_Paste = 3800
                 End If
-                 
-            Case 4000
+
+            Case 3800
                 '共计12颗料，index_InPaste从0开始
                 If index_InPaste < 11 Then
                     index_InPaste += 1
                     Step_Paste = 200 '去贴合下一颗料
                 Else
-                    Step_Paste = 4020 '工作完成
+                    Step_Paste = 3850 '工作完成
                 End If
 
+            Case 3850
+                '开启预固化的子程序
+                If PreIndex_InPaste >= 0 Then
+                    If CureProcessFlag.StepNum = 0 Then
+                        '先复位参数
+                        CureProcessFlag.Init()
+                        '再给参数赋值
+                        CureProcessFlag.StepNum = 10
 
-
-                '****************************************************************************************************
-                '*****************************************组装站预固化段开始*****************************************
-            Case 4020  'X,Y,R回待机位置
-                AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
-                AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
-                If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
-                    Step_Paste = 4040
-                End If
-
-            Case 4040 '将Index_CurePoint 预固化牵引次数清零
-                If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
-                    Index_CurePoint = 0
-                    Step_Paste = 4060
-                End If
-
-            Case 4060   '用来判断预固化需要走哪些点位
-                If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
-                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(Index_CurePoint).X)
-                    Step_Paste = 4070
+                        Step_Paste = 3900
+                    Else
+                        ListBoxAddMessage("预固化子程序处于运行中！")
+                    End If
                 Else
-                    Step_Paste = 4120
+                    '说明此时载具中没有一个料是可供生产的
+                    Step_Paste = 8000
                 End If
 
-            Case 4070
-                If Not isAxisMoving(1, CureX) Then
-                    Step_Paste = 4080
+            Case 3900
+                If Math.Abs(CurrEncPos(BarcodeStrS1, CureX) - Par_Pos.St_Cure(0).X) < 5 And CureProcessFlag.StepNum = 0 Then
+                    Step_Paste = 8000
                 End If
 
-            Case 4080 '打开预固化UV灯
-                If Flag_UVConnect(1) And Flag_UVConnect(2) Then
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Then
-                        UV_Open(ControllerHandle(1), 1, 255)
-                        UV_Open(ControllerHandle(1), 2, 255)
-                    End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Then
-                        UV_Open(ControllerHandle(1), 3, 255)
-                        UV_Open(ControllerHandle(1), 4, 255)
-                    End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Then
-                        UV_Open(ControllerHandle(2), 1, 255)
-                        UV_Open(ControllerHandle(2), 2, 255)
-                    End If
 
-                    If Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
-                        UV_Open(ControllerHandle(2), 3, 255)
-                        UV_Open(ControllerHandle(2), 4, 255)
-                    End If
+                '        '****************************************************************************************************
+                '        '*****************************************组装站预固化段开始*****************************************
+                'Case 4020  'X,Y,R回待机位置
+                '        AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
+                '        AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
+                '        If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
+                '            Step_Paste = 4040
+                '        End If
 
-                    timeStart = GetTickCount
-                    Step_Paste = 4100
-                End If
+                'Case 4040 '将Index_CurePoint 预固化牵引次数清零
+                '        If (Not isAxisMoving(0, PasteX)) And (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(0, PasteR)) Then
+                '            Index_CurePoint = 0
+                '            Step_Paste = 4060
+                '        End If
 
-            Case 4100 '关闭预固化UV灯
-                If GetTickCount - timeStart > par.num(19) * 1000 Then
-                    UV_Close(ControllerHandle(1), 0)
-                    UV_Close(ControllerHandle(2), 0)
-                    Step_Paste = 4120
-                End If
+                'Case 4060   '用来判断预固化需要走哪些点位
+                '        If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Or Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
+                '            AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(Index_CurePoint).X)
+                '            Step_Paste = 4070
+                '        Else
+                '            Step_Paste = 4120
+                '        End If
 
-            Case 4120
-                Index_CurePoint = Index_CurePoint + 1
-                If Index_CurePoint < 3 Then
-                    Step_Paste = 4060
-                Else
-                    Step_Paste = 4140
-                End If
+                'Case 4070
+                '        If Not isAxisMoving(1, CureX) Then
+                '            Step_Paste = 4080
+                '        End If
 
-            Case 4140  '预固化轴回待机位置
-                AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(0).X)
-                Step_Paste = 4160
+                'Case 4080 '打开预固化UV灯
+                '        If Flag_UVConnect(1) And Flag_UVConnect(2) Then
+                '            If Tray_Pallet(2).Hole(2 * Index_CurePoint).isProductOk Then
+                '                UV_Open(ControllerHandle(1), 1, 255)
+                '                UV_Open(ControllerHandle(1), 2, 255)
+                '            End If
 
-            Case 4160
-                If Not isAxisMoving(1, CureX) Then
-                    Step_Paste = 4180
-                End If
+                '            If Tray_Pallet(2).Hole(2 * Index_CurePoint + 1).isProductOk Then
+                '                UV_Open(ControllerHandle(1), 3, 255)
+                '                UV_Open(ControllerHandle(1), 4, 255)
+                '            End If
 
-            Case 4180   '整个预固化完成
-                Step_Paste = 8000 
-                '*****************************************组装站预固化段结束*****************************************
-                '****************************************************************************************************
+                '            If Tray_Pallet(2).Hole(2 * Index_CurePoint + 6).isProductOk Then
+                '                UV_Open(ControllerHandle(2), 1, 255)
+                '                UV_Open(ControllerHandle(2), 2, 255)
+                '            End If
+
+                '            If Tray_Pallet(2).Hole(2 * Index_CurePoint + 7).isProductOk Then
+                '                UV_Open(ControllerHandle(2), 3, 255)
+                '                UV_Open(ControllerHandle(2), 4, 255)
+                '            End If
+
+                '            timeStart = GetTickCount
+                '            Step_Paste = 4100
+                '        End If
+
+                'Case 4100 '关闭预固化UV灯
+                '        If GetTickCount - timeStart > par.num(19) * 1000 Then
+                '            UV_Close(ControllerHandle(1), 0)
+                '            UV_Close(ControllerHandle(2), 0)
+                '            Step_Paste = 4120
+                '        End If
+
+                'Case 4120
+                '        Index_CurePoint = Index_CurePoint + 1
+                '        If Index_CurePoint < 3 Then
+                '            Step_Paste = 4060
+                '        Else
+                '            Step_Paste = 4140
+                '        End If
+
+                'Case 4140  '预固化轴回待机位置
+                '        AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(0).X)
+                '        Step_Paste = 4160
+
+                'Case 4160
+                '        If Not isAxisMoving(1, CureX) Then
+                '            Step_Paste = 4180
+                '        End If
+
+                'Case 4180   '整个预固化完成
+                '        Step_Paste = 8000
+                '        '*****************************************组装站预固化段结束*****************************************
+                '        '****************************************************************************************************
 
 
 
@@ -773,8 +843,10 @@
 
         End Select
 
-
-
+        '这段预固化的子程序控制靠CureProcessFlag标志位来控制
+        Call CureProcess(CureProcessFlag, PreIndex_InPaste)
+        '这段精补轴运动子程序控制靠FineProcessFlag标志位来控制
+        Call FineCompensationProcess(FineProcessFlag, index_InPaste)
     End Sub
 
     ''' <summary>
@@ -889,4 +961,168 @@
         Loop
           
     End Sub
+     
+    ''' <summary>
+    ''' 预固化子程序段
+    ''' </summary>
+    ''' <param name="state"></param>
+    ''' <param name="index">载具中已经生产OK产品的牵引号</param>
+    ''' <remarks></remarks>
+    Public Sub CureProcess(ByRef state As sFlag4, index As Integer)
+        Dim TimeStart As Integer
+
+
+        Select Case state.StepNum
+            Case 10
+                If state.State = False And state.Result = False Then 
+                    state.State = True
+                    state.StepNum = 100
+                End If
+
+            Case 100
+                If index = 0 Or index = 1 Or index = 6 Or index = 7 Then
+                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(1).X)
+                    state.StepNum = 120
+                ElseIf index = 2 Or index = 3 Or index = 8 Or index = 9 Then
+                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(2).X)
+                    state.StepNum = 120
+                ElseIf index = 4 Or index = 5 Or index = 10 Or index = 11 Then
+                    AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(3).X)
+                    state.StepNum = 120
+                End If
+
+            Case 120
+                If isAxisMoving(1, CureX) = False Then
+                    state.StepNum = 140 
+                End If
+
+            Case 140
+                If index = 0 Or index = 2 Or index = 4 Then
+                    If Flag_UVConnect(1) Then
+                        TimeStart = GetTickCount
+                        UV_Open(ControllerHandle(1), 1, 255)
+                        UV_Open(ControllerHandle(1), 2, 255)
+                        state.StepNum = 160
+                    Else
+                        state.StepNum = 9000
+                        ListBoxAddMessage("预固化站UV控制器1未连接！")
+                    End If
+                ElseIf index = 1 Or index = 3 Or index = 5 Then
+                    If Flag_UVConnect(1) Then
+                        TimeStart = GetTickCount
+                        UV_Open(ControllerHandle(1), 3, 255)
+                        UV_Open(ControllerHandle(1), 4, 255)
+                        state.StepNum = 160
+                    Else
+                        state.StepNum = 9000
+                        ListBoxAddMessage("预固化站UV控制器1未连接！")
+                    End If
+                ElseIf index = 6 Or index = 8 Or index = 10 Then
+                    If Flag_UVConnect(2) Then
+                        TimeStart = GetTickCount
+                        UV_Open(ControllerHandle(2), 1, 255)
+                        UV_Open(ControllerHandle(2), 2, 255)
+                        state.StepNum = 160
+                    Else
+                        state.StepNum = 9000
+                        ListBoxAddMessage("预固化站UV控制器2未连接！")
+                    End If
+                ElseIf index = 7 Or index = 9 Or index = 11 Then
+                    If Flag_UVConnect(2) Then
+                        TimeStart = GetTickCount
+                        UV_Open(ControllerHandle(2), 3, 255)
+                        UV_Open(ControllerHandle(2), 4, 255)
+                        state.StepNum = 160
+                    Else
+                        state.StepNum = 9000
+                        ListBoxAddMessage("预固化站UV控制器2未连接！")
+                    End If
+                End If
+
+            Case 160
+                If GetTickCount - TimeStart > par.num(19) * 1000 Then
+                    UV_Close(ControllerHandle(1), 0)
+                    UV_Close(ControllerHandle(2), 0)
+                    state.StepNum = 180
+                End If
+
+            Case 180
+                AbsMotion(1, CureX, AxisPar.MoveVel(1, CureX), Par_Pos.St_Cure(0).X)
+                state.StepNum = 200
+
+            Case 200
+                If isAxisMoving(1, CureX) = False Then
+                    state.StepNum = 8000
+                End If
+
+            Case 8000 
+                state.Result = True
+                state.State = False
+                state.StepNum = 0
+
+            Case 9000 
+                state.Result = False
+                state.State = False
+                state.StepNum = 0
+        End Select
+
+
+    End Sub
+
+    ''' <summary>
+    ''' 精补轴移动子程序段
+    ''' </summary>
+    ''' <param name="state"></param>
+    ''' <param name="index">当前载具工作中的穴位索引号</param>
+    ''' <remarks></remarks>
+    Public Sub FineCompensationProcess(ByRef state As sFlag4, index As Integer)
+        Static timestart As Integer
+
+        Select Case state.StepNum
+            Case 10
+                state.State = True
+                state.Result = False
+                state.StepNum = 30
+
+            Case 30
+                '判断完要做哪个穴位后，精补轴直接过去对应点位
+                AbsMotion(1, FineX, AxisPar.MoveVel(1, FineX), TrayMatrix.TrayFineCompensation(index).X)
+                AbsMotion(1, FineY, AxisPar.MoveVel(1, FineY), TrayMatrix.TrayFineCompensation(index).Y)
+                state.StepNum = 50
+
+            Case 50 '判断精补轴到位
+                If (Not isAxisMoving(1, FineX)) And (Not isAxisMoving(1, FineY)) Then
+                    timestart = GetTickCount
+                    state.StepNum = 100
+                End If
+
+            Case 100  '延时0.5S
+                If GetTickCount - timestart > 500 Then
+                    If TriggerCCD("T2,1", index_InPaste, Tray_Pallet(2).Tray_Barcode, Tray_Pallet(2).Hole(index_InPaste).ProductBarcode) = True Then
+                        timestart = GetTickCount
+                        state.StepNum = 150
+                    End If
+                End If
+
+            Case 150  '等待精补CCD2拍照完成
+                If Winsock1_Data(0) = "T2" And Winsock1_Data(1) = 1 Then
+                    If Cam_Status(2) = 1 Then
+                        state.StepNum = 200
+                    Else
+                        Frm_DialogAddMessage("组装站CCD2定位拍第" & index + 1 & "颗料物料异常，请检查有无产品")
+                    End If
+                ElseIf GetTickCount - timestart > 5000 Then
+                    Frm_DialogAddMessage("组装站CCD2定位拍第" & index + 1 & "颗料物料超时")
+                End If
+
+            Case 200
+                state.StepNum = 8000
+
+            Case 8000
+                state.State = False
+                state.Result = True
+                state.StepNum = 0
+        End Select
+    End Sub
+     
 End Module

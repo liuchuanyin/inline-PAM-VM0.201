@@ -55,6 +55,14 @@
         '复检UV固化每个位置有6个点，用来判断这6个点中哪些是需要固化的
         Static UV_Point(1, 5) As Boolean
 
+
+        '复检站暂停功能控制，但是UV灯有开启时不允许暂停，关闭UV后再自动暂停
+        If Flag_MachinePause = True Then
+            If Not (Flag_UVIsOpened(3) Or Flag_UVIsOpened(4) Or Flag_UVIsOpened(5) Or Flag_UVIsOpened(7)) Then
+                Exit Sub
+            End If
+        End If
+
         Select Case Step_Recheck
             Case 10
                 If Flag_MachineStop = False And Line_Sta(3).workState = 2 And _

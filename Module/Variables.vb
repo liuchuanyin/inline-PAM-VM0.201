@@ -303,6 +303,45 @@ Public Module Variables
         Dim Result As Boolean   '结果
     End Structure
 
+    Public Structure sFlag4
+
+        ''' <summary>
+        ''' 使能
+        ''' </summary>
+        ''' <remarks></remarks>
+        Dim Enable As Boolean   '使能
+
+        ''' <summary>
+        ''' 状态
+        ''' </summary>
+        ''' <remarks></remarks>
+        Dim State As Boolean    '状态
+
+        ''' <summary>
+        ''' 结果
+        ''' </summary>
+        ''' <remarks></remarks>
+        Dim Result As Boolean   '结果
+
+        ''' <summary>
+        ''' 步序号
+        ''' </summary>
+        ''' <remarks></remarks>
+        Dim StepNum As Integer
+
+        ''' <summary>
+        ''' 初始化
+        ''' </summary>
+        ''' <remarks></remarks>
+        Public Sub Init()
+            Enable = False
+            State = False
+            Result = False
+            StepNum = 0
+        End Sub
+
+    End Structure
+
 #Region "设备运行状态标志位"
     ''' <summary>
     ''' Machine Pause Flag

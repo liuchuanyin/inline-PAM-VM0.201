@@ -452,7 +452,14 @@
         ' GLue_Sta.workState =1 工作完成
         ' GLue_Sta.workState =2 工作进行中:点胶进行中
         Static timeStart As Long    '记录开始时间
-        Dim Result, TempPosZ As Short 
+        Dim Result, TempPosZ As Short
+
+        '点胶站暂停功能控制，但是点胶阀开启时不允许暂停，关闭点胶阀后再自动暂停
+        If Flag_MachinePause = True Then
+            If Not (EXO(1, 13) Or EXO(1, 14)) Then
+                Exit Sub
+            End If
+        End If
          
         Select Case Step_Glue
             Case 10

@@ -150,6 +150,13 @@
         'PreTaker_Sta.workState = 4   '工作进行中：去放料，夹镜头保护盖
         Static timeStart As Long    '记录开始时间
 
+
+        '预取料站暂停功能
+        If Flag_MachinePause = True Then
+            Exit Sub
+        End If
+
+
         Select Case Step_PreTaker
             Case 10
                 If Flag_MachineStop = False And Cam_OnTransferPlate.isHaveCam = False And Feed_Sta.isWorking = False And Feed_Sta.workState = 1 Then

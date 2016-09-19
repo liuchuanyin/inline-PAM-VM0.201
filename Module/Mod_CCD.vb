@@ -534,32 +534,32 @@
                 Pos_C(1).Y = Par.StartPosition.Y
                 Pos_C(1).A = Par.StartPosition.A
                 For i = 2 To 3
-                    Pos_C(i).X = Pos_C(i - 1).X + 15
+                    Pos_C(i).X = Pos_C(i - 1).X + Par.OffsetX
                     Pos_C(i).Y = Pos_C(i - 1).Y
                     Pos_C(i).A = Par.StartPosition.A
                 Next
                 Pos_C(4).X = Pos_C(3).X
-                Pos_C(4).Y = Pos_C(3).Y + 15
+                Pos_C(4).Y = Pos_C(3).Y + Par.OffsetY
                 Pos_C(4).A = Par.StartPosition.A
                 For i = 5 To 6
-                    Pos_C(i).X = Pos_C(i - 1).X - 15
+                    Pos_C(i).X = Pos_C(i - 1).X - Par.OffsetX
                     Pos_C(i).Y = Pos_C(i - 1).Y
                     Pos_C(i).A = Par.StartPosition.A
                 Next
                 Pos_C(7).X = Pos_C(6).X
-                Pos_C(7).Y = Pos_C(6).Y + 15
+                Pos_C(7).Y = Pos_C(6).Y + Par.OffsetY
                 Pos_C(7).A = Par.StartPosition.A
                 For i = 8 To 9
-                    Pos_C(i).X = Pos_C(i - 1).X + 15
+                    Pos_C(i).X = Pos_C(i - 1).X + Par.OffsetX
                     Pos_C(i).Y = Pos_C(i - 1).Y
                     Pos_C(i).A = Par.StartPosition.A
                 Next
                 Pos_C(10).X = Pos_C(5).X
                 Pos_C(10).Y = Pos_C(5).Y
-                Pos_C(10).A = Par.StartPosition.A + 15
+                Pos_C(10).A = Par.StartPosition.A + Par.OffsetA
                 Pos_C(11).X = Pos_C(5).X
                 Pos_C(11).Y = Pos_C(5).Y
-                Pos_C(11).A = Par.StartPosition.A - 15
+                Pos_C(11).A = Par.StartPosition.A - Par.OffsetA
                 index_Point = 1
                 Step_CCD_Calibration = 260
 
