@@ -78,9 +78,13 @@
                 Case 20
                     Call AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(index).X)
                     Call AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(index).R)
+                    Step_Gopos(2) = 25
+
+                Case 25
                     If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(index).Y) = True Then
                         Step_Gopos(2) = 30
                     End If
+
                 Case 30
                     If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
                         Frm_DialogAddMessage("组装站X,Y,R轴运动到" & Par_Pos.St_Paste(index).Name & "完成")
@@ -223,6 +227,7 @@
         Static PreIndex_InPaste As Integer '用来记录上一个生产穴位的索引号，给UV预固化使用
         Static CureProcessFlag As sFlag4   '用此结构体传递给预固化子函数
         Static FineProcessFlag As sFlag4   '用此结构体传递给精补轴运动子函数
+        Static CureProcessIsStart As Boolean '预固化轴子程序是否已经开始
 
         '组装站暂停功能控制，但是UV灯有开启时不允许暂停，关闭UV后再自动暂停
         If Flag_MachinePause = True Then
@@ -246,6 +251,7 @@
                     index_InPaste = 0
                     PreIndex_InPaste = -1  '必须初始化的值小于0，此变量作为是否调用预固化程序的开关
                     CureProcessFlag.Init()
+                    CureProcessIsStart = False
 
                     Step_Paste = 200
                 End If
@@ -316,11 +322,14 @@
                     '运动到待机位置
                     Call AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
                     Call AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
-                    If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
-                        Step_Paste = 230
-                    End If
+                    Step_Paste = 235
                 End If
 
+            Case 235
+                If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
+                    Step_Paste = 240
+                End If
+                 
             Case 240
                 If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
                     Paste_Sta.workState = 6     '工作进行中:等待取料机构向中转机构上放料
@@ -331,6 +340,8 @@
                         CureProcessFlag.Init()
                         '再给参数赋值
                         CureProcessFlag.StepNum = 10
+                        '预固化轴子程序是否处于工作，作用是给Step_Paste＝330防呆处理
+                        CureProcessIsStart = True
                     End If
 
                     ListBoxAddMessage("组装站运动到待机位置，等待取料模组放料")
@@ -346,29 +357,35 @@
 
             Case 300  '回到待机位置
                 Call AbsMotion(0, PasteZ, AxisPar.MoveVel(0, PasteZ), Par_Pos.St_Paste(0).Z)
-                Step_Paste = 310
+                Step_Paste = 305
 
-            Case 310
-                '组装模组去取料位置取料
+            Case 305
                 If isAxisMoving(0, PasteZ) = False Then
                     '运动到取料位置
                     Call AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(1).X)
                     Call AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(1).R)
-                    If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(1).Y) = True Then
-                        Step_Paste = 330
-                    End If
+                    Step_Paste = 310
                 End If
+
+            Case 310
+                '组装模组去取料位置取料
+                If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Par_Pos.St_Paste(1).Y) = True Then
+                    Step_Paste = 330
+                End If
+
 
             Case 330
                 If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
 
                     '开启预固化的子程序
-                    If PreIndex_InPaste >= 0 And CureProcessFlag.StepNum = 0 Then
+                    If PreIndex_InPaste >= 0 And CureProcessFlag.StepNum = 0 And CureProcessIsStart = False Then
                         '先复位参数
                         CureProcessFlag.Init()
                         '再给参数赋值
                         CureProcessFlag.StepNum = 10
                     End If
+
+                    CureProcessIsStart = False
 
                     ListBoxAddMessage("组装站X、Y、R轴运动到取料位置")
                     Step_Paste = 350
@@ -429,6 +446,9 @@
             Case 460  '组装站X,Y,R到定位拍照位置
                 AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(2).X)
                 AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(2).R)
+                Step_Paste = 465
+
+            Case 465
                 If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(2).Y) = True Then
                     Step_Paste = 480
                 End If
@@ -499,6 +519,9 @@
             Case 600  '运动到精补位置的X,Y,R位置
                 AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam3Data(1, 0))
                 AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam3Data(1, 2))
+                Step_Paste = 605
+
+            Case 605
                 If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Cam3Data(1, 1)) = True Then
                     Step_Paste = 620
                 End If
@@ -554,6 +577,9 @@
             Case 700
                 AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Cam2Data(2, 0))
                 AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Cam2Data(2, 2))
+                Step_Paste = 705
+
+            Case 705
                 If AbsMotion(2, PasteY1, AxisPar.MoveVel(2, PasteY1), Cam2Data(2, 1)) Then
                     Step_Paste = 720
                 End If
@@ -676,7 +702,7 @@
                 End If
 
             Case 3900
-                If Math.Abs(CurrEncPos(BarcodeStrS1, CureX) - Par_Pos.St_Cure(0).X) < 5 And CureProcessFlag.StepNum = 0 Then
+                If Math.Abs(CurrEncPos(1, CureX) - Par_Pos.St_Cure(0).X) < 5 And CureProcessFlag.StepNum = 0 Then
                     Step_Paste = 8000
                 End If
 
@@ -688,6 +714,9 @@
                 'Case 4020  'X,Y,R回待机位置
                 '        AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(0).X)
                 '        AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(0).R)
+                '        Step_Paste = 4025
+
+                'case 4025
                 '        If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(0).Y) = True Then
                 '            Step_Paste = 4040
                 '        End If
@@ -784,6 +813,9 @@
             Case 4570
                 AbsMotion(0, PasteX, AxisPar.MoveVel(0, PasteX), Par_Pos.St_Paste(5).X)
                 AbsMotion(0, PasteR, AxisPar.MoveVel(0, PasteR), Par_Pos.St_Paste(5).R)
+                Step_Paste = 4575
+
+            Case 4575
                 If AbsMotion(2, PasteY1, AxisPar.MoveVel(0, PasteY1), Par_Pos.St_Paste(5).Y) = True Then
                     Step_Paste = 4590
                 End If
@@ -823,7 +855,7 @@
                 End If
 
             Case 4680
-                Step_Paste = 210
+                Step_Paste = 200
                 '*****************************************组装站抛料程序段结束*****************************************
                 '****************************************************************************************************
 

@@ -142,7 +142,7 @@ Module Motion
                         rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_1.cfg")          '下载控制卡1配置参数
                     ElseIf n = 2 Then
                         '复位运动控制卡1
-                        rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS400_VB.cfg")          '下载控制卡2配置参数
+                        rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS400.cfg")          '下载控制卡2配置参数
                     End If
                    
                     If rtn <> 0 Then

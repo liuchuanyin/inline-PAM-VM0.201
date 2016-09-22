@@ -25,7 +25,7 @@ Public Class Frm_Main
         '加载回原点需要的参数
         Call HomeValue()
         '运动控制卡初始化
-        Call MotionCardInit()
+        'Call MotionCardInit()
         '串口初始化
         Call SerialPortInit()
         '网络初始化
@@ -51,9 +51,9 @@ Public Class Frm_Main
         For i = 0 To Tray_Pallet.Count - 1
             Tray_Pallet(i).init()
         Next
-        If GTS_Opened_EX = True And GTS_Opened_EM = True Then
-            Thread_IORefresh.Start()
-        End If
+        'If GTS_Opened_EX = True And GTS_Opened_EM = True Then
+        '    Thread_IORefresh.Start()
+        'End If
         Timer_Sys.Enabled = True
 
         '在主界面上显示设备名称及编号

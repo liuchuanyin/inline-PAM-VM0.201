@@ -76,6 +76,9 @@
                 Case 20
                     Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(index).X)
                     Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(index).R)
+                    Step_Gopos(3) = 25
+
+                Case 25
                     If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(0, PreTakerY1), Par_Pos.St_PreTaker(index).Y) = True Then
                         Step_Gopos(3) = 30
                     End If
@@ -179,6 +182,9 @@
                 'XY去料盘拍照位置 R轴去拍料盘第一颗料的R位置
                 Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), TrayMatrix.TrayPreTaker(index_TakerMaterial).X) 
                 Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(1).R)
+                Step_PreTaker = 125
+
+            Case 125
                 If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), TrayMatrix.TrayPreTaker(index_TakerMaterial).Y) = True Then
                     Step_PreTaker = 130
                 End If
@@ -237,6 +243,9 @@
                 'XY去取料盘中物料的位置
                 Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Cam4Data(1, 0))
                 Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Cam4Data(1, 2))
+                Step_PreTaker = 465
+
+            Case 465
                 If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Cam4Data(1, 1)) = True Then
                     Step_PreTaker = 480
                 End If
@@ -349,13 +358,11 @@
 
             Case 620  '去物料中转平台的位置
                 If Cam_OnTransferPlate.isHaveCam = False And Paste_Sta.workState <> 2 And EMI(1, 11) And EMI(1, 12) Then
-                    PreTaker_Sta.workState = 4
-
+                    PreTaker_Sta.workState = 4 
                     Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(6).X)
                     Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(6).R)
-                    If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(6).Y) = True Then
-                        Step_PreTaker = 700
-                    End If
+                    Step_PreTaker = 625
+                   
                 ElseIf Cam_OnTransferPlate.isHaveCam Then
                     '中转平台上有物料
                 ElseIf Paste_Sta.workState <> 2 Then
@@ -367,6 +374,11 @@
                 ElseIf EMI(1, 12) = False Then
                     '夹镜头保护盖升降气缸未处于上升状态
                     Frm_DialogAddMessage("夹镜头保护盖升降气缸未处于上升状态,请检查！")
+                End If
+
+            Case 625
+                If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(6).Y) = True Then
+                    Step_PreTaker = 700
                 End If
 
             Case 700
@@ -466,6 +478,9 @@
             Case 940
                 Call AbsMotion(0, PreTakerX, AxisPar.MoveVel(0, PreTakerX), Par_Pos.St_PreTaker(0).X)
                 Call AbsMotion(1, PreTakerR, AxisPar.MoveVel(1, PreTakerR), Par_Pos.St_PreTaker(0).R)
+                Step_PreTaker = 945
+
+            Case 945
                 If AbsMotion(2, PreTakerY1, AxisPar.MoveVel(2, PreTakerY1), Par_Pos.St_PreTaker(0).Y) = True Then
                     Step_PreTaker = 960
                 End If
