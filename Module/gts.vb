@@ -1,4 +1,4 @@
-﻿Public Module gts
+﻿Module gtsuser
     Public Const DLL_VERSION_0 As Short = 2
     Public Const DLL_VERSION_1 As Short = 1
     Public Const DLL_VERSION_2 As Short = 0
@@ -266,7 +266,6 @@
         Dim maxerr As Short
         Dim threshold As Short
     End Structure
-
     Public Declare Function GT_SetCardNo Lib "gts.dll" (ByVal index As Short) As Short
     Public Declare Function GT_GetCardNo Lib "gts.dll" (ByRef pIndex As Short) As Short
 
@@ -680,6 +679,42 @@
     Public Declare Function GT_SetControlMode Lib "gts.dll" (ByVal cardNum As Short, ByVal control As Short, ByVal mode As Short) As Short
     Public Declare Function GT_GetControlMode Lib "gts.dll" (ByVal cardNum As Short, ByVal control As Short, ByRef pMode As Short) As Short
     Public Declare Function GT_SetGantryMode Lib "gts.dll" (ByVal cardNum As Short, ByVal axis1 As Short, ByVal axis2 As Short, ByVal mode As Short) As Short
+
+    Public Structure TDoConfig
+        Dim active As Short
+        Dim axis As Short
+        Dim axisItem As Short
+        Dim reverse As Short
+    End Structure
+
+    Public Structure TAxisConfig
+        Dim active As Short
+        Dim alarmType As Short
+        Dim alarmIndex As Short
+        Dim limitPositiveType As Short
+        Dim limitPositiveIndex As Short
+        Dim limitNegativeType As Short
+        Dim limitNegativeIndex As Short
+        Dim smoothStopType As Short
+        Dim smoothStopIndex As Short
+        Dim abruptStopType As Short
+        Dim abruptStopIndex As Short
+        Dim prfMap As Short
+        Dim encMap As Short
+        Dim prfMapAlpha1 As Short
+        Dim prfMapAlpha2 As Short
+        Dim prfMapBeta1 As Short
+        Dim prfMapBeta2 As Short
+        Dim encMapAlpha1 As Short
+        Dim encMapAlpha2 As Short
+        Dim encMapBeta1 As Short
+        Dim encMapBeta2 As Short
+    End Structure
+
+    Public Declare Function GT_GetAxisConfig Lib "gts.dll" (ByVal cardNum As Short, ByVal axis As Short, ByVal axisConfig As TAxisConfig) As Short
+    Public Declare Function GT_SetAxisConfig Lib "gts.dll" (ByVal cardNum As Short, ByVal axis As Short, ByRef axisConfig As TAxisConfig) As Short
+
+
 
     Public Declare Function GT_OpenExtMdlGts Lib "gts.dll" (ByVal cardNum As Short, ByVal pDllName As String) As Short
     Public Declare Function GT_CloseExtMdlGts Lib "gts.dll" (ByVal cardNum As Short) As Short

@@ -1,4 +1,5 @@
-﻿Public Class Frm_Engineering
+﻿Imports LH_MC2_6CH
+Public Class Frm_Engineering
 
     Public lbl_PrfPos(2, 8) As Label
     Public lbl_EncPos(2, 8) As Label
@@ -955,23 +956,23 @@
             If rad_Brc(i).Checked Then txt_MaterialSelected.Text = i + 1
         Next
 
-        Me.lbl_Blocked0.BackColor = IIf(EXI(1, 0), Color.Lime, Color.Transparent)   'L0阻挡气缸磁簧
-        Me.lbl_NoBlock0.BackColor = IIf(EXI(1, 1), Color.Lime, Color.Transparent)   'L0阻挡气缸磁簧
-        Me.lbl_Blocked1.BackColor = IIf(EXI(1, 2), Color.Lime, Color.Transparent)   'L1阻挡气缸磁簧
-        Me.lbl_NoBlock1.BackColor = IIf(EXI(1, 3), Color.Lime, Color.Transparent)   'L1阻挡气缸磁簧
-        Me.lbl_Blocked2.BackColor = IIf(EXI(1, 4), Color.Lime, Color.Transparent)   'L2阻挡气缸磁簧
-        Me.lbl_NoBlock2.BackColor = IIf(EXI(1, 5), Color.Lime, Color.Transparent)   'L2阻挡气缸磁簧
-        Me.lbl_Blocked3.BackColor = IIf(EXI(1, 6), Color.Lime, Color.Transparent)   'L3阻挡气缸磁簧
-        Me.lbl_NoBlock3.BackColor = IIf(EXI(1, 7), Color.Lime, Color.Transparent)   'L3阻挡气缸磁簧
-        Me.lbl_Rised1.BackColor = IIf(EXI(1, 8), Color.Lime, Color.Transparent)   'L1顶升气缸磁簧
-        Me.lbl_Down1.BackColor = IIf(EXI(1, 9), Color.Lime, Color.Transparent)   'L1顶升气缸磁簧
-        Me.lbl_Rised2.BackColor = IIf(EXI(1, 10), Color.Lime, Color.Transparent)   'L2顶升气缸磁簧
-        Me.lbl_Down2.BackColor = IIf(EXI(1, 11), Color.Lime, Color.Transparent)   'L2顶升气缸磁簧
-        Me.lbl_Rised3.BackColor = IIf(EXI(1, 12), Color.Lime, Color.Transparent)   'L3顶升气缸磁簧
-        Me.lbl_Down3.BackColor = IIf(EXI(1, 13), Color.Lime, Color.Transparent)   'L3顶升气缸磁簧
-        Me.lbl_Vac1.BackColor = IIf(EMI(1, 8), Color.Lime, Color.Transparent)  '1短流水线线吸载具真空负压信号
-        Me.lbl_Vac2.BackColor = IIf(EMI(1, 9), Color.Lime, Color.Transparent)  '2短流水线线吸载具真空负压信号
-        Me.lbl_Vac3.BackColor = IIf(EMI(1, 10), Color.Lime, Color.Transparent)  '3短流水线线吸载具真空负压信号
+        Me.lbl_Blocked0.BZ_Color = IIf(EXI(1, 0), Color.Lime, Color.Transparent)   'L0阻挡气缸磁簧
+        Me.lbl_NoBlock0.BZ_Color = IIf(EXI(1, 1), Color.Lime, Color.Transparent)   'L0阻挡气缸磁簧
+        Me.lbl_Blocked1.BZ_Color = IIf(EXI(1, 2), Color.Lime, Color.Transparent)   'L1阻挡气缸磁簧
+        Me.lbl_NoBlock1.BZ_Color = IIf(EXI(1, 3), Color.Lime, Color.Transparent)   'L1阻挡气缸磁簧
+        Me.lbl_Blocked2.BZ_Color = IIf(EXI(1, 4), Color.Lime, Color.Transparent)   'L2阻挡气缸磁簧
+        Me.lbl_NoBlock2.BZ_Color = IIf(EXI(1, 5), Color.Lime, Color.Transparent)   'L2阻挡气缸磁簧
+        Me.lbl_Blocked3.BZ_Color = IIf(EXI(1, 6), Color.Lime, Color.Transparent)   'L3阻挡气缸磁簧
+        Me.lbl_NoBlock3.BZ_Color = IIf(EXI(1, 7), Color.Lime, Color.Transparent)   'L3阻挡气缸磁簧
+        Me.lbl_Rised1.BZ_Color = IIf(EXI(1, 8), Color.Lime, Color.Transparent)   'L1顶升气缸磁簧
+        Me.lbl_Down1.BZ_Color = IIf(EXI(1, 9), Color.Lime, Color.Transparent)   'L1顶升气缸磁簧
+        Me.lbl_Rised2.BZ_Color = IIf(EXI(1, 10), Color.Lime, Color.Transparent)   'L2顶升气缸磁簧
+        Me.lbl_Down2.BZ_Color = IIf(EXI(1, 11), Color.Lime, Color.Transparent)   'L2顶升气缸磁簧
+        Me.lbl_Rised3.BZ_Color = IIf(EXI(1, 12), Color.Lime, Color.Transparent)   'L3顶升气缸磁簧
+        Me.lbl_Down3.BZ_Color = IIf(EXI(1, 13), Color.Lime, Color.Transparent)   'L3顶升气缸磁簧
+        Me.lbl_Vac1.BZ_Color = IIf(EMI(1, 8), Color.Lime, Color.Transparent)  '1短流水线线吸载具真空负压信号
+        Me.lbl_Vac2.BZ_Color = IIf(EMI(1, 9), Color.Lime, Color.Transparent)  '2短流水线线吸载具真空负压信号
+        Me.lbl_Vac3.BZ_Color = IIf(EMI(1, 10), Color.Lime, Color.Transparent)  '3短流水线线吸载具真空负压信号
     End Sub
 
     ''' <summary>
@@ -1169,11 +1170,15 @@
                 '龙门使能
                 If ServoOn(2, sender.tag - 16) Then  '判断当前轴伺服ON是否打开
                     rtn = GT_ClrSts(2, sender.tag - 16, 1)  '清除当前轴报警标志
-                    rtn = GT_AxisOff(2, sender.tag - 8) '当前轴伺服OFF
+                    rtn = GT_ClrSts(2, sender.tag + 1 - 16, 1)  '清除当前轴报警标志
+                    rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
+                    rtn = GT_AxisOff(2, sender.tag + 1 - 16) '当前轴伺服OFF
                     Call Write_Log(AxisPar.axisName(2, sender.tag - 16) & "轴使能关闭", Path_Log)
                 Else
                     rtn = GT_ClrSts(2, sender.tag - 16, 1)  '清除当前轴报警标志
+                    rtn = GT_ClrSts(2, sender.tag + 1 - 16, 1)  '清除当前轴报警标志
                     rtn = GT_AxisOn(2, sender.tag - 16) '当前轴伺服ON
+                    rtn = GT_AxisOn(2, sender.tag + 1 - 16) '当前轴伺服ON
                     rtn = GT_GetEncPos(2, sender.tag - 16, temp, 1, 0) '读取0号卡各轴当前实际位置
                     rtn = GT_SetPrfPos(2, sender.tag - 16, temp)    '伺服ON关闭则将实际位置同步到规划位置
                     rtn = GT_SynchAxisPos(2, 2 ^ (sender.tag - 17))              '将当前轴进行位置同步
@@ -1193,7 +1198,7 @@
         btn_Home5.Click, btn_Home6.Click, btn_Home7.Click, btn_Home8.Click, _
         btn_Home9.Click, btn_Home10.Click, btn_Home11.Click, btn_Home12.Click, _
         btn_Home13.Click, btn_Home14.Click, btn_Home15.Click, btn_Home16.Click, _
-        btn_Home17.Click, btn_Home18.Click, btn_Home19.Click
+        btn_Home17.Click, btn_Home19.Click, btn_Home18.Click
 
         If IsSysEmcStop Then    '判断紧急停止是否按下
             MsgBox("紧急停止中，请先解除急停！", vbOKOnly, "警告提示")
@@ -1202,6 +1207,11 @@
         Select Case sender.tag
             Case 1, 2, 3, 4, 5, 6, 7, 8
                 Dim tmpAxis As Integer = sender.tag
+
+                If ServoErr(0, sender.tag) Then
+
+                End If
+
                 If ServoOn(0, sender.tag) = False Then   '判断当前轴伺服ON是否已打开
                     MsgBox("请先打开伺服ON！", vbOKOnly, "警告提示")
                     Exit Sub
@@ -1211,18 +1221,18 @@
                     Exit Sub
                 End If
 
-                If tmpAxis = 3 Then
-                    If AxisHome(0, 1).Result = False Or AxisHome(0, 2).Result = False Then
-                        MsgBox("请先将X轴、Y轴回零OK！", vbOKOnly, "警告提示")
-                        Exit Sub
-                    End If
-                End If
-                If tmpAxis = 6 Then
-                    If AxisHome(0, 4).Result = False Or AxisHome(0, 5).Result = False Then
-                        MsgBox("请先将X轴、Y轴回零OK！", vbOKOnly, "警告提示")
-                        Exit Sub
-                    End If
-                End If
+                'If tmpAxis = 3 Then
+                '    If AxisHome(0, 1).Result = False Or AxisHome(0, 2).Result = False Then
+                '        MsgBox("请先将X轴、Y轴回零OK！", vbOKOnly, "警告提示")
+                '        Exit Sub
+                '    End If
+                'End If
+                'If tmpAxis = 6 Then
+                '    If AxisHome(0, 4).Result = False Or AxisHome(0, 5).Result = False Then
+                '        MsgBox("请先将X轴、Y轴回零OK！", vbOKOnly, "警告提示")
+                '        Exit Sub
+                '    End If
+                'End If
 
                 If MsgBox(sender.tag & "准备回点复归，确认不会撞机？", vbOKCancel) <> vbOK Then '判断是否确认退出主窗体
                     Exit Sub
@@ -1232,7 +1242,7 @@
                 If AxisHome(0, sender.tag).State = False Then '判断当前轴是否在回原点中
                     AxisHome(0, sender.tag).Enable = True '当前轴回原点使能
                 End If
-            Case 9, 10, 11, 12, 13, 14, 15
+            Case 9, 10, 11, 12, 13, 14, 15, 16
                 Dim tmpAxis As Integer = sender.tag - 8
 
                 If ServoOn(1, sender.tag - 8) = False Then   '判断当前轴伺服ON是否已打开
@@ -1243,19 +1253,35 @@
                     MsgBox("正在运动中，请等待！", vbOKOnly, "警告提示")
                     Exit Sub
                 End If
+                Timer_GoHome.Enabled = True
+                If AxisHome(1, sender.tag - 8).State = False Then '判断当前轴是否在回原点中
+                    AxisHome(1, sender.tag - 8).Enable = True '当前轴回原点使能
+                End If
 
-                If tmpAxis = 4 And EXI(1, 7) = False And MACTYPE <> "PAM-B" Then
-                    List_DebugAddMessage("请检查3工位UV灯升降气缸是否在缩回位置！")
+            Case 17, 19
+                Dim tmpAxis As Integer = sender.tag - 16
+
+                If ServoOn(2, sender.tag - 16) = False Then   '判断当前轴伺服ON是否已打开
+                    MsgBox("请先打开伺服ON！", vbOKOnly, "警告提示")
                     Exit Sub
                 End If
+                If isAxisMoving(2, sender.tag - 16) Then  '判断当前轴是否正在运动中
+                    MsgBox("正在运动中，请等待！", vbOKOnly, "警告提示")
+                    Exit Sub
+                End If
+
+                'If tmpAxis = 4 And EXI(1, 7) = False And MACTYPE <> "PAM-B" Then
+                '    List_DebugAddMessage("请检查3工位UV灯升降气缸是否在缩回位置！")
+                '    Exit Sub
+                'End If
 
                 If MsgBox(sender.tag & "准备回点复归，确认不会撞机？", vbOKCancel) <> vbOK Then '判断是否确认退出主窗体
                     Exit Sub
                 End If
 
                 Timer_GoHome.Enabled = True
-                If AxisHome(1, sender.tag - 8).State = False Then '判断当前轴是否在回原点中
-                    AxisHome(1, sender.tag - 8).Enable = True '当前轴回原点使能
+                If AxisHome(2, sender.tag - 16).State = False Then '判断当前轴是否在回原点中
+                    AxisHome(2, sender.tag - 16).Enable = True '当前轴回原点使能
                 End If
         End Select
     End Sub
@@ -1276,12 +1302,16 @@
                     isRotateAxis = False
                 End If
                 If AxisHome(card, axis).Enable Then
-                    Call Motor_Home(card, axis, isRotateAxis)
+                    If (card = 2 And axis = 1) Or (card = 2 And axis = 3) Then
+                        Call Motor_Homelongmen(card, axis, isRotateAxis)
+                    Else
+                        Call Motor_Home(card, axis, isRotateAxis)
+                    End If
                     If AxisHome(card, axis).State = False Then '判断当前轴回原点是否完成
                         If AxisHome(card, axis).Result Then '判断当前轴回原点是否成功
-                            MsgBox(AxisPar.acc(card, axis) & "轴回原点成功！")
+                            MsgBox(AxisPar.axisName(card, axis) & "轴回原点成功！")
                         Else
-                            MsgBox(AxisPar.acc(card, axis) & "轴回原点失败！")
+                            MsgBox(AxisPar.axisName(card, axis) & "轴回原点失败！")
                         End If
                     End If
                 End If
@@ -2695,7 +2725,7 @@
         '写入矩阵点位文件
         WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
     End Sub
-     
+
     ''' <summary>
     ''' 计算复检CCD拍照位置的矩阵点位
     ''' </summary>
@@ -2740,8 +2770,108 @@
         '写入矩阵点位文件
         WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
     End Sub
-     
+
 #End Region
-  
-   
+
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        GT_ClrSts(2, 19 + 1 - 16, 1)  '清除当前轴报警标志
+        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
+        GT_AxisOff(2, 19 + 1 - 16) '当前轴伺服OFF
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        GT_ClrSts(2, 17 + 1 - 16, 1)  '清除当前轴报警标志
+        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
+        GT_AxisOff(2, 17 + 1 - 16) '当前轴伺服OFF
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If HomeBit(2, 1) = False Then
+            MessageBox.Show("请回原点")
+        End If
+
+        If MessageBox.Show("是否开始重复测试", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        Dim step0 As Integer = 10
+        Dim starttime As Integer
+
+        Par_Pos.St_Paste(14).Y = 240
+
+        While True
+            Select Case step0
+                Case 10
+                    If AbsMotion(2, PasteY1, 20, 0) Then
+                        step0 = 20
+                    End If
+                Case 20
+                    If isAxisMoving(2, PasteY1) = False Then
+                        starttime = GetTickCount
+                        step0 = 22
+                    End If
+
+                Case 22
+                    If GetTickCount - starttime > 1000 Then
+                        step0 = 30
+                    End If
+
+                Case 30
+                    If AbsMotion(2, PasteY1, 20, 200) Then
+                        step0 = 40
+                    End If
+                Case 40
+                    If isAxisMoving(2, PasteY1) = False Then
+                        starttime = GetTickCount
+                        step0 = 50
+                    End If
+
+                Case 50
+                    If GetTickCount - starttime > 1000 Then
+                        step0 = 10
+                    End If
+            End Select
+            Application.DoEvents()
+            If IsSysEmcStop = True Then
+                Exit Sub
+            End If
+        End While
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        If HomeBit(2, 1) = False Then
+            MessageBox.Show("请回原点")
+        End If
+
+        If MessageBox.Show("是否开始重复测试", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        Dim step0 As Integer = 10
+
+        Par_Pos.St_Paste(14).Y = 220
+
+        Dim currentProcess As New sFlag4
+        currentProcess.Init()
+        currentProcess.StepNum = 10
+
+        While True
+            CorrectionsProcess(currentProcess, 0, 200, 20)
+
+            If currentProcess.StepNum = 0 And currentProcess.State = False And currentProcess.Result = True Then
+                Exit Sub
+                MessageBox.Show("yunxingwanc")
+            End If
+        End While
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Label240.Text = CurrEncPos(2, PasteY1)
+        Label241.Text = CurrEncPos(2, PasteY2)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        MessageBox.Show(CalculateOffset(CType(Val(TextBox2.Text), Double)))
+    End Sub
 End Class

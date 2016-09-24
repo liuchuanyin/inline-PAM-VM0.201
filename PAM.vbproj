@@ -193,6 +193,7 @@
     </Compile>
     <Compile Include="Module\FuntctionSub.vb" />
     <Compile Include="Module\gts.vb" />
+    <Compile Include="Module\Module1.vb" />
     <Compile Include="Module\Mod_LHMC.vb" />
     <Compile Include="Module\YieldStatistics.vb" />
     <Compile Include="运动模块\L0Run.vb" />

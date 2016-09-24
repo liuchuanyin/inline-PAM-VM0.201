@@ -199,12 +199,12 @@ Module Motion
 
             End If
 
-            If Load_GantryMode() <> 0 Then
-                Frm_DialogAddMessage("龙门模式配置失败！")
-                Exit Sub
-            Else
-                ListBoxAddMessage("龙门模式配置成功！")
-            End If
+            'If Load_GantryMode() <> 0 Then
+            '    Frm_DialogAddMessage("龙门模式配置失败！")
+            '    Exit Sub
+            'Else
+            '    ListBoxAddMessage("龙门模式配置成功！")
+            'End If
 
             '//如下使能  位置清零
             For n = 0 To GTS_CardNum - 1
@@ -302,7 +302,7 @@ Module Motion
         'Glue Z
         HomeSearchDist(0, 3) = -1000
         HomeOffsetDist(0, 3) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 3) = -25      '到极限走过原点的距离
+        LimToHomeDist(0, 3) = -30      '到极限走过原点的距离
         'Paste X
         HomeSearchDist(0, 4) = -1000
         HomeOffsetDist(0, 4) = -10     '第2次原点搜索偏移距离
@@ -310,11 +310,11 @@ Module Motion
         'Paste Z
         HomeSearchDist(0, 5) = -1000
         HomeOffsetDist(0, 5) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 5) = -40      '到极限走过原点的距离
+        LimToHomeDist(0, 5) = -30      '到极限走过原点的距离
         'Paste R
-        HomeSearchDist(0, 6) = 360
-        HomeOffsetDist(0, 6) = 2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 6) = 180     '到极限走过原点的距离
+        HomeSearchDist(0, 6) = -360
+        HomeOffsetDist(0, 6) = -20     '第2次原点搜索偏移距离
+        LimToHomeDist(0, 6) = -100    '到极限走过原点的距离
         'PreTaker X
         HomeSearchDist(0, 7) = -1000
         HomeOffsetDist(0, 7) = -2     '第2次原点搜索偏移距离
@@ -322,12 +322,12 @@ Module Motion
         'PreTaker Z
         HomeSearchDist(0, 8) = -1000
         HomeOffsetDist(0, 8) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 8) = -25      '到极限走过原点的距离
+        LimToHomeDist(0, 8) = -30      '到极限走过原点的距离
 
         'PreTaker R
-        HomeSearchDist(1, 1) = 360
-        HomeOffsetDist(1, 1) = 2     '第2次原点搜索偏移距离
-        LimToHomeDist(1, 1) = 180      '到极限走过原点的距离
+        HomeSearchDist(1, 1) = -360
+        HomeOffsetDist(1, 1) = -20     '第2次原点搜索偏移距离
+        LimToHomeDist(1, 1) = -100      '到极限走过原点的距离
 
         'Cure X
         HomeSearchDist(1, 2) = -1000
@@ -341,7 +341,7 @@ Module Motion
 
         'Fine Y
         HomeSearchDist(1, 4) = -1000
-        HomeOffsetDist(1, 4) = -2     '第2次原点搜索偏移距离
+        HomeOffsetDist(1, 4) = -10     '第2次原点搜索偏移距离
         LimToHomeDist(1, 4) = -40     '到极限走过原点的距离
 
         'Reheck X
@@ -478,8 +478,8 @@ Module Motion
                         rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志
                         rtn = GT_SetCaptureMode(Card, Axis, CAPTURE_HOME) '启动当前轴的原点捕获
                         If isRotateAxis Then
-                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)) / 10   '计算当前轴目标速度脉冲频率（原点搜索速度）
-                            Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))  '计算当前轴目标位置脉冲数量（即原点搜索距离）
+                            Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)     '计算当前轴目标速度脉冲频率（原点搜索速度）
+                            Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360) '计算当前轴目标位置脉冲数量（即原点搜索距离）
                         Else
                             Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)) / 10   '计算当前轴目标速度脉冲频率（原点搜索速度）
                             Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))  '计算当前轴目标位置脉冲数量（即原点搜索距离）
@@ -564,14 +564,14 @@ Module Motion
                         rtn = GT_SetPrfPos(Card, Axis, 0) '将当前轴规划器位置修改为零点
                         rtn = GT_SetEncPos(Card, Axis, 0) '将当前轴编码器位置修改为零点
                         rtn = GT_SynchAxisPos(Card, 2 ^ (Axis - 1))  '将当前轴进行位置同步
-                        Delay(50)
+                        Delay(100)
                         HomeStep(Card, Axis) = 15
                     End If
 
                 Case 15
                     rtn = GT_GetPrfPos(Card, Axis, CurrentPos, 1, 0) '读取0号卡当前轴规划位置
                     rtn = GT_GetEncPos(Card, Axis, CurrentPosEnc, 1, 0) '读取0号卡当前轴实际位置
-                    If CurrentPos = 0 And CurrentPosEnc = 0 Then
+                    If Math.Abs(CurrentPos) < 10 And Math.Abs(CurrentPosEnc) < 10 Then
                         AxisHome(Card, Axis).Result = True  '当前轴回原点成功(返回结果为TRUE)
                         HomeStep(Card, Axis) = 18 '跳转到第18步（当前轴原点复归完成，原点复归成功）
                     Else
@@ -973,8 +973,11 @@ Module Motion
         rtn = GT_GetSts(card, axis, Status, 1, 0)
         flag_Moving = True
         If CBool(Status And &H400) = False Then
+
             rtn = GT_GetEncPos(card, axis, TempPos(0), 1, 0)
             rtn = GT_GetPrfPos(card, axis, TempPos(1), 1, 0)
+
+
             If Abs(TempPos(0) - TempPos(1)) < i Then
                 flag_Moving = False
             Else
@@ -1066,16 +1069,18 @@ Module Motion
                     Case 1, 2, 3, 4, 5, 7, 8
                         Vel = CDbl(Tempvel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
                         Pos = CurrentPos + CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis)) * Direction     '(*计算目标位置脉冲数量*)
-                    Case 7
+                    Case 6
                         Vel = CDbl(Tempvel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
                         Pos = CurrentPos + CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360) * Direction        '(*计算目标位置脉冲数量*)
                 End Select
             Case 1
                 Select Case Axis
                     Case 2, 3, 4, 5, 6, 7, 8
+
                         Vel = CDbl(Tempvel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
                         Pos = CurrentPos + CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis)) * Direction     '(*计算目标位置脉冲数量*)
-                    Case 4
+                  
+                    Case Else
                         Vel = CDbl(Tempvel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
                         Pos = CurrentPos + CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360) * Direction        '(*计算目标位置脉冲数量*)
                 End Select
@@ -1497,5 +1502,242 @@ Module Motion
         Return True
     End Function
 
+
+    ''' <summary>
+    ''' 轴回原点函数
+    ''' </summary>
+    ''' <param name="Card">卡号：从0开始</param>
+    ''' <param name="Axis">轴号：从1开始</param>
+    ''' <remarks></remarks>
+    Public Sub Motor_Homelongmen(ByVal Card As Integer, ByVal Axis As Integer, Optional isRotateAxis As Boolean = False)
+        Dim CurrentPos As Double
+        Dim CurrentPosEnc As Double
+        Dim Status As Long
+        Dim TrapPrm As TTrapPrm
+        Dim Tpos, Tvel As Double
+        Dim rtn As Short
+
+        If AxisHome(Card, Axis).Enable Then
+            Select Case HomeStep(Card, Axis)
+                Case 0
+                    AxisHome(Card, Axis).State = True
+
+                    rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志
+                    rtn = GT_SetPrfPos(Card, Axis, 0) '将当前轴规划器位置修改为零点
+                    rtn = GT_SetEncPos(Card, Axis, 0) '将当前轴编码器位置修改为零点
+                    rtn = GT_SynchAxisPos(Card, 2 ^ (Axis - 1))  '将当前轴进行位置同步
+
+                    rtn = GT_PrfTrap(Card, Axis) '设置当前轴的运动模式为点位模式
+                    rtn = GT_GetTrapPrm(Card, Axis, TrapPrm) '获取当前轴点位模式运动参数
+                    TrapPrm.acc = AxisPar.acc(Card, Axis)       '载入当前轴的加速度
+                    TrapPrm.dec = AxisPar.dec(Card, Axis)      '载入当前轴的减速度
+                    rtn = GT_SetTrapPrm(Card, Axis, TrapPrm) '设置当前轴点位模式运动参数
+                    rtn = GT_SetCaptureMode(Card, Axis, CAPTURE_HOME) '启动当前轴的原点捕获
+                    If isRotateAxis Then
+                        Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)     '计算当前轴目标速度脉冲频率（原点搜索速度）
+                        Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)  '计算当前轴目标位置脉冲数量（即原点搜索距离）
+                    Else
+                        Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)     '计算当前轴目标速度脉冲频率（原点搜索速度）
+                        Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))  '计算当前轴目标位置脉冲数量（即原点搜索距离）
+                    End If
+                    rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（即原点搜索速度）
+                    rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（即原点搜索距离）
+                    rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动
+                    HomeStep(Card, Axis) = 1
+
+                Case 1
+                    rtn = GT_GetCaptureStatus(Card, Axis, HomeCapture(Card, Axis), HomeTempPos(Card, Axis), 1, 0) '获取当前轴原点捕获的状态及捕获的当前位置
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If HomeCapture(Card, Axis) Then   '判断当前轴是否原点捕获触发
+                        HomeCapture(Card, Axis) = 0   '当前轴原点捕获触发标志清零
+                        HomeStep(Card, Axis) = 2
+                    ElseIf CBool(Status And &H400) = False Then '判断当前轴是否运动停止（原点搜索距离太小或触发极限）
+                        HomeStep(Card, Axis) = 16 '跳转到第16步（移过一段极限到原点的距离再重新搜索）
+                    End If
+
+                Case 2
+                    rtn = GT_Stop(Card, 2 ^ (Axis - 1), 2 ^ (Axis - 1))  '捕获到原点则当前轴紧急停止
+                    HomeStep(Card, Axis) = 3
+
+                Case 3
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止
+                        HomeStep(Card, Axis) = 4
+                    End If
+
+                Case 4
+                    rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志
+                    rtn = GT_GetPrfPos(Card, Axis, CurrentPos, 1, 0) '获取当前轴当前位置
+                    If isRotateAxis Then
+                        Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)     '计算当前轴目标速度脉冲频率（第二次搜索原点的偏移速度）
+                        Tpos = CurrentPos - (CLng(HomeOffsetDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)) '计算当前轴目标位置脉冲数量（第二次搜索原点的偏移距离）
+                    Else
+                        Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)     '计算当前轴目标速度脉冲频率（第二次搜索原点的偏移速度）
+                        Tpos = CurrentPos - (CLng(HomeOffsetDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))) '计算当前轴目标位置脉冲数量（第二次搜索原点的偏移距离）
+                    End If
+                    rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（即第二次搜索原点的偏移速度）
+                    rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（即第二次搜索原点的偏移距离）
+                    rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动（运动中进行原点位置修正）
+                    HomeStep(Card, Axis) = 5
+
+                Case 5
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止
+                        HomeTime(Card, Axis) = GetTickCount
+                        HomeStep(Card, Axis) = 6
+                    End If
+
+                    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''第二次搜索原点
+                Case 6
+                    If GetTickCount - HomeTime(Card, Axis) > 50 Then
+                        rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志
+                        rtn = GT_SetCaptureMode(Card, Axis, CAPTURE_HOME) '启动当前轴的原点捕获
+                        If isRotateAxis Then
+                            Tvel = CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)     '计算当前轴目标速度脉冲频率（原点搜索速度）
+                            Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360) '计算当前轴目标位置脉冲数量（即原点搜索距离）
+                        Else
+                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)) / 10   '计算当前轴目标速度脉冲频率（原点搜索速度）
+                            Tpos = CLng(HomeSearchDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))  '计算当前轴目标位置脉冲数量（即原点搜索距离）
+                        End If
+                        rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（即原点搜索速度）
+                        rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（即原点搜索距离）
+                        rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动
+                        HomeStep(Card, Axis) = 7
+                    End If
+
+                Case 7
+                    rtn = GT_GetCaptureStatus(Card, Axis, HomeCapture(Card, Axis), HomeTempPos(Card, Axis), 1, 0) '获取当前轴原点捕获的状态及捕获的当前位置
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If HomeCapture(Card, Axis) Then   '判断当前轴是否原点捕获触发
+                        HomeCapture(Card, Axis) = 0   '当前轴原点捕获触发标志清零
+                        HomeStep(Card, Axis) = 8
+                    ElseIf CBool(Status And &H400) = False Then '判断当前轴是否运动停止（原点搜索距离太小或触发极限）
+                        AxisHome(Card, Axis).Result = False  '当前轴回原点失败(返回结果为FALSE)
+                        HomeStep(Card, Axis) = 18 '跳转到第16步（当前轴回原点完成，回原点失败）
+                    End If
+
+                Case 8
+                    rtn = GT_Stop(Card, 2 ^ (Axis - 1), 0)  '捕获到原点则当前轴平滑停止
+                    HomeStep(Card, Axis) = 9
+
+                Case 9
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止
+                        HomeTime(Card, Axis) = GetTickCount
+                        HomeStep(Card, Axis) = 10
+                    End If
+
+                    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''对第二次搜索到的原点信号进行修正（高速硬件捕获锁存位置）
+                Case 10
+                    If GetTickCount - HomeTime(Card, Axis) > 50 Then
+                        rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志
+                        If isRotateAxis Then
+                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) / 360) / 2   '计算当前轴目标速度脉冲频率（即原点修正速度）
+                        Else
+                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000)) / 2   '计算当前轴目标速度脉冲频率（即原点修正速度）
+                        End If
+                        Tpos = HomeTempPos(Card, Axis)    '计算当前轴目标位置脉冲数量，即原点修正距离（高速硬件捕获到的原点位置）
+                        rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（即原点修正速度）
+                        rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（即原点修正距离）
+                        rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动（运动中进行原点位置修正）
+                        HomeStep(Card, Axis) = 11
+                    End If
+
+                Case 11
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止（原点修正完成）
+                        HomeTime(Card, Axis) = GetTickCount
+                        HomeStep(Card, Axis) = 12
+                    End If
+
+                    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''移动固定的原点偏移量
+                Case 12
+                    If GetTickCount - HomeTime(Card, Axis) > 50 Then
+                        If isRotateAxis Then
+                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) / 360)  '计算目标速度脉冲频率（原点偏移速度）
+                            Tpos = HomeTempPos(Card, Axis) + CLng(AxisPar.OrgOffset(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)  '计算目标位置脉冲数量（即原点偏移距离）
+                        Else
+                            Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000))  '计算目标速度脉冲频率（原点偏移速度）
+                            Tpos = HomeTempPos(Card, Axis) + CLng(AxisPar.OrgOffset(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))  '计算目标位置脉冲数量（即原点偏移距离）
+                        End If
+
+                        rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（即原点偏移速度）
+                        rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（即原点偏移距离）
+                        rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动
+                        HomeStep(Card, Axis) = 13
+                    End If
+
+                Case 13
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止（原点偏移完成）
+                        HomeTime(Card, Axis) = GetTickCount
+                        HomeStep(Card, Axis) = 14
+                    End If
+
+                Case 14
+                    If GetTickCount - HomeTime(Card, Axis) > 500 Then
+                        rtn = GT_SetPrfPos(Card, Axis, 0) '将当前轴规划器位置修改为零点
+                        rtn = GT_SetEncPos(Card, Axis, 0) '将当前轴编码器位置修改为零点
+                        rtn = GT_SynchAxisPos(Card, 2 ^ (Axis - 1))  '将当前轴进行位置同步
+
+                        If (Card = 2 And Axis = 1) Or (Card = 2 And Axis = 3) Then
+                            rtn = GT_SetPrfPos(Card, Axis + 1, 0) '将当前轴规划器位置修改为零点
+                            rtn = GT_SetEncPos(Card, Axis + 1, 0) '将当前轴编码器位置修改为零点
+                            rtn = GT_SynchAxisPos(Card, 2 ^ (Axis - 1 + 1))  '将当前轴进行位置同步 
+                        End If
+
+                        Delay(100)
+                        HomeStep(Card, Axis) = 15
+                    End If
+
+                Case 15
+                    rtn = GT_GetPrfPos(Card, Axis, CurrentPos, 1, 0) '读取0号卡当前轴规划位置
+                    rtn = GT_GetEncPos(Card, Axis, CurrentPosEnc, 1, 0) '读取0号卡当前轴实际位置
+                    If Math.Abs(CurrentPos) < 10 And Math.Abs(CurrentPosEnc) < 10 Then
+                        AxisHome(Card, Axis).Result = True  '当前轴回原点成功(返回结果为TRUE)
+                        HomeStep(Card, Axis) = 18 '跳转到第18步（当前轴原点复归完成，原点复归成功）
+                    Else
+                        HomeTime(Card, Axis) = GetTickCount
+                        HomeStep(Card, Axis) = 14 '跳转到14,重新进行位置清0和同步
+                    End If
+
+                Case 16
+                    rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志（极限触发停止）
+                    rtn = GT_GetPrfPos(Card, Axis, CurrentPos, 1, 0) '获取当前轴当前位置
+                    If isRotateAxis Then
+                        Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) / 360)  '计算目标速度脉冲频率（极限过原点走过的速度）
+                        Tpos = CurrentPos - CLng(LimToHomeDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)   '计算目标位置脉冲数量（极限过原点走过的距离）
+                    Else
+                        Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000))  '计算目标速度脉冲频率（极限过原点走过的速度）
+                        Tpos = CurrentPos - CLng(LimToHomeDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))   '计算目标位置脉冲数量（极限过原点走过的距离）
+                    End If
+                    rtn = GT_SetVel(Card, Axis, Tvel) '设置当前轴的目标速度（极限过原点走过的速度）
+                    rtn = GT_SetPos(Card, Axis, Tpos) '设置当前轴的目标位置（极限过原点走过的距离）
+                    rtn = GT_Update(Card, 2 ^ (Axis - 1)) '启动当前轴点位运动
+                    HomeStep(Card, Axis) = 17
+
+                Case 17
+                    rtn = GT_GetSts(Card, Axis, Status, 1, 0) '获取当前轴的状态
+                    If CBool(Status And &H400) = False Then '判断当前轴是否运动停止（极限过原点走过的距离完成）                                                                          '判断当前轴是否运动停止
+                        Delay(50) '极限过原点走过的距离完成延时50ms等待马达停稳
+                        If HomeCounter(Card, Axis) = 0 Then   '判断当前轴回原点计数是否等于零
+                            HomeCounter(Card, Axis) = HomeCounter(Card, Axis) + 1   '当前轴回原点计数加1
+                            HomeStep(Card, Axis) = 6 '回原点计数等于零则回到第5步直接进行第二次回原点搜索
+                        Else
+                            AxisHome(Card, Axis).Result = False  '当前轴回原点失败(返回结果为FALSE)
+                            HomeStep(Card, Axis) = 18   '跳转到下一步（当前轴回原点完成，回原点失败）
+                        End If
+                    End If
+                Case 18
+                    AxisHome(Card, Axis).Enable = False       '当前轴回原点循环完成退出
+                    AxisHome(Card, Axis).State = False        '回原点完成
+                    HomeStep(Card, Axis) = 0
+                    HomeCounter(Card, Axis) = 0
+                    HomeCapture(Card, Axis) = 0
+                    HomeTempPos(Card, Axis) = 0
+                Case Else
+            End Select
+        End If
+    End Sub
 
 End Module

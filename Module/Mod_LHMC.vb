@@ -20,9 +20,9 @@ Module Mod_LHMC
             Try
                 LineMotorController = New SendDate(COM)
                 LineMotorController.Open()
-                Delay(50)
+                Delay(500)
                 LineMotorController.Get_Status()
-                Delay(50)
+                Delay(500)
                 Enable_LineMotor()
                 Flag_isLineMotorControllerOpened = True
                 Return True
@@ -38,7 +38,7 @@ Module Mod_LHMC
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Enable_LineMotor()
-        LineMotorController.Motor_Enable(Aixs.all)
+        LineMotorController.Motor_able(Aixs.all)
     End Sub
 
     ''' <summary>
@@ -46,7 +46,7 @@ Module Mod_LHMC
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Disable_LineMotor()
-        LineMotorController.Motor_Disable(Aixs.all)
+        LineMotorController.Motor_able(Aixs.none)
     End Sub
 
     ''' <summary>

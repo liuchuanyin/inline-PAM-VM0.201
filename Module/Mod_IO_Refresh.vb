@@ -144,7 +144,7 @@
                             If AxisPar.pulse(n, i) > 0 Then
                                 Select Case i
                                     Case 1, 2, 3, 4, 5, 6, 7, 8
-                                        If n = 0 And i = 5 Then
+                                        If n = 0 And i = 6 Then
                                             CurrPrfPos(n, i) = Format(prfPos(i) * AxisPar.Lead(n, i) * 360 / AxisPar.pulse(n, i) / AxisPar.Gear(n, i), "0.0000")
                                         ElseIf n = 1 And i = 1 Then
                                             CurrPrfPos(n, i) = Format(prfPos(i) * AxisPar.Lead(n, i) * 360 / AxisPar.pulse(n, i) / AxisPar.Gear(n, i), "0.0000")
@@ -161,7 +161,7 @@
                             If AxisPar.pulse(n, i) > 0 Then
                                 Select Case i
                                     Case 1, 2, 3, 4, 5, 6, 7, 8
-                                        If n = 0 And i = 5 Then
+                                        If n = 0 And i = 6 Then
                                             CurrEncPos(n, i) = Format(encPos(i) * AxisPar.Lead(n, i) * 360 / AxisPar.pulse(n, i) / AxisPar.Gear(n, i), "0.0000")
                                         ElseIf n = 1 And i = 1 Then
                                             CurrEncPos(n, i) = Format(encPos(i) * AxisPar.Lead(n, i) * 360 / AxisPar.pulse(n, i) / AxisPar.Gear(n, i), "0.0000")
