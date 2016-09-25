@@ -156,13 +156,21 @@
 
             Case 150
                 '//如下使能
-                For n = 0 To GTS_CardNum - 1
+                For n = 0 To GTS_CardNum - 2
                     For i = 1 To GTS_AxisNum(n)
                         Call GT_ClrSts(n, i, 1)
                         Call GT_SetAxisBand(n, i, 500, 20)
                         Call GT_AxisOn(n, i)
                     Next i
                 Next n
+                Call GT_ClrSts(2, 1, 1)
+                Call GT_SetAxisBand(2, 1, 500, 20)
+                Call GT_AxisOn(2, 1)
+                Call GT_ClrSts(2, 3, 1)
+                Call GT_SetAxisBand(2, 3, 500, 20)
+                Call GT_AxisOn(2, 3)
+                If ServoOn(2, 2) Then Call GT_AxisOff(2, 2)
+                If ServoOn(2, 4) Then Call GT_AxisOff(2, 4)
                 OldTickCount = GetTickCount
                 Step_MachineIni = 170
 
@@ -183,7 +191,7 @@
                 Step_MachineIni = 200
 
             Case 200
-                For n = 0 To GTS_CardNum - 1
+                For n = 0 To GTS_CardNum - 2
                     For i = 1 To GTS_AxisNum(n)
                         If ServoOn(n, i) = False Then
                             Frm_DialogAddMessage("请打开所有伺服使能！")
@@ -192,6 +200,10 @@
                         End If
                     Next
                 Next
+                If ServoOn(2, 1) = False Or ServoOn(2, 3) = False Then
+                    Frm_DialogAddMessage("请打开所有伺服使能！")
+                    Step_MachineIni = 9000
+                End If
                 Step_MachineIni = 300
 
 
@@ -332,7 +344,7 @@
                 End If
 
             Case 900
-                If GetDi(0, 1) = 1 Then
+                If EXI(0, 1) Then
                     '如果光电感应到信号，那么急停组装站Y轴
                     Call GT_Stop(2, 2 ^ (PasteY1 - 1), 1)
                 End If
@@ -490,10 +502,50 @@
                 End If
 
                 If AxisHome(0, PreTakerX).State = False And AxisHome(2, PreTakerY1).State = False Then
+                    Step_MachineIni = 1520
+                End If
+
+            Case 1520
+                If MACTYPE = "PAM-B" Or MACTYPE = "PAM-3" Then
+                    Step_MachineIni = 1530
+                Else
+                    Step_MachineIni = 1560
+                End If
+
+            Case 1530
+                If AxisHome(2, PreTakerY1).Result And AxisHome(2, PreTakerY1).Result Then
+                    SetEXO(2, 10, True)
+                    SetEXO(2, 12, True)
+                    OldTickCount = GetTickCount
+                    Step_MachineIni = 1540
+                End If
+
+            Case 1540
+                If isTimeout(OldTickCount, 1000) Then
+                    SetEXO(2, 10, False)
+                    SetEXO(2, 12, False)
+                    Call GT_ClrSts(2, 2, 1)
+
+                    Call GT_SetAxisBand(2, 2, 500, 20) 
+                    Call GT_AxisOn(2, 2)
+                    Call GT_ClrSts(2, 4, 1)
+                    Call GT_SetAxisBand(2, 4, 500, 20)
+                    Call GT_AxisOn(2, 4)
                     Step_MachineIni = 1600
                 End If
 
+            Case 1560
+                Call GT_ClrSts(2, 2, 1) 
+                Call GT_SetAxisBand(2, 2, 500, 20)
+                FileToDPCM("D:\BZ-Parameter\CorrectList_Past.xml", 2, 1)
+                Call GT_AxisOn(2, 2)
 
+                Call GT_ClrSts(2, 4, 1)
+                Call GT_SetAxisBand(2, 4, 500, 20)
+                FileToDPCM("D:\BZ-Parameter\CorrectList_PreTaker.xml", 2, 3)
+                Call GT_AxisOn(2, 4)
+                Step_MachineIni = 1600
+                 
             Case 1600
                 '点胶工站X,Y，组装工站X,Y，取料工站X,Y回待机位置
                 Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(0).X)
@@ -649,11 +701,9 @@
                 End If
 
             Case 2200
+                Step_MachineIni = 2500
 
-                '需要处理的变量
-
-
-            Case 2300
+            Case 2500
                 Step_MachineIni = 8000
 
                 '初始化成功

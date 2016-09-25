@@ -139,12 +139,16 @@ Module Motion
                         rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_0.cfg")          '下载控制卡0配置参数
                     ElseIf n = 1 Then
                         '复位运动控制卡1
-                        rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_1.cfg")          '下载控制卡1配置参数
+                        If MACTYPE = "PAM-B" Then
+                            rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_2.cfg")          '下载控制卡1配置参数
+                        Else
+                            rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_1.cfg")          '下载控制卡1配置参数
+                        End If 
                     ElseIf n = 2 Then
                         '复位运动控制卡1
                         rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS400.cfg")          '下载控制卡2配置参数
                     End If
-                   
+
                     If rtn <> 0 Then
                         Frm_DialogAddMessage("运动控制板卡" & n & "配置参数失败，请检查！")
                         Exit Sub
@@ -306,7 +310,7 @@ Module Motion
         'Paste X
         HomeSearchDist(0, 4) = -1000
         HomeOffsetDist(0, 4) = -10     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 5) = -40      '到极限走过原点的距离
+        LimToHomeDist(0, 4) = -80      '到极限走过原点的距离
         'Paste Z
         HomeSearchDist(0, 5) = -1000
         HomeOffsetDist(0, 5) = -2     '第2次原点搜索偏移距离
@@ -316,9 +320,9 @@ Module Motion
         HomeOffsetDist(0, 6) = -20     '第2次原点搜索偏移距离
         LimToHomeDist(0, 6) = -100    '到极限走过原点的距离
         'PreTaker X
-        HomeSearchDist(0, 7) = -1000
-        HomeOffsetDist(0, 7) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(0, 7) = -40      '到极限走过原点的距离
+        HomeSearchDist(0, 7) = 1000
+        HomeOffsetDist(0, 7) = 2     '第2次原点搜索偏移距离
+        LimToHomeDist(0, 7) = 40      '到极限走过原点的距离
         'PreTaker Z
         HomeSearchDist(0, 8) = -1000
         HomeOffsetDist(0, 8) = -2     '第2次原点搜索偏移距离
@@ -560,7 +564,7 @@ Module Motion
                     End If
 
                 Case 14
-                    If GetTickCount - HomeTime(Card, Axis) > 50 Then
+                    If GetTickCount - HomeTime(Card, Axis) > 2500 Then
                         rtn = GT_SetPrfPos(Card, Axis, 0) '将当前轴规划器位置修改为零点
                         rtn = GT_SetEncPos(Card, Axis, 0) '将当前轴编码器位置修改为零点
                         rtn = GT_SynchAxisPos(Card, 2 ^ (Axis - 1))  '将当前轴进行位置同步
@@ -581,7 +585,7 @@ Module Motion
 
                 Case 16
                     rtn = GT_ClrSts(Card, Axis, 1) '清除当前轴驱动器报警标志（极限触发停止）
-                    rtn = GT_GetPrfPos(Card, Axis, CurrentPos, 1, 0) '获取当前轴当前位置
+                    rtn = GT_GetEncPos(Card, Axis, CurrentPos, 1, 0) '获取当前轴当前位置
                     If isRotateAxis Then
                         Tvel = (CDbl(AxisPar.HomeVel(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) / 360)  '计算目标速度脉冲频率（极限过原点走过的速度）
                         Tpos = CurrentPos - CLng(LimToHomeDist(Card, Axis) * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)   '计算目标位置脉冲数量（极限过原点走过的距离）
@@ -1163,54 +1167,63 @@ Module Motion
         Dim PasetY_SafeLimet As Double
         Dim TakeY_SafeLimet As Double
 
-        '龙门Y轴会有撞机风险
-        If Card = 2 Then
-            PasetY_SafeLimet = Par_Pos.St_Paste(14).Y
-            TakeY_SafeLimet = Par_Pos.St_PreTaker(9).Y
+        AbsMotion = False
 
-            Select Case Axis
-                Case 1, 2
-                    '判断安全锁
-                    If LockedTake = True Then Return False
+        ''龙门Y轴会有撞机风险
+        'If Card = 2 Then
+        '    PasetY_SafeLimet = Par_Pos.St_Paste(14).Y
+        '    TakeY_SafeLimet = Par_Pos.St_PreTaker(9).Y
 
-                    '先判断运行方向，如果朝+方向运行，则继续向下判断
-                    If Dist - CurrEncPos(2, PasteY1) > 0 Or Dist - CurrEncPos(2, PasteY2) > 0 Then
-                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
-                        If Dist > PasetY_SafeLimet Then
-                            '最后判断对方轴是在安全区域以内并且停止中
-                            If (Not isAxisMoving(2, PreTakerY1)) And (Not isAxisMoving(2, PreTakerY2)) And (CurrEncPos(2, PreTakerY1) <= TakeY_SafeLimet) And (CurrEncPos(2, PreTakerY2) <= TakeY_SafeLimet) Then
-                                LockedPaste = True
-                            Else
-                                Return False
-                            End If
-                        End If
-                    End If
+        '    Select Case Axis
+        '        Case 1, 2
+        '            '判断安全锁
+        '            If LockedTake = True Then Return False
 
-                Case 3, 4
-                    '判断安全锁
-                    If LockedPaste = True Then Return False
+        '            '先判断运行方向，如果朝+方向运行，则继续向下判断
+        '            If Dist - CurrEncPos(2, PasteY1) > 0 Or Dist - CurrEncPos(2, PasteY2) > 0 Then
+        '                '再判断运动的目的地，如果超过安全区域，则往下继续判断
+        '                If Dist > PasetY_SafeLimet Then
+        '                    '最后判断对方轴是在安全区域以内并且停止中
+        '                    If (Not isAxisMoving(2, PreTakerY1)) And (CurrEncPos(2, PreTakerY1) <= TakeY_SafeLimet) And (CurrEncPos(2, PreTakerY2) <= TakeY_SafeLimet) Then
+        '                        LockedPaste = True
+        '                    Else
+        '                        Return False
+        '                    End If
+        '                End If
+        '            End If
 
-                    '先判断运行方向，如果朝+方向运行，则继续向下判断
-                    If Dist - CurrEncPos(2, PreTakerY1) > 0 Or Dist - CurrEncPos(2, PreTakerY2) > 0 Then
-                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
-                        If Dist > TakeY_SafeLimet Then
-                            '最后判断对方轴是在安全区域以内并且停止中
-                            If (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(2, PasteY2)) And (CurrEncPos(2, PasteY1) <= PasetY_SafeLimet) And (CurrEncPos(2, PasteY2) <= PasetY_SafeLimet) Then
-                                LockedTake = True
-                            Else
-                                Return False
-                            End If
-                        End If
-                    End If
+        '        Case 3, 4
+        '            '判断安全锁
+        '            If LockedPaste = True Then Return False
 
-                Case Else
-                    Return False
-            End Select
-        End If
+        '            '先判断运行方向，如果朝+方向运行，则继续向下判断
+        '            If Dist - CurrEncPos(2, PreTakerY1) > 0 Or Dist - CurrEncPos(2, PreTakerY2) > 0 Then
+        '                '再判断运动的目的地，如果超过安全区域，则往下继续判断
+        '                If Dist > TakeY_SafeLimet Then
+        '                    '最后判断对方轴是在安全区域以内并且停止中
+        '                    If (Not isAxisMoving(2, PasteY1)) And (CurrEncPos(2, PasteY1) <= PasetY_SafeLimet) And (CurrEncPos(2, PasteY2) <= PasetY_SafeLimet) Then
+        '                        LockedTake = True
+        '                    Else
+        '                        Return False
+        '                    End If
+        '                End If
+        '            End If
+
+        '        Case Else
+        '            Return False
+        '    End Select
+        'End If
 
         TempVel = Speed
         TempPos = Dist
-        rtn = GT_ClrSts(Card, Axis)               '清除当前轴的错误标志
+
+        If Card = 2 And (Axis = 1 Or Axis = 3) Then
+            rtn = GT_ClrSts(Card, Axis)               '清除当前轴的错误标志
+            rtn = GT_ClrSts(Card, Axis + 1)               '清除当前轴的错误标志
+        Else
+            rtn = GT_ClrSts(Card, Axis)               '清除当前轴的错误标志
+        End If
+         
         rtn = GT_PrfTrap(Card, Axis)              '将当前轴设置为点位运动模式
         rtn = GT_GetTrapPrm(Card, Axis, TrapPrm)  '读取当前轴点位模式运动参数
 
@@ -1245,6 +1258,8 @@ Module Motion
         rtn = GT_SetVel(Card, Axis, Vel)      '设置当前轴的目标速度
         rtn = GT_SetPos(Card, Axis, Pos)      '设置当前轴的目标位置
         rtn = GT_Update(Card, 2 ^ (Axis - 1))   '启动当前轴运动
+
+        'If Card = 2 And Axis = 1 And rtn = 0 Then MessageBox.Show(Pos & "," & Vel & "," & TrapPrm.acc)
 
         AxisTime(Card, Axis) = GetTickCount()
 
@@ -1334,11 +1349,19 @@ Module Motion
                         rtn = GT_AxisOff(n, i) '当前轴伺服OFF
                     Next i
                 Next n
+
                 Frm_DialogAddMessage("紧急停止被触发，请检查!")
                 Call Frm_Main.Machine_Stop()
+                Frm_Engineering.Btn_initialize.Text = "初始化"
+                'Btn_Start.BZ_Color = Color_Unselected
+                'Btn_Pause.BZ_Color = Color_Unselected
+                'Btn_Stop.BZ_Color = Color_Red
+
+                Frm_Engineering.Btn_initialize.Enabled = True
+                Frm_Engineering.Btn_initialize.BZ_Color = Color_Unselected
                 Frm_Main.Timer_MacInit.Enabled = False
                 Frm_Main.Timer_AutoRun.Enabled = False
-                'Flag_MachineInit = False
+                Flag_MachineInit = False
                 Flag_MachineAutoRun = False
                 Frm_Main.SetMachine(0)
             End If
@@ -1740,4 +1763,166 @@ Module Motion
         End If
     End Sub
 
+
+    Private LockedPaste1 As Boolean
+    Private LockedTake1 As Boolean
+    Public Function AbsMotionlongmen(ByVal Card As Integer, ByVal Axis As Integer, ByVal Speed As Double, ByVal Dist As Double) As Boolean
+        Dim TempPos, TempVel As Double
+        Dim Pos, Vel As Double
+        Dim TrapPrm As TTrapPrm
+        Dim rtn As Short
+
+        Dim TempPos1, TempVel1 As Double
+        Dim Pos1, Vel1 As Double
+        Dim TrapPrm1 As TTrapPrm
+        Dim rtn1 As Short
+
+        Dim K As Double
+
+        Dim prfPos(1) As Double
+
+        Dim d(1) As Double
+
+        Dim PasetY_SafeLimet As Double
+        Dim TakeY_SafeLimet As Double
+
+        '龙门Y轴会有撞机风险
+        If Card = 2 Then
+            PasetY_SafeLimet = Par_Pos.St_Paste(14).Y
+            TakeY_SafeLimet = Par_Pos.St_PreTaker(9).Y
+
+            Select Case Axis
+                Case 1, 2
+                    '判断安全锁
+                    If LockedTake1 = True Then Return False
+
+                    '先判断运行方向，如果朝+方向运行，则继续向下判断
+                    If Dist - CurrEncPos(2, PasteY1) > 0 Or Dist - CurrEncPos(2, PasteY2) > 0 Then
+                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
+                        If Dist > PasetY_SafeLimet Then
+                            '最后判断对方轴是在安全区域以内并且停止中
+                            If (Not isAxisMoving(2, PreTakerY1)) And (Not isAxisMoving(2, PreTakerY2)) And (CurrEncPos(2, PreTakerY1) <= TakeY_SafeLimet) And (CurrEncPos(2, PreTakerY2) <= TakeY_SafeLimet) Then
+                                LockedPaste1 = True
+                            Else
+                                Return False
+                            End If
+                        End If
+                    End If
+
+                Case 3, 4
+                    '判断安全锁
+                    If LockedPaste1 = True Then Return False
+
+                    '先判断运行方向，如果朝+方向运行，则继续向下判断
+                    If Dist - CurrEncPos(2, PreTakerY1) > 0 Or Dist - CurrEncPos(2, PreTakerY2) > 0 Then
+                        '再判断运动的目的地，如果超过安全区域，则往下继续判断
+                        If Dist > TakeY_SafeLimet Then
+                            '最后判断对方轴是在安全区域以内并且停止中
+                            If (Not isAxisMoving(2, PasteY1)) And (Not isAxisMoving(2, PasteY2)) And (CurrEncPos(2, PasteY1) <= PasetY_SafeLimet) And (CurrEncPos(2, PasteY2) <= PasetY_SafeLimet) Then
+                                LockedTake1 = True
+                            Else
+                                Return False
+                            End If
+                        End If
+                    End If
+
+                Case Else
+                    Return False
+            End Select
+        End If
+
+        TempVel = Speed
+        TempPos = Dist
+        rtn = GT_ClrSts(Card, Axis)               '清除当前轴的错误标志
+        rtn = GT_PrfTrap(Card, Axis)              '将当前轴设置为点位运动模式
+        rtn = GT_GetTrapPrm(Card, Axis, TrapPrm)  '读取当前轴点位模式运动参数
+
+        TrapPrm.acc = AxisPar.acc(Card, Axis)       '载入当前轴的加速度
+        TrapPrm.dec = AxisPar.dec(Card, Axis)       '载入当前轴的减速度
+
+        rtn = GT_SetTrapPrm(Card, Axis, TrapPrm)    '设置当前轴加速度、减速度、起跳速度、平滑时间
+
+        If Card = 2 And (Axis = 1 Or Axis = 3) Then
+            rtn = GT_GetPrfPos(Card, Axis + 1, prfPos(1))
+            TempPos1 = CalculateOffset(Dist)
+            d(1) = Math.Abs(CDbl(TempPos1 * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis)) - prfPos(1))
+
+            rtn = GT_GetPrfPos(Card, Axis, prfPos(0))
+            d(0) = Math.Abs(CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis)) - prfPos(0))
+
+            If d(1) <> 0 And d(0) <> 0 Then
+                K = d(1) / d(0)
+            Else
+                K = 1
+            End If
+
+
+            rtn1 = GT_ClrSts(Card, Axis + 1)               '清除当前轴的错误标志
+            rtn1 = GT_PrfTrap(Card, Axis + 1)              '将当前轴设置为点位运动模式
+            rtn1 = GT_GetTrapPrm(Card, Axis + 1, TrapPrm1)  '读取当前轴点位模式运动参数
+
+            TrapPrm1.acc = TrapPrm.acc * K     '载入当前轴的加速度
+            TrapPrm1.dec = TrapPrm.dec * K     '载入当前轴的减速度
+
+            rtn1 = GT_SetTrapPrm(Card, Axis + 1, TrapPrm1)    '设置当前轴加速度、减速度、起跳速度、平滑时间
+        End If
+
+
+        Select Case Card
+            Case 0
+                Select Case Axis
+                    Case 1, 2, 3, 4, 5, 7, 8
+                        Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+                        Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+                    Case 6
+                        Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
+                        Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)          '(*计算目标位置脉冲数量*)
+                End Select
+            Case 1
+                Select Case Axis
+                    Case 2, 3, 4, 5, 6, 7, 8
+                        Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+                        Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+                    Case 1
+                        Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000 / 360)   '(*计算目标速度脉冲频率*)
+                        Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 360)          '(*计算目标位置脉冲数量*)
+                End Select
+            Case 2
+                Vel = CDbl(TempVel * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis) / 1000) '(*计算目标速度脉冲频率*)
+                Pos = CDbl(TempPos * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+
+                If Card = 2 And (Axis = 1 Or Axis = 3) Then
+                    Vel1 = Vel * K
+                    Pos1 = CDbl(TempPos1 * AxisPar.pulse(Card, Axis) * AxisPar.Gear(Card, Axis) / AxisPar.Lead(Card, Axis))    '(*计算目标位置脉冲数量*)
+                End If
+
+        End Select
+        rtn = GT_SetVel(Card, Axis, Vel)      '设置当前轴的目标速度
+        rtn = GT_SetPos(Card, Axis, Pos)      '设置当前轴的目标位置
+
+        If Card = 2 And (Axis = 1 Or Axis = 3) Then
+            rtn1 = GT_SetVel(Card, Axis + 1, Vel1)      '设置当前轴的目标速度
+            rtn1 = GT_SetPos(Card, Axis + 1, Pos1)      '设置当前轴的目标位置
+        End If
+
+        If Card = 2 And (Axis = 1 Or Axis = 3) Then
+            rtn = GT_Update(Card, (2 ^ (Axis - 1)) + (2 ^ Axis))   '启动当前轴运动
+        Else
+            rtn = GT_Update(Card, 2 ^ (Axis - 1))   '启动当前轴运动
+        End If 
+
+        AxisTime(Card, Axis) = GetTickCount()
+
+        '解锁
+        If Card = 2 Then
+            Select Case Axis
+                Case 1, 2
+                    LockedPaste1 = False
+                Case 3, 4
+                    LockedTake1 = False
+            End Select
+        End If
+
+        Return True
+    End Function
 End Module

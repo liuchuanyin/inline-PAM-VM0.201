@@ -23,7 +23,7 @@ Partial Class Frm_Engineering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Engineering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -150,6 +150,8 @@ Partial Class Frm_Engineering
         Me.Label332 = New System.Windows.Forms.Label()
         Me.Label333 = New System.Windows.Forms.Label()
         Me.BZ_RoundPanel5 = New BoTech.BZ_RoundPanel()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.lbl_sts_Line = New System.Windows.Forms.Label()
         Me.lbl_sts_PDCA = New System.Windows.Forms.Label()
         Me.lbl_sts_Server = New System.Windows.Forms.Label()
@@ -628,7 +630,6 @@ Partial Class Frm_Engineering
         Me.Label240 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Label236 = New System.Windows.Forms.Label()
         Me.lbl_PressSTD = New System.Windows.Forms.Label()
         Me.Label252 = New System.Windows.Forms.Label()
@@ -691,6 +692,7 @@ Partial Class Frm_Engineering
         Me.Label242 = New System.Windows.Forms.Label()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.btn_S4IO4 = New System.Windows.Forms.Button()
         Me.btn_S4IO8 = New System.Windows.Forms.Button()
         Me.btn_S4IO7 = New System.Windows.Forms.Button()
@@ -941,8 +943,7 @@ Partial Class Frm_Engineering
         Me.txt_Diff0X = New System.Windows.Forms.TextBox()
         Me.Timer_Display = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_GoHome = New System.Windows.Forms.Timer(Me.components)
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.BZ_RoundPanel6.SuspendLayout
@@ -1081,8 +1082,8 @@ Partial Class Frm_Engineering
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 30
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.Size = New System.Drawing.Size(808, 160)
         Me.DataGridView1.TabIndex = 1
@@ -2533,6 +2534,8 @@ Partial Class Frm_Engineering
         Me.BZ_RoundPanel5.BZ_Color = System.Drawing.Color.WhiteSmoke
         Me.BZ_RoundPanel5.BZ_Radius = 11
         Me.BZ_RoundPanel5.BZ_RoundStyle = BoTech.BZ_RoundPanel.RoundStyle.All
+        Me.BZ_RoundPanel5.Controls.Add(Me.Button12)
+        Me.BZ_RoundPanel5.Controls.Add(Me.Button11)
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_Line)
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_PDCA)
         Me.BZ_RoundPanel5.Controls.Add(Me.lbl_sts_Server)
@@ -2559,6 +2562,24 @@ Partial Class Frm_Engineering
         Me.BZ_RoundPanel5.Name = "BZ_RoundPanel5"
         Me.BZ_RoundPanel5.Size = New System.Drawing.Size(328, 280)
         Me.BZ_RoundPanel5.TabIndex = 6
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(6, 204)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(145, 40)
+        Me.Button12.TabIndex = 78
+        Me.Button12.Text = "结束测试"
+        Me.Button12.UseVisualStyleBackColor = true
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(7, 157)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(145, 40)
+        Me.Button11.TabIndex = 77
+        Me.Button11.Text = "直线电机空跑测试"
+        Me.Button11.UseVisualStyleBackColor = true
         '
         'lbl_sts_Line
         '
@@ -6813,7 +6834,7 @@ Partial Class Frm_Engineering
         Me.btn_Out_3_10.Name = "btn_Out_3_10"
         Me.btn_Out_3_10.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_10.TabIndex = 3
-        Me.btn_Out_3_10.Text = "10-"
+        Me.btn_Out_3_10.Text = "10-启动组装站Y2补偿"
         Me.btn_Out_3_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_Out_3_10.UseVisualStyleBackColor = false
         '
@@ -6839,7 +6860,7 @@ Partial Class Frm_Engineering
         Me.btn_Out_3_12.Name = "btn_Out_3_12"
         Me.btn_Out_3_12.Size = New System.Drawing.Size(184, 29)
         Me.btn_Out_3_12.TabIndex = 3
-        Me.btn_Out_3_12.Text = "12-"
+        Me.btn_Out_3_12.Text = "12-启动取料站Y2补偿"
         Me.btn_Out_3_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_Out_3_12.UseVisualStyleBackColor = false
         '
@@ -8712,7 +8733,6 @@ Partial Class Frm_Engineering
         Me.Panel2.Controls.Add(Me.Label240)
         Me.Panel2.Controls.Add(Me.Button8)
         Me.Panel2.Controls.Add(Me.Button7)
-        Me.Panel2.Controls.Add(Me.Button6)
         Me.Panel2.Controls.Add(Me.Label236)
         Me.Panel2.Controls.Add(Me.lbl_PressSTD)
         Me.Panel2.Controls.Add(Me.Label252)
@@ -8762,21 +8782,12 @@ Partial Class Frm_Engineering
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(116, 36)
+        Me.Button7.Location = New System.Drawing.Point(251, 36)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(146, 44)
         Me.Button7.TabIndex = 134
         Me.Button7.Text = "从轴自动补正"
         Me.Button7.UseVisualStyleBackColor = true
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(290, 36)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(107, 44)
-        Me.Button6.TabIndex = 133
-        Me.Button6.Text = "重复定位"
-        Me.Button6.UseVisualStyleBackColor = true
         '
         'Label236
         '
@@ -8911,8 +8922,6 @@ Partial Class Frm_Engineering
         'GroupBox14
         '
         Me.GroupBox14.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox14.Controls.Add(Me.TextBox2)
-        Me.GroupBox14.Controls.Add(Me.Button9)
         Me.GroupBox14.Controls.Add(Me.Button5)
         Me.GroupBox14.Controls.Add(Me.btnTrayPaste)
         Me.GroupBox14.Controls.Add(Me.btn_LoadCell_Ca)
@@ -9463,6 +9472,7 @@ Partial Class Frm_Engineering
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel6.Controls.Add(Me.Button6)
         Me.Panel6.Controls.Add(Me.btn_S4IO4)
         Me.Panel6.Controls.Add(Me.btn_S4IO8)
         Me.Panel6.Controls.Add(Me.btn_S4IO7)
@@ -9475,6 +9485,15 @@ Partial Class Frm_Engineering
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(735, 182)
         Me.Panel6.TabIndex = 271
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(269, 20)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(146, 44)
+        Me.Button6.TabIndex = 135
+        Me.Button6.Text = "从轴自动补正"
+        Me.Button6.UseVisualStyleBackColor = true
         '
         'btn_S4IO4
         '
@@ -9603,11 +9622,11 @@ Partial Class Frm_Engineering
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(348, 295)
+        Me.Button4.Location = New System.Drawing.Point(308, 287)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(107, 50)
         Me.Button4.TabIndex = 113
-        Me.Button4.Text = "Button4"
+        Me.Button4.Text = "关闭从轴"
         Me.Button4.UseVisualStyleBackColor = true
         '
         'btnTrayPreTk
@@ -12527,21 +12546,9 @@ Partial Class Frm_Engineering
         '
         Me.Timer_GoHome.Interval = 10
         '
-        'Button9
+        'Timer1
         '
-        Me.Button9.Location = New System.Drawing.Point(230, 331)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(107, 44)
-        Me.Button9.TabIndex = 115
-        Me.Button9.Text = "计算从轴补偿"
-        Me.Button9.UseVisualStyleBackColor = true
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(111, 344)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 116
+        Me.Timer1.Interval = 20
         '
         'Frm_Engineering
         '
@@ -13573,11 +13580,12 @@ End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label241 As System.Windows.Forms.Label
     Friend WithEvents Label240 As System.Windows.Forms.Label
     Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents Button11 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class

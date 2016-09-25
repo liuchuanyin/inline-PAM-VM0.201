@@ -983,6 +983,9 @@ Com_Err:
             Frm_Engineering.Btn_AutoRun.Enabled = True
         End If
         Timer_AutoRun.Enabled = False
+        Timer_MacInit.Enabled = False
+        Frm_Engineering.Timer1.Enabled = False
+        Frm_Engineering.Timer_GoHome.Enabled = False
         ListBoxAddMessage("设备停止自动运行")
     End Sub
 #End Region
@@ -1000,7 +1003,7 @@ Com_Err:
             Call Machine_Initialize()
             Frm_ProgressBar.Show()
         End If
-
+        Timer_MacInit.Enabled = True
         '初始化完成，关闭进度条，提示初始化完成，初始化按钮颜色选中，并Disabled，关闭定时器
         If Flag_MachineInit Then
             Frm_ProgressBar.Close()
@@ -1031,7 +1034,7 @@ Com_Err:
             Frm_Engineering.Btn_initialize.BZ_Color = Color_Unselected
             Timer_MacInit.Enabled = False
         End If
-        Timer_MacInit.Enabled = True
+
     End Sub
 
     ''' <summary>
@@ -1045,7 +1048,7 @@ Com_Err:
                 Btn_Start.BZ_Color = Color_Unselected
                 Btn_Pause.BZ_Color = Color_Unselected
                 Btn_Stop.BZ_Color = Color_Red
-                'Flag_MachineInit = False
+                Flag_MachineInit = False
                 Flag_MachinePause = False
                 Flag_MachineAutoRun = False
                 Flag_MachineStop = True

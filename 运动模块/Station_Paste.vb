@@ -55,10 +55,10 @@
             Exit Sub
         End If
 
-        If Math.Abs(CurrEncPos(2, PreTakerY1) - Par_Pos.St_PreTaker(0).Y) > 2 Then
-            List_DebugAddMessage("请检查取料模组是否在安全位置！")
-            Exit Sub
-        End If
+        'If Math.Abs(CurrEncPos(2, PreTakerY1) - Par_Pos.St_PreTaker(0).Y) > 2 Then
+        '    List_DebugAddMessage("请检查取料模组是否在安全位置！")
+        '    Exit Sub
+        'End If
 
         Step_Gopos(2) = 0
         Do While True
@@ -71,7 +71,7 @@
 
                 Case 10
                     If isAxisMoving(0, PasteZ) = False Then
-                        Frm_DialogAddMessage("组装站Z轴运动到待机位置完成")
+                        List_DebugAddMessage("组装站Z轴运动到待机位置完成")
                         Step_Gopos(2) = 20
                     End If
 
@@ -87,7 +87,7 @@
 
                 Case 30
                     If isAxisMoving(0, PasteR) = False And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False Then
-                        Frm_DialogAddMessage("组装站X,Y,R轴运动到" & Par_Pos.St_Paste(index).Name & "完成")
+                        List_DebugAddMessage("组装站X,Y,R轴运动到" & Par_Pos.St_Paste(index).Name & "完成")
                         Step_Gopos(2) = 40
                     End If
 
@@ -97,7 +97,7 @@
 
                 Case 50
                     If isAxisMoving(0, PasteZ) = False Then
-                        Frm_DialogAddMessage("组装站Z轴运动到" & Par_Pos.St_Paste(index).Name & "完成")
+                        List_DebugAddMessage("组装站Z轴运动到" & Par_Pos.St_Paste(index).Name & "完成")
                         Step_Gopos(2) = 0
                         Exit Do
                     End If

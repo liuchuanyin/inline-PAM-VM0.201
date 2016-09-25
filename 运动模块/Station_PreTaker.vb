@@ -53,10 +53,10 @@
             Exit Sub
         End If
 
-        If Math.Abs(CurrEncPos(2, PasteY1) - Par_Pos.St_Paste(0).Y) > 2 Then
-            List_DebugAddMessage("请检查组装模组是否在安全位置！")
-            Exit Sub
-        End If
+        'If Math.Abs(CurrEncPos(2, PasteY1) - Par_Pos.St_Paste(0).Y) > 2 Then
+        '    List_DebugAddMessage("请检查组装模组是否在安全位置！")
+        '    Exit Sub
+        'End If
 
         Step_Gopos(3) = 0
         Do While True

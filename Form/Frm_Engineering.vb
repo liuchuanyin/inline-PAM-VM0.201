@@ -332,7 +332,7 @@ Public Class Frm_Engineering
         btn_Home(1, 8) = btn_Home19
 
         btn_Home(2, 1) = btn_Home6
-        btn_Home(2, 2) = btn_Home10
+        btn_Home(2, 3) = btn_Home10
 
     End Sub
 
@@ -611,9 +611,11 @@ Public Class Frm_Engineering
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub Timer_GoHome_Tick(sender As Object, e As EventArgs) Handles Timer_GoHome.Tick
-        Timer_GoHome.Enabled = False
+        Static en As Boolean
+        If en Then Exit Sub
+        en = True
         Call GoHome()
-        Timer_GoHome.Enabled = True
+        en = False
     End Sub
 #End Region
 
@@ -2784,59 +2786,10 @@ Public Class Frm_Engineering
         GT_ClrSts(2, 17 + 1 - 16, 1)  '清除当前轴报警标志
         'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
         GT_AxisOff(2, 17 + 1 - 16) '当前轴伺服OFF
-    End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        If HomeBit(2, 1) = False Then
-            MessageBox.Show("请回原点")
-        End If
-
-        If MessageBox.Show("是否开始重复测试", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
-            Exit Sub
-        End If
-
-        Dim step0 As Integer = 10
-        Dim starttime As Integer
-
-        Par_Pos.St_Paste(14).Y = 240
-
-        While True
-            Select Case step0
-                Case 10
-                    If AbsMotion(2, PasteY1, 20, 0) Then
-                        step0 = 20
-                    End If
-                Case 20
-                    If isAxisMoving(2, PasteY1) = False Then
-                        starttime = GetTickCount
-                        step0 = 22
-                    End If
-
-                Case 22
-                    If GetTickCount - starttime > 1000 Then
-                        step0 = 30
-                    End If
-
-                Case 30
-                    If AbsMotion(2, PasteY1, 20, 200) Then
-                        step0 = 40
-                    End If
-                Case 40
-                    If isAxisMoving(2, PasteY1) = False Then
-                        starttime = GetTickCount
-                        step0 = 50
-                    End If
-
-                Case 50
-                    If GetTickCount - starttime > 1000 Then
-                        step0 = 10
-                    End If
-            End Select
-            Application.DoEvents()
-            If IsSysEmcStop = True Then
-                Exit Sub
-            End If
-        End While
+        GT_ClrSts(2, 19 + 1 - 16, 1)  '清除当前轴报警标志
+        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
+        GT_AxisOff(2, 19 + 1 - 16) '当前轴伺服OFF
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -2844,34 +2797,127 @@ Public Class Frm_Engineering
             MessageBox.Show("请回原点")
         End If
 
-        If MessageBox.Show("是否开始重复测试", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+        If MessageBox.Show("是否开始从轴精度校正", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
             Exit Sub
         End If
 
         Dim step0 As Integer = 10
-
-        Par_Pos.St_Paste(14).Y = 220
-
+         
         Dim currentProcess As New sFlag4
         currentProcess.Init()
         currentProcess.StepNum = 10
 
         While True
-            CorrectionsProcess(currentProcess, 0, 200, 20)
+            CorrectionsProcess(currentProcess, 2, 1, 0, 200, 21, "D:\BZ-Parameter\CorrectList_Past.xml")
 
-            If currentProcess.StepNum = 0 And currentProcess.State = False And currentProcess.Result = True Then
-                Exit Sub
-                MessageBox.Show("yunxingwanc")
+            If currentProcess.StepNum = 0 And currentProcess.State = False And currentProcess.Result = True Then 
+                MessageBox.Show("自动从轴校正程序")
+                Exit While
             End If
+
+            Application.DoEvents() 
         End While
+
+        FileToDPCM("D:\BZ-Parameter\CorrectList_Past.xml", 2, 1)
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Label240.Text = CurrEncPos(2, PasteY1)
         Label241.Text = CurrEncPos(2, PasteY2)
     End Sub
+     
+   
+    Public stepTest As Integer
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Static oldtick As Long
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        MessageBox.Show(CalculateOffset(CType(Val(TextBox2.Text), Double)))
+        If Flag_MachineInit = False Then Exit Sub
+        Dim speedTest = 200
+        Select Case stepTest
+            Case 10
+                Call AbsMotion(0, GlueX, speedTest, Par_Pos.St_Glue(1).X)
+                Call AbsMotion(0, GlueY, speedTest, Par_Pos.St_Glue(1).Y)
+                Call AbsMotion(0, PasteX, speedTest, Par_Pos.St_Paste(1).X)
+                Call AbsMotion(2, PasteY1, speedTest, Par_Pos.St_Paste(1).Y)
+
+                Call AbsMotion(0, PreTakerX, speedTest, Par_Pos.St_PreTaker(1).X)
+                Call AbsMotion(2, PreTakerY1, speedTest, Par_Pos.St_PreTaker(1).Y)
+                stepTest = 20
+
+            Case 20
+                If Not isAxisMoving(0, GlueX) And Not isAxisMoving(0, GlueY) And Not isAxisMoving(0, PasteX) And _
+                    Not isAxisMoving(0, PreTakerX) And Not isAxisMoving(2, PreTakerY1) And Not isAxisMoving(2, PasteY1) Then
+                    oldtick = GetTickCount
+                    stepTest = 25
+                End If
+
+            Case 25
+                If isTimeout(oldtick, 3000) Then
+                    stepTest = 30
+                End If
+
+            Case 30
+                Call AbsMotion(0, GlueX, speedTest, Par_Pos.St_Glue(0).X)
+                Call AbsMotion(0, GlueY, speedTest, Par_Pos.St_Glue(0).Y)
+                Call AbsMotion(0, PasteX, speedTest, Par_Pos.St_Paste(0).X)
+                Call AbsMotion(2, PasteY1, speedTest, Par_Pos.St_Paste(0).Y)
+
+                Call AbsMotion(0, PreTakerX, speedTest, Par_Pos.St_PreTaker(0).X)
+                Call AbsMotion(2, PreTakerY1, speedTest, Par_Pos.St_PreTaker(0).Y)
+                stepTest = 40
+
+            Case 40
+                If Not isAxisMoving(0, GlueX) And Not isAxisMoving(0, GlueY) And Not isAxisMoving(0, PasteX) And _
+                    Not isAxisMoving(0, PreTakerX) And Not isAxisMoving(2, PreTakerY1) And Not isAxisMoving(2, PasteY1) Then
+                    oldtick = GetTickCount
+                    stepTest = 50
+                End If
+
+            Case 50
+                If isTimeout(oldtick, 3000) Then
+                    stepTest = 10
+                End If
+
+        End Select
+
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        stepTest = 10
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Timer1.Enabled = False
+        stepTest = 0
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If HomeBit(2, 3) = False Then
+            MessageBox.Show("请回原点")
+        End If
+
+        If MessageBox.Show("是否开始从轴精度校正", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        Dim step0 As Integer = 10
+
+        Dim currentProcess As New sFlag4
+        currentProcess.Init()
+        currentProcess.StepNum = 10
+
+        While True
+            CorrectionsProcess(currentProcess, 2, 3, 0, 200, 21, "D:\BZ-Parameter\CorrectList_PreTaker.xml")
+
+            If currentProcess.StepNum = 0 And currentProcess.State = False And currentProcess.Result = True Then
+                MessageBox.Show("自动从轴校正程序")
+                Exit While
+            End If
+
+            Application.DoEvents() 
+        End While
+
+        FileToDPCM("D:\BZ-Parameter\CorrectList_PreTaker.xml", 2, 3)
     End Sub
 End Class
