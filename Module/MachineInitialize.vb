@@ -507,7 +507,7 @@
 
             Case 1520
                 If MACTYPE = "PAM-B" Or MACTYPE = "PAM-3" Then
-                    Step_MachineIni = 1530
+                    Step_MachineIni = 1560
                 Else
                     Step_MachineIni = 1560
                 End If
@@ -564,7 +564,7 @@
                     And isAxisMoving(0, PasteX) = False And isAxisMoving(2, PasteY1) = False _
                     And isAxisMoving(0, PreTakerX) = False And isAxisMoving(2, PreTakerY1) = False Then
                     Step_MachineIni = 1700
-                ElseIf isTimeout(OldTickCount, 5000) Then
+                ElseIf isTimeout(OldTickCount, 20000) Then
                     Frm_DialogAddMessage("点胶XY，组装XY和取料XY同时回待机位置超时！")
                     Step_MachineIni = 9000
                 End If

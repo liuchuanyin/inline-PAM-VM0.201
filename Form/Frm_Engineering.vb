@@ -2468,7 +2468,7 @@ Public Class Frm_Engineering
                     SetEXO(1, 10, True)
                 End If
             Case 3
-                If EXO(1, 6) Then
+                If EXO(1, 12) Then
                     SetEXO(1, 12, False)
                 Else
                     SetEXO(1, 12, True)
@@ -2832,7 +2832,7 @@ Public Class Frm_Engineering
         Static oldtick As Long
 
         If Flag_MachineInit = False Then Exit Sub
-        Dim speedTest = 200
+        Dim speedTest = 600
         Select Case stepTest
             Case 10
                 Call AbsMotion(0, GlueX, speedTest, Par_Pos.St_Glue(1).X)
@@ -2852,7 +2852,7 @@ Public Class Frm_Engineering
                 End If
 
             Case 25
-                If isTimeout(oldtick, 3000) Then
+                If isTimeout(oldtick, 1000) Then
                     stepTest = 30
                 End If
 
@@ -2874,7 +2874,7 @@ Public Class Frm_Engineering
                 End If
 
             Case 50
-                If isTimeout(oldtick, 3000) Then
+                If isTimeout(oldtick, 1000) Then
                     stepTest = 10
                 End If
 

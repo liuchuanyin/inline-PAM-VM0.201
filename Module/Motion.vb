@@ -321,7 +321,7 @@ Module Motion
         LimToHomeDist(0, 6) = -100    '到极限走过原点的距离
         'PreTaker X
         HomeSearchDist(0, 7) = 1000
-        HomeOffsetDist(0, 7) = 2     '第2次原点搜索偏移距离
+        HomeOffsetDist(0, 7) = 4     '第2次原点搜索偏移距离
         LimToHomeDist(0, 7) = 40      '到极限走过原点的距离
         'PreTaker Z
         HomeSearchDist(0, 8) = -1000
@@ -381,7 +381,7 @@ Module Motion
         'PreTaker Y1
         HomeSearchDist(2, 3) = -1000
         HomeOffsetDist(2, 3) = -2     '第2次原点搜索偏移距离
-        LimToHomeDist(2, 3) = -40     '到极限走过原点的距离
+        LimToHomeDist(2, 3) = -30     '到极限走过原点的距离
 
         'PreTaker Y2
         HomeSearchDist(2, 4) = -1000

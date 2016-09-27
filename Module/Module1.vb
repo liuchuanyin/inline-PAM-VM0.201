@@ -115,6 +115,17 @@
                 End If
 
             Case 110
+                If AbsMotion(Card, Axis, 20, Posi(0)) = True Then
+                    Statue.StepNum = 120
+                End If
+
+            Case 120
+                If isAxisMoving(Card, Axis) = False Then
+                    StartTime = GetTickCount
+                    Statue.StepNum = 130
+                End If
+
+            Case 130
                 WriteXML_Corr(path, CorrectList_Past)
 
                 ReDim Posi(PointNum - 1)
@@ -219,7 +230,7 @@
     ''' <remarks></remarks>
     Public Sub FileToDPCM(Filepath As String, Card As Integer, Axis As Integer)
         Dim CorrectListTemp As New List(Of Corrections)
-        ReadXML_Corr(Filepath, CorrectListTemp)
+        CorrectListTemp = ReadXML_Corr(Filepath, CorrectListTemp)
         DPCM(Card, Axis + 1, CorrectListTemp)
     End Sub
      
