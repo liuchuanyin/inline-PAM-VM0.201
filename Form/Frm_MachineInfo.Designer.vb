@@ -157,7 +157,7 @@ Partial Class Frm_MachineInfo
         Me.Label_BuildDate.Name = "Label_BuildDate"
         Me.Label_BuildDate.Size = New System.Drawing.Size(147, 27)
         Me.Label_BuildDate.TabIndex = 55
-        Me.Label_BuildDate.Text = "2016/05/20"
+        Me.Label_BuildDate.Text = "2016/09/01"
         Me.Label_BuildDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label39

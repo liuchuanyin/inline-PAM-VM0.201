@@ -140,7 +140,7 @@ Module Motion
                     ElseIf n = 1 Then
                         '复位运动控制卡1
                         If MACTYPE = "PAM-B" Then
-                            rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_2.cfg")          '下载控制卡1配置参数
+                            rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_B.cfg")          '下载控制卡1配置参数
                         Else
                             rtn = GT_LoadConfig(n, Application.StartupPath & "\GTS_Config\GTS800_1.cfg")          '下载控制卡1配置参数
                         End If 
@@ -181,7 +181,6 @@ Module Motion
                     End If
                 End If
 
-
                 rtn = GT_OpenExtMdlGts(1, "gts.dll")                         '打开扩展IO模块
                 If rtn <> 0 Then
                     Frm_DialogAddMessage("扩展AD-DA模块打开失败，请检查！")
@@ -200,15 +199,7 @@ Module Motion
                         GTS_Opened_ADDA = True
                     End If
                 End If
-
             End If
-
-            'If Load_GantryMode() <> 0 Then
-            '    Frm_DialogAddMessage("龙门模式配置失败！")
-            '    Exit Sub
-            'Else
-            '    ListBoxAddMessage("龙门模式配置成功！")
-            'End If
 
             '//如下使能  位置清零
             For n = 0 To GTS_CardNum - 1
@@ -233,65 +224,6 @@ Module Motion
         End Try
     End Sub
 
-
-    Public Function Load_GantryMode() As Short
-        Dim rtn As Short
-        Dim plPid1, plPid2, plPid3, plPid4 As TPid
-        Dim vlPid1, vlPid2, vlPid3, vlPid4 As TPid
-        Dim piConvertPara1, piConvertPara2, piConvertPara3, piConvertPara4 As Double
-        rtn = 1
-        Try
-            '// 配置龙门模式
-            GT_SetGantryMode(2, PasteY1, PasteY2, 0)
-            GT_SetGantryMode(2, PreTakerY1, PreTakerY2, 0)
-
-            '// 配置2卡 轴 1、2、3、4 为双闭环模式
-            GT_SetControlMode(2, PasteY1, 3)
-            GT_SetControlMode(2, PasteY2, 3)
-            GT_SetControlMode(2, PreTakerY1, 3)
-            GT_SetControlMode(2, PreTakerY2, 3)
-
-            Frm_DialogAddMessage("龙门参数需要配置提醒")
-
-            ''// 配置轴 1 控制参数
-            'GT_GetPid(2, PasteY1, 1, plPid1)
-            'plPid1.kp = 0.01
-            'GT_SetPid(2, PasteY1, 1, plPid1)
-            'GT_GetVelLoopPid(2, PasteY1, 1, vlPid1, piConvertPara1)
-            'vlPid1.kp = 500
-            'piConvertPara1 = 1
-            'GT_SetVelLoopPid(2, PasteY1, 1, vlPid1, piConvertPara1)
-            ''// 配置轴 2 控制参数
-            'GT_GetPid(2, PasteY2, 1, plPid2)
-            'plPid2.kp = 0.01
-            'GT_SetPid(2, PasteY2, 1, plPid2)
-            'GT_GetVelLoopPid(2, PasteY2, 1, vlPid2, piConvertPara2)
-            'vlPid2.kp = 500
-            'piConvertPara2 = 1
-            'GT_SetVelLoopPid(2, PasteY2, 1, vlPid2, piConvertPara2)
-            ''// 配置轴 3 控制参数
-            'GT_GetPid(2, PreTakerY1, 1, plPid3)
-            'plPid3.kp = 0.01
-            'GT_SetPid(2, PreTakerY1, 1, plPid3)
-            'GT_GetVelLoopPid(2, PreTakerY1, 1, vlPid3, piConvertPara3)
-            'vlPid3.kp = 500
-            'piConvertPara3 = 1
-            'GT_SetVelLoopPid(2, PreTakerY1, 1, vlPid3, piConvertPara3)
-            ''// 配置轴 4 控制参数
-            'GT_GetPid(2, PreTakerY2, 1, plPid4)
-            'plPid4.kp = 0.01
-            'GT_SetPid(2, PreTakerY2, 1, plPid4)
-            'GT_GetVelLoopPid(2, PreTakerY2, 1, vlPid4, piConvertPara4)
-            'vlPid4.kp = 500
-            'piConvertPara4 = 1
-            'GT_SetVelLoopPid(2, PreTakerY2, 1, vlPid4, piConvertPara4)
-            rtn = 0
-            Return rtn
-        Catch ex As Exception
-            rtn = 1
-            Return rtn
-        End Try
-    End Function
 #End Region
 
     Public Sub HomeValue()

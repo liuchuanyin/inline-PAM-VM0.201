@@ -69,7 +69,6 @@ Public Class Frm_Main
 
         '刷新IO线程关闭
         Thread_IORefresh.Abort()
-        If LineMotorController IsNot Nothing Then LineMotorController.C1ose()
 
         '*********************  统计软件使用时间  **********************
         Dim temp As Long
@@ -268,36 +267,6 @@ Public Class Frm_Main
         '断开UV灯连接
         Call UV_DisConnect()
         Call Close_LineMotorController()
-
-        SetEXO(0, 0, False) '关闭启动按钮指示灯
-        SetEXO(0, 1, False) '关闭1工位真空吸
-        SetEXO(0, 2, False) '关闭2工位真空吸
-        SetEXO(0, 3, False) '关闭3工位真空吸
-        SetEXO(0, 4, False) '关闭4工位真空吸
-        SetEXO(0, 5, False) '关闭5工位真空吸
-        SetEXO(0, 6, False)  '关闭2工位点胶
-        SetEXO(0, 7, False) '关闭3工位点胶
-        SetEXO(0, 8, False) '关闭4工位取料吸嘴真空吸
-        SetEXO(0, 9, False) '关闭蜂鸣器
-        SetEXO(0, 10, False) '关闭OK指示灯
-        SetEXO(0, 11, False) '关闭NG指示灯
-
-        SetEXO(1, 2, False) '三色灯红
-        SetEXO(1, 3, False) '三色灯黄
-        SetEXO(1, 4, False) '三色灯绿
-        SetEXO(1, 5, False) '三色灯蜂鸣器
-        SetEXO(1, 6, False) '日光灯控制
-        SetEXO(1, 7, False) '真空泵控制
-        SetEXO(1, 8, False) '2工位点胶气缸电磁阀
-        SetEXO(1, 9, False) '3工位点胶气缸电磁阀
-        SetEXO(1, 10, False) '4工位光源气缸电磁阀
-
-        SetEXO(1, 15, False) 'UV灯升降气缸缩回
-
-
-        SetEMO(0, 0, False) '关闭料盘步进使能
-        SetEMO(1, 4, False) '关闭2工位步进使能
-        SetEMO(1, 6, False) '关闭4工位步进使能
 
         Timer_Sys.Enabled = False
         Call SetPressure(0, 0)

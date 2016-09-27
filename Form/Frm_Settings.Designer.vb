@@ -341,10 +341,10 @@ Partial Class Frm_Settings
         'Label_DownTime
         '
         Me.Label_DownTime.AutoSize = True
-        Me.Label_DownTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_DownTime.Font = New System.Drawing.Font("HelveticaNeue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_DownTime.Location = New System.Drawing.Point(345, 18)
         Me.Label_DownTime.Name = "Label_DownTime"
-        Me.Label_DownTime.Size = New System.Drawing.Size(151, 20)
+        Me.Label_DownTime.Size = New System.Drawing.Size(155, 19)
         Me.Label_DownTime.TabIndex = 10
         Me.Label_DownTime.Text = "DowmTime Settings"
         '
@@ -541,7 +541,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime4
         '
-        Me.lbl_Downtime4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime4.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime4.Location = New System.Drawing.Point(3, 90)
         Me.lbl_Downtime4.Name = "lbl_Downtime4"
         Me.lbl_Downtime4.Size = New System.Drawing.Size(80, 30)
@@ -551,7 +551,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime1
         '
-        Me.lbl_Downtime1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime1.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime1.Location = New System.Drawing.Point(3, 0)
         Me.lbl_Downtime1.Name = "lbl_Downtime1"
         Me.lbl_Downtime1.Size = New System.Drawing.Size(80, 30)
@@ -561,7 +561,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime2
         '
-        Me.lbl_Downtime2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime2.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime2.Location = New System.Drawing.Point(3, 30)
         Me.lbl_Downtime2.Name = "lbl_Downtime2"
         Me.lbl_Downtime2.Size = New System.Drawing.Size(80, 30)
@@ -571,7 +571,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime3
         '
-        Me.lbl_Downtime3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime3.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime3.Location = New System.Drawing.Point(3, 60)
         Me.lbl_Downtime3.Name = "lbl_Downtime3"
         Me.lbl_Downtime3.Size = New System.Drawing.Size(80, 30)
@@ -581,7 +581,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime5
         '
-        Me.lbl_Downtime5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime5.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime5.Location = New System.Drawing.Point(3, 120)
         Me.lbl_Downtime5.Name = "lbl_Downtime5"
         Me.lbl_Downtime5.Size = New System.Drawing.Size(80, 30)
@@ -591,7 +591,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime6
         '
-        Me.lbl_Downtime6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime6.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime6.Location = New System.Drawing.Point(3, 150)
         Me.lbl_Downtime6.Name = "lbl_Downtime6"
         Me.lbl_Downtime6.Size = New System.Drawing.Size(80, 30)
@@ -601,7 +601,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime7
         '
-        Me.lbl_Downtime7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime7.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime7.Location = New System.Drawing.Point(3, 180)
         Me.lbl_Downtime7.Name = "lbl_Downtime7"
         Me.lbl_Downtime7.Size = New System.Drawing.Size(80, 30)
@@ -611,7 +611,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime8
         '
-        Me.lbl_Downtime8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime8.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime8.Location = New System.Drawing.Point(3, 210)
         Me.lbl_Downtime8.Name = "lbl_Downtime8"
         Me.lbl_Downtime8.Size = New System.Drawing.Size(80, 30)
@@ -621,7 +621,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime9
         '
-        Me.lbl_Downtime9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime9.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime9.Location = New System.Drawing.Point(3, 240)
         Me.lbl_Downtime9.Name = "lbl_Downtime9"
         Me.lbl_Downtime9.Size = New System.Drawing.Size(80, 30)
@@ -631,7 +631,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime10
         '
-        Me.lbl_Downtime10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime10.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime10.Location = New System.Drawing.Point(3, 270)
         Me.lbl_Downtime10.Name = "lbl_Downtime10"
         Me.lbl_Downtime10.Size = New System.Drawing.Size(80, 30)
@@ -641,7 +641,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime11
         '
-        Me.lbl_Downtime11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime11.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime11.Location = New System.Drawing.Point(3, 300)
         Me.lbl_Downtime11.Name = "lbl_Downtime11"
         Me.lbl_Downtime11.Size = New System.Drawing.Size(80, 30)
@@ -651,7 +651,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime12
         '
-        Me.lbl_Downtime12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime12.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime12.Location = New System.Drawing.Point(3, 330)
         Me.lbl_Downtime12.Name = "lbl_Downtime12"
         Me.lbl_Downtime12.Size = New System.Drawing.Size(80, 30)
@@ -661,7 +661,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime15
         '
-        Me.lbl_Downtime15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime15.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime15.Location = New System.Drawing.Point(3, 420)
         Me.lbl_Downtime15.Name = "lbl_Downtime15"
         Me.lbl_Downtime15.Size = New System.Drawing.Size(80, 30)
@@ -671,7 +671,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime14
         '
-        Me.lbl_Downtime14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime14.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime14.Location = New System.Drawing.Point(3, 390)
         Me.lbl_Downtime14.Name = "lbl_Downtime14"
         Me.lbl_Downtime14.Size = New System.Drawing.Size(80, 30)
@@ -681,7 +681,7 @@ Partial Class Frm_Settings
         '
         'lbl_Downtime13
         '
-        Me.lbl_Downtime13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Downtime13.Font = New System.Drawing.Font("HelveticaNeue", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Downtime13.Location = New System.Drawing.Point(3, 360)
         Me.lbl_Downtime13.Name = "lbl_Downtime13"
         Me.lbl_Downtime13.Size = New System.Drawing.Size(80, 30)
@@ -3223,7 +3223,7 @@ Partial Class Frm_Settings
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Font = New System.Drawing.Font("HelveticaNeue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(5, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -3234,10 +3234,10 @@ Partial Class Frm_Settings
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.BZ_RoundPanel3)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(931, 612)
+        Me.TabPage1.Size = New System.Drawing.Size(931, 613)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Parameter Settings"
         '
@@ -3266,9 +3266,9 @@ Partial Class Frm_Settings
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.BZ_RoundPanel1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(931, 612)
+        Me.TabPage3.Size = New System.Drawing.Size(931, 613)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Machine Info"
         Me.TabPage3.UseVisualStyleBackColor = True

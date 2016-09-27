@@ -177,12 +177,12 @@ Public Module Variables
     ''' 软件版本
     ''' </summary>
     ''' <remarks></remarks>
-    Public Const VERSION_SOFTWARE As String = "SV1.2.5"
+    Public Const VERSION_SOFTWARE As String = "SV2.0.0"
     ''' <summary>
     ''' 软体更新日期
     ''' </summary>
     ''' <remarks></remarks>
-    Public Const UPDATE_SOFTWARE As String = "2016/07/29"
+    Public Const UPDATE_SOFTWARE As String = "2016/09/27"
 
     ''' <summary>
     ''' DownTime

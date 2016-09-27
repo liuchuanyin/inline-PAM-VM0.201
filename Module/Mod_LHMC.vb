@@ -29,7 +29,6 @@ Module Mod_LHMC
             Catch ex As Exception
                 Return False
             End Try
-
         End If
     End Function
 
@@ -74,10 +73,13 @@ Module Mod_LHMC
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Close_LineMotorController()
-        Disable_LineMotor()
-        Delay(50)
-        LineMotorController.C1ose()
-        Flag_isLineMotorControllerOpened = False
+        If Flag_isLineMotorControllerOpened Then
+            LineMotorController.Stop(Aixs.all)
+            Disable_LineMotor()
+            Delay(50)
+            LineMotorController.C1ose()
+            Flag_isLineMotorControllerOpened = False
+        End If
     End Sub
 
 End Module
