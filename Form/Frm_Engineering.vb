@@ -9,6 +9,12 @@ Public Class Frm_Engineering
     Public rad_Brc(12) As RadioButton
 
 #Region "   窗体加载"
+
+    Public Sub init_UI()
+        Me.TabControl1.SelectedIndex = 0
+        Me.tab_Log.SelectedIndex = 2
+    End Sub
+
     ''' <summary>
     ''' 工程界面加载
     ''' </summary>
@@ -23,7 +29,7 @@ Public Class Frm_Engineering
         For i = 0 To TabControl1.TabPages.Count - 1
             TabControl1.TabPages(i).BackColor = Color.FromArgb(252, 223, 222)
         Next
-
+        init_UI()
         Call Load_CurWorkState()
         Call OutPut_Button_Load()
         Call GoHome_Button_Load()
@@ -1625,6 +1631,10 @@ Public Class Frm_Engineering
                 End If
 
             Case 17, 18, 19, 20
+                '如果设备没有初始化，且从轴使能ing，那么关闭从轴使能
+                If Flag_MachineInit = False And ServoOn(2, sender.tag - 16 + 1) Then
+                    Call GT_AxisOff(2, sender.tag - 16 + 1)
+                End If
                 '判断当前轴伺服ON是否已打开
                 If ServoOn(2, Val(sender.tag) - 16) = False Then
                     List_DebugAddMessage("请先打开" & AxisPar.axisName(2, sender.tag - 16) & "轴的的伺服使能！")
@@ -1726,6 +1736,10 @@ Public Class Frm_Engineering
                     Exit Sub
                 End If
             Case 17, 18, 19, 20
+                '如果设备没有初始化，且从轴使能ing，那么关闭从轴使能
+                If Flag_MachineInit = False And ServoOn(2, sender.tag - 16 + 1) Then
+                    Call GT_AxisOff(2, sender.tag - 16 + 1)
+                End If
                 '判断当前轴伺服ON是否已打开
                 If ServoOn(2, Val(sender.tag) - 16) = False Then
                     List_DebugAddMessage("请先打开" & AxisPar.axisName(2, sender.tag - 16) & "轴的的伺服使能！")
@@ -2456,17 +2470,11 @@ Public Class Frm_Engineering
     Private Sub btn_setRise_Click(sender As Object, e As EventArgs) Handles btn_setRise3.Click, btn_setRise1.Click, btn_setRise2.Click
         Select Case sender.tag
             Case 1
-                If EXO(1, 8) Then
-                    SetEXO(1, 8, False)
-                Else
-                    SetEXO(1, 8, True)
-                End If
+                If EXO(1, 8) Then SetEXO(1, 8, False) Else SetEXO(1, 8, True)
+
             Case 2
-                If EXO(1, 10) Then
-                    SetEXO(1, 10, False)
-                Else
-                    SetEXO(1, 10, True)
-                End If
+                If EXO(1, 10) Then SetEXO(1, 10, False) Else SetEXO(1, 10, True)
+
             Case 3
                 If EXO(1, 12) Then
                     SetEXO(1, 12, False)
@@ -2557,7 +2565,7 @@ Public Class Frm_Engineering
     ''' <remarks></remarks>
     Private Sub btnTrayGlue_Click(sender As Object, e As EventArgs) Handles btnTrayGlue.Click
         Dim en As Boolean
-        Dim P(5) As Dist_XY
+        Dim P(5) As Pos_XY
         Dim Rows As Integer = 2
         Dim Columns As Integer = 3
 
@@ -2588,6 +2596,7 @@ Public Class Frm_Engineering
         Next
 
         TrayMatrix.TrayGlue = CalTrayMatrix(P, Rows, Columns)
+        TrayMatrix.TrayGlue = CalTrayMatrix(P(0), P(5), TrayOffset)
 
         '写入矩阵点位文件
         WriteMatrixPos(Path_TrayMatrix, TrayMatrix)
@@ -2601,7 +2610,7 @@ Public Class Frm_Engineering
     ''' <remarks></remarks>
     Private Sub btnTrayPaste_Click(sender As Object, e As EventArgs) Handles btnTrayPaste.Click
         Dim en As Boolean
-        Dim P(5) As Dist_XY
+        Dim P(5) As Pos_XY
         Dim Rows As Integer = 2
         Dim Columns As Integer = 3
 
@@ -2646,7 +2655,7 @@ Public Class Frm_Engineering
     ''' <remarks></remarks>
     Private Sub btnTrayPreTk_Click(sender As Object, e As EventArgs) Handles btnTrayPreTk.Click
         Dim en As Boolean
-        Dim P(2) As Dist_XY
+        Dim P(2) As Pos_XY
         Dim Rows As Integer = par.num(33)
         Dim Columns As Integer = par.num(34)
 
@@ -2691,7 +2700,7 @@ Public Class Frm_Engineering
     ''' <remarks></remarks>
     Private Sub btnTrayFineCpt_Click(sender As Object, e As EventArgs) Handles btnTrayFineCpt.Click
         Dim en As Boolean
-        Dim P(5) As Dist_XY
+        Dim P(5) As Pos_XY
         Dim Rows As Integer = 2
         Dim Columns As Integer = 3
 
@@ -2736,7 +2745,7 @@ Public Class Frm_Engineering
     ''' <remarks></remarks>
     Private Sub btnTrayRecheck_Click(sender As Object, e As EventArgs) Handles btnTrayRecheck.Click
         Dim en As Boolean
-        Dim P(5) As Dist_XY
+        Dim P(5) As Pos_XY
         Dim Rows As Integer = 2
         Dim Columns As Integer = 3
 
@@ -2776,21 +2785,6 @@ Public Class Frm_Engineering
 #End Region
 
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        GT_ClrSts(2, 19 + 1 - 16, 1)  '清除当前轴报警标志
-        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
-        GT_AxisOff(2, 19 + 1 - 16) '当前轴伺服OFF
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        GT_ClrSts(2, 17 + 1 - 16, 1)  '清除当前轴报警标志
-        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
-        GT_AxisOff(2, 17 + 1 - 16) '当前轴伺服OFF
-
-        GT_ClrSts(2, 19 + 1 - 16, 1)  '清除当前轴报警标志
-        'rtn = GT_AxisOff(2, sender.tag - 16) '当前轴伺服OFF
-        GT_AxisOff(2, 19 + 1 - 16) '当前轴伺服OFF
-    End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         If HomeBit(2, 1) = False Then
@@ -2821,11 +2815,6 @@ Public Class Frm_Engineering
         FileToDPCM("D:\BZ-Parameter\CorrectList_Past.xml", 2, 1)
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Label240.Text = CurrEncPos(2, PasteY1)
-        Label241.Text = CurrEncPos(2, PasteY2)
-    End Sub
-     
    
     Public stepTest As Integer
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -2920,4 +2909,5 @@ Public Class Frm_Engineering
 
         FileToDPCM("D:\BZ-Parameter\CorrectList_PreTaker.xml", 2, 3)
     End Sub
+
 End Class

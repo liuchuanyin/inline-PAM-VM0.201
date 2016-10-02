@@ -1,4 +1,5 @@
-﻿Public Module StructureVariable
+﻿Imports System.Math
+Public Module StructureVariable
 
 
 #Region "   点位的定义"
@@ -236,32 +237,153 @@
 #End Region
 
 #Region "Tray矩阵计算及文件读写保存"
+    Public TrayOffset(11) As Pos_XY
+
+    Public Sub Load_OffsetXY()
+        Select Case MACTYPE
+            Case "PAM-1"
+                TrayOffset(0).X = 0
+                TrayOffset(1).X = 29
+                TrayOffset(2).X = 62
+                TrayOffset(3).X = 91
+                TrayOffset(4).X = 124
+                TrayOffset(5).X = 153
+
+                TrayOffset(6).X = -13.84
+                TrayOffset(7).X = 15.16
+                TrayOffset(8).X = 48.16
+                TrayOffset(9).X = 77.16
+                TrayOffset(10).X = 110.16
+                TrayOffset(11).X = 139.16
+
+                TrayOffset(0).Y = 0
+                TrayOffset(1).Y = 16.5
+                TrayOffset(2).Y = 0
+                TrayOffset(3).Y = 16.5
+                TrayOffset(4).Y = 0
+                TrayOffset(5).Y = 16.5
+
+                TrayOffset(6).Y = 27.5
+                TrayOffset(7).Y = 44
+                TrayOffset(8).Y = 27.5
+                TrayOffset(9).Y = 44
+                TrayOffset(10).Y = 27.5
+                TrayOffset(11).Y = 44
+
+            Case "PAM-2"
+                TrayOffset(0).X = 0
+                TrayOffset(1).X = 29
+                TrayOffset(2).X = 62
+                TrayOffset(3).X = 91
+                TrayOffset(4).X = 124
+                TrayOffset(5).X = 153
+
+                TrayOffset(6).X = 29
+                TrayOffset(7).X = 58
+                TrayOffset(8).X = 91
+                TrayOffset(9).X = 120
+                TrayOffset(10).X = 153
+                TrayOffset(11).X = 182
+
+                TrayOffset(0).Y = 0
+                TrayOffset(1).Y = 16.5
+                TrayOffset(2).Y = 0
+                TrayOffset(3).Y = 16.5
+                TrayOffset(4).Y = 0
+                TrayOffset(5).Y = 16.5
+
+                TrayOffset(6).Y = 27.5
+                TrayOffset(7).Y = 44
+                TrayOffset(8).Y = 27.5
+                TrayOffset(9).Y = 44
+                TrayOffset(10).Y = 27.5
+                TrayOffset(11).Y = 44
+            Case "PAM-3"
+                TrayOffset(0).X = 0
+                TrayOffset(1).X = 29
+                TrayOffset(2).X = 62
+                TrayOffset(3).X = 91
+                TrayOffset(4).X = 124
+                TrayOffset(5).X = 153
+
+                TrayOffset(6).X = 29
+                TrayOffset(7).X = 58
+                TrayOffset(8).X = 91
+                TrayOffset(9).X = 120
+                TrayOffset(10).X = 153
+                TrayOffset(11).X = 182
+
+                TrayOffset(0).Y = 0
+                TrayOffset(1).Y = 16.5
+                TrayOffset(2).Y = 0
+                TrayOffset(3).Y = 16.5
+                TrayOffset(4).Y = 0
+                TrayOffset(5).Y = 16.5
+
+                TrayOffset(6).Y = 27.5
+                TrayOffset(7).Y = 44
+                TrayOffset(8).Y = 27.5
+                TrayOffset(9).Y = 44
+                TrayOffset(10).Y = 27.5
+                TrayOffset(11).Y = 44
+
+            Case "PAM-4"
+                TrayOffset(0).X = 0
+                TrayOffset(1).X = 29
+                TrayOffset(2).X = 62
+                TrayOffset(3).X = 91
+                TrayOffset(4).X = 124
+                TrayOffset(5).X = 153
+
+                TrayOffset(6).X = 29
+                TrayOffset(7).X = 58
+                TrayOffset(8).X = 91
+                TrayOffset(9).X = 120
+                TrayOffset(10).X = 153
+                TrayOffset(11).X = 182
+
+                TrayOffset(0).Y = 0
+                TrayOffset(1).Y = 16.5
+                TrayOffset(2).Y = 0
+                TrayOffset(3).Y = 16.5
+                TrayOffset(4).Y = 0
+                TrayOffset(5).Y = 16.5
+
+                TrayOffset(6).Y = 27.5
+                TrayOffset(7).Y = 44
+                TrayOffset(8).Y = 27.5
+                TrayOffset(9).Y = 44
+                TrayOffset(10).Y = 27.5
+                TrayOffset(11).Y = 44
+        End Select
+
+    End Sub
     Structure sctTrayMatrix
         ''' <summary>
         ''' 点胶矩阵
         ''' </summary>
         ''' <remarks></remarks>
-        Dim TrayGlue() As Dist_XY
+        Dim TrayGlue() As Pos_XY
         ''' <summary>
         ''' 精补矩阵
         ''' </summary>
         ''' <remarks></remarks>
-        Dim TrayFineCompensation() As Dist_XY
+        Dim TrayFineCompensation() As Pos_XY
         ''' <summary>
         ''' 贴合矩阵
         ''' </summary>
         ''' <remarks></remarks>
-        Dim TrayPaste() As Dist_XY
+        Dim TrayPaste() As Pos_XY
         ''' <summary>
         ''' 取料矩阵
         ''' </summary>
         ''' <remarks></remarks>
-        Dim TrayPreTaker() As Dist_XY
+        Dim TrayPreTaker() As Pos_XY
         ''' <summary>
         ''' 复检矩阵
         ''' </summary>
         ''' <remarks></remarks>
-        Dim TrayRecheck() As Dist_XY
+        Dim TrayRecheck() As Pos_XY
 
         ''' <summary>
         ''' 重新定义各数组大小
@@ -282,6 +404,30 @@
     ''' <remarks></remarks>
     Public TrayMatrix As sctTrayMatrix
 
+
+    Public Function CalTrayMatrix(StartPoint As Pos_XY, EndPoint As Pos_XY, Offset() As Pos_XY) As Pos_XY()
+        Dim Alpha, Beta, Theta As Double
+        Dim temp_Pos(Offset.Count - 1) As Pos_XY
+        If Offset(Offset.Count - 1).X = 0 Or EndPoint.X - StartPoint.X = 0 Then
+            For i = 1 To Offset.Count - 1
+                temp_Pos(i).X = StartPoint.X + 0
+                temp_Pos(i).Y = StartPoint.Y + 0
+            Next
+            Return temp_Pos
+        End If
+
+        Alpha = Atan(Offset(Offset.Count - 1).Y / Offset(Offset.Count - 1).X)
+        Beta = Atan((EndPoint.Y - StartPoint.Y) / (EndPoint.X - StartPoint.X))
+        Theta = Beta - Alpha
+        temp_Pos(0) = StartPoint
+        For i = 1 To Offset.Count - 1
+            temp_Pos(i).X = StartPoint.X + Offset(i).X * Cos(Theta) - Offset(i).Y * Sin(Theta)
+            temp_Pos(i).Y = StartPoint.Y + Offset(i).X * Sin(Theta) + Offset(i).Y * Cos(Theta)
+        Next
+
+        Return temp_Pos
+    End Function
+
     ''' <summary>
     ''' 给出六个点，算出两个矩阵，并转换成我们需要的Tray盘格式的点位信息
     ''' </summary>
@@ -290,10 +436,10 @@
     ''' <param name="Columns"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function CalTrayMatrix(P() As Dist_XY, Rows As Integer, Columns As Integer) As Dist_XY()
+    Public Function CalTrayMatrix(P() As Pos_XY, Rows As Integer, Columns As Integer) As Pos_XY()
         Dim index As Integer
-        Dim tempPoint0(), tempPoint1() As Dist_XY
-        Dim TempPoint() As Dist_XY
+        Dim tempPoint0(), tempPoint1() As Pos_XY
+        Dim TempPoint() As Pos_XY
 
         '判断矩阵计算点位返回异常
         tempPoint0 = PointRefresh(P(0), P(1), P(2), Rows, Columns)
@@ -340,14 +486,14 @@
     ''' <param name="Column"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function PointRefresh(P0 As Dist_XY, P1 As Dist_XY, P2 As Dist_XY, Row As Integer, Column As Integer) As Dist_XY()
-        Dim tempRowPoint0() As Dist_XY
-        Dim tempRowPoint1() As Dist_XY
-        Dim tempColumnPoint() As Dist_XY
+    Public Function PointRefresh(P0 As Pos_XY, P1 As Pos_XY, P2 As Pos_XY, Row As Integer, Column As Integer) As Pos_XY()
+        Dim tempRowPoint0() As Pos_XY
+        Dim tempRowPoint1() As Pos_XY
+        Dim tempColumnPoint() As Pos_XY
         Dim index As Integer
-        Dim Point(Row * Column - 1) As Dist_XY
+        Dim Point(Row * Column - 1) As Pos_XY
 
-        Dim P3 As Dist_XY
+        Dim P3 As Pos_XY
 
         If Row < 2 Then Row = 2
         If Column < 2 Then Column = 2
@@ -381,8 +527,9 @@
     ''' <param name="tempP2"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Function ParallelogramFourthPoint(tempP0 As Dist_XY, tempP1 As Dist_XY, tempP2 As Dist_XY) As Dist_XY
-        Dim tempP3 As Dist_XY
+    Private Function ParallelogramFourthPoint(tempP0 As Pos_XY, tempP1 As Pos_XY, tempP2 As Pos_XY) As Pos_XY
+        Dim tempP3 As New Pos_XY
+        tempP3.X = 0 : tempP3.Y = 0
         tempP3.X = tempP2.X - tempP1.X + tempP0.X
         tempP3.Y = tempP2.Y - tempP1.Y + tempP0.Y
         Return tempP3
@@ -396,13 +543,13 @@
     ''' <param name="AveragenNum"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Function AveragePoint(StartPoint As Dist_XY, EndPoint As Dist_XY, AveragenNum As Integer) As Dist_XY()
+    Private Function AveragePoint(StartPoint As Pos_XY, EndPoint As Pos_XY, AveragenNum As Integer) As Pos_XY()
         '首先对输入的均分点数进行判断,包括起始点和终止点,所以均分点必须>=2
         If AveragenNum < 2 Then AveragenNum = 2
 
         Dim n As Integer = AveragenNum - 1
 
-        Dim TempPoint(n) As Dist_XY
+        Dim TempPoint(n) As Pos_XY
 
         For i = 0 To n
             TempPoint(i).X = (i * EndPoint.X + (n - i) * StartPoint.X) / n
@@ -444,14 +591,14 @@
     Public Sub WriteMatrixPos(ByVal FileName As String, ByRef WriteData As sctTrayMatrix)
         Try
             Dim writer As New System.Xml.Serialization.XmlSerializer(GetType(sctTrayMatrix))
-            Dim file As New System.IO.StreamWriter(FileName) 
+            Dim file As New System.IO.StreamWriter(FileName)
             writer.Serialize(file, WriteData)
             file.Close()
         Catch ex As Exception
             MsgBox("Tray矩阵点位文件创建/写入失败:" & ex.Message)
         End Try
     End Sub
-     
+
 #End Region
 
 End Module

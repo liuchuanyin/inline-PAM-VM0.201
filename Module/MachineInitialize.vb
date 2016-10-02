@@ -41,10 +41,7 @@
         '轴回原点成功记录
         Static Once(2, 8) As Boolean
 
-
-        If Flag_MachineInit Then
-            Exit Sub
-        End If
+        If Flag_MachineInit Then Exit Sub
 
         Select Case Step_MachineIni
             Case 10
@@ -526,7 +523,7 @@
                     SetEXO(2, 12, False)
                     Call GT_ClrSts(2, 2, 1)
 
-                    Call GT_SetAxisBand(2, 2, 500, 20) 
+                    Call GT_SetAxisBand(2, 2, 500, 20)
                     Call GT_AxisOn(2, 2)
                     Call GT_ClrSts(2, 4, 1)
                     Call GT_SetAxisBand(2, 4, 500, 20)
@@ -535,7 +532,7 @@
                 End If
 
             Case 1560
-                Call GT_ClrSts(2, 2, 1) 
+                Call GT_ClrSts(2, 2, 1)
                 Call GT_SetAxisBand(2, 2, 500, 20)
                 FileToDPCM("D:\BZ-Parameter\CorrectList_Past.xml", 2, 1)
                 Call GT_AxisOn(2, 2)
@@ -545,7 +542,7 @@
                 FileToDPCM("D:\BZ-Parameter\CorrectList_PreTaker.xml", 2, 3)
                 Call GT_AxisOn(2, 4)
                 Step_MachineIni = 1600
-                 
+
             Case 1600
                 '点胶工站X,Y，组装工站X,Y，取料工站X,Y回待机位置
                 Call AbsMotion(0, GlueX, AxisPar.MoveVel(0, GlueX), Par_Pos.St_Glue(0).X)
@@ -695,7 +692,7 @@
                     isAxisMoving(1, RecheckX) = False And isAxisMoving(1, RecheckY) = False Then
 
                     Step_MachineIni = 2200
-                ElseIf isTimeout(GetTickCount, 5000) Then
+                ElseIf isTimeout(GetTickCount, 10000) Then
                     Frm_DialogAddMessage("R轴，精补XY和复检XY同时回待机位置超时！")
                     Step_MachineIni = 9000
                 End If

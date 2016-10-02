@@ -1,4 +1,4 @@
-﻿Public Module Module1
+﻿Public Module Mod_LogicErrCompensation
     Structure Corrections
         Public Position As Double
         Public DPCM As Double
@@ -137,55 +137,6 @@
 
         End Select
     End Sub
-     
-    Public Function CalculateOffset(SourcePosi As Double) As Double
-        Dim xDoc As XDocument
-        Dim mCorrection, nCorrection As Corrections
-
-        xDoc = XDocument.Load("E:\Corrections.xml")
-
-        Dim ps = From p In xDoc.Descendants("Corrections") _
-                                Where CType(p.Element("Position"), Double) = SourcePosi _
-                                Select New With {.Position = CType(p.Element("Position"), Double), _
-                                                 .DPCM = p.Element("DPCM").Value, _
-                                                 .PTPDis = p.Element("PTPDis").Value}
-        '输出查询的数量()
-        If ps.Count <= 0 Then
-
-            Dim ps1 = From p1 In xDoc.Descendants("Corrections") _
-                                Where Math.Abs((SourcePosi - CType(p1.Element("Position"), Double))) < CType(p1.Element("PTPDis"), Double) _
-                                And (CType(p1.Element("PTPDis"), Double) + CType(p1.Element("Position"), Double)) > SourcePosi _
-                                Select New With {.Position = CType(p1.Element("Position"), Double), _
-                                                 .DPCM = p1.Element("DPCM").Value, _
-                                                 .PTPDis = p1.Element("PTPDis").Value}
-
-            Dim index As Integer = 0
-            For Each x In ps1
-                If index = 0 Then
-                    mCorrection.Position = x.Position
-                    mCorrection.DPCM = x.DPCM
-                    mCorrection.PTPDis = x.PTPDis
-                ElseIf index = 1 Then
-                    nCorrection.Position = x.Position
-                    nCorrection.DPCM = x.DPCM
-                    nCorrection.PTPDis = x.PTPDis
-                End If
-
-                index = index + 1
-            Next
-
-            CalculateOffset = (SourcePosi - mCorrection.Position) / (nCorrection.Position - mCorrection.Position) * _
-                            (nCorrection.DPCM - mCorrection.DPCM) + mCorrection.DPCM
-
-        Else
-            For Each n In ps
-                CalculateOffset = n.DPCM
-            Next
-        End If
-
-        Return CalculateOffset
-        MessageBox.Show("OK")
-    End Function
 
     ''' <summary>
     ''' 压补正表进入轴卡
@@ -233,7 +184,7 @@
         CorrectListTemp = ReadXML_Corr(Filepath, CorrectListTemp)
         DPCM(Card, Axis + 1, CorrectListTemp)
     End Sub
-     
+
     Public Sub test(data As List(Of Corrections))
         Dim rtn As Integer
         Dim a() As Integer = {0, 15, 25, 35, 45}
@@ -244,34 +195,5 @@
         rtn += GT_EnableLeadScrewComp(2, 2, 1)
 
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-    'Dim ps2 = From p2 In xDoc.Descendants("Corrections") _
-    '                    Where CType(p2.Element("Position"), Integer) = CType((mCorrection.Position + mCorrection.PTPDis), Integer) _
-    '                    Select New With {.Position = CType(p2.Element("Position"), Double), _
-    '                                     .DPCM = p2.Element("DPCM").Value, _
-    '                                     .PTPDis = p2.Element("PTPDis").Value}
-
-    'Dim ps2 = From p2 In xDoc.Descendants("Corrections") _
-    '                    Where (SourcePosi + CType(p2.Element("PTPDis"), Double)) < CType(p2.Element("PTPDis"), Double) _
-    '                    And (CType(p2.Element("PTPDis"), Double) + CType(p2.Element("Position"), Double)) > SourcePosi + CType(p2.Element("PTPDis"), Double) _
-    '                    Select New With {.Position = CType(p2.Element("Position"), Double), _
-    '                                     .DPCM = p2.Element("DPCM").Value, _
-    '                                     .PTPDis = p2.Element("PTPDis").Value}
-
-    'For Each x1 In ps2
-    '    nCorrection.Position = x1.Position
-    '    nCorrection.DPCM = x1.DPCM
-    '    nCorrection.PTPDis = x1.PTPDis
-    'Next
 
 End Module

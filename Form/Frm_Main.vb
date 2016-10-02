@@ -41,8 +41,6 @@ Public Class Frm_Main
         Call read_Par_Pos(Path_Par_Pos, Par_Pos)
         'UV Light Ini
         Call UV_Init()
-        '读取矩阵点位文件
-        ReadMatrixPos(Path_TrayMatrix, TrayMatrix)
 
         Frm_Engineering.Opacity = 0
         Frm_Engineering.Show(Me)
@@ -51,6 +49,10 @@ Public Class Frm_Main
         For i = 0 To Tray_Pallet.Count - 1
             Tray_Pallet(i).init()
         Next
+        Call Load_OffsetXY()
+        '读取矩阵点位文件
+        ReadMatrixPos(Path_TrayMatrix, TrayMatrix)
+
         If GTS_Opened_EX = True And GTS_Opened_EM = True Then
             Thread_IORefresh.Start()
         End If
@@ -186,6 +188,7 @@ Public Class Frm_Main
                     Frm_Engineering.Show(Me)
                     Frm_Engineering.Visible = True
                     Frm_Engineering.Opacity = 255
+                    Call Frm_Engineering.init_UI()
                     txt_Password.Text = ""
                     '登陆成功后，关闭使能
                     Login_Engineering_Enable(False)
